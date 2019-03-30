@@ -1,0 +1,21 @@
+{
+  "name": "aa-server",
+  "version": "1.0.0",
+  "description": "node服务器",
+  "main": "app.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "sujiahong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "log4js": "^4.1.0",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "ws": "^6.2.1"
+  }
+}
