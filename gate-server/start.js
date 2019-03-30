@@ -9,9 +9,12 @@ const config = require("../share/config");
 const httpReq = require("../utils/http_request");
 const redis = require("redis");
 const network = require("../utils/network");
+const utils = require("../utils/utils");
+
+var GAME_SERVER_LIST = [];
 
 var start = function(){
-    const srv = http.createServer((req, res) => {
+    const httpSvr = http.createServer((req, res) => {
         const statusCode = res.statusCode;
         if (statusCode !== 200){
             return res.end("fail");
@@ -24,15 +27,27 @@ var start = function(){
         });
     });
     
-    srv.listen(config.GATE_HTTP_PORT, ()=>{
+    httpSvr.listen(config.GATE_HTTP_PORT, ()=>{
         console.log(TAG, "http server listen start.");
     });
     //requestRouteHandler({url: "/validateUser?code=081roMln014eNj1Xdtnn0HNWln0roMlQ&MiniId=1"})
+    var serverId = 0;
+    GAME_SERVER_LIST = utils.clone(config.GAME_SERVER_LIST);
+    console.log("---==== ", GAME_SERVER_LIST)
+    for (var i = 0; i < GAME_SERVER_LIST.length; ++i){
+        if (!list[i].ISUSED){
+            serverId = list[i].ID;
+            list[i].ISUSED = true;
+            break;
+        }
+    }
+    ////////启动server
     var svr = new network.Server({port: config.GATE_SOCKET_PORT});
     svr.createServer(function(socketId){});
     svr.recv(function(data){
 
     });
+    
 }
 
 var requestRouteHandler = function(req, next){

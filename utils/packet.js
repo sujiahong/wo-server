@@ -10,7 +10,7 @@ p.pack = function(jsonData){
     pack.write(str, 4);
     return pack;
 }
-
+///解包
 p.unpack = function(buf, start, end){
     var str = buf.toString('utf8', start, end);
     return JSON.parse(str);
