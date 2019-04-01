@@ -1,0 +1,22 @@
+[2019-04-01T19:53:51.526] [INFO] home-server - 启动home server ！！！！ server pid:  10723 { ID: 1, NAME: 'home-server-1', IP: '', PORT: 8110, ISUSED: true }
+[2019-04-01T19:53:51.535] [INFO] home-server - network_express.js express server listen:  { port: 8110 }
+[2019-04-01T19:53:51.544] [INFO] home-server - 启动home server ！！！！ server pid:  10729 { ID: 2, NAME: 'home-server-2', IP: '', PORT: 8210, ISUSED: true }
+[2019-04-01T19:53:51.549] [INFO] home-server - network_express.js express server listen:  { port: 8210 }
+[2019-04-01T20:07:23.452] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:07:23.463] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:07:23.476] [INFO] home-server - 启动home server ！！！！ server pid:  12113 { ID: 1, NAME: 'home-server-1', IP: '', PORT: 8110, ISUSED: true }
+[2019-04-01T20:07:23.483] [INFO] home-server - network_express.js express server listen:  { port: 8110 }
+[2019-04-01T20:07:23.489] [INFO] home-server - 启动home server ！！！！ server pid:  12114 { ID: 2, NAME: 'home-server-2', IP: '', PORT: 8210, ISUSED: true }
+[2019-04-01T20:07:23.493] [INFO] home-server - network_express.js express server listen:  { port: 8210 }
+[2019-04-01T20:08:08.788] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:08:08.805] [INFO] home-server - 启动home server ！！！！ server pid:  12212 { ID: 1, NAME: 'home-server-1', IP: '', PORT: 8110, ISUSED: true }
+[2019-04-01T20:08:08.810] [INFO] home-server - network_express.js express server listen:  { port: 8110 }
+[2019-04-01T20:08:08.820] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:08:08.836] [INFO] home-server - 启动home server ！！！！ server pid:  12207 { ID: 2, NAME: 'home-server-2', IP: '', PORT: 8210, ISUSED: true }
+[2019-04-01T20:08:08.839] [INFO] home-server - network_express.js express server listen:  { port: 8210 }
+[2019-04-01T20:13:36.440] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:13:36.457] [INFO] home-server - 连接 redis server!!!! 
+[2019-04-01T20:13:36.467] [INFO] home-server - 启动home server ！！！！ server pid:  12811 { ID: 1, NAME: 'home-server-1', IP: '', PORT: 8110, ISUSED: true }
+[2019-04-01T20:13:36.475] [INFO] home-server - network_express.js express server listen:  { port: 8110 }
+[2019-04-01T20:13:36.490] [INFO] home-server - 启动home server ！！！！ server pid:  12806 { ID: 2, NAME: 'home-server-2', IP: '', PORT: 8210, ISUSED: true }
+[2019-04-01T20:13:36.496] [INFO] home-server - network_express.js express server listen:  { port: 8210 }

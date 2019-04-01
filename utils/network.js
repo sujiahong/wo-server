@@ -57,17 +57,21 @@ Client.prototype.send = function(data){
 Client.prototype.recv = function(next){
     var self = this;
     this.eventEmitter.on("socketData", (socket, data)=>{
-       console.log(TAG, "Client socketData", data, self.HBTime);
-       if (data.route == "pong"){
-           if (data.time == self.HBTime){
-                if (self.closeTimeId){
-                    clearTimeout(self.closeTimeId);
-                    self.closeTimeId = null;
+        console.log(TAG, "Client socketData", data, self.HBTime);
+        if (data.request){
+            self.eventEmitter.emit(data.request, data);
+        }else{
+            if (data.route == "pong"){
+                if (data.time == self.HBTime){
+                     if (self.closeTimeId){
+                         clearTimeout(self.closeTimeId);
+                         self.closeTimeId = null;
+                     }
                 }
-           }
-       }else{
-            next(data);
-       }
+            }else{
+                 next(data);
+            }
+        }
     });
 }
 
@@ -79,6 +83,13 @@ Client.prototype.ping = function(){
         self.closeTimeId = null;
         self.close();
     }, this.HBInterval*1000/2);
+}
+
+Client.prototype.request = function(data, next){
+    this.send(data);
+    this.eventEmitter.on(data.request, (ret)=>{
+        next(ret);
+    });
 }
 
 Client.prototype.close = function(){
@@ -188,16 +199,28 @@ Server.prototype.recv = function(next){
     var self = this;
     this.eventEmitter.on("socketData", function(socket, data){
         console.log(TAG, "Server socketData", socket.id, data);
-        if (data.route == "ping"){
-            if (socket.closeTimeId){
-                clearTimeout(socket.closeTimeId);
-                socket.closeTimeId = null;
-            }
-            self.pong(socket, data.time);
+        if (data.request){
+            next(socket.id, data);
         }else{
-            next(data);
+            if (data.route == "ping"){
+                if (socket.closeTimeId){
+                    clearTimeout(socket.closeTimeId);
+                    socket.closeTimeId = null;
+                }
+                self.pong(socket, data.time);
+            }else{
+                next(socket.id, data);
+            }
         }
     });
+}
+
+
+Server.prototype.getSocketById = function(id){
+    if (id){
+        return this.socketMap[id];
+    }
+    return null;
 }
 
 Server.prototype.pong = function(socket, time){

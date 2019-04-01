@@ -1,8 +1,10 @@
 "use strict"
-const TAG = "gameserver-start.js";
+const TAG = "homeserver-start.js";
 const network = require("../utils/network");
 const config = require("../share/config");
 const networkHttp = require("../utils/network_http");
+const dbConnect = require("../utils/db_connection");
+global.g_logger = require("../utils/log_launch")("home-server");
 
 var start = function(){
     //连接gate
@@ -14,7 +16,7 @@ var start = function(){
     cli.request({request: "register"}, function(data){
         global.g_serverName = data.serverData.NAME;
         global.g_serverId = data.serverData.ID;
-        console.log(TAG, data.serverData);
+        g_logger.info("启动home server ！！！！ server pid: ", process.pid, data.serverData);
         ///启动express监听
         var options = {
             port: data.serverData.PORT,
@@ -25,6 +27,10 @@ var start = function(){
             res.send("success");
         });
     });
+
+    g_logger.info("连接 redis server!!!! ");
+    //连接redis
+    dbConnect.redisConnect();
 }
 
 process.on("uncaughtException", (err)=>{

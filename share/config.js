@@ -6,17 +6,17 @@ module.exports = {
     REDIS_IP: "192.168.10.34",
     REDIS_PORT: 6379,
 
-    GAME_SERVER_LIST: [
+    HOME_SERVER_LIST: [
         {
             ID: 1,
-            NAME: "game-server-1",
+            NAME: "home-server-1",
             IP: "",
             PORT: 8110,
             ISUSED: false,
         },
         {
             ID: 2,
-            NAME: "game-server-2",
+            NAME: "home-server-2",
             IP: "",
             PORT: 8210,
             ISUSED: false,

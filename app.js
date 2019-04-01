@@ -12,7 +12,7 @@ srvCluster.createCluster(2, function(cluster){
     //启动gate
     gateStarter.start();
 }, function(cluster){
-    const gameStarter = require("./game-server/start");
+    const gameStarter = require("./home-server/start");
     //
     gameStarter.start();
 });

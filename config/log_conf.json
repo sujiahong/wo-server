@@ -1,0 +1,30 @@
+{
+    "appenders": {
+        "out": {
+            "type": "console"
+        },
+        "gate-server": {
+            "type": "file",
+            "filename": "./logs/gate-server.log"
+        },
+        "home-server": {
+            "type": "file",
+            "filename": "./logs/home-server.log"
+        }
+    },
+    "categories" :{
+        "default": {
+            "appenders": ["out"],
+            "level": "info"
+        },
+        "gate-server": {
+            "appenders": ["gate-server", "out"],
+            "level": "info"
+        },
+        "home-server": {
+            "appenders": ["home-server", "out"],
+            "level": "info"
+        }
+    },
+    "replaceConsole": true
+}
