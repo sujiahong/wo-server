@@ -3,6 +3,7 @@ const TAG = "utils/network.js";
 const net = require("net");
 const packet = require("../utils/packet");
 const event = require("events");
+const util = require("util");
 
 var nw = module.exports;
 
@@ -15,8 +16,9 @@ var Client = function(options){
     this.closeTimeId = null;
     this.remainderData = Buffer.alloc(0);
     this.sendFailData = Buffer.alloc(0);
-    this.eventEmitter = new event.EventEmitter(this);
 };
+
+util.inherits(Client, event.EventEmitter);
 
 Client.prototype.connect = function(next){
     var self = this;
@@ -44,22 +46,10 @@ Client.prototype.connect = function(next){
     socket.on("data", (buffer)=>{
         bufferAnalysis(self, socket, buffer);
     });
-}
-
-Client.prototype.send = function(data){
-    var pack = packet.pack(data);
-    var rt = this.socket.write(pack);
-    if (rt == false){
-        Buffer.concat([this.sendFailData, pack]);
-    }
-}
-
-Client.prototype.recv = function(next){
-    var self = this;
-    this.eventEmitter.on("socketData", (socket, data)=>{
+    self.on("socketData", (socket, data)=>{
         console.log(TAG, "Client socketData", data, self.HBTime);
         if (data.request){
-            self.eventEmitter.emit(data.request, data);
+            self.emit(data.request, data);
         }else{
             if (data.route == "pong"){
                 if (data.time == self.HBTime){
@@ -75,6 +65,14 @@ Client.prototype.recv = function(next){
     });
 }
 
+Client.prototype.send = function(data){
+    var pack = packet.pack(data);
+    var rt = this.socket.write(pack);
+    if (rt == false){
+        Buffer.concat([this.sendFailData, pack]);
+    }
+}
+
 Client.prototype.ping = function(){
     var self = this;
     this.HBTime = Date.now();
@@ -87,7 +85,7 @@ Client.prototype.ping = function(){
 
 Client.prototype.request = function(data, next){
     this.send(data);
-    this.eventEmitter.on(data.request, (ret)=>{
+    this.on(data.request, (ret)=>{
         next(ret);
     });
 }
@@ -131,7 +129,7 @@ var bufferAnalysis = function(self, socket, buffer){
         }
         idx += packlen;
         var jsonData = packet.unpack(self.remainderData, idx - bodylen, idx);
-        self.eventEmitter.emit("socketData", socket, jsonData);
+        self.emit("socketData", socket, jsonData);
         if (idx == len){
             self.remainderData = Buffer.alloc(0);
             break;
@@ -150,8 +148,9 @@ var Server = function(options){
     this.HBInterval = 30;
     this.remainderData = Buffer.alloc(0);
     this.sendFailData = Buffer.alloc(0);
-    this.eventEmitter = new event.EventEmitter(this);
 }
+
+util.inherits(Server, event.EventEmitter);
 
 Server.prototype.createServer = function(next){
     var self = this;
@@ -197,7 +196,7 @@ Server.prototype.send = function(socketId, data){
 
 Server.prototype.recv = function(next){
     var self = this;
-    this.eventEmitter.on("socketData", function(socket, data){
+    this.on("socketData", function(socket, data){
         console.log(TAG, "Server socketData", socket.id, data);
         if (data.request){
             next(socket.id, data);

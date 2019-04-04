@@ -7,7 +7,7 @@ exports.createCluster = function(num, masterFunc, workerFunc){
         console.log(TAG, "--------master pid: ", process.pid);
         masterFunc(cluster);
         for (var i = 0; i < num; ++i)
-            cluster.fork({NODE_UNIQUE_ID: process.pid});
+            cluster.fork();
         cluster.on("exit", (worker, code, signal) => {
             console.log(TAG, "worker exit id-pid: ", worker.id, worker.process.pid, code, signal);
         });

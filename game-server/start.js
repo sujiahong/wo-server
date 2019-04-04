@@ -2,33 +2,43 @@
 const TAG = "gameserver-start.js";
 const network = require("../utils/network");
 const config = require("../share/config");
-const networkHttp = require("../utils/network_http");
+const dbConn = require("../utils/db_connection");
+global.g_logger = require("../utils/log_launch")("game-server");
+
+g_logger.debug(TAG, "启动 processid: ", process.pid, process.execArgv, process.argv);
 
 var start = function(){
-    //连接gate
-    var cli = new network.Client({port: config.GATE_SOCKET_PORT});
-    cli.connect();
-    cli.recv(function(data){////监听
+    global.g_serverId = process.argv[2];
+    global.g_serverName = process.argv[3];
+    g_logger.info("连接 redis server， mysql server");
+    //连接redis
+    dbConn.redisConnect();
+    //连接mysql
+    dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
+    //连接home,完成register
+    connectHome();
+    ////监听game user connection;
+    listenConnection();
+}
 
-    });
-    cli.request({request: "register"}, function(data){
-        global.g_serverName = data.serverData.NAME;
-        global.g_serverId = data.serverData.ID;
-        console.log(TAG, data.serverData);
-        ///启动express监听
-        var options = {
-            port: data.serverData.PORT,
-        };
-        var app = networkHttp.createExpress(options);
-        app.get("/login", function(req, res){
-            console.log(TAG, "登录！！！");
-            res.send("success");
+var connectHome = function(){
+    var homeList = config.HOME_SERVER_LIST;
+    for (var i = 0; i < homeList.length; ++i){
+        var cli = new network.Client({port: homeList[i].FOR_LOGIC_PORT});
+        cli.connect();
+        cli.request({request: "register", serverId: g_serverId}, function(data){
+            g_logger.info("注册game server ！！！！ server pid: ", process.pid, data.msg, data.serverId);
         });
-    });
+        global.g_homeIdClientMap[homeList[i].ID] = cli; 
+    }
+}
+
+var listenConnection = function(){
+
 }
 
 process.on("uncaughtException", (err)=>{
     console.error("caught exception: ", err.stack);
 });
 
-module.exports.start = start;
+start();

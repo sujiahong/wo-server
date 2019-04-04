@@ -9,11 +9,16 @@ const httpReq = require("../utils/http_request");
 const network = require("../utils/network");
 const utils = require("../utils/utils");
 const networkHttp = require("../utils/network_http");
+const dbConn = require("../utils/db_connection");
 global.g_logger = require("../utils/log_launch")("gate-server");
 
 var HOME_SERVER_LIST = [];
 
 var start = function(){
+    /////连接数据库
+    g_logger.info("连接数据库");
+    dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
+
     var options = {
         port: config.GATE_HTTP_PORT,
     }
@@ -30,7 +35,7 @@ var start = function(){
         });
     });
     //requestRouteHandler({url: "/validateUser?code=081roMln014eNj1Xdtnn0HNWln0roMlQ&MiniId=1"})
-    g_logger.info("启动gate server！！！！！！")
+    g_logger.info("启动gate server for home！！！！！！");
     HOME_SERVER_LIST = utils.clone(config.HOME_SERVER_LIST);
     console.log("---==== ", HOME_SERVER_LIST)
     var serverData;
@@ -49,7 +54,6 @@ var start = function(){
             svr.send(socketId, {request: "register", serverData: serverData})
         }
     });
-    
 }
 
 var requestRouteHandler = function(req, next){

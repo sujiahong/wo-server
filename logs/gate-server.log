@@ -5,3 +5,196 @@
 [2019-04-01T20:08:08.373] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
 [2019-04-01T20:13:35.960] [INFO] gate-server - 启动gate server！！！！！！
 [2019-04-01T20:13:35.969] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-02T13:50:39.013] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-02T13:50:39.014] [INFO] gate-server - 连接数据库
+[2019-04-02T13:52:36.800] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-02T13:52:36.801] [INFO] gate-server - 连接数据库
+[2019-04-02T13:56:21.604] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-02T14:17:53.360] [INFO] gate-server - 连接数据库
+[2019-04-02T14:17:53.364] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-02T14:17:53.383] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-02T14:17:53.391] [INFO] gate-server - utils/db_connection.js MongoClient {
+  domain: null,
+  _events: {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  s: 
+   { url: 'mongodb://127.0.0.1:7772',
+     options: 
+      { servers: [Object],
+        caseTranslate: true,
+        useNewUrlParser: true,
+        socketTimeoutMS: 360000,
+        connectTimeoutMS: 30000,
+        promiseLibrary: [Function: Promise] },
+     promiseLibrary: [Function: Promise],
+     dbCache: {},
+     sessions: [] },
+  topology: 
+   Server {
+     domain: null,
+     _events: 
+      { serverOpening: [Function],
+        serverDescriptionChanged: [Function],
+        serverHeartbeatStarted: [Function],
+        serverHeartbeatSucceeded: [Function],
+        serverHeartbeatFailed: [Function],
+        serverClosed: [Function],
+        topologyOpening: [Function],
+        topologyClosed: [Function],
+        topologyDescriptionChanged: [Function],
+        commandStarted: [Function],
+        commandSucceeded: [Function],
+        commandFailed: [Function],
+        joined: [Function],
+        left: [Function],
+        ping: [Function],
+        ha: [Function],
+        authenticated: [Function],
+        error: [Function],
+        timeout: [Function],
+        close: [Function],
+        parseError: [Function],
+        open: [Object],
+        fullsetup: [Object],
+        all: [Object],
+        reconnect: [Function] },
+     _eventsCount: 25,
+     _maxListeners: Infinity,
+     clientInfo: 
+      { driver: [Object],
+        os: [Object],
+        platform: 'Node.js v6.14.4, LE' },
+     s: 
+      { coreTopology: [Object],
+        sCapabilities: null,
+        clonedOptions: [Object],
+        reconnect: true,
+        emitError: true,
+        poolSize: 5,
+        storeOptions: [Object],
+        store: [Object],
+        host: '127.0.0.1',
+        port: 7772,
+        options: [Object],
+        sessionPool: [Object],
+        sessions: [],
+        promiseLibrary: [Function: Promise] } } }
+[2019-04-02T14:24:13.011] [INFO] gate-server - 连接数据库
+[2019-04-02T14:24:13.015] [INFO] gate-server - =============    undefined
+[2019-04-02T14:24:13.016] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-02T14:24:13.039] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-02T14:24:13.049] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-03T18:16:42.311] [INFO] gate-server - 连接数据库
+[2019-04-03T18:16:42.875] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-03T18:16:42.908] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-03T18:16:42.919] [INFO] gate-server - mysql数据库连接成功！！！！！ 6
+[2019-04-03T18:16:43.046] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-03T18:24:15.501] [INFO] gate-server - 连接数据库
+[2019-04-03T18:24:15.574] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-03T18:24:15.583] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-03T18:24:15.589] [INFO] gate-server - mysql数据库连接成功！！！！！ 7
+[2019-04-03T18:24:15.592] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-03T18:25:49.544] [INFO] gate-server - 连接数据库
+[2019-04-03T18:25:49.600] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-03T18:25:49.617] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-03T18:25:49.622] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功！！！！！ 8
+[2019-04-03T18:25:49.624] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-03T20:52:23.121] [INFO] gate-server - 连接数据库
+[2019-04-03T20:52:23.208] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-03T20:52:23.210] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-03T20:52:23.219] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-03T20:52:23.223] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-04T11:31:39.329] [INFO] gate-server - 连接数据库
+[2019-04-04T11:31:39.834] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T11:31:39.837] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-04T11:31:39.856] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T11:31:39.864] [INFO] gate-server - utils/db_connection.js mongo数据库连接成功！！！！！
+[2019-04-04T13:41:52.679] [INFO] gate-server - 连接数据库
+[2019-04-04T13:41:52.724] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T13:41:52.725] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-04T13:41:52.739] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T13:42:19.680] [INFO] gate-server - 连接数据库
+[2019-04-04T13:42:19.722] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T13:42:19.723] [INFO] gate-server - 启动gate server！！！！！！
+[2019-04-04T13:42:19.732] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:04:38.135] [INFO] gate-server - 连接数据库
+[2019-04-04T17:04:38.180] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:04:38.181] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:04:38.201] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:04:58.615] [INFO] gate-server - 连接数据库
+[2019-04-04T17:04:58.669] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:04:58.670] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:04:58.682] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:05:11.981] [INFO] gate-server - 连接数据库
+[2019-04-04T17:05:12.024] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:05:12.025] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:05:12.034] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:07:34.723] [INFO] gate-server - 连接数据库
+[2019-04-04T17:07:34.764] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:07:34.765] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:07:34.773] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:09:08.955] [INFO] gate-server - 连接数据库
+[2019-04-04T17:09:08.997] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:09:08.998] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:09:09.008] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:10:33.015] [INFO] gate-server - 连接数据库
+[2019-04-04T17:10:33.060] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:10:33.061] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:10:33.077] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:16:32.004] [INFO] gate-server - 连接数据库
+[2019-04-04T17:16:32.055] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:16:32.056] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:16:32.071] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:35:23.247] [INFO] gate-server - 连接数据库
+[2019-04-04T17:35:23.297] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:35:23.298] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:35:23.311] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:39:02.997] [INFO] gate-server - 连接数据库
+[2019-04-04T17:39:03.045] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:39:03.046] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:39:03.064] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:39:50.303] [INFO] gate-server - 连接数据库
+[2019-04-04T17:39:50.371] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:39:50.373] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:39:50.387] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:42:55.244] [INFO] gate-server - 连接数据库
+[2019-04-04T17:42:55.409] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:42:55.410] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:42:55.439] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:43:00.904] [INFO] gate-server - 连接数据库
+[2019-04-04T17:43:00.944] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:43:00.946] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:43:00.978] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T17:49:09.262] [INFO] gate-server - 连接数据库
+[2019-04-04T17:49:09.325] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T17:49:09.337] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T17:49:09.361] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:21:46.167] [INFO] gate-server - 连接数据库
+[2019-04-04T19:21:46.242] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:21:46.252] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:21:46.295] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:25:51.039] [INFO] gate-server - 连接数据库
+[2019-04-04T19:25:51.077] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:25:51.080] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:25:51.106] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:26:31.684] [INFO] gate-server - 连接数据库
+[2019-04-04T19:26:31.723] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:26:31.725] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:26:31.760] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:28:13.210] [INFO] gate-server - 连接数据库
+[2019-04-04T19:28:13.250] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:28:13.252] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:28:13.273] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:34:53.760] [INFO] gate-server - 连接数据库
+[2019-04-04T19:34:53.820] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:34:53.823] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:34:53.865] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:45:43.747] [INFO] gate-server - 连接数据库
+[2019-04-04T19:45:43.853] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:45:43.855] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:45:43.923] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }
+[2019-04-04T19:47:19.852] [INFO] gate-server - 连接数据库
+[2019-04-04T19:47:19.962] [INFO] gate-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-04T19:47:19.964] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-04T19:47:20.020] [INFO] gate-server - network_express.js http server listen:  { port: 8090 }

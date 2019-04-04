@@ -1,20 +1,21 @@
 "use strict"
 const TAG = "wo-server app.js";
 const srvCluster = require("./utils/server_cluster");
+const cq = require("./config/cluster_quantity.json");
 
-console.log(__dirname, process.execPath, process.execArgv, process.pid)
+console.log(TAG, __dirname, process.execPath, process.execArgv, process.pid)
 //////debug
-process.execArgv[1] = process.execArgv[1].replace('-brk', '');
+//process.execArgv[1] = process.execArgv[1].replace('-brk', '');
 
 /////启动集群
-srvCluster.createCluster(2, function(cluster){
+srvCluster.createCluster(cq.home_quantity, function(cluster){
     const gateStarter = require("./gate-server/start");
     //启动gate
     gateStarter.start();
 }, function(cluster){
-    const gameStarter = require("./home-server/start");
+    const homeStarter = require("./home-server/start");
     //
-    gameStarter.start();
+    homeStarter.start();
 });
 
 
