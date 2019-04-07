@@ -1,27 +1,16 @@
 "use strict"
-const TAG = "network_express.js";
-
+const TAG = "network_http.js";
 const express = require("express");
 const http = require("http");
 
+const logger = g_serverData.logger;
 var nwh = module.exports;
 
 nwh.createHttp = function(options, next){
-    const httpSvr = http.createServer((req, res) => {
-        const statusCode = res.statusCode;
-        if (statusCode !== 200){
-            return res.end("fail");
-        }
-        const ip = res.socket.remoteAddress;
-        const port = res.socket.remotePort;
-        console.log(TAG, "ip=", ip, port, req.url);
-        requestRouteHandler(req, (ret)=>{
-            res.end(JSON.stringify(ret));
-        });
-    });
+    const httpSvr = http.createServer(next);
     
     httpSvr.listen(options, ()=>{
-        g_logger.info(TAG, "http server listen: ", options);
+        logger.info(TAG, "http server listen: ", options);
 	});
 	httpSvr.on("error", onError);
 }
@@ -30,7 +19,7 @@ nwh.createExpress = function(options){
     var app = express();
     var server = http.createServer(app);
     server.listen(options, ()=>{
-        g_logger.info(TAG, "express server listen: ", options);
+        logger.info(TAG, "express server listen: ", options);
     });
     server.on('error', onError);
     return app;

@@ -3,6 +3,8 @@ module.exports = {
 	FAIL: 1,        				//服务器错误
 	TIMEOUT: 2,				    	//超时
 	HAVE_FROZEN: 3,					//帐号已被冻结
+	ACCOUNT_TYPE_ERR: 4,			//帐号类型错误
+	RECOMMENDATION_ERR: 5,			//推荐码错误
 	BIND_UID_FAIL: 8,				//绑定用户id失败
 	REGISTER_FAIL: 9,				//注册失败
 	WXOPNEID_NULL:10,				//微信openid为空

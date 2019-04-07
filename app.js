@@ -18,7 +18,9 @@ srvCluster.createCluster(cq.home_quantity, function(cluster){
     homeStarter.start();
 });
 
-
+// setTimeout(function(){
+//     require("./test/benchmark").bench(2000);
+// }, 5000);
 
 //
 process.on("uncaughtException", (err)=>{

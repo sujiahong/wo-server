@@ -1,7 +1,6 @@
 "use strict";
 const TAG = "util/utils.js"
 const constant = require('../share/constant');
-const base64 = require('./jbase64');
 const crypto = require('crypto');
 
 var utils  = module.exports;

@@ -48,19 +48,15 @@ Client.prototype.connect = function(next){
     });
     self.on("socketData", (socket, data)=>{
         console.log(TAG, "Client socketData", data, self.HBTime);
-        if (data.request){
-            self.emit(data.request, data);
-        }else{
-            if (data.route == "pong"){
-                if (data.time == self.HBTime){
-                     if (self.closeTimeId){
-                         clearTimeout(self.closeTimeId);
-                         self.closeTimeId = null;
-                     }
-                }
-            }else{
-                 next(data);
+        if (data.route == "pong"){
+            if (data.time == self.HBTime){
+                 if (self.closeTimeId){
+                     clearTimeout(self.closeTimeId);
+                     self.closeTimeId = null;
+                 }
             }
+        }else{
+             self.emit(data.route, data);
         }
     });
 }
@@ -85,7 +81,7 @@ Client.prototype.ping = function(){
 
 Client.prototype.request = function(data, next){
     this.send(data);
-    this.on(data.request, (ret)=>{
+    this.on(data.route, (ret)=>{
         next(ret);
     });
 }
@@ -198,18 +194,14 @@ Server.prototype.recv = function(next){
     var self = this;
     this.on("socketData", function(socket, data){
         console.log(TAG, "Server socketData", socket.id, data);
-        if (data.request){
-            next(socket.id, data);
-        }else{
-            if (data.route == "ping"){
-                if (socket.closeTimeId){
-                    clearTimeout(socket.closeTimeId);
-                    socket.closeTimeId = null;
-                }
-                self.pong(socket, data.time);
-            }else{
-                next(socket.id, data);
+        if (data.route == "ping"){
+            if (socket.closeTimeId){
+                clearTimeout(socket.closeTimeId);
+                socket.closeTimeId = null;
             }
+            self.pong(socket, data.time);
+        }else{
+            next(socket.id, data);
         }
     });
 }

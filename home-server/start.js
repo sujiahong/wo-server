@@ -1,20 +1,24 @@
 "use strict"
 const TAG = "homeserver-start.js";
+global.g_serverData = {};
+g_serverData.logger = require("../utils/log_launch")("home-server");
+const logger = g_serverData.logger;
 const assert = require("assert");
 const cps = require("child_process");
 const cq = require("../config/cluster_quantity.json");
+const errcode = require("../share/errcode");
 const network = require("../utils/network");
 const config = require("../share/config");
 const networkHttp = require("../utils/network_http");
 const dbConn = require("../utils/db_connection");
-global.g_logger = require("../utils/log_launch")("home-server");
+logger.info("连接 redis server， mysql server pid: ", process.pid);
+//连接redis
+dbConn.redisConnect();
+//连接mysql
+dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
+const mainService = require("./service/main_service");
 
 var start = function(){
-    g_logger.info("连接 redis server， mysql server pid: ", process.pid);
-    //连接redis
-    dbConn.redisConnect();
-    //连接mysql
-    dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
     //连接gate
     connectGate();
 }
@@ -22,18 +26,27 @@ var start = function(){
 var connectGate = function(){
     var cli = new network.Client({port: config.GATE_SOCKET_PORT});
     cli.connect();
-    cli.request({request: "register"}, function(data){
-        global.g_serverName = data.serverData.NAME;
-        global.g_serverId = data.serverData.ID;
-        g_logger.info("启动home server ！！！！ server pid: ", process.pid, data.serverData);
+    cli.request({route: "register"}, function(data){
+        g_serverData.serverName = data.serverData.NAME;
+        g_serverData.serverId = data.serverData.ID;
+        logger.info("启动home server ！！！！ server pid: ", process.pid, data.serverData);
+        var recommendation;
+        cli.on("recommend", function(data){
+            logger.info(TAG, "recommend: ", data);
+            recommendation = data.recommendation;
+        });
         ///启动express监听
         var options = {
             port: data.serverData.FOR_CLIENT_PORT,
         };
         var app = networkHttp.createExpress(options);
         app.get("/login", function(req, res){
-            console.log(TAG, "登录！！！");
-            res.send("success");
+            console.log(TAG, "用户登录！！！", req.query);
+            if (req.query.recommendation != recommendation){
+                return res.send({code: errcode.RECOMMENDATION_ERR});
+            }
+            mainService.login(req.query);
+            res.send({code: errcode.OK});
         });
         //启动game server
         listenGameServer();
@@ -43,12 +56,12 @@ var connectGate = function(){
 }
 
 var listenGameServer = function(){
-    var svr = new network.Server({port: getLogicPortbyId(g_serverId)});
+    var svr = new network.Server({port: getLogicPortbyId(g_serverData.serverId)});
     svr.createServer(function(socketId){});
     svr.recv(function(socketId, data){
-        if (data.request == "register"){
-            g_logger.info("serverId:", data.serverId, "前来注册在serverId: ", g_serverId);
-            svr.send(socketId, {request: "register", msg: "register success!", serverId: g_serverId});
+        if (data.route == "register"){
+            logger.info("serverId:", data.serverId, "前来注册在serverId: ", g_serverData.serverId);
+            svr.send(socketId, {route: "register", msg: "register success!", serverId: g_serverData.serverId});
         }
     });
 }
@@ -65,7 +78,7 @@ var forkProcess = function(){
     var num = cq.game_quantity;
     var gameList = config.GAEM_SERVER_LIST;
     for (var i = 0; i < num; ++i){
-        if (g_serverId == Math.floor(gameList[i].ID/10))
+        if (g_serverData.serverId == Math.floor(gameList[i].ID/10))
             cps.fork("./game-server/start", [gameList[i].ID, gameList[i].NAME]);
     }
 }

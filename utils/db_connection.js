@@ -5,6 +5,7 @@ const config = require("../share/config");
 const mongo = require("mongodb");
 const mysql = require("mysql");
 
+const logger = g_serverData.logger;
 var dbc = module.exports;
 
 dbc.redisConnect = function(){
@@ -13,7 +14,7 @@ dbc.redisConnect = function(){
         console.error(TAG, "redis connect error:", err);
     });
     global.g_redisConn = conn;
-    g_logger.info(TAG, "redis数据库连接成功！！！！！");
+    logger.info(TAG, "redis数据库连接成功！！！！！");
 }
 
 dbc.mongoConnect = function(dbName, next){
@@ -22,7 +23,7 @@ dbc.mongoConnect = function(dbName, next){
         poolSize: 10,
     }, (err, client)=>{
         if (err) throw err;
-        g_logger.info(TAG, "mongo数据库连接成功！！！！！");
+        logger.info(TAG, "mongo数据库连接成功！！！！！");
         global.g_mongoConn = client;
         var db = client.db(dbName);
         next ? next(db) : null;
@@ -39,7 +40,7 @@ dbc.mysqlConnect = function(dbName){
     });
     conn.connect(function(err){
         if (err) throw err;
-        g_logger.info(TAG, "mysql数据库连接成功！！！！！", conn.threadId);
+        logger.info(TAG, "mysql数据库连接成功！！！！！", conn.threadId);
         global.g_mysqlConn = conn;
     });
 }
@@ -54,22 +55,22 @@ dbc.mysqlPoolConnect = function(dbName){
         database: dbName
     });
     pool.on("enqueue", function(){
-        g_logger.info("mysql 一个连接请求在排队");
+        logger.info("mysql 一个连接请求在排队");
     });
-    g_logger.info(TAG, "mysql数据库连接成功, 使用连接池！！！！！");
+    logger.info(TAG, "mysql数据库连接成功, 使用连接池！！！！！");
     global.g_mysqlPool = pool;
 }
 
 dbc.mysqlPoolQuery = function(sql, next){
     g_mysqlPool.getConnection((err, conn)=>{
         if (err){
-            g_logger.error(TAG, "mysql 获取连接出错：", err);
+            logger.error(TAG, "mysql 获取连接出错：", err);
             return next(err);
         }
         conn.query(sql, (err, results, fields)=>{
             conn.release();
             if (err){
-                g_logger.error(TAG, "mysql 查询出错：sql: ", sql, err);
+                logger.error(TAG, "mysql 查询出错：sql: ", sql, err);
                 return next(err);
             }
             next(null, results, fields);

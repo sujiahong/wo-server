@@ -6,6 +6,7 @@ module.exports = {
 
     REDIS_IP: "192.168.10.34",
     REDIS_PORT: 6379,
+    REDIS_PASSWD: "",
 
     MONGO_URL: "mongodb://127.0.0.1:7772",
 
@@ -21,7 +22,7 @@ module.exports = {
         {
             ID: 1,
             NAME: "home-server-1",
-            IP: "",
+            IP: "192.168.10.34",
             FOR_LOGIC_PORT: 9100,
             FOR_CLIENT_PORT: 8110,
             ISUSED: false,
@@ -29,7 +30,7 @@ module.exports = {
         {
             ID: 2,
             NAME: "home-server-2",
-            IP: "",
+            IP: "192.168.10.34",
             FOR_LOGIC_PORT: 9120,
             FOR_CLIENT_PORT: 8120,
             ISUSED: false,
@@ -40,14 +41,14 @@ module.exports = {
         {
             ID: 11,
             NAME: "game-server-11",
-            IP: "",
+            IP: "192.168.10.34",
             FOR_CLIENT_PORT: 8310,
             ISUSED: false,
         },
         {
             ID: 21,
             NAME: "game-server-21",
-            IP: "",
+            IP: "192.168.10.34",
             FOR_CLIENT_PORT: 8320,
             ISUSED: false,
         }
