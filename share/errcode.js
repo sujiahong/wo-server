@@ -7,9 +7,13 @@ module.exports = {
 	RECOMMENDATION_ERR: 5,			//推荐码错误
 	BIND_UID_FAIL: 8,				//绑定用户id失败
 	REGISTER_FAIL: 9,				//注册失败
-	WXOPNEID_NULL:10,				//微信openid为空
+	UP_GEN_USREID_LIMIT: 10,		//达到生成Id上限
+	
 	LOGIN_ERR: 11,   				//登录失败
 	LOGINED: 12,     				//你的账号已登录！
 	LOGINED_INVALID: 13,			//登录信息失效
-    LOGIN_USERID_NULL: 14,			//登录用户Id为空
+	LOGIN_USERID_NULL: 14,			//登录用户Id为空
+	
+	REDIS_DATABASE_ERR: 20,
+	MYSQL_DATABASE_ERR: 21,
 };

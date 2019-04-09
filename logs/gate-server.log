@@ -6525,3 +6525,26 @@
 [2019-04-07T15:18:51.626] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
 [2019-04-07T15:18:51.641] [INFO] gate-server - 启动gate server for home！！！！！！
 [2019-04-07T15:18:51.677] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-07T16:26:45.725] [INFO] gate-server - 连接数据库
+[2019-04-07T16:26:45.732] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-07T16:26:45.744] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-07T16:26:45.796] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-08T13:57:58.004] [INFO] gate-server - 连接数据库
+[2019-04-08T13:57:58.008] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-08T13:57:58.031] [INFO] gate-server - 启动gate server for home！！！！！！
+[2019-04-08T13:57:58.093] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-09T16:17:13.917] [INFO] gate-server - 连接数据库
+[2019-04-09T16:17:13.920] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-09T16:17:13.942] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-09T16:17:13.970] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }

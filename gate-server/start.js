@@ -20,9 +20,8 @@ var start = function(){
     g_serverData.serverName = "gate-server-1";
     g_serverData.serverId = 1;
 
-    logger.info("启动gate server for home！！！！！！");
     g_serverData.homeServerList = utils.clone(config.HOME_SERVER_LIST);
-    console.log("---==== ", g_serverData.homeServerList)
+    logger.info("启动gate server for home！！！, home server list: ", g_serverData.homeServerList);
     ////////启动server
     var svr = new network.Server({port: config.GATE_SOCKET_PORT});
     svr.createServer(function(socketId){});

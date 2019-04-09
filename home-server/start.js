@@ -7,6 +7,7 @@ const assert = require("assert");
 const cps = require("child_process");
 const cq = require("../config/cluster_quantity.json");
 const errcode = require("../share/errcode");
+const homeManager = require("./models/home_manager");
 const network = require("../utils/network");
 const config = require("../share/config");
 const networkHttp = require("../utils/network_http");
@@ -19,6 +20,7 @@ dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
 const mainService = require("./service/main_service");
 
 var start = function(){
+    g_serverData.homeManager = new homeManager();
     //连接gate
     connectGate();
 }
@@ -41,12 +43,14 @@ var connectGate = function(){
         };
         var app = networkHttp.createExpress(options);
         app.get("/login", function(req, res){
-            console.log(TAG, "用户登录！！！", req.query);
-            if (req.query.recommendation != recommendation){
+            var query = req.query;
+            logger.info(TAG, "用户登录！！！", query);
+            if (query.recommendation != recommendation){
                 return res.send({code: errcode.RECOMMENDATION_ERR});
             }
-            mainService.login(req.query);
-            res.send({code: errcode.OK});
+            mainService.login(query, function(ret){
+                res.send(ret);
+            });
         });
         //启动game server
         listenGameServer();

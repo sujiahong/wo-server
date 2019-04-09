@@ -13146,3 +13146,75 @@
 [2019-04-07T15:18:53.432] [INFO] home-server - serverId: 11 前来注册在serverId:  2
 [2019-04-07T15:18:53.482] [INFO] home-server - serverId: 21 前来注册在serverId:  1
 [2019-04-07T15:18:53.483] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-07T16:26:46.552] [INFO] home-server - 连接 redis server， mysql server pid:  6042
+[2019-04-07T16:26:46.593] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-07T16:26:46.609] [INFO] home-server - 连接 redis server， mysql server pid:  6048
+[2019-04-07T16:26:46.642] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-07T16:26:46.658] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-07T16:26:46.698] [INFO] home-server - 启动home server ！！！！ server pid:  6042 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-07T16:26:46.742] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-07T16:26:46.754] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-07T16:26:46.794] [INFO] home-server - 启动home server ！！！！ server pid:  6048 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-07T16:26:46.825] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-07T16:26:47.609] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-07T16:26:47.609] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-07T16:26:47.744] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-07T16:26:47.746] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-08T13:57:58.886] [INFO] home-server - 连接 redis server， mysql server pid:  30274
+[2019-04-08T13:57:58.914] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-08T13:57:58.998] [INFO] home-server - 连接 redis server， mysql server pid:  30275
+[2019-04-08T13:57:59.013] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-08T13:57:59.325] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-08T13:57:59.329] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-08T13:57:59.367] [INFO] home-server - 启动home server ！！！！ server pid:  30275 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-08T13:57:59.371] [INFO] home-server - 启动home server ！！！！ server pid:  30274 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-08T13:57:59.398] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-08T13:57:59.409] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-08T13:58:00.145] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-08T13:58:00.160] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-08T13:58:00.466] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-08T13:58:00.466] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-09T16:17:14.705] [INFO] home-server - 连接 redis server， mysql server pid:  20660
+[2019-04-09T16:17:14.716] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-09T16:17:14.869] [INFO] home-server - 连接 redis server， mysql server pid:  20661
+[2019-04-09T16:17:14.880] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-09T16:17:14.920] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-09T16:17:14.962] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-09T16:17:14.972] [INFO] home-server - 启动home server ！！！！ server pid:  20660 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-09T16:17:14.995] [INFO] home-server - 启动home server ！！！！ server pid:  20661 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-09T16:17:15.022] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-09T16:17:15.032] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-09T16:17:15.807] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-09T16:17:15.820] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-09T16:17:15.834] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-09T16:17:15.841] [INFO] home-server - serverId: 21 前来注册在serverId:  2

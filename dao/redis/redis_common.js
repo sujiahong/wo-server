@@ -5,7 +5,7 @@ var client = g_redisConn;
 
 var exp = module.exports;
 
-////////////
+////////////推荐码
 exp.setRecommendation = function(recommondation, str){
     client.set(recommondation, str);
 }
@@ -30,7 +30,7 @@ exp.addToRegisterTable = function(wxId, userId){
     _set();
 }
 
-exp.getRegisterUId = function(wxId, next){
+exp.getRegisterUserId = function(wxId, next){
     client.hget("REGISTER_USER", wxId, next);
 }
 

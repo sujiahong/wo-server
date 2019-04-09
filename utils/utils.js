@@ -77,6 +77,18 @@ utils.rand = function(num) {
 	return str;
 }
 
+utils.randFirstNotZero = function(num){
+	var n = Math.floor(Math.random() * 10);
+	if (n == 0){
+		return utils.randFirstNotZero(num);
+	}
+	var str = '' + n;
+	for (var i = 1; i < num; ++i) {
+		str += Math.floor(Math.random() * 10);
+	}
+	return str;
+}
+
 utils.encodeBase64 = function(content){
 	return new Buffer(content).toString('base64');
 }
