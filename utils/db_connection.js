@@ -36,7 +36,8 @@ dbc.mysqlConnect = function(dbName){
         port: config.MYSQL_PORT,
         user: config.MYSQL_USER,
         password: config.MYSQL_PASSWD,
-        database: dbName
+        database: dbName,
+        charset: "utf8mb4"
     });
     conn.connect(function(err){
         if (err) throw err;
@@ -52,7 +53,9 @@ dbc.mysqlPoolConnect = function(dbName){
         port: config.MYSQL_PORT,
         user: config.MYSQL_USER,
         password: config.MYSQL_PASSWD,
-        database: dbName
+        database: dbName,
+        charset: "utf8mb4",
+        debug: false
     });
     pool.on("enqueue", function(){
         logger.info("mysql 一个连接请求在排队");
@@ -65,15 +68,15 @@ dbc.mysqlPoolQuery = function(sql, next){
     g_mysqlPool.getConnection((err, conn)=>{
         if (err){
             logger.error(TAG, "mysql 获取连接出错：", err);
-            return next(err);
+            return next({code: 21});
         }
         conn.query(sql, (err, results, fields)=>{
             conn.release();
             if (err){
                 logger.error(TAG, "mysql 查询出错：sql: ", sql, err);
-                return next(err);
+                return next({code: 21});
             }
-            next(null, results, fields);
+            next({code: 0, results: results, fields: fields});
         });
     });
 }

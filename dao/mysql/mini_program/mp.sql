@@ -12,12 +12,15 @@ CREATE TABLE `mp_user` (
     `coins`         int                 DEFAULT "0" COMMENT "金币",
     `create_time`   bigint unsigned     NOT NULL COMMENT "创建时间",
     `login_time`    bigint unsigned     NOT NULL COMMENT "登录时间",
-    `cli_type`      char(8)             NOT NULL COMMENT "客户端类别",
-    `account_type`  char(8)             NOT NULL COMMENT "帐号类型",
+    `mini_id`       tinyint unsigned    NOT NULL COMMENT "小程序id",
+    `cli_type`      char(12)            NOT NULL COMMENT "客户端类别",
+    `account_type`  char(12)            NOT NULL COMMENT "帐号类型",
     `account`       varchar(64)         NOT NULL COMMENT "帐号",
-    `location`      varchar(64)         DEFAULT "" COMMENT "定位"
+    `location`      varchar(64)         DEFAULT "" COMMENT "定位",
+    `login_ip`      char(16)            DEFAULT "" COMMENT "登录IP",
+    `successive_sign` smallint          DEFAULT "0" COMMENT "连续签到",
     PRIMARY KEY (`userid`),
     UNIQUE KEY (`account`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 SET FOREIGN_KEY_CHECKS = 1;

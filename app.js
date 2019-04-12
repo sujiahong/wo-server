@@ -23,6 +23,10 @@ srvCluster.createCluster(cq.home_quantity, function(cluster){
 // }, 5000);
 
 //
-process.on("uncaughtException", (err)=>{
-    console.error("caught exception: ", err.stack);
-});
+
+// var modifyUserLoginTime = function(userId, next){
+//     var sql = "{0}".format();
+//     sql.Format(Date.now());
+//     console.log(sql);
+// }
+// modifyUserLoginTime()

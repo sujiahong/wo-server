@@ -46,10 +46,24 @@ module.exports = {
             ISUSED: false,
         },
         {
+            ID: 12,
+            NAME: "game-server-12",
+            IP: "192.168.10.34",
+            FOR_CLIENT_PORT: 8311,
+            ISUSED: false,
+        },
+        {
             ID: 21,
             NAME: "game-server-21",
             IP: "192.168.10.34",
             FOR_CLIENT_PORT: 8320,
+            ISUSED: false,
+        },
+        {
+            ID: 22,
+            NAME: "game-server-22",
+            IP: "192.168.10.34",
+            FOR_CLIENT_PORT: 8321,
             ISUSED: false,
         }
     ],

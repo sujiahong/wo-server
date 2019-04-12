@@ -6,7 +6,6 @@ const logger = g_serverData.logger;
 const assert = require("assert");
 const cps = require("child_process");
 const cq = require("../config/cluster_quantity.json");
-const errcode = require("../share/errcode");
 const homeManager = require("./models/home_manager");
 const network = require("../utils/network");
 const config = require("../share/config");
@@ -17,7 +16,7 @@ logger.info("连接 redis server， mysql server pid: ", process.pid);
 dbConn.redisConnect();
 //连接mysql
 dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
-const mainService = require("./service/main_service");
+const router = require("./router");
 
 var start = function(){
     g_serverData.homeManager = new homeManager();
@@ -32,26 +31,17 @@ var connectGate = function(){
         g_serverData.serverName = data.serverData.NAME;
         g_serverData.serverId = data.serverData.ID;
         logger.info("启动home server ！！！！ server pid: ", process.pid, data.serverData);
-        var recommendation;
+        g_serverData.recommendationAccountMap = {};
         cli.on("recommend", function(data){
             logger.info(TAG, "recommend: ", data);
-            recommendation = data.recommendation;
+            g_serverData.recommendationAccountMap[data.recommendation] = data.account;
         });
         ///启动express监听
         var options = {
             port: data.serverData.FOR_CLIENT_PORT,
         };
         var app = networkHttp.createExpress(options);
-        app.get("/login", function(req, res){
-            var query = req.query;
-            logger.info(TAG, "用户登录！！！", query);
-            if (query.recommendation != recommendation){
-                return res.send({code: errcode.RECOMMENDATION_ERR});
-            }
-            mainService.login(query, function(ret){
-                res.send(ret);
-            });
-        });
+        app.use("/", router);
         //启动game server
         listenGameServer();
         //fork
@@ -86,6 +76,14 @@ var forkProcess = function(){
             cps.fork("./game-server/start", [gameList[i].ID, gameList[i].NAME]);
     }
 }
+
+process.on("exit", function(){
+    logger.warn(TAG, "exit 事件", process.pid);
+});
+
+// process.on("SIGINT", function(){
+//     logger.warn(TAG, "sigint 事件", process.pid);
+// });
 
 process.on("uncaughtException", (err)=>{
     console.error("caught exception: ", err.stack);

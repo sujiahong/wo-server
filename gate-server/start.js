@@ -73,7 +73,22 @@ var requestRouteHandler = function(req, next){
         mainService.validateUser(queryString.parse(urlData.query), next);
     }else if (urlData.pathname == "/checkRecommendation"){
         mainService.checkRecommendation(queryString.parse(urlData.query), next);
+    }else{
+        next({code: errcode.ROUTE_ERR});
     }
 }
+
+process.on("exit", function(){
+    logger.warn(TAG, "exit 事件", process.pid);
+});
+
+// process.on("SIGINT", function(){
+//     logger.warn(TAG, "sigint 事件", process.pid);
+// });
+
+process.on("uncaughtException", (err)=>{
+    console.error("caught exception: ", err.stack);
+});
+
 
 exports.start = start;

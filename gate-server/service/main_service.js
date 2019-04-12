@@ -13,15 +13,17 @@ service.validateUser = function(vData, next){
     case constant.ACCOUNT_TYPE.wx:
         httpReq.loginWX(vData, function(ret){
             var toData = {};
-            toData.code = ret.code;
-            if (ret.code == errcode.OK){
+            toData.code = ret.errcode;
+            if (ret.errcode == errcode.OK){
+                var openid = ret.openid;
+                toData.account = openid;
                 var homeServerData = recommondHomeServer(g_serverData.homeServerList);
                 toData.ip = homeServerData.IP;
                 toData.port = homeServerData.FOR_CLIENT_PORT;
-                var str = genRecommendationCode(vData, homeServerData.NAME);
+                var str = genRecommendationCode(vData.accountType, homeServerData.NAME, openid);
                 toData.recommendation = str;
-                redis.setRecommendation(str, ret.openid + "|" + ret.session_key);
-                notifyHomeServerRecommendation(homeServerData.NAME, str);
+                redis.setRecommendation(str, openid);
+                notifyHomeServerRecommendation(homeServerData.NAME, str, openid);
             }
             next(toData);
         });
@@ -32,10 +34,10 @@ service.validateUser = function(vData, next){
         var homeServerData = recommondHomeServer(g_serverData.homeServerList);
         toData.ip = homeServerData.IP;
         toData.port = homeServerData.FOR_CLIENT_PORT;
-        var str = genRecommendationCode(vData, homeServerData.NAME);
+        var str = genRecommendationCode(constant.ACCOUNT_TYPE.tel, homeServerData.NAME, "3838");
         toData.recommendation = str;
         redis.setRecommendation(str, "333");
-        notifyHomeServerRecommendation(homeServerData.NAME, str);
+        notifyHomeServerRecommendation(homeServerData.NAME, str, "3838");
         next(toData);
         break;
     case constant.ACCOUNT_TYPE.wb:
@@ -47,9 +49,9 @@ service.validateUser = function(vData, next){
     }
 }
 
-var genRecommendationCode = function(vData, homeServerName){
+var genRecommendationCode = function(accountType, homeServerName, account){
     var val = Math.floor(Date.now() * Math.random()); 
-    var str = g_serverData.serverName + "|" + homeServerName + "|" + vData.cliType +  "|" + vData.accountType + "|" + val;
+    var str = g_serverData.serverName + "|" + homeServerName +  "|" + accountType + "|" + account + "|" + val;
     return str;
 }
 
@@ -62,9 +64,9 @@ var recommondHomeServer = function(serverList){
     return serverList[idx];
 }
 
-var notifyHomeServerRecommendation = function(homeName, str){
+var notifyHomeServerRecommendation = function(homeName, str, account){
     var socketId = g_serverData.homeNameSocketIdMap[homeName];
-    g_serverData.gateServer.send(socketId, {route: "recommend", recommendation: str});
+    g_serverData.gateServer.send(socketId, {route: "recommend", recommendation: str, account: account});
 }
 
 service.checkRecommendation = function(vData, next){

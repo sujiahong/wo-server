@@ -5,7 +5,9 @@ module.exports = {
     MINIINFO: {
         1: {
             appid: "wxf603b7180fa23a8e",
-            secret: "4bc8f36fdf8593dcb2333b95a956b1c2",
+            secret: "4577f635500acfe8f9eda34cdc0606f5",
+            times: 3,
+            consumption: [100, 200, 400],
         },
     },
     CLI_TYPE: {

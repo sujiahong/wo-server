@@ -13,7 +13,7 @@ req.loginWX = function(data, next){
     var queryData = {
         appid: constant.MINIINFO[data.MiniId].appid,
         secret: constant.MINIINFO[data.MiniId].secret,
-        js_code: data.code,
+        js_code: JSON.parse(data.accountData).code,
         grant_type: "authorization_code"
     };
     url = url + queryString.stringify(queryData);
@@ -24,7 +24,10 @@ req.loginWX = function(data, next){
             str += chunk;
         }).on("end", function(){
             console.log(TAG, "end end", str);
-            next({code: errcode.OK, data: JSON.parse(str)});
+            var data = JSON.parse(str);
+            if (!data.errcode)
+                data.errcode = 0;
+            next(data);
         });
     });
     rt.on("error", function(e){

@@ -1,5 +1,6 @@
 "use_strict"
 const TAG = "table_user.js";
+const util = require("util");
 const dbConn = require("../../../utils/db_connection");
 
 exports.createUserTable = function(name, next){
@@ -9,22 +10,29 @@ exports.createUserTable = function(name, next){
 
 exports.createUser = function(userData, next){
     var time = Date.now();
-    var sql = "INSERT INTO mp_user(userid,nickname,sex,icon,create_time,login_time,cli_type,account_type,account) \
-    VALUES({0},{1},{2},{3},{4},{5},{6},{7},{8})";
-    sql = sql.format(userData.userId, userData.nickname, userData.sex, 
-        userData.icon, time, time, userData.cliType, userData.accountType, userData.account);
+    var sql = "INSERT INTO mp_user(userid,nickname,sex,icon,coins,create_time,login_time,mini_id,cli_type,account_type,account,login_ip) \
+    VALUES(%s,'%s',%d,'%s',%d,%d,%d,%d,'%s','%s','%s','%s')";
+    sql = util.format(sql, userData.userId, userData.nickname, userData.sex, userData.icon, userData.coins,
+        time, time, userData.mini_id, userData.cli_type, userData.account_type, userData.account, userData.ip);
     dbConn.mysqlPoolQuery(sql, next);
 }
 
 exports.modifyUserInfo = function(userId, userInfo, next){
-    var sql = "UPDATE mp_user SET nickname={0}, sex={1}, icon={2}, login_time={3}  WHERE userid = " + userId;
-    sql.format(userInfo.nickname, userInfo.sex, userInfo.icon, Date.now());
+    var sql = "UPDATE mp_user SET nickname='%s', sex=%d, icon='%s', login_ip='%s', login_time=%d  WHERE userid = " + userId;
+    sql = util.format(sql, decodeURIComponent(userInfo.nickName), userInfo.gender, 
+    decodeURIComponent(userInfo.avatarUrl), userInfo.ip, Date.now());
     dbConn.mysqlPoolQuery(sql, next);
 }
 
-exports.modifyUserLoginTime = function(userId, next){
-    var sql = "UPDATE mp_user SET login_time={0}  WHERE userid = " + userId;
-    sql.format(Date.now());
+exports.modifyUserLogin = function(userId, ip, next){
+    var sql = "UPDATE mp_user SET login_ip='%s', login_time=%d  WHERE userid = " + userId;
+    sql = util.format(sql, ip, Date.now());
+    dbConn.mysqlPoolQuery(sql, next);
+}
+
+exports.modifyUserCoins = function(userId, coins, next){
+    var sql = "UPDATE mp_user SET coins=%d  WHERE userid = " + userId;
+    sql = util.format(sql, coins);
     dbConn.mysqlPoolQuery(sql, next);
 }
 

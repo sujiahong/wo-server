@@ -42,6 +42,14 @@ var listenConnection = function(){
 
 }
 
+process.on("exit", function(){
+    logger.warn(TAG, "exit 事件", process.pid);
+});
+
+// process.on("SIGINT", function(){
+//     logger.warn(TAG, "sigint 事件", process.pid);
+// });
+
 process.on("uncaughtException", (err)=>{
     console.error("caught exception: ", err.stack);
 });
