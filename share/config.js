@@ -2,6 +2,7 @@ module.exports = {
     GATE_NAME: "gate-server",
     GATE_SOCKET_PORT: 9090,
     GATE_HTTP_PORT: 8090,
+    GATE_IP: "192.168.10.34",
 
 
     REDIS_IP: "192.168.10.34",

@@ -22,13 +22,11 @@ router.get("/login", function(req, res){
     query.ip = ip;
     logger.info(TAG, "用户登录！！！", query);
     var recommendation = query.recommendation;
-    if (g_serverData.recommendationAccountMap[recommendation] != query.account){
-        redis.getRecommendation(recommendation, function(err, account){
-            if (err){
-                return res.send({code: errcode.REDIS_DATABASE_ERR});
-            }
-            if (account){
-                g_serverData.recommendationAccountMap[recommendation] = account;
+    var recommendationAccountMap = g_serverData.homeManager.recommendationAccountMap;
+    if (recommendationAccountMap[recommendation] != query.account){
+        redis.getRecommendation(recommendation, function(ret){
+            if (ret.account){
+                recommendationAccountMap[recommendation] = ret.account;
                 mainService.login(query, function(ret){
                     res.send(ret);
                 });
@@ -41,6 +39,17 @@ router.get("/login", function(req, res){
             res.send(ret);
         });
     }
+});
+
+router.get("/logout", function(req, res){
+    var userId = req.query.userId;
+    var user = g_serverData.homeManager.getUserById(userId);
+    if (!user){
+        return res.send({code: errcode.LOGIN_INVALID});
+    }
+    mainService.logout(userId, function(ret){
+        res.send(ret);
+    });
 });
 
 router.get("/luckTest", function(req, res){

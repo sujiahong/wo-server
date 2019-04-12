@@ -25,16 +25,16 @@ var start = function(){
 }
 
 var connectGate = function(){
+    var homeManager = g_serverData.homeManager;
     var cli = new network.Client({port: config.GATE_SOCKET_PORT});
     cli.connect();
     cli.request({route: "register"}, function(data){
-        g_serverData.serverName = data.serverData.NAME;
-        g_serverData.serverId = data.serverData.ID;
+        homeManager.serverName = data.serverData.NAME;
+        homeManager.serverId = data.serverData.ID;
         logger.info("启动home server ！！！！ server pid: ", process.pid, data.serverData);
-        g_serverData.recommendationAccountMap = {};
         cli.on("recommend", function(data){
             logger.info(TAG, "recommend: ", data);
-            g_serverData.recommendationAccountMap[data.recommendation] = data.account;
+            homeManager.recommendationAccountMap[data.recommendation] = data.account;
         });
         ///启动express监听
         var options = {
@@ -42,6 +42,9 @@ var connectGate = function(){
         };
         var app = networkHttp.createExpress(options);
         app.use("/", router);
+        app.use(function(req, res){
+            res.send({code: 6});
+        });
         //启动game server
         listenGameServer();
         //fork
@@ -50,12 +53,13 @@ var connectGate = function(){
 }
 
 var listenGameServer = function(){
-    var svr = new network.Server({port: getLogicPortbyId(g_serverData.serverId)});
+    var serverId = g_serverData.homeManager.serverId;
+    var svr = new network.Server({port: getLogicPortbyId(serverId)});
     svr.createServer(function(socketId){});
     svr.recv(function(socketId, data){
         if (data.route == "register"){
-            logger.info("serverId:", data.serverId, "前来注册在serverId: ", g_serverData.serverId);
-            svr.send(socketId, {route: "register", msg: "register success!", serverId: g_serverData.serverId});
+            logger.info("serverId:", data.serverId, "前来注册在serverId: ", serverId);
+            svr.send(socketId, {route: "register", msg: "register success!", serverId: serverId});
         }
     });
 }
@@ -72,7 +76,7 @@ var forkProcess = function(){
     var num = cq.game_quantity;
     var gameList = config.GAEM_SERVER_LIST;
     for (var i = 0; i < num; ++i){
-        if (g_serverData.serverId == Math.floor(gameList[i].ID/10))
+        if (g_serverData.homeManager.serverId == Math.floor(gameList[i].ID/10))
             cps.fork("./game-server/start", [gameList[i].ID, gameList[i].NAME]);
     }
 }

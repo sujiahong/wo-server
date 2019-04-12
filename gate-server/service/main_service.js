@@ -70,5 +70,11 @@ var notifyHomeServerRecommendation = function(homeName, str, account){
 }
 
 service.checkRecommendation = function(vData, next){
-
+    redis.getRecommendation(vData.recommendation, function(ret){
+        if (ret.account){
+            next({code: errcode.OK});
+        }else{
+            next({code: errcode.RECOMMENDATION_NOT_EXIST});
+        }
+    });
 }

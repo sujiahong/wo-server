@@ -19,14 +19,19 @@ exports.createUser = function(userData, next){
 
 exports.modifyUserInfo = function(userId, userInfo, next){
     var sql = "UPDATE mp_user SET nickname='%s', sex=%d, icon='%s', login_ip='%s', login_time=%d  WHERE userid = " + userId;
-    sql = util.format(sql, decodeURIComponent(userInfo.nickName), userInfo.gender, 
-    decodeURIComponent(userInfo.avatarUrl), userInfo.ip, Date.now());
+    sql = util.format(sql, userInfo.nickName, userInfo.gender, userInfo.avatarUrl, userInfo.ip, Date.now());
     dbConn.mysqlPoolQuery(sql, next);
 }
 
-exports.modifyUserLogin = function(userId, ip, next){
+exports.modifyUserLoginIP = function(userId, ip, next){
     var sql = "UPDATE mp_user SET login_ip='%s', login_time=%d  WHERE userid = " + userId;
     sql = util.format(sql, ip, Date.now());
+    dbConn.mysqlPoolQuery(sql, next);
+}
+
+exports.modifyUserLoginTime = function(userId, next){
+    var sql = "UPDATE mp_user SET login_time=%d  WHERE userid = " + userId;
+    sql = util.format(sql, Date.now());
     dbConn.mysqlPoolQuery(sql, next);
 }
 

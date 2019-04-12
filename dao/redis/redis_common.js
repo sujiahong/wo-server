@@ -1,6 +1,6 @@
 "use strict"
 const TAG = "redis_common.js";
-
+const constant = require("../../share/constant");
 var client = g_redisConn;
 
 var exp = module.exports;
@@ -8,7 +8,7 @@ var exp = module.exports;
 ////////////推荐码
 exp.setRecommendation = function(recommondation, str){
     client.set(recommondation, str);
-    client.pexpire(recommondation, 60*1000);
+    client.pexpire(recommondation, constant.LOGIN_TIME);
 }
 
 exp.getRecommendation = function(recommondation, next){
@@ -17,7 +17,7 @@ exp.getRecommendation = function(recommondation, next){
             if (err){
                 _get();
             }
-            next(null, str);
+            next({code: 0, account: str});
         });
     }
     _get();

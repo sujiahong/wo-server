@@ -22,4 +22,5 @@ module.exports = {
         wb: "weibo",
         mail: "mail",
     },
+    LOGIN_TIME: 3600000,
 };

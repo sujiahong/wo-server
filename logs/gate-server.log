@@ -8032,3 +8032,101 @@
 [2019-04-12T16:13:53.395] [INFO] gate-server - gate-server/main_ervice.js { accountData: '{"code":"061BV0wK081B182D9zuK0S0BvK0BV0wI"}',
   MiniId: '1',
   accountType: 'wechat' }
+[2019-04-12T19:05:11.023] [INFO] gate-server - 连接数据库
+[2019-04-12T19:05:11.026] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T19:05:11.029] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T19:05:11.049] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-12T19:17:44.895] [INFO] gate-server - 连接数据库
+[2019-04-12T19:17:44.899] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T19:17:44.901] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T19:17:44.915] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-12T19:44:13.594] [INFO] gate-server - 连接数据库
+[2019-04-12T19:44:13.598] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T19:44:13.600] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T19:44:13.618] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-12T20:02:10.145] [INFO] gate-server - 连接数据库
+[2019-04-12T20:02:10.148] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T20:02:10.151] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T20:02:10.171] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-12T20:02:22.689] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountData=%7B%22code%22%3A%22081oULC30cd4rK1zfRE30O3RC30oULCg%22%7D&MiniId=1&accountType=wechat
+[2019-04-12T20:02:22.690] [INFO] gate-server - gate-server/main_ervice.js { accountData: '{"code":"081oULC30cd4rK1zfRE30O3RC30oULCg"}',
+  MiniId: '1',
+  accountType: 'wechat' }
+[2019-04-12T20:03:27.593] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountData=%7B%22code%22%3A%22001kWB0E1l3H860yHxYD1bTN0E1kWB0c%22%7D&MiniId=1&accountType=wechat
+[2019-04-12T20:03:27.593] [INFO] gate-server - gate-server/main_ervice.js { accountData: '{"code":"001kWB0E1l3H860yHxYD1bTN0E1kWB0c"}',
+  MiniId: '1',
+  accountType: 'wechat' }
+[2019-04-12T20:06:07.394] [INFO] gate-server - 连接数据库
+[2019-04-12T20:06:07.398] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T20:06:07.400] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T20:06:07.416] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }
+[2019-04-12T20:06:23.683] [INFO] gate-server - 连接数据库
+[2019-04-12T20:06:23.687] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-12T20:06:23.690] [INFO] gate-server - 启动gate server for home！！！, home server list:  [ { ID: 1,
+    NAME: 'home-server-1',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9100,
+    FOR_CLIENT_PORT: 8110,
+    ISUSED: false },
+  { ID: 2,
+    NAME: 'home-server-2',
+    IP: '192.168.10.34',
+    FOR_LOGIC_PORT: 9120,
+    FOR_CLIENT_PORT: 8120,
+    ISUSED: false } ]
+[2019-04-12T20:06:23.710] [INFO] gate-server - network_http.js http server listen:  { port: 8090 }

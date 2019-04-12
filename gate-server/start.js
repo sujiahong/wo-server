@@ -57,9 +57,6 @@ var listenHttpClient = function(){
         if (statusCode !== 200){
             return res.end("fail");
         }
-        const ip = res.socket.remoteAddress;
-        const port = res.socket.remotePort;
-        console.log(TAG, "ip-port-url: ", ip, port, req.url);
         requestRouteHandler(req, (ret)=>{
             res.end(JSON.stringify(ret));
         });
@@ -70,6 +67,7 @@ var listenHttpClient = function(){
 var requestRouteHandler = function(req, next){
     var urlData = URL.parse(req.url);
     if (urlData.pathname == "/validateUser"){
+        logger.info(TAG, "验证用户身份，获取推荐码", urlData.query);
         mainService.validateUser(queryString.parse(urlData.query), next);
     }else if (urlData.pathname == "/checkRecommendation"){
         mainService.checkRecommendation(queryString.parse(urlData.query), next);

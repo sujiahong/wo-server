@@ -3,7 +3,9 @@ const TAG = "gameserver-start.js";
 global.g_serverData = {};
 g_serverData.logger = require("../utils/log_launch")("game-server");
 const logger = g_serverData.logger;
+const GameManager = require("./models/game_manager");
 const network = require("../utils/network");
+const networkWS = require("../utils/network_ws");
 const config = require("../share/config");
 const dbConn = require("../utils/db_connection");
 
@@ -11,8 +13,9 @@ const dbConn = require("../utils/db_connection");
 logger.debug(TAG, "启动 processid: ", process.pid, process.execArgv, process.argv);
 
 var start = function(){
-    g_serverData.serverId = process.argv[2];
-    g_serverData.serverName = process.argv[3];
+    g_serverData.manager = new GameManager();
+    g_serverData.manager.serverId = process.argv[2];
+    g_serverData.manager.serverName = process.argv[3];
     logger.info("连接 redis server， mysql server");
     //连接redis
     dbConn.redisConnect();
@@ -26,20 +29,34 @@ var start = function(){
 }
 
 var connectHome = function(){
-    g_serverData.homeIdClientMap = {};
     var homeList = config.HOME_SERVER_LIST;
     for (var i = 0; i < homeList.length; ++i){
         var cli = new network.Client({port: homeList[i].FOR_LOGIC_PORT});
         cli.connect();
-        cli.request({route: "register", serverId: g_serverData.serverId}, function(data){
+        cli.request({route: "register", serverId: g_serverData.manager.serverId}, function(data){
             logger.info("注册game server ！！！！ server pid: ", process.pid, data.msg, data.serverId);
         });
-        g_serverData.homeIdClientMap[homeList[i].ID] = cli; 
+        g_serverData.manager.homeIdClientMap[homeList[i].ID] = cli; 
     }
 }
 
 var listenConnection = function(){
+    var addr = getForClientListenAddress();
 
+}
+
+var getForClientListenAddress = function(){
+    var addr = {};
+    var serverId = g_serverData.manager.serverId;
+    var gameServerList = config.GAEM_SERVER_LIST;
+    for (var i = 0; i < gameServerList.length; ++i){
+        if (gameServerList[i].ID == serverId){
+            addr.port = gameServerList[i].FOR_CLIENT_PORT;
+            addr.ip = gameServerList[i].IP;
+            return addr;
+        }
+    }
+    return addr;
 }
 
 process.on("exit", function(){
