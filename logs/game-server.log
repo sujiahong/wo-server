@@ -1,0 +1,112 @@
+[2019-04-13T14:02:45.862] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:02:45.867] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:45.905] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:45.907] [INFO] game-server - gameserver-start.js listenConnection addr:  { port: 8310, ip: '192.168.10.34' }
+[2019-04-13T14:02:45.940] [INFO] game-server - 注册game server ！！！！ server pid:  13636 register success! 1
+[2019-04-13T14:02:45.941] [INFO] game-server - 注册game server ！！！！ server pid:  13636 register success! 2
+[2019-04-13T14:02:45.886] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:02:45.891] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:45.958] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:45.961] [INFO] game-server - gameserver-start.js listenConnection addr:  { port: 8311, ip: '192.168.10.34' }
+[2019-04-13T14:02:45.978] [INFO] game-server - 注册game server ！！！！ server pid:  13642 register success! 2
+[2019-04-13T14:02:45.979] [INFO] game-server - 注册game server ！！！！ server pid:  13642 register success! 1
+[2019-04-13T14:02:45.907] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:02:45.929] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:45.987] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:45.990] [INFO] game-server - gameserver-start.js listenConnection addr:  { port: 8320, ip: '192.168.10.34' }
+[2019-04-13T14:02:46.003] [INFO] game-server - 注册game server ！！！！ server pid:  13643 register success! 1
+[2019-04-13T14:02:46.004] [INFO] game-server - 注册game server ！！！！ server pid:  13643 register success! 2
+[2019-04-13T14:02:45.993] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:02:46.007] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:46.055] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:46.057] [INFO] game-server - gameserver-start.js listenConnection addr:  { port: 8321, ip: '192.168.10.34' }
+[2019-04-13T14:02:46.069] [INFO] game-server - 注册game server ！！！！ server pid:  13649 register success! 1
+[2019-04-13T14:02:46.069] [INFO] game-server - 注册game server ！！！！ server pid:  13649 register success! 2
+[2019-04-13T14:13:19.147] [DEBUG] game-server - gameserver-start.js 启动 processid:  14963 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '11',
+  'game-server-11' ]
+[2019-04-13T14:13:19.175] [DEBUG] game-server - gameserver-start.js 启动 processid:  14976 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '22',
+  'game-server-22' ]
+[2019-04-13T14:13:19.151] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:13:19.179] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:13:19.154] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:19.182] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:19.226] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:19.228] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8321, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.232] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8321, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.255] [INFO] game-server - 注册game server ！！！！ server pid:  14976 register success! 1
+[2019-04-13T14:13:19.257] [INFO] game-server - 注册game server ！！！！ server pid:  14976 register success! 2
+[2019-04-13T14:13:19.158] [DEBUG] game-server - gameserver-start.js 启动 processid:  14970 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '21',
+  'game-server-21' ]
+[2019-04-13T14:13:19.162] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:13:19.206] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:19.213] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8310, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.227] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8310, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.263] [INFO] game-server - 注册game server ！！！！ server pid:  14963 register success! 1
+[2019-04-13T14:13:19.263] [INFO] game-server - 注册game server ！！！！ server pid:  14963 register success! 2
+[2019-04-13T14:13:19.187] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:19.247] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:19.249] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8320, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.258] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8320, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.267] [INFO] game-server - 注册game server ！！！！ server pid:  14970 register success! 2
+[2019-04-13T14:13:19.268] [INFO] game-server - 注册game server ！！！！ server pid:  14970 register success! 1
+[2019-04-13T14:13:19.199] [DEBUG] game-server - gameserver-start.js 启动 processid:  14964 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '12',
+  'game-server-12' ]
+[2019-04-13T14:13:19.210] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T14:13:19.214] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:19.283] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:19.285] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8311, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.290] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8311, ip: '192.168.10.34' }
+[2019-04-13T14:13:19.299] [INFO] game-server - 注册game server ！！！！ server pid:  14964 register success! 1
+[2019-04-13T14:13:19.300] [INFO] game-server - 注册game server ！！！！ server pid:  14964 register success! 2
+[2019-04-13T15:39:49.356] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:49.394] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:49.396] [DEBUG] game-server - gameserver-start.js 启动 processid:  25078 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '11',
+  'game-server-11' ]
+[2019-04-13T15:39:49.371] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:49.397] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T15:39:49.399] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8310, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.411] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:49.403] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8310, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.425] [INFO] game-server - 注册game server ！！！！ server pid:  25078 register success! 1
+[2019-04-13T15:39:49.427] [INFO] game-server - 注册game server ！！！！ server pid:  25078 register success! 2
+[2019-04-13T15:39:49.413] [DEBUG] game-server - gameserver-start.js 启动 processid:  25091 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '21',
+  'game-server-21' ]
+[2019-04-13T15:39:49.415] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T15:39:49.418] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8320, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.423] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8320, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.432] [INFO] game-server - 注册game server ！！！！ server pid:  25091 register success! 1
+[2019-04-13T15:39:49.433] [INFO] game-server - 注册game server ！！！！ server pid:  25091 register success! 2
+[2019-04-13T15:39:49.496] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:49.537] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:49.539] [DEBUG] game-server - gameserver-start.js 启动 processid:  25080 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '12',
+  'game-server-12' ]
+[2019-04-13T15:39:49.540] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T15:39:49.542] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8311, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.546] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8311, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.558] [INFO] game-server - 注册game server ！！！！ server pid:  25080 register success! 1
+[2019-04-13T15:39:49.558] [INFO] game-server - 注册game server ！！！！ server pid:  25080 register success! 2
+[2019-04-13T15:39:49.534] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:49.578] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:49.579] [DEBUG] game-server - gameserver-start.js 启动 processid:  25092 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '22',
+  'game-server-22' ]
+[2019-04-13T15:39:49.581] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T15:39:49.582] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8321, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.586] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8321, ip: '192.168.10.34' }
+[2019-04-13T15:39:49.598] [INFO] game-server - 注册game server ！！！！ server pid:  25092 register success! 1
+[2019-04-13T15:39:49.598] [INFO] game-server - 注册game server ！！！！ server pid:  25092 register success! 2

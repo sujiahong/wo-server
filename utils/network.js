@@ -4,6 +4,7 @@ const net = require("net");
 const packet = require("../utils/packet");
 const event = require("events");
 const util = require("util");
+const logger = g_serverData.logger;
 
 var nw = module.exports;
 
@@ -178,7 +179,7 @@ Server.prototype.createServer = function(next){
         next ? next(socket.id) : null;
     });
     server.listen(this.options, ()=>{
-        console.log(TAG, "socket server listen start!!");
+        logger.debug(TAG, "socket server listen start!!", this.options);
     });
 }
 
@@ -201,6 +202,7 @@ Server.prototype.recv = function(next){
             }
             self.pong(socket, data.time);
         }else{
+            self.emit(data.route, socket.id, data);
             next(socket.id, data);
         }
     });

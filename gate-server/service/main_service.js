@@ -66,7 +66,7 @@ var recommondHomeServer = function(serverList){
 
 var notifyHomeServerRecommendation = function(homeName, str, account){
     var socketId = g_serverData.homeNameSocketIdMap[homeName];
-    g_serverData.gateServer.send(socketId, {route: "recommend", recommendation: str, account: account});
+    g_serverData.forHomeServer.send(socketId, {route: "recommend", recommendation: str, account: account});
 }
 
 service.checkRecommendation = function(vData, next){

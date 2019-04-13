@@ -43,7 +43,7 @@ var start = function(){
             }
         }
     });
-    g_serverData.gateServer = svr;
+    g_serverData.forHomeServer = svr;
     ///启动http server
     listenHttpClient();
 }

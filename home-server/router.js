@@ -4,6 +4,7 @@ const express = require("express");
 const router = express.Router();
 const errcode = require("../share/errcode");
 const mainService = require("./service/main_service");
+const roomService = require("./service/room_service");
 const redis = require("../dao/redis/redis_common");
 const logger = g_serverData.logger;
 
@@ -92,6 +93,31 @@ router.get("/shareSignInSuccess", function(req, res){
         return res.send({code: errcode.LOGIN_INVALID});
     }
     mainService.shareSignInSuccess(user, req.query.coin, function(ret){
+        res.send(ret);
+    });
+});
+
+
+///////////////////////////game//////////////////////////////
+
+router.get("/createRoom", function(req, res){
+    var userId = req.query.userId;
+    var user = g_serverData.homeManager.getUserById(userId);
+    if (!user){
+        return res.send({code: errcode.LOGIN_INVALID});
+    }
+    roomService.createRoom(user, req.query.roomInfo, function(ret){
+        res.send(ret);
+    });
+});
+
+router.get("/joinRoom", function(req, res){
+    var userId = req.query.userId;
+    var user = g_serverData.homeManager.getUserById(userId);
+    if (!user){
+        return res.send({code: errcode.LOGIN_INVALID});
+    }
+    roomService.joinRoom(user, req.query.roomId, function(ret){
         res.send(ret);
     });
 });

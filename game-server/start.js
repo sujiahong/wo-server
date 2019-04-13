@@ -8,8 +8,11 @@ const network = require("../utils/network");
 const networkWS = require("../utils/network_ws");
 const config = require("../share/config");
 const dbConn = require("../utils/db_connection");
-
-
+//连接redis
+dbConn.redisConnect();
+//连接mysql
+dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
+const mainRouter = require("./router/main_router");
 logger.debug(TAG, "启动 processid: ", process.pid, process.execArgv, process.argv);
 
 var start = function(){
@@ -17,12 +20,7 @@ var start = function(){
     g_serverData.manager.serverId = process.argv[2];
     g_serverData.manager.serverName = process.argv[3];
     logger.info("连接 redis server， mysql server");
-    //连接redis
-    dbConn.redisConnect();
-    //连接mysql
-    dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
     //连接home,完成register
-    
     connectHome();
     ////监听game user connection;
     listenConnection();
@@ -36,13 +34,21 @@ var connectHome = function(){
         cli.request({route: "register", serverId: g_serverData.manager.serverId}, function(data){
             logger.info("注册game server ！！！！ server pid: ", process.pid, data.msg, data.serverId);
         });
+        cli.on("createRoom", function(data){
+            mainRouter.createRoom(cli, data);
+        });
         g_serverData.manager.homeIdClientMap[homeList[i].ID] = cli; 
     }
 }
 
 var listenConnection = function(){
     var addr = getForClientListenAddress();
-
+    logger.warn(TAG, "listenConnection addr: ", addr);
+    var svr = new network.Server(addr);
+    svr.createServer();
+    svr.recv(function(socketId, data){});
+    mainRouter.listen(svr);
+    g_serverData.manager.forClientServer = svr;
 }
 
 var getForClientListenAddress = function(){

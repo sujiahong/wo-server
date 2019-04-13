@@ -5,7 +5,7 @@ var client = g_redisConn;
 
 var exp = module.exports;
 
-////////////推荐码
+///////////////////推荐码/////////////////////////////
 exp.setRecommendation = function(recommondation, str){
     client.set(recommondation, str);
     client.pexpire(recommondation, constant.LOGIN_TIME);
@@ -35,11 +35,11 @@ exp.getRecommendationTTL = function(recommondation, next){
     _get();
 }
 
-///////////////注册用户表/////////////////
+/////////////////////////注册用户表/////////////////////////
 exp.addToRegisterTable = function(wxId, userId){
     var _set = function(){
         client.hset("REGISTER_USER", wxId, userId, function(err, reply){
-            if (err || reply != 1){
+            if (err || reply < 0){
                 return _set();
             }
         });
@@ -59,4 +59,50 @@ exp.getRegisterUserId = function(wxId, next){
 
 exp.isHaveRegisted = function(wxId, next){
     client.hexists("REGISTER_USER", wxId, next);
+}
+
+/////////////////////////房间id玩法/////////////////////////
+exp.setRoomIdToPlay = function(roomId, play){
+    var _set = function(){
+        redis.hset("ROOMID_ROOMPLAY", roomId, play, (err, reply)=>{
+            if (err || reply < 0){
+                return _set();
+            }
+        });
+    }
+    _set();
+}
+
+exp.getRoomIdToPlay = function(roomId, next){
+	redis.hget("ROOMID_ROOMPLAY", roomId, next);
+}
+
+exp.delRoomIdToPlay = function(roomId, next){
+    var count = 0 ;
+    var _del = function(){
+        redis.hdel("ROOMID_ROOMPLAY", roomId, (err, reply)=>{
+            console.log(TAG, "delRoomIdToPlay ", err, reply);
+            if (err || reply != 1){
+                count ++;
+                if (count < 10)
+                    return _del();
+            }
+            next ? next() : null;
+        });
+    }
+    _del();
+}
+
+exp.existRoomId = function(roomId, next){
+	redis.hexists("ROOMID_ROOMPLAY", roomId, function(err, ret){
+        if (err){
+            logger.error(TAG, "exp.existRoomId error: ", err);
+            return next({code: 20});
+        }
+        next({code: 0, is: (ret == 1)})
+    });
+}
+
+exp.clearRoomIdToPlay = function(){
+	redis.del("ROOMID_ROOMPLAY");
 }

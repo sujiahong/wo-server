@@ -10,6 +10,10 @@
         "home-server": {
             "type": "file",
             "filename": "./logs/home-server.log"
+        },
+        "game-server":{
+            "type": "file",
+            "filename":"./logs/game-server.log" 
         }
     },
     "categories" :{
@@ -19,11 +23,15 @@
         },
         "gate-server": {
             "appenders": ["gate-server", "out"],
-            "level": "info"
+            "level": "all"
         },
         "home-server": {
             "appenders": ["home-server", "out"],
-            "level": "info"
+            "level": "all"
+        },
+        "game-server": {
+            "appenders": ["game-server", "out"],
+            "level": "all"
         }
     },
     "replaceConsole": true

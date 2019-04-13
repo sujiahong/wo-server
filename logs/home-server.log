@@ -27298,3 +27298,158 @@
 [2019-04-12T21:01:55.352] [INFO] home-server - serverId: 11 前来注册在serverId:  2
 [2019-04-12T21:01:55.366] [INFO] home-server - serverId: 22 前来注册在serverId:  1
 [2019-04-12T21:01:55.366] [INFO] home-server - serverId: 22 前来注册在serverId:  2
+[2019-04-13T09:40:24.146] [INFO] home-server - router.js 用户登录！！！ { accountData: '{"avatarUrl":"https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83epz1ibwQJxXuAGTzxdnmF48icYzouL3H2IutPPz4DWSc4Sicbib1SEibw3BJwaHLw4O4SgVQsmz1o0owEA%2F132","gender":2,"nickName":"%E5%B0%8F%F0%9F%8C%9F%E7%8C%AA%E4%BA%8C%E5%8F%B7"}',
+  cliType: 'mini_program',
+  MiniId: '1',
+  recommendation: 'gate-server-1|home-server-2|wechat|oEsjD5KD7n2x0b9psA8kK8HgtKSM|666068043034',
+  accountType: 'wechat',
+  account: 'oEsjD5KD7n2x0b9psA8kK8HgtKSM',
+  ip: '192.168.10.148' }
+[2019-04-13T13:54:41.907] [INFO] home-server - 连接 redis server， mysql server pid:  12620
+[2019-04-13T13:54:41.908] [INFO] home-server - 连接 redis server， mysql server pid:  12619
+[2019-04-13T13:54:41.911] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T13:54:41.911] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T13:54:42.368] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T13:54:42.368] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T13:54:42.430] [INFO] home-server - 启动home server ！！！！ server pid:  12620 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T13:54:42.430] [INFO] home-server - 启动home server ！！！！ server pid:  12619 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T13:54:42.448] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-13T13:54:42.459] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-13T13:54:42.922] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-13T13:54:42.925] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-13T13:54:42.926] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-13T13:54:42.927] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-13T13:54:42.963] [INFO] home-server - serverId: 12 前来注册在serverId:  1
+[2019-04-13T13:54:42.965] [INFO] home-server - serverId: 22 前来注册在serverId:  1
+[2019-04-13T13:54:42.964] [INFO] home-server - serverId: 12 前来注册在serverId:  2
+[2019-04-13T13:54:42.966] [INFO] home-server - serverId: 22 前来注册在serverId:  2
+[2019-04-13T14:02:45.417] [INFO] home-server - 连接 redis server， mysql server pid:  13615
+[2019-04-13T14:02:45.421] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:45.423] [INFO] home-server - 连接 redis server， mysql server pid:  13621
+[2019-04-13T14:02:45.427] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:02:45.461] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:45.467] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:02:45.483] [INFO] home-server - 启动home server ！！！！ server pid:  13615 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T14:02:45.485] [INFO] home-server - 启动home server ！！！！ server pid:  13621 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T14:02:45.510] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-13T14:02:45.525] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-13T14:02:45.926] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-13T14:02:45.938] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-13T14:02:45.975] [INFO] home-server - serverId: 12 前来注册在serverId:  2
+[2019-04-13T14:02:45.976] [INFO] home-server - serverId: 12 前来注册在serverId:  1
+[2019-04-13T14:02:46.002] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-13T14:02:46.003] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-13T14:02:46.067] [INFO] home-server - serverId: 22 前来注册在serverId:  1
+[2019-04-13T14:02:46.068] [INFO] home-server - serverId: 22 前来注册在serverId:  2
+[2019-04-13T14:13:18.669] [INFO] home-server - 连接 redis server， mysql server pid:  14942
+[2019-04-13T14:13:18.673] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:18.679] [INFO] home-server - 连接 redis server， mysql server pid:  14948
+[2019-04-13T14:13:18.684] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T14:13:18.713] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:18.723] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T14:13:18.733] [INFO] home-server - 启动home server ！！！！ server pid:  14942 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T14:13:18.744] [INFO] home-server - 启动home server ！！！！ server pid:  14948 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T14:13:18.753] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-13T14:13:18.754] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9100 }
+[2019-04-13T14:13:18.781] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-13T14:13:18.782] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9120 }
+[2019-04-13T14:13:19.242] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-13T14:13:19.245] [INFO] home-server - serverId: 22 前来注册在serverId:  1
+[2019-04-13T14:13:19.248] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-13T14:13:19.256] [INFO] home-server - serverId: 22 前来注册在serverId:  2
+[2019-04-13T14:13:19.266] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-13T14:13:19.267] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-13T14:13:19.297] [INFO] home-server - serverId: 12 前来注册在serverId:  1
+[2019-04-13T14:13:19.298] [INFO] home-server - serverId: 12 前来注册在serverId:  2
+[2019-04-13T15:37:09.831] [INFO] home-server - 连接 redis server， mysql server pid:  24692
+[2019-04-13T15:37:09.835] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:37:09.836] [INFO] home-server - 连接 redis server， mysql server pid:  24698
+[2019-04-13T15:37:09.841] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:37:09.874] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:37:09.880] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:37:09.892] [INFO] home-server - 启动home server ！！！！ server pid:  24692 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T15:37:09.896] [INFO] home-server - 启动home server ！！！！ server pid:  24698 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T15:37:09.910] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-13T15:37:09.911] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9100 }
+[2019-04-13T15:37:09.915] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-13T15:37:09.915] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9120 }
+[2019-04-13T15:39:48.912] [INFO] home-server - 连接 redis server， mysql server pid:  25058
+[2019-04-13T15:39:48.916] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:48.923] [INFO] home-server - 连接 redis server， mysql server pid:  25064
+[2019-04-13T15:39:48.928] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T15:39:48.955] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:48.967] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T15:39:48.973] [INFO] home-server - 启动home server ！！！！ server pid:  25058 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T15:39:48.991] [INFO] home-server - network_http.js express server listen:  { port: 8110 }
+[2019-04-13T15:39:48.992] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9100 }
+[2019-04-13T15:39:48.999] [INFO] home-server - 启动home server ！！！！ server pid:  25064 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T15:39:49.032] [INFO] home-server - network_http.js express server listen:  { port: 8120 }
+[2019-04-13T15:39:49.033] [DEBUG] home-server - utils/network.js socket server listen start!! { port: 9120 }
+[2019-04-13T15:39:49.422] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-13T15:39:49.424] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-13T15:39:49.430] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-13T15:39:49.431] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-13T15:39:49.556] [INFO] home-server - serverId: 12 前来注册在serverId:  1
+[2019-04-13T15:39:49.557] [INFO] home-server - serverId: 12 前来注册在serverId:  2
+[2019-04-13T15:39:49.595] [INFO] home-server - serverId: 22 前来注册在serverId:  2
+[2019-04-13T15:39:49.596] [INFO] home-server - serverId: 22 前来注册在serverId:  1
+[2019-04-13T16:00:45.226] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: 'gate-server-1|home-server-2|wechat|oEsjD5KD7n2x0b9psA8kK8HgtKSM|141522073294',
+  account: 'oEsjD5KD7n2x0b9psA8kK8HgtKSM' }
+[2019-04-13T16:00:45.669] [INFO] home-server - router.js 用户登录！！！ { accountData: '{"avatarUrl":"https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FDYAIOgq83epz1ibwQJxXuAGTzxdnmF48icYzouL3H2IutPPz4DWSc4Sicbib1SEibw3BJwaHLw4O4SgVQsmz1o0owEA%2F132","gender":2,"nickName":"%E5%B0%8F%F0%9F%8C%9F%E7%8C%AA%E4%BA%8C%E5%8F%B7"}',
+  cliType: 'mini_program',
+  MiniId: '1',
+  recommendation: 'gate-server-1|home-server-2|wechat|oEsjD5KD7n2x0b9psA8kK8HgtKSM|141522073294',
+  accountType: 'wechat',
+  account: 'oEsjD5KD7n2x0b9psA8kK8HgtKSM',
+  ip: '192.168.10.148' }

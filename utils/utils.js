@@ -192,64 +192,18 @@ utils.isObject = function(arg){
 	return typeof arg === "object" && arg !== null;
 };
 
-utils.genRoomUniqueId = function(isExistRoom, next){
-    var cur = 0;
-    var _genUniqueId = function(){
-        var id = utils.rand(6);
-        isExistRoom(id, function(err, is){
-            if (err){
-                return next(err);
-            }
-            if (is == 1){
-                cur++;
-                if (cur < 10){
-                    _genUniqueId();
-                }else{
-                    return next("超出生成id次数");
-                }
-            }else{
-                return next(null, id);
-            }
-        });
-    }
-    _genUniqueId();
-};
-
-utils.genUserUniqueId = function(isHaveUserNo, next){
-    var cur = 0;
-    var _genUniqueId = function(){
-        var id = utils.rand(6);
-        isHaveUserNo(id, function(err, is){
-            if (err){
-                return next(err);
-            }
-            if (is == 1){
-                cur++;
-                if (cur < 10){
-                    _genUniqueId();
-                }else{
-                    return next("超出生成id次数");
-                }
-            }else{
-                return next(null, id);
-            }
-        });
-    }
-    _genUniqueId();
-}
-
 utils.generateUniqueId = function(idLen, isExist, next){
     var _genUniqueId = function(){
 		var id = utils.rand(idLen);
-        isExist(id, function(err, is){
-            if (err){
-				console.log("生成唯一Id redis报错, 5秒后重新生成  error:", err);
+        isExist(id, function(ret){
+			if (ret.code != 0){
+				console.log("----------生成唯一Id redis报错, 5秒后重新生成  error:", err);
                 return setTimeout(_genUniqueId, 5000);
-            }
-            if (is == 1){
+			}
+            if (ret.is){
                 _genUniqueId();
             }else{
-                return next(id);
+                return next({code: 0, roomId: id});
             }
         });
     }

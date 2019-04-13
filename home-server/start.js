@@ -60,8 +60,10 @@ var listenGameServer = function(){
         if (data.route == "register"){
             logger.info("serverId:", data.serverId, "前来注册在serverId: ", serverId);
             svr.send(socketId, {route: "register", msg: "register success!", serverId: serverId});
+            g_serverData.homeManager.gameServerIdSocketIdMap[data.serverId] = socketId;
         }
     });
+    g_serverData.homeManager.forGameServer = svr;
 }
 
 var getLogicPortbyId = function(id){
