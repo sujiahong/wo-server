@@ -26,7 +26,7 @@ var start = function(){
 
 var connectGate = function(){
     var homeManager = g_serverData.homeManager;
-    var cli = new network.Client({port: config.GATE_SOCKET_PORT});
+    var cli = new network.Client({host: config.GATE_IP,port: config.GATE_SOCKET_PORT});
     cli.connect();
     cli.request({route: "register"}, function(data){
         homeManager.serverName = data.serverData.NAME;
@@ -38,6 +38,7 @@ var connectGate = function(){
         });
         ///启动express监听
         var options = {
+            host: data.serverData.IP,
             port: data.serverData.FOR_CLIENT_PORT,
         };
         var app = networkHttp.createExpress(options);
@@ -54,7 +55,7 @@ var connectGate = function(){
 
 var listenGameServer = function(){
     var serverId = g_serverData.homeManager.serverId;
-    var svr = new network.Server({port: getLogicPortbyId(serverId)});
+    var svr = new network.Server(getLogicAddrbyId(serverId));
     svr.createServer(function(socketId){});
     svr.recv(function(socketId, data){
         if (data.route == "register"){
@@ -66,12 +67,16 @@ var listenGameServer = function(){
     g_serverData.homeManager.forGameServer = svr;
 }
 
-var getLogicPortbyId = function(id){
+var getLogicAddrbyId = function(id){
+    var addr = {};
     for (var i = 0; i < config.HOME_SERVER_LIST.length; ++i){
         if (id == config.HOME_SERVER_LIST[i].ID){
-            return config.HOME_SERVER_LIST[i].FOR_LOGIC_PORT;
+            addr.host = config.HOME_SERVER_LIST[i].IP;
+            addr.port = config.HOME_SERVER_LIST[i].FOR_LOGIC_PORT;
+            return addr;
         }
     }
+    return addr;
 }
 
 var forkProcess = function(){

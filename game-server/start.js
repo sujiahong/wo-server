@@ -29,7 +29,7 @@ var start = function(){
 var connectHome = function(){
     var homeList = config.HOME_SERVER_LIST;
     for (var i = 0; i < homeList.length; ++i){
-        var cli = new network.Client({port: homeList[i].FOR_LOGIC_PORT});
+        var cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
         cli.connect();
         cli.request({route: "register", serverId: g_serverData.manager.serverId}, function(data){
             logger.info("注册game server ！！！！ server pid: ", process.pid, data.msg, data.serverId);
@@ -58,7 +58,7 @@ var getForClientListenAddress = function(){
     for (var i = 0; i < gameServerList.length; ++i){
         if (gameServerList[i].ID == serverId){
             addr.port = gameServerList[i].FOR_CLIENT_PORT;
-            addr.ip = gameServerList[i].IP;
+            addr.host = gameServerList[i].IP;
             return addr;
         }
     }

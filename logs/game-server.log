@@ -110,3 +110,47 @@
 [2019-04-13T15:39:49.586] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8321, ip: '192.168.10.34' }
 [2019-04-13T15:39:49.598] [INFO] game-server - 注册game server ！！！！ server pid:  25092 register success! 1
 [2019-04-13T15:39:49.598] [INFO] game-server - 注册game server ！！！！ server pid:  25092 register success! 2
+[2019-04-13T16:32:33.924] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:33.964] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:33.965] [DEBUG] game-server - gameserver-start.js 启动 processid:  31247 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '11',
+  'game-server-11' ]
+[2019-04-13T16:32:33.966] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T16:32:33.968] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8310, host: '192.168.10.34' }
+[2019-04-13T16:32:33.972] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8310, host: '192.168.10.34' }
+[2019-04-13T16:32:33.981] [INFO] game-server - 注册game server ！！！！ server pid:  31247 register success! 1
+[2019-04-13T16:32:33.981] [INFO] game-server - 注册game server ！！！！ server pid:  31247 register success! 2
+[2019-04-13T16:32:33.990] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:34.033] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:34.035] [DEBUG] game-server - gameserver-start.js 启动 processid:  31248 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '12',
+  'game-server-12' ]
+[2019-04-13T16:32:34.036] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T16:32:34.038] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8311, host: '192.168.10.34' }
+[2019-04-13T16:32:34.043] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8311, host: '192.168.10.34' }
+[2019-04-13T16:32:34.052] [INFO] game-server - 注册game server ！！！！ server pid:  31248 register success! 1
+[2019-04-13T16:32:34.053] [INFO] game-server - 注册game server ！！！！ server pid:  31248 register success! 2
+[2019-04-13T16:32:34.003] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:34.064] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:34.066] [DEBUG] game-server - gameserver-start.js 启动 processid:  31254 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '21',
+  'game-server-21' ]
+[2019-04-13T16:32:34.067] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T16:32:34.068] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8320, host: '192.168.10.34' }
+[2019-04-13T16:32:34.073] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8320, host: '192.168.10.34' }
+[2019-04-13T16:32:34.084] [INFO] game-server - 注册game server ！！！！ server pid:  31254 register success! 1
+[2019-04-13T16:32:34.085] [INFO] game-server - 注册game server ！！！！ server pid:  31254 register success! 2
+[2019-04-13T16:32:34.108] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:34.147] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:34.149] [DEBUG] game-server - gameserver-start.js 启动 processid:  31255 [] [ '/usr/local/bin/node',
+  '/home/sujiahong/workspace/aa-server/game-server/start',
+  '22',
+  'game-server-22' ]
+[2019-04-13T16:32:34.150] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-13T16:32:34.152] [WARN] game-server - gameserver-start.js listenConnection addr:  { port: 8321, host: '192.168.10.34' }
+[2019-04-13T16:32:34.157] [DEBUG] game-server - utils/network.js socket server listen start!! { port: 8321, host: '192.168.10.34' }
+[2019-04-13T16:32:34.166] [INFO] game-server - 注册game server ！！！！ server pid:  31255 register success! 1
+[2019-04-13T16:32:34.167] [INFO] game-server - 注册game server ！！！！ server pid:  31255 register success! 2

@@ -27453,3 +27453,33 @@
   accountType: 'wechat',
   account: 'oEsjD5KD7n2x0b9psA8kK8HgtKSM',
   ip: '192.168.10.148' }
+[2019-04-13T16:32:33.497] [INFO] home-server - 连接 redis server， mysql server pid:  31234
+[2019-04-13T16:32:33.501] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:33.507] [INFO] home-server - 连接 redis server， mysql server pid:  31240
+[2019-04-13T16:32:33.511] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-13T16:32:33.541] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:33.550] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-13T16:32:33.555] [INFO] home-server - 启动home server ！！！！ server pid:  31234 { ID: 1,
+  NAME: 'home-server-1',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9100,
+  FOR_CLIENT_PORT: 8110,
+  ISUSED: true }
+[2019-04-13T16:32:33.567] [INFO] home-server - 启动home server ！！！！ server pid:  31240 { ID: 2,
+  NAME: 'home-server-2',
+  IP: '192.168.10.34',
+  FOR_LOGIC_PORT: 9120,
+  FOR_CLIENT_PORT: 8120,
+  ISUSED: true }
+[2019-04-13T16:32:33.582] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-13T16:32:33.582] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-13T16:32:33.596] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-13T16:32:33.598] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-13T16:32:33.976] [INFO] home-server - serverId: 11 前来注册在serverId:  1
+[2019-04-13T16:32:33.977] [INFO] home-server - serverId: 11 前来注册在serverId:  2
+[2019-04-13T16:32:34.048] [INFO] home-server - serverId: 12 前来注册在serverId:  1
+[2019-04-13T16:32:34.049] [INFO] home-server - serverId: 12 前来注册在serverId:  2
+[2019-04-13T16:32:34.080] [INFO] home-server - serverId: 21 前来注册在serverId:  1
+[2019-04-13T16:32:34.084] [INFO] home-server - serverId: 21 前来注册在serverId:  2
+[2019-04-13T16:32:34.161] [INFO] home-server - serverId: 22 前来注册在serverId:  1
+[2019-04-13T16:32:34.163] [INFO] home-server - serverId: 22 前来注册在serverId:  2

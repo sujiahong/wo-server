@@ -23,7 +23,7 @@ var start = function(){
     g_serverData.homeServerList = utils.clone(config.HOME_SERVER_LIST);
     logger.info("启动gate server for home！！！, home server list: ", g_serverData.homeServerList);
     ////////启动server
-    var svr = new network.Server({port: config.GATE_SOCKET_PORT});
+    var svr = new network.Server({host: config.GATE_IP, port: config.GATE_SOCKET_PORT});
     svr.createServer(function(socketId){});
     svr.recv(function(socketId, data){
         if (data.route == "register"){
@@ -50,6 +50,7 @@ var start = function(){
 
 var listenHttpClient = function(){
     var options = {
+        host: config.GATE_IP,
         port: config.GATE_HTTP_PORT,
     }
     networkHttp.createHttp(options, function(req, res){
