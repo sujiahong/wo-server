@@ -17,15 +17,17 @@ service.createRoom = function(user, roomInfo, next){
         var roomId = ret.roomId;
         var info = getGameServerInfoByRoomId(roomId);
         var homeManager = g_serverData.homeManager;
+        var connectionCode = homeManager.serverName + "|" + info.NAME + "|" +
+        roomId + "|" + Math.floor(Date.now() * Math.random());
         var socketId = homeManager.getSocketIdByServerId(info.ID);
+        roomInfo.connectionCode = connectionCode;
         homeManager.forGameServer.send(socketId, {route: "createRoom", roomInfo: roomInfo});
         homeManager.forGameServer.on("createRoom", function(socketId, data){
             if (data.code != errcode.OK){
                 return next({code: data.code});
             }
             logger.info(TAG, "create room ", info);
-            var ret = {code: 0};
-            ret.roomId = roomId;
+            var ret = {code: 0, roomId: roomId, connectionCode: connectionCode};
             ret.ip = info.IP;
             ret.port = info.FOR_CLIENT_PORT;
             next(ret);

@@ -5,7 +5,7 @@ g_serverData.logger = require("../utils/log_launch")("game-server");
 const logger = g_serverData.logger;
 const GameManager = require("./models/game_manager");
 const network = require("../utils/network");
-const networkWS = require("../utils/network_ws");
+const WSServer = require("../utils/network_ws");
 const config = require("../share/config");
 const dbConn = require("../utils/db_connection");
 //连接redis
@@ -44,11 +44,10 @@ var connectHome = function(){
 var listenConnection = function(){
     var addr = getForClientListenAddress();
     logger.warn(TAG, "listenConnection addr: ", addr);
-    var svr = new network.Server(addr);
-    svr.createServer();
-    svr.recv(function(socketId, data){});
-    mainRouter.listen(svr);
-    g_serverData.manager.forClientServer = svr;
+    var wsvr = new WSServer(addr);
+    wsvr.createServer();
+    mainRouter.listen(wsvr);
+    g_serverData.manager.forClientServer = wsvr;
 }
 
 var getForClientListenAddress = function(){

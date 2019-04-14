@@ -9,8 +9,8 @@ exports.createRoom = function(cli, data){
 }
 
 exports.listen = function(svr){
-    svr.on("connect", function(socketId, data){
-        mainService.joinRoom(data);
-        svr.send(socketId, {route: "connect"});
-    });
+    // svr.on("connect", function(socketId, data){
+    //     mainService.joinRoom(data);
+    //     svr.send(socketId, {route: "connect"});
+    // });
 }

@@ -1,7 +1,7 @@
 "use strict"
 const TAG = "utils/network.js";
 const net = require("net");
-const packet = require("../utils/packet");
+const packet = require("./packet");
 const event = require("events");
 const util = require("util");
 const logger = g_serverData.logger;
@@ -11,7 +11,7 @@ var nw = module.exports;
 var Client = function(options){
     this.options = options
     this.socket = null;
-    this.HBInterval = 20;
+    this.HBInterval = 25;
     this.HBTime = 0;
     this.freqTimeId = null;
     this.closeTimeId = null;
@@ -26,10 +26,11 @@ Client.prototype.connect = function(next){
     var socket = net.createConnection(this.options);
     this.socket = socket;
     socket.on("close", ()=>{
-        console.warn(TAG, "client close close ");
+        logger.warn(TAG, "socket client close close 尝试重新连接!!!");
     });
     socket.on("error", (err)=>{
         console.error(TAG, "client client socket error :", err);
+        throw err;
     });
     socket.on("connect", ()=>{
         console.log(TAG, process.pid, "客户端连接建立成功ip-port: ", socket.localAddress, socket.localPort, socket.remotePort);
@@ -42,7 +43,7 @@ Client.prototype.connect = function(next){
         }, 1000);
     });
     socket.on("drain", ()=>{
-        console.log(TAG, 'drain event fired.');
+        logger.error(TAG, "socket client drain事件 触发 触发 触发！！！");
     });
     socket.on("data", (buffer)=>{
         bufferAnalysis(self, socket, buffer);
@@ -66,6 +67,7 @@ Client.prototype.send = function(data){
     var pack = packet.pack(data);
     var rt = this.socket.write(pack);
     if (rt == false){
+        logger.error(TAG, "socket client send函数失败！！！");
         Buffer.concat([this.sendFailData, pack]);
     }
 }
@@ -165,16 +167,22 @@ Server.prototype.createServer = function(next){
         console.log(TAG, process.pid, "服务端连接建立成功ip-port: ", socket.remoteAddress.substr(7), socket.remotePort);
         socket.on("close", function(){
             console.warn(TAG, "server close close socketId: ", socket.id);
+            self.closeClientConn(socket.id);
         });
         socket.on("error", function(err){
+            self.closeClientConn(socket.id);
             console.error(TAG, "server server socket err err", socket.id, err);
         });
         socket.on("data", function(buffer){
             console.log(TAG, "server data", socket.id);
             bufferAnalysis(self, socket, buffer);
         });
+        socket.on("drain", function(){
+            logger.error(TAG, "socket server drain事件 触发 触发 触发！！！");
+        });
         socket.on("timeout", function(){
-            console.log(TAG, "timeout timeout");
+            logger.warn(TAG, "socket server timeout事件 触发 触发 触发！！！");
+            self.closeClientConn(socket.id);
         });
         next ? next(socket.id) : null;
     });
@@ -187,6 +195,7 @@ Server.prototype.send = function(socketId, data){
     var pack = packet.pack(data);
     var rt = this.socketMap[socketId].write(pack);
     if (rt == false){
+        logger.error(TAG, "socket server send函数失败！！！");
         Buffer.concat([this.sendFailData, pack]);
     }
 }
