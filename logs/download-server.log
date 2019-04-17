@@ -1,0 +1,107 @@
+[2019-04-15T18:09:29.137] [DEBUG] download-server - download-start.js download start ~~!!!!
+[2019-04-15T18:50:53.126] [DEBUG] download-server - download-start.js download start ~~!!!!
+[2019-04-15T18:52:00.998] [DEBUG] download-server - download-start.js download start ~~!!!!
+[2019-04-15T20:18:16.683] [DEBUG] download-server - download-start.js download start ~~!!!! [object Object]
+[2019-04-15T20:20:20.077] [DEBUG] download-server - download-start.js download start ~~!!!! [object Object]
+[2019-04-16T14:39:51.504] [INFO] download-server - download-start.js download start ~~!!!! undefined undefined
+[2019-04-16T14:39:51.510] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:40:54.174] [INFO] download-server - download-start.js download start ~~!!!! undefined undefined
+[2019-04-16T14:40:54.180] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:41:21.818] [INFO] download-server - download-start.js download start ~~!!!! undefined undefined
+[2019-04-16T14:41:21.824] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:48:27.719] [INFO] download-server - download-start.js download start ~~!!!! 26775 undefined undefined
+[2019-04-16T14:48:27.724] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:50:32.220] [INFO] download-server - download-start.js download start ~~!!!! 27116 /usr/local/bin/node /home/sujiahong/workspace/aa-server/servers/download-server/start [object Object] undefined undefined
+[2019-04-16T14:50:32.226] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:52:12.874] [INFO] download-server - download-start.js download start ~~!!!! 27352 undefined undefined
+[2019-04-16T14:52:12.878] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T14:53:12.243] [INFO] download-server - download-start.js download start ~~!!!! 27554 undefined undefined
+[2019-04-16T14:53:12.247] [INFO] download-server - network_http.js http server listen:  { host: undefined, port: undefined }
+[2019-04-16T15:00:17.611] [INFO] download-server - download-start.js download start ~~!!!! 28502
+[2019-04-16T15:00:17.620] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: '9990' }
+[2019-04-16T15:02:09.182] [INFO] download-server - download-start.js 请求pathname assets/hotupdate-assets/version.manifest
+[2019-04-16T15:05:40.511] [INFO] download-server - download-start.js download start ~~!!!! 29286
+[2019-04-16T15:05:40.518] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: '9990' }
+[2019-04-16T15:05:47.639] [INFO] download-server - download-start.js 请求pathname assets/hotupdate-assets/version.manifest
+[2019-04-16T15:08:27.585] [INFO] download-server - download-start.js download start ~~!!!! 29657
+[2019-04-16T15:08:27.592] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: '9990' }
+[2019-04-16T15:08:34.406] [INFO] download-server - download-start.js 请求pathname assets/hotupdate-assets/version.manifest
+[2019-04-16T15:10:34.479] [INFO] download-server - download-start.js 请求pathname assets/hotupdate-assets/version.manifest
+[2019-04-16T15:11:08.050] [INFO] download-server - download-start.js download start ~~!!!! 30058
+[2019-04-16T15:11:08.057] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:11:23.676] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:12:12.963] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:12:19.301] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:14:19.352] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:14:44.814] [INFO] download-server - download-start.js download start ~~!!!! 30549
+[2019-04-16T15:14:44.821] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:14:48.885] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:14:55.934] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:16:55.960] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:18:03.879] [INFO] download-server - download-start.js download start ~~!!!! 31014
+[2019-04-16T15:18:03.886] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:18:06.841] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:19:34.367] [INFO] download-server - download-start.js download start ~~!!!! 31251
+[2019-04-16T15:19:34.374] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:19:38.944] [INFO] download-server - download-start.js 请求pathname: assets/hotupdate-assets/version.manifest
+[2019-04-16T15:20:37.842] [INFO] download-server - download-start.js download start ~~!!!! 31481
+[2019-04-16T15:20:37.850] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:20:44.919] [INFO] download-server - download-start.js 请求pathname: ./assets/hotupdate-assets/version.manifest
+[2019-04-16T15:20:45.000] [INFO] download-server - download-start.js 请求pathname: ./assets/favicon.ico
+[2019-04-16T15:22:50.619] [INFO] download-server - download-start.js download start ~~!!!! 31859 /home/sujiahong/workspace/aa-server
+[2019-04-16T15:22:50.625] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:26:57.037] [INFO] download-server - download-start.js download start ~~!!!! 32376 /home/sujiahong/workspace/aa-server
+[2019-04-16T15:26:57.044] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:27:02.560] [INFO] download-server - download-start.js 请求pathname: ./assets/hotupdate-assets/version.manifest /home/sujiahong/workspace/aa-server/servers/download-server
+[2019-04-16T15:27:49.893] [INFO] download-server - download-start.js download start ~~!!!! 32556 /home/sujiahong/workspace/aa-server
+[2019-04-16T15:27:49.900] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T15:27:57.649] [INFO] download-server - download-start.js 请求pathname: /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate-assets/version.manifest /home/sujiahong/workspace/aa-server/servers/download-server
+[2019-04-16T16:55:25.413] [INFO] download-server - download-start.js download start ~~!!!! 10846 /home/sujiahong/workspace/aa-server
+[2019-04-16T16:55:25.420] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-16T16:55:45.262] [INFO] download-server - download-start.js 请求pathname: /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate-assets/version.manifest { host: '192.168.10.34:9990',
+  connection: 'keep-alive',
+  'upgrade-insecure-requests': '1',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding': 'gzip, deflate',
+  'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7' } GET 1.1 null
+[2019-04-17T15:51:40.081] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 8558 /home/sujiahong/workspace/aa-server
+[2019-04-17T15:51:40.119] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T15:51:40.127] [DEBUG] download-server - utils/network.js 8558 客户端连接建立成功ip-port:  192.168.10.34 43510 9001
+[2019-04-17T15:51:40.146] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T15:52:17.406] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 8723 /home/sujiahong/workspace/aa-server
+[2019-04-17T15:52:17.441] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T15:52:17.457] [DEBUG] download-server - utils/network.js 8723 客户端连接建立成功ip-port:  192.168.10.34 43854 9001
+[2019-04-17T15:52:17.466] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T15:52:44.587] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 8874 /home/sujiahong/workspace/aa-server
+[2019-04-17T15:52:44.609] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T15:52:44.633] [DEBUG] download-server - utils/network.js 8874 客户端连接建立成功ip-port:  192.168.10.34 44116 9001
+[2019-04-17T15:52:44.645] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T15:56:22.389] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 9423 /home/sujiahong/workspace/aa-server
+[2019-04-17T15:56:22.411] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T15:56:22.418] [DEBUG] download-server - utils/network.js 9423 客户端连接建立成功ip-port:  192.168.10.34 45932 9001
+[2019-04-17T15:56:22.428] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:01:00.285] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 10084 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:01:00.311] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:01:00.316] [DEBUG] download-server - utils/network.js 10084 客户端连接建立成功ip-port:  192.168.10.34 48236 9001
+[2019-04-17T16:01:00.326] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:03:58.074] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 10553 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:03:58.102] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:03:58.105] [DEBUG] download-server - utils/network.js 10553 客户端连接建立成功ip-port:  192.168.10.34 49736 9001
+[2019-04-17T16:03:58.114] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:05:58.304] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 10899 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:05:58.332] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:05:58.336] [DEBUG] download-server - utils/network.js 10899 客户端连接建立成功ip-port:  192.168.10.34 50754 9001
+[2019-04-17T16:05:58.365] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:21:45.283] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 13035 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:21:45.330] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:21:45.344] [DEBUG] download-server - utils/network.js 13035 客户端连接建立成功ip-port:  192.168.10.34 58608 9001
+[2019-04-17T16:21:45.356] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:23:11.990] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 13288 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:23:12.002] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:23:12.004] [DEBUG] download-server - utils/network.js 13288 客户端连接建立成功ip-port:  192.168.10.34 59362 9001
+[2019-04-17T16:23:12.007] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-17T16:27:29.979] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 13888 /home/sujiahong/workspace/aa-server
+[2019-04-17T16:27:29.989] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-17T16:27:29.991] [DEBUG] download-server - utils/network.js 13888 客户端连接建立成功ip-port:  192.168.10.34 33272 9001
+[2019-04-17T16:27:30.000] [INFO] download-server - download-start.js 向center server 注册 success code:  0

@@ -1,9 +1,9 @@
 "use strict"
 const TAG = "gate-server/main_ervice.js";
-const httpReq = require("../../utils/http_request");
-const errcode = require("../../share/errcode");
-const constant = require("../../share/constant");
-const redis = require("../../dao/redis/redis_common");
+const httpReq = require("../../../utils/http_request");
+const errcode = require("../../../share/errcode");
+const constant = require("../../../share/constant");
+const redis = require("../../../dao/redis/redis_common");
 const logger = g_serverData.logger;
 var service = module.exports;
 
@@ -17,13 +17,13 @@ service.validateUser = function(vData, next){
             if (ret.errcode == errcode.OK){
                 var openid = ret.openid;
                 toData.account = openid;
-                var homeServerData = recommondHomeServer(g_serverData.homeServerList);
+                var homeServerData = recommondHomeServer(g_serverData.idHomeInfoMap);
                 toData.ip = homeServerData.IP;
                 toData.port = homeServerData.FOR_CLIENT_PORT;
-                var str = genRecommendationCode(vData.accountType, homeServerData.NAME, openid);
+                var str = genRecommendationCode(vData.accountType, homeServerData.ID, openid);
                 toData.recommendation = str;
                 redis.setRecommendation(str, openid);
-                notifyHomeServerRecommendation(homeServerData.NAME, str, openid);
+                notifyHomeServerRecommendation(homeServerData.ID, str, openid);
             }
             next(toData);
         });
@@ -31,13 +31,13 @@ service.validateUser = function(vData, next){
     case constant.ACCOUNT_TYPE.tel:
         var toData = {};
         toData.code = errcode.OK;
-        var homeServerData = recommondHomeServer(g_serverData.homeServerList);
+        var homeServerData = recommondHomeServer(g_serverData.idHomeInfoMap);
         toData.ip = homeServerData.IP;
         toData.port = homeServerData.FOR_CLIENT_PORT;
-        var str = genRecommendationCode(constant.ACCOUNT_TYPE.tel, homeServerData.NAME, "3838");
+        var str = genRecommendationCode(constant.ACCOUNT_TYPE.tel, homeServerData.ID, "3838");
         toData.recommendation = str;
         redis.setRecommendation(str, "333");
-        notifyHomeServerRecommendation(homeServerData.NAME, str, "3838");
+        notifyHomeServerRecommendation(homeServerData.ID, str, "3838");
         next(toData);
         break;
     case constant.ACCOUNT_TYPE.wb:
@@ -55,17 +55,18 @@ var genRecommendationCode = function(accountType, homeServerName, account){
     return str;
 }
 
-var recommondHomeServer = function(serverList){
+var recommondHomeServer = function(serverMap){
+    var serverList = Object.keys(serverMap);
     var len = serverList.length;
     if(len == 1){
-		return serverList[0];
+		return serverMap[serverList[0]];
 	}
     var idx = Math.floor(Math.random()* 100000) % len;
-    return serverList[idx];
+    return serverMap[serverList[idx]];
 }
 
-var notifyHomeServerRecommendation = function(homeName, str, account){
-    var socketId = g_serverData.homeNameSocketIdMap[homeName];
+var notifyHomeServerRecommendation = function(homeId, str, account){
+    var socketId = g_serverData.idHomeInfoMap[homeId].socketId;
     g_serverData.forHomeServer.send(socketId, {route: "recommend", recommendation: str, account: account});
 }
 

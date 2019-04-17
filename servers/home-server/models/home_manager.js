@@ -7,7 +7,7 @@ class HomeManager {
         this.serverName = "";
         this.userIdObjectMap = {};
         this.recommendationAccountMap = {};
-        this.gameServerIdSocketIdMap = {};
+        this.idGameInfoMap = {};
         this.forGameServer = null;
     }
     userAdd(id, user){
@@ -26,7 +26,7 @@ class HomeManager {
         return this.serverName;
     }
     getSocketIdByServerId(serverId){
-        return this.gameServerIdSocketIdMap[serverId];
+        return this.idGameInfoMap[serverId];
     }
 };
 

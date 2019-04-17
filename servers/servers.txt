@@ -1,0 +1,11 @@
+服务器类型介绍：
+center-server主要有两个功能，管理所有服务器，管理员后台
+
+gate-server 网关
+
+home-server 大厅
+ 
+game-server 游戏逻辑
+
+download-server 下载
+

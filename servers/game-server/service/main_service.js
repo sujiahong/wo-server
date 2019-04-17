@@ -1,6 +1,6 @@
 "use strict"
 const TAG = "game-server/main_service.js";
-const redis = require("../../dao/redis/redis_common");
+const redis = require("../../../dao/redis/redis_common");
 
 var service = module.exports;
 

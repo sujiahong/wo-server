@@ -1,21 +1,35 @@
 "use strict"
 const TAG = "wo-server app.js";
 const srvCluster = require("./utils/server_cluster");
-const cq = require("./config/cluster_quantity.json");
+const clusterInfo = require("./config/cluster_info.json");
+const cp = require("child_process");
+const async = require("async");
 
 console.log(TAG, __dirname, process.execPath, process.execArgv, process.pid)
 //////debug
 //process.execArgv[1] = process.execArgv[1].replace('-brk', '');
 
 /////启动集群
-srvCluster.createCluster(cq.home_quantity, function(cluster){
-    const gateStarter = require("./gate-server/start");
-    //启动gate
-    gateStarter.start();
+srvCluster.createCluster(1, function(cluster){
+    require("./servers/center-server/start");
 }, function(cluster){
-    const homeStarter = require("./home-server/start");
-    //
-    homeStarter.start();
+    //启动服务
+    var startArr = [];
+    for (let key in clusterInfo){
+        var func = function(cb){
+            let list = clusterInfo[key];
+            let len = list.length;
+            for(var i = 0; i < len; ++i){
+                console.log(TAG, "启动服务: ", list[i].ID);
+                cp.fork(list[i].START_PATH, [JSON.stringify(list[i])]);
+            }
+            setTimeout(cb, 100*len);
+        }
+        startArr.push(func);
+    }
+    async.waterfall(startArr, function(){
+        process.exit();
+    });
 });
 
 // setTimeout(function(){

@@ -23,17 +23,34 @@ util.inherits(Client, event.EventEmitter);
 
 Client.prototype.connect = function(next){
     var self = this;
-    var socket = net.createConnection(this.options);
-    this.socket = socket;
+    doConnect(self, next);
+    self.on("socketData", (socket, data)=>{
+        console.log(TAG, "Client socketData", data, self.HBTime);
+        if (data.route == "pong"){
+            if (data.time == self.HBTime){
+                 if (self.closeTimeId){
+                     clearTimeout(self.closeTimeId);
+                     self.closeTimeId = null;
+                 }
+            }
+        }else{
+             self.emit(data.route, data);
+        }
+    });
+}
+
+var doConnect = function(self, next){
+    var socket = net.createConnection(self.options);
+    self.socket = socket;
     socket.on("close", ()=>{
         logger.warn(TAG, "socket client close close 尝试重新连接!!!");
     });
     socket.on("error", (err)=>{
-        console.error(TAG, "client client socket error :", err);
+        logger.error(TAG, "client client socket error :", err);
         throw err;
     });
     socket.on("connect", ()=>{
-        console.log(TAG, process.pid, "客户端连接建立成功ip-port: ", socket.localAddress, socket.localPort, socket.remotePort);
+        logger.debug(TAG, process.pid, "客户端连接建立成功ip-port: ", socket.localAddress, socket.localPort, socket.remotePort);
         next ? next(socket): null;
         setTimeout(()=>{
             self.ping();
@@ -47,19 +64,6 @@ Client.prototype.connect = function(next){
     });
     socket.on("data", (buffer)=>{
         bufferAnalysis(self, socket, buffer);
-    });
-    self.on("socketData", (socket, data)=>{
-        console.log(TAG, "Client socketData", data, self.HBTime);
-        if (data.route == "pong"){
-            if (data.time == self.HBTime){
-                 if (self.closeTimeId){
-                     clearTimeout(self.closeTimeId);
-                     self.closeTimeId = null;
-                 }
-            }
-        }else{
-             self.emit(data.route, data);
-        }
     });
 }
 
@@ -159,22 +163,21 @@ Server.prototype.createServer = function(next){
         throw err;
     });
     server.on("close", function(){
-        console.warn(TAG, "server close, close close!!!");
+        logger.warn(TAG, "server close, close close!!!");
     });
     server.on("connection", function(socket){
-        socket.id = socket.remoteAddress.substr(7) + ":" + socket.remotePort + ":" + Date.now();
+        socket.id = socket.remoteAddress + ":" + socket.remotePort + ":" + Date.now();
         self.socketMap[socket.id] = socket;
-        console.log(TAG, process.pid, "服务端连接建立成功ip-port: ", socket.remoteAddress.substr(7), socket.remotePort);
+        logger.debug(TAG, process.pid, "服务端连接建立成功ip-port: ", socket.remoteAddress, socket.remotePort);
         socket.on("close", function(){
-            console.warn(TAG, "server close close socketId: ", socket.id);
+            logger.warn(TAG, "server close close socketId: ", socket.id);
             self.closeClientConn(socket.id);
         });
         socket.on("error", function(err){
             self.closeClientConn(socket.id);
-            console.error(TAG, "server server socket err err", socket.id, err);
+            logger.error(TAG, "server server socket err err", socket.id, err);
         });
         socket.on("data", function(buffer){
-            console.log(TAG, "server data", socket.id);
             bufferAnalysis(self, socket, buffer);
         });
         socket.on("drain", function(){
@@ -203,7 +206,7 @@ Server.prototype.send = function(socketId, data){
 Server.prototype.recv = function(next){
     var self = this;
     this.on("socketData", function(socket, data){
-        console.log(TAG, "Server socketData", socket.id, data);
+        console.log(TAG, "Server socketData: ", socket.id, data);
         if (data.route == "ping"){
             if (socket.closeTimeId){
                 clearTimeout(socket.closeTimeId);

@@ -1,57 +1,51 @@
 "use strict"
 const TAG = "gateserver-start.js";
 global.g_serverData = {};
-g_serverData.logger = require("../utils/log_launch")("gate-server");
+g_serverData.logger = require("../../utils/log_launch")("gate-server");
 const logger = g_serverData.logger;
-const errcode = require("../share/errcode");
+const errcode = require("../../share/errcode");
 const URL = require("url");
 const queryString = require("querystring");
-const config = require("../share/config");
-const network = require("../utils/network");
-const utils = require("../utils/utils");
-const networkHttp = require("../utils/network_http");
-const dbConn = require("../utils/db_connection");
+const config = require("../../share/config");
+const network = require("../../utils/network");
+const networkHttp = require("../../utils/network_http");
+const dbConn = require("../../utils/db_connection");
 
 logger.info("连接数据库");
 dbConn.redisConnect();
 const mainService = require("./service/main_service");
 
-var start = function(){
-    g_serverData.serverName = "gate-server-1";
-    g_serverData.serverId = 1;
+const serverInfo = JSON.parse(process.argv[2]);
+g_serverData.serverName = serverInfo.NAME;
+g_serverData.serverId = serverInfo.ID;
 
-    g_serverData.homeServerList = utils.clone(config.HOME_SERVER_LIST);
-    logger.info("启动gate server for home！！！, home server list: ", g_serverData.homeServerList);
-    ////////启动server
-    var svr = new network.Server({host: config.GATE_IP, port: config.GATE_SOCKET_PORT});
+logger.info(TAG, "gate server start ~~!!!!", serverInfo.ID, process.pid, process.cwd());
+
+var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
+cli.connect();
+cli.request({route: "register", serverData: serverInfo}, function(data){
+    logger.info(TAG, "向center server 注册 success code: ", data.code);
+});
+
+var listenHomeClient = function(){
+    g_serverData.idHomeInfoMap = {};
+    var svr = new network.Server({host: serverInfo.IP, port: serverInfo.FOR_HOME_PORT});
     svr.createServer(function(socketId){});
     svr.recv(function(socketId, data){
         if (data.route == "register"){
-            var serverData;
-            for (var i = 0; i < g_serverData.homeServerList.length; ++i){
-                if (!g_serverData.homeServerList[i].ISUSED){
-                    serverData = g_serverData.homeServerList[i];
-                    g_serverData.homeServerList[i].ISUSED = true;
-                    break;
-                }
-            }
-            svr.send(socketId, {route: "register", serverData: serverData});
-            if (g_serverData.homeNameSocketIdMap){
-                g_serverData.homeNameSocketIdMap[serverData.NAME] = socketId;
-            }else{
-                g_serverData.homeNameSocketIdMap = {[serverData.NAME] : socketId};
-            }
+            data.serverData.socketId = socketId;
+            g_serverData.idHomeInfoMap[data.serverData.ID] = data.serverData;
+            svr.send(socketId, {route: "register", code: 0});
+            logger.debug(TAG, data.serverData.NAME, "注册成功在gate server!!!");
         }
     });
     g_serverData.forHomeServer = svr;
-    ///启动http server
-    listenHttpClient();
 }
 
 var listenHttpClient = function(){
     var options = {
-        host: config.GATE_IP,
-        port: config.GATE_HTTP_PORT,
+        host: serverInfo.IP,
+        port: serverInfo.FOR_HTTP_PORT,
     }
     networkHttp.createHttp(options, function(req, res){
         const statusCode = res.statusCode;
@@ -77,6 +71,11 @@ var requestRouteHandler = function(req, next){
     }
 }
 
+////////启动server
+listenHomeClient();
+///启动http server
+listenHttpClient();
+
 process.on("exit", function(){
     logger.warn(TAG, "exit 事件", process.pid);
 });
@@ -88,6 +87,3 @@ process.on("exit", function(){
 process.on("uncaughtException", (err)=>{
     console.error("caught exception: ", err.stack);
 });
-
-
-exports.start = start;

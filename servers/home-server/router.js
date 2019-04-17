@@ -2,10 +2,10 @@
 const TAG = "router.js";
 const express = require("express");
 const router = express.Router();
-const errcode = require("../share/errcode");
+const errcode = require("../../share/errcode");
 const mainService = require("./service/main_service");
 const roomService = require("./service/room_service");
-const redis = require("../dao/redis/redis_common");
+const redis = require("../../dao/redis/redis_common");
 const logger = g_serverData.logger;
 
 module.exports = router;

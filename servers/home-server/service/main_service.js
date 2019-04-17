@@ -1,11 +1,11 @@
 "use strict"
 const TAG = "home-server/main_service.js";
-const redis = require("../../dao/redis/redis_common");
-const luckRedis = require("../../dao/redis/redis_lucktest");
-const userTable = require("../../dao/mysql/mini_program/table_user");
-const constant = require("../../share/constant");
-const errcode = require("../../share/errcode");
-const util = require("../../utils/utils");
+const redis = require("../../../dao/redis/redis_common");
+const luckRedis = require("../../../dao/redis/redis_lucktest");
+const userTable = require("../../../dao/mysql/mini_program/table_user");
+const constant = require("../../../share/constant");
+const errcode = require("../../../share/errcode");
+const util = require("../../../utils/utils");
 const HomeUser = require("../models/home_user");
 const logger = g_serverData.logger;
 

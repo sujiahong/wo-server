@@ -3,6 +3,10 @@
         "out": {
             "type": "console"
         },
+        "center-server": {
+            "type": "file",
+            "filename": "./logs/center-server.log"
+        },
         "gate-server": {
             "type": "file",
             "filename": "./logs/gate-server.log"
@@ -14,12 +18,20 @@
         "game-server":{
             "type": "file",
             "filename":"./logs/game-server.log" 
+        },
+        "download-server":{
+            "type": "file",
+            "filename":"./logs/download-server.log" 
         }
     },
     "categories" :{
         "default": {
             "appenders": ["out"],
             "level": "info"
+        },
+        "center-server": {
+            "appenders": ["center-server", "out"],
+            "level": "all"
         },
         "gate-server": {
             "appenders": ["gate-server", "out"],
@@ -31,6 +43,10 @@
         },
         "game-server": {
             "appenders": ["game-server", "out"],
+            "level": "all"
+        },
+        "download-server": {
+            "appenders": ["download-server", "out"],
             "level": "all"
         }
     },

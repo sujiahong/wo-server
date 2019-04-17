@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const TAG = "network_http.js";
 const express = require("express");
 const http = require("http");

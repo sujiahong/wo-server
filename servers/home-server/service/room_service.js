@@ -1,10 +1,9 @@
 "use strict"
 const TAG = "home-server/main_service.js";
-const redis = require("../../dao/redis/redis_common");
-const constant = require("../../share/constant");
-const errcode = require("../../share/errcode");
-const util = require("../../utils/utils");
-const config = require("../../share/config");
+const redis = require("../../../dao/redis/redis_common");
+const constant = require("../../../share/constant");
+const errcode = require("../../../share/errcode");
+const util = require("../../../utils/utils");
 const logger = g_serverData.logger;
 
 var service = module.exports;
@@ -36,14 +35,15 @@ service.createRoom = function(user, roomInfo, next){
 }
 
 var getGameServerInfoByRoomId = function(id){
-    var servers = config.GAEM_SERVER_LIST;
+    var idInfoMap = g_serverData.homeManager.idGameInfoMap;
+    var servers = Object.keys(idInfoMap);
     var len = servers.length;
 	if(len == 1){
-		return servers[0];
+		return idInfoMap[servers[0]];
 	}
 	var num = parseInt(id);
 	var remainder = num % len;
-	return servers[remainder];
+	return idInfoMap[servers[remainder]];
 }
 
 service.joinRoom = function(user, roomId, next){

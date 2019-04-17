@@ -12,6 +12,7 @@
   "author": "sujiahong",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.2",
     "express": "^4.16.4",
     "log4js": "^4.1.0",
     "mongodb": "^3.2.2",
