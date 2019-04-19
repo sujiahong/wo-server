@@ -7,7 +7,8 @@ var nhp = require("../../utils/network_http");
 const network = require("../../utils/network");
 const URL = require("url");
 const config = require("../../share/config");
-//const path = require("path");
+const path = require("path");
+const express = require("express");
 const fs = require("fs");
 
 var serverInfo = JSON.parse(process.argv[2]);
@@ -21,20 +22,27 @@ cli.request({route: "register", serverData: serverInfo}, function(data){
     logger.info(TAG, "向center server 注册 success code: ", data.code);
 });
 
-nhp.createHttp({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT}, function(msg, res){
-    var pathname = URL.parse(msg.url).pathname;
-    pathname = __dirname + "/assets" + pathname;
-    logger.info(TAG, "请求pathname:", pathname, msg.headers, msg.httpVersion);
-    fs.readFile(pathname, function(err, data){
-        if (err){
-            res.writeHead(404, {"Content-Type": "text/plain"});
-            return res.end(err.code);
-        }
-        res.writeHead(200, {"Content-Type": "text/plain"});
-        res.write(data, "binary");
-        res.end();
-    });
-});
+///////热更新下载
+var app = nhp.createExpress({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT});
+app.use(express.static(path.join(__dirname+"/assets", "hotupdate")));
+
+///////游戏包下载
+var appc = nhp.createExpress({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1});
+appc.use(express.static(path.join(__dirname+"/assets", "game-package")));
+// nhp.createHttp({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1}, function(msg, res){
+//     var pathname = URL.parse(msg.url).pathname;
+//     pathname = __dirname + "/assets" + pathname;
+//     logger.info(TAG, "请求pathname:", pathname, msg.headers, msg.httpVersion);
+//     fs.readFile(pathname, function(err, data){
+//         if (err){
+//             res.writeHead(404, {"Content-Type": "text/plain"});
+//             return res.end(err.code);
+//         }
+//         res.writeHead(200, {"Content-Type": "text/plain"});
+//         res.write(data, "binary");
+//         res.end();
+//     });
+// });
 
 
 process.on("exit", function(){

@@ -105,3 +105,206 @@
 [2019-04-17T16:27:29.989] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9990 }
 [2019-04-17T16:27:29.991] [DEBUG] download-server - utils/network.js 13888 客户端连接建立成功ip-port:  192.168.10.34 33272 9001
 [2019-04-17T16:27:30.000] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T16:58:35.497] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 14276 /home/sujiahong/workspace/aa-server
+[2019-04-18T16:58:35.509] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-18T16:58:35.511] [DEBUG] download-server - utils/network.js 14276 客户端连接建立成功ip-port:  192.168.10.34 42706 9001
+[2019-04-18T16:58:35.517] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T17:05:33.818] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 15226 /home/sujiahong/workspace/aa-server
+[2019-04-18T17:05:33.825] [WARN] download-server - download-start.js /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate-assets
+[2019-04-18T17:05:33.830] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-18T17:05:33.832] [DEBUG] download-server - utils/network.js 15226 客户端连接建立成功ip-port:  192.168.10.34 42842 9001
+[2019-04-18T17:05:33.847] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T17:10:09.949] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 15887 /home/sujiahong/workspace/aa-server
+[2019-04-18T17:10:09.967] [WARN] download-server - download-start.js /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate-assets
+[2019-04-18T17:10:09.977] [INFO] download-server - network_http.js http server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-18T17:10:09.978] [DEBUG] download-server - utils/network.js 15887 客户端连接建立成功ip-port:  192.168.10.34 42934 9001
+[2019-04-18T17:10:10.003] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T17:13:32.959] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 16542 /home/sujiahong/workspace/aa-server
+[2019-04-18T17:13:32.969] [WARN] download-server - download-start.js /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate-assets
+[2019-04-18T17:13:32.975] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-18T17:13:32.977] [DEBUG] download-server - utils/network.js 16542 客户端连接建立成功ip-port:  192.168.10.34 43058 9001
+[2019-04-18T17:13:32.981] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T17:21:14.347] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 17516 /home/sujiahong/workspace/aa-server
+[2019-04-18T17:21:14.358] [WARN] download-server - download-start.js /home/sujiahong/workspace/aa-server/servers/download-server/assets/hotupdate
+[2019-04-18T17:21:14.364] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-18T17:21:14.367] [DEBUG] download-server - utils/network.js 17516 客户端连接建立成功ip-port:  192.168.10.34 43192 9001
+[2019-04-18T17:21:14.371] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T17:31:14.308] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 18758 /home/sujiahong/workspace/aa-server
+[2019-04-18T17:31:14.316] [WARN] download-server - download-start.js function serveStatic(req, res, next) {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      if (fallthrough) {
+        return next()
+      }
+
+      // method not allowed
+      res.statusCode = 405
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
+      res.end()
+      return
+    }
+
+    var forwardError = !fallthrough
+    var originalUrl = parseUrl.original(req)
+    var path = parseUrl(req).pathname
+
+    // make sure redirect occurs at mount
+    if (path === '/' && originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
+    }
+
+    // create send stream
+    var stream = send(req, path, opts)
+
+    // add directory handler
+    stream.on('directory', onDirectory)
+
+    // add headers listener
+    if (setHeaders) {
+      stream.on('headers', setHeaders)
+    }
+
+    // add file listener for fallthrough
+    if (fallthrough) {
+      stream.on('file', function onFile () {
+        // once file is determined, always forward error
+        forwardError = true
+      })
+    }
+
+    // forward errors
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode < 500)) {
+        next(err)
+        return
+      }
+
+      next()
+    })
+
+    // pipe
+    stream.pipe(res)
+  }
+[2019-04-18T17:31:14.321] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-18T17:31:14.323] [DEBUG] download-server - utils/network.js 18758 客户端连接建立成功ip-port:  192.168.10.34 43320 9001
+[2019-04-18T17:31:14.326] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-18T19:32:58.749] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 32650 /home/sujiahong/workspace/aa-server
+[2019-04-18T19:32:58.759] [WARN] download-server - download-start.js function serveStatic(req, res, next) {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      if (fallthrough) {
+        return next()
+      }
+
+      // method not allowed
+      res.statusCode = 405
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
+      res.end()
+      return
+    }
+
+    var forwardError = !fallthrough
+    var originalUrl = parseUrl.original(req)
+    var path = parseUrl(req).pathname
+
+    // make sure redirect occurs at mount
+    if (path === '/' && originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
+    }
+
+    // create send stream
+    var stream = send(req, path, opts)
+
+    // add directory handler
+    stream.on('directory', onDirectory)
+
+    // add headers listener
+    if (setHeaders) {
+      stream.on('headers', setHeaders)
+    }
+
+    // add file listener for fallthrough
+    if (fallthrough) {
+      stream.on('file', function onFile () {
+        // once file is determined, always forward error
+        forwardError = true
+      })
+    }
+
+    // forward errors
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode < 500)) {
+        next(err)
+        return
+      }
+
+      next()
+    })
+
+    // pipe
+    stream.pipe(res)
+  }
+[2019-04-18T19:32:58.762] [WARN] download-server - download-start.js function serveStatic(req, res, next) {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      if (fallthrough) {
+        return next()
+      }
+
+      // method not allowed
+      res.statusCode = 405
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
+      res.end()
+      return
+    }
+
+    var forwardError = !fallthrough
+    var originalUrl = parseUrl.original(req)
+    var path = parseUrl(req).pathname
+
+    // make sure redirect occurs at mount
+    if (path === '/' && originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
+    }
+
+    // create send stream
+    var stream = send(req, path, opts)
+
+    // add directory handler
+    stream.on('directory', onDirectory)
+
+    // add headers listener
+    if (setHeaders) {
+      stream.on('headers', setHeaders)
+    }
+
+    // add file listener for fallthrough
+    if (fallthrough) {
+      stream.on('file', function onFile () {
+        // once file is determined, always forward error
+        forwardError = true
+      })
+    }
+
+    // forward errors
+    stream.on('error', function error (err) {
+      if (forwardError || !(err.statusCode < 500)) {
+        next(err)
+        return
+      }
+
+      next()
+    })
+
+    // pipe
+    stream.pipe(res)
+  }
+[2019-04-18T19:32:58.765] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-18T19:32:58.766] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-18T19:32:58.768] [DEBUG] download-server - utils/network.js 32650 客户端连接建立成功ip-port:  192.168.10.34 44446 9001
+[2019-04-18T19:32:58.773] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-19T16:54:05.140] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 14248 /home/sujiahong/workspace/aa-server
+[2019-04-19T16:54:05.153] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-19T16:54:05.154] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-19T16:54:05.156] [DEBUG] download-server - utils/network.js 14248 客户端连接建立成功ip-port:  192.168.10.34 54472 9001
+[2019-04-19T16:54:05.159] [INFO] download-server - download-start.js 向center server 注册 success code:  0

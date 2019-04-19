@@ -5,6 +5,9 @@ g_serverData.logger = require("../../utils/log_launch")("center-server");
 const logger = g_serverData.logger;
 const config = require("../../share/config");
 const network = require("../../utils/network");
+const networkHttp = require("../../utils/network_http");
+const URL = require("url");
+const queryString = require("querystring");
 
 logger.info(TAG, "center server start ~~!!!!", process.pid, process.cwd());
 
@@ -20,6 +23,31 @@ svr.recv(function(socketId, data){
     }
 });
 g_serverData.centerServer = svr;
+
+var options = {
+    host: config.CENTER_IP,
+    port: config.CENTER_HTTP_PORT,
+}
+networkHttp.createHttp(options, function(msg, res){
+    const statusCode = res.statusCode;
+    if (statusCode !== 200){
+        return res.end("fail");
+    }
+    requestRouteHandler(msg, (ret)=>{
+        res.end(JSON.stringify(ret));
+    });
+});
+
+var requestRouteHandler = function(req, next){
+    var urlData = URL.parse(req.url);
+    if (urlData.pathname == "/login"){
+        logger.info(TAG, "管理员用户登录, urlData.query");
+    }else if (urlData.pathname == "/lookServerInfo"){
+        
+    }else{
+        next({code: errcode.ROUTE_ERR});
+    }
+}
 
 process.on("exit", function(){
     logger.warn(TAG, "exit 事件", process.pid);

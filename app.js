@@ -23,7 +23,7 @@ srvCluster.createCluster(1, function(cluster){
                 console.log(TAG, "启动服务: ", list[i].ID);
                 cp.fork(list[i].START_PATH, [JSON.stringify(list[i])]);
             }
-            setTimeout(cb, 100*len);
+            setTimeout(cb, 150*len);
         }
         startArr.push(func);
     }
