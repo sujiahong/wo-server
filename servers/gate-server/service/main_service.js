@@ -4,6 +4,7 @@ const httpReq = require("../../../utils/http_request");
 const errcode = require("../../../share/errcode");
 const constant = require("../../../share/constant");
 const redis = require("../../../dao/redis/redis_common");
+const utils = require("../../../utils/utils");
 const logger = g_serverData.logger;
 var service = module.exports;
 
@@ -31,13 +32,15 @@ service.validateUser = function(vData, next){
     case constant.ACCOUNT_TYPE.tel:
         var toData = {};
         toData.code = errcode.OK;
+        var account = JSON.parse(decodeURIComponent(vData.accountData)).account;
+        toData.account = account;
         var homeServerData = recommondHomeServer(g_serverData.idHomeInfoMap);
         toData.ip = homeServerData.IP;
         toData.port = homeServerData.FOR_CLIENT_PORT;
-        var str = genRecommendationCode(constant.ACCOUNT_TYPE.tel, homeServerData.ID, "3838");
+        var str = genRecommendationCode(constant.ACCOUNT_TYPE.tel, homeServerData.ID, account);
         toData.recommendation = str;
-        redis.setRecommendation(str, "333");
-        notifyHomeServerRecommendation(homeServerData.ID, str, "3838");
+        redis.setRecommendation(str, account);
+        notifyHomeServerRecommendation(homeServerData.ID, str, account);
         next(toData);
         break;
     case constant.ACCOUNT_TYPE.wb:
@@ -52,7 +55,7 @@ service.validateUser = function(vData, next){
 var genRecommendationCode = function(accountType, homeServerName, account){
     var val = Math.floor(Date.now() * Math.random()); 
     var str = g_serverData.serverName + "|" + homeServerName +  "|" + accountType + "|" + account + "|" + val;
-    return str;
+    return utils.md5(str);
 }
 
 var recommondHomeServer = function(serverMap){

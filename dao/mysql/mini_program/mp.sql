@@ -12,7 +12,7 @@ CREATE TABLE `mp_user` (
     `coins`         int                 DEFAULT "0" COMMENT "金币",
     `create_time`   bigint unsigned     NOT NULL COMMENT "创建时间",
     `login_time`    bigint unsigned     NOT NULL COMMENT "登录时间",
-    `mini_id`       tinyint unsigned    NOT NULL COMMENT "小程序id",
+    `client_id`     tinyint unsigned    NOT NULL COMMENT "客户端id",
     `cli_type`      char(12)            NOT NULL COMMENT "客户端类别",
     `account_type`  char(12)            NOT NULL COMMENT "帐号类型",
     `account`       varchar(64)         NOT NULL COMMENT "帐号",

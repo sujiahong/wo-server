@@ -18,7 +18,7 @@ module.exports = {
     },
     ACCOUNT_TYPE: {
         wx: "wechat",
-        tel: "tel-number",
+        tel: "telnumber",
         wb: "weibo",
         mail: "mail",
     },

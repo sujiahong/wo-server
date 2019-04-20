@@ -308,3 +308,43 @@
 [2019-04-19T16:54:05.154] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
 [2019-04-19T16:54:05.156] [DEBUG] download-server - utils/network.js 14248 客户端连接建立成功ip-port:  192.168.10.34 54472 9001
 [2019-04-19T16:54:05.159] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T18:41:43.081] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 24436 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:43.093] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T18:41:43.095] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T18:41:43.096] [DEBUG] download-server - utils/network.js 24436 客户端连接建立成功ip-port:  192.168.10.34 38128 9001
+[2019-04-20T18:41:43.101] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T18:42:34.284] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 24668 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:34.304] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T18:42:34.305] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T18:42:34.310] [DEBUG] download-server - utils/network.js 24668 客户端连接建立成功ip-port:  192.168.10.34 38184 9001
+[2019-04-20T18:42:34.314] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T18:56:10.692] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 26268 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:10.709] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T18:56:10.710] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T18:56:10.711] [DEBUG] download-server - utils/network.js 26268 客户端连接建立成功ip-port:  192.168.10.34 38338 9001
+[2019-04-20T18:56:10.717] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T19:22:54.399] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 29479 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:54.417] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T19:22:54.418] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T19:22:54.419] [DEBUG] download-server - utils/network.js 29479 客户端连接建立成功ip-port:  192.168.10.34 38626 9001
+[2019-04-20T19:22:54.426] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T19:39:03.594] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 31377 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:03.621] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T19:39:03.622] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T19:39:03.624] [DEBUG] download-server - utils/network.js 31377 客户端连接建立成功ip-port:  192.168.10.34 38810 9001
+[2019-04-20T19:39:03.627] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T19:49:00.300] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 32591 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:49:00.320] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T19:49:00.321] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T19:49:00.323] [DEBUG] download-server - utils/network.js 32591 客户端连接建立成功ip-port:  192.168.10.34 38944 9001
+[2019-04-20T19:49:00.329] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T19:54:15.305] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 916 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:15.321] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T19:54:15.322] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T19:54:15.324] [DEBUG] download-server - utils/network.js 916 客户端连接建立成功ip-port:  192.168.10.34 39034 9001
+[2019-04-20T19:54:15.343] [INFO] download-server - download-start.js 向center server 注册 success code:  0
+[2019-04-20T19:57:25.154] [INFO] download-server - download-start.js download start ~~!!!! download-server-1 1418 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:25.167] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9990 }
+[2019-04-20T19:57:25.168] [INFO] download-server - network_http.js express server listen:  { host: '192.168.10.34', port: 9991 }
+[2019-04-20T19:57:25.170] [DEBUG] download-server - utils/network.js 1418 客户端连接建立成功ip-port:  192.168.10.34 39114 9001
+[2019-04-20T19:57:25.174] [INFO] download-server - download-start.js 向center server 注册 success code:  0

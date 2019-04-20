@@ -25,9 +25,9 @@ router.get("/login", function(req, res){
     var recommendation = query.recommendation;
     var recommendationAccountMap = g_serverData.homeManager.recommendationAccountMap;
     if (recommendationAccountMap[recommendation] != query.account){
-        redis.getRecommendation(recommendation, function(ret){
-            if (ret.account){
-                recommendationAccountMap[recommendation] = ret.account;
+        redis.getRecommendation(recommendation, function(retData){
+            if (retData.account){
+                recommendationAccountMap[recommendation] = retData.account;
                 mainService.login(query, function(ret){
                     res.send(ret);
                 });

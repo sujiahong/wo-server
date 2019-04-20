@@ -9,11 +9,12 @@ const queryString = require("querystring");
 var req = module.exports;
 
 req.loginWX = function(data, next){
+    var accountData = JSON.parse(data.accountData);
     var url = config.WX_LOGIN_URL;
     var queryData = {
-        appid: constant.MINIINFO[data.MiniId].appid,
-        secret: constant.MINIINFO[data.MiniId].secret,
-        js_code: JSON.parse(data.accountData).code,
+        appid: constant.MINIINFO[accountData.clientId].appid,
+        secret: constant.MINIINFO[accountData.clientId].secret,
+        js_code: accountData.code,
         grant_type: "authorization_code"
     };
     url = url + queryString.stringify(queryData);

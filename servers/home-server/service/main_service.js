@@ -12,26 +12,19 @@ const logger = g_serverData.logger;
 var service = module.exports;
 
 service.login = function(loginData, next){
-    loginData.accountData = JSON.parse(loginData.accountData);
-    if (loginData.accountType == constant.ACCOUNT_TYPE.wx){
-        redis.getRegisterUserId(loginData.account, (ret)=>{
-            if (ret.code != errcode.OK){
-                return next(ret);
-            }
-            var userId = ret.userId;
-            if (userId){
-                doLogin(userId, loginData, next);
-            }else{
-                logger.info(TAG, "go 注册！！！", loginData);
-                service.register(loginData, next);
-            }
-        });
-    }else if (loginData.accountType == constant.ACCOUNT_TYPE.tel){
-        next({code: errcode.OK});
-    }else{
-        logger.info(TAG, "login 帐号类型：", loginData.accountType);
-        next({code: errcode.ACCOUNT_TYPE_ERR});
-    }
+    loginData.accountData = JSON.parse(decodeURIComponent(loginData.accountData));
+    redis.getRegisterUserId(loginData.account, (ret)=>{
+        if (ret.code != errcode.OK){
+            return next(ret);
+        }
+        var userId = ret.userId;
+        if (userId){
+            doLogin(userId, loginData, next);
+        }else{
+            logger.info(TAG, "go 注册！！！", loginData);
+            service.register(loginData, next);
+        }
+    });
 }
 
 var doLogin = function(userId, loginData, next){
@@ -81,49 +74,43 @@ service.register = function(registerData, next){
         if (code != errcode.OK){
             return next({code: code});
         }
-        if (registerData.accountType == constant.ACCOUNT_TYPE.wx){
-            var userData = {};
-            userData.userId = userId;
-            userData.cli_type = registerData.cliType;
-            userData.account_type = registerData.accountType;
-            userData.account = registerData.account;
-            userData.mini_id = registerData.MiniId;
-            userData.nickname = decodeURIComponent(registerData.accountData.nickName);
-            userData.sex = registerData.accountData.gender;
-            userData.icon = decodeURIComponent(registerData.accountData.avatarUrl) || "";
-            userData.coins = 20;
-            userData.login_ip = registerData.ip;
-            userTable.createUser(userData, function(ret){
-                if (ret.code != errcode.OK){
-                    return next(ret);
-                }
-                var user = new HomeUser(userId, userData);
-                g_serverData.homeManager.userAdd(userId, user);
-                redis.getRecommendationTTL(loginData.recommendation, function(num){
-                    if (num > 0){
-                        user.timeId = setTimeout(function(){
-                            g_serverData.homeManager.userExit(userId);
-                            delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-                        }, num);
-                    }else{
+        var userData = {};
+        userData.userId = userId;
+        userData.cli_type = registerData.cliType;
+        userData.account_type = registerData.accountType;
+        userData.account = registerData.account;
+        userData.client_id = registerData.clientId;
+        userData.nickname = decodeURIComponent(registerData.accountData.nickName);
+        userData.sex = registerData.accountData.gender;
+        userData.icon = decodeURIComponent(registerData.accountData.avatarUrl) || "";
+        userData.coins = 20;
+        userData.login_ip = registerData.ip;
+        userTable.createUser(userData, function(ret){
+            if (ret.code != errcode.OK){
+                return next(ret);
+            }
+            var user = new HomeUser(userId, userData);
+            g_serverData.homeManager.userAdd(userId, user);
+            redis.getRecommendationTTL(registerData.recommendation, function(num){
+                if (num > 0){
+                    user.timeId = setTimeout(function(){
                         g_serverData.homeManager.userExit(userId);
-                        delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-                    }
-                });
-                redis.addToRegisterTable(registerData.account, userId);
-                var res = {
-                    code: 0,
-                    userId: userId,
-                    coins: 20
-                };
-                next(res);
+                        delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
+                    }, num);
+                }else{
+                    g_serverData.homeManager.userExit(userId);
+                    delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
+                }
             });
-        }else if (registerData.accountType == constant.ACCOUNT_TYPE.tel){
-            next({code: errcode.OK});
-        }else{
-            logger.info(TAG, "register 帐号类型：", loginData.accountType);
-            next({code: errcode.ACCOUNT_TYPE_ERR});
-        }
+            redis.addToRegisterTable(registerData.account, userId);
+            var res = {
+                code: 0,
+                userId: userId,
+                coins: 20
+            };
+            logger.info(TAG, "to client data: ", res);
+            next(res);
+        });
     });
 }
 

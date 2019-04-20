@@ -10004,3 +10004,371 @@
 [2019-04-19T16:54:06.128] [DEBUG] game-server - utils/network.js 14285 客户端连接建立成功ip-port:  192.168.10.34 36262 9120
 [2019-04-19T16:54:06.132] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
 [2019-04-19T16:54:06.133] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:41:44.303] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:41:44.393] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:41:44.271] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:41:44.348] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:41:44.353] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:41:44.764] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:41:44.827] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 24477 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:44.398] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:41:44.288] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:41:44.870] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T18:41:44.308] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:41:44.762] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:41:44.813] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 24471 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:44.877] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9100
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9100 }
+[2019-04-20T18:41:44.844] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T18:41:44.916] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9120
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9120 }
+[2019-04-20T18:41:44.859] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9100
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9100 }
+[2019-04-20T18:41:44.916] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.920] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9120
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9120 }
+[2019-04-20T18:41:44.916] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.920] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.920] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.760] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:41:44.813] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 24483 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:44.866] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T18:41:44.873] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9100
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9100 }
+[2019-04-20T18:41:44.920] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9120
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9120 }
+[2019-04-20T18:41:44.920] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.920] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.763] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:41:44.813] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 24470 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:44.840] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T18:41:44.858] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9100
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9100 }
+[2019-04-20T18:41:44.922] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9120
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9120 }
+[2019-04-20T18:41:44.923] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:41:44.923] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:42:34.820] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:42:34.827] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:42:34.924] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:42:34.935] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 24711 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:34.943] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T18:42:34.955] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9100
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9100 }
+[2019-04-20T18:42:34.956] [DEBUG] game-server - utils/network.js 24711 客户端连接建立成功ip-port:  192.168.10.34 48182 9120
+[2019-04-20T18:42:34.958] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T18:42:34.962] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:34.913] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:42:34.932] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:42:35.021] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:42:35.023] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 24704 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:35.032] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T18:42:35.037] [DEBUG] game-server - utils/network.js 24704 客户端连接建立成功ip-port:  192.168.10.34 59614 9100
+[2019-04-20T18:42:35.039] [DEBUG] game-server - utils/network.js 24704 客户端连接建立成功ip-port:  192.168.10.34 48194 9120
+[2019-04-20T18:42:35.044] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:35.044] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:35.091] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:42:35.097] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:42:35.145] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:42:35.147] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 24705 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:35.154] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T18:42:35.161] [DEBUG] game-server - utils/network.js 24705 客户端连接建立成功ip-port:  192.168.10.34 59620 9100
+[2019-04-20T18:42:35.163] [DEBUG] game-server - utils/network.js 24705 客户端连接建立成功ip-port:  192.168.10.34 48200 9120
+[2019-04-20T18:42:35.168] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:35.168] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:35.140] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:42:35.145] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:42:35.185] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:42:35.187] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 24717 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:35.193] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T18:42:35.198] [DEBUG] game-server - utils/network.js 24717 客户端连接建立成功ip-port:  192.168.10.34 59626 9100
+[2019-04-20T18:42:35.199] [DEBUG] game-server - utils/network.js 24717 客户端连接建立成功ip-port:  192.168.10.34 48206 9120
+[2019-04-20T18:42:35.205] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:42:35.206] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.438] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:56:11.479] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:56:11.473] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:56:11.536] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:56:11.537] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 26322 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:11.546] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T18:56:11.559] [DEBUG] game-server - utils/network.js 26322 客户端连接建立成功ip-port:  192.168.10.34 59766 9100
+[2019-04-20T18:56:11.573] [DEBUG] game-server - utils/network.js 26322 客户端连接建立成功ip-port:  192.168.10.34 48346 9120
+[2019-04-20T18:56:11.583] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.583] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.484] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:56:11.546] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:56:11.548] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 26328 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:11.556] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T18:56:11.578] [DEBUG] game-server - utils/network.js 26328 客户端连接建立成功ip-port:  192.168.10.34 59772 9100
+[2019-04-20T18:56:11.579] [DEBUG] game-server - utils/network.js 26328 客户端连接建立成功ip-port:  192.168.10.34 48352 9120
+[2019-04-20T18:56:11.596] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.600] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.654] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:56:11.663] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T18:56:11.660] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:56:11.669] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T18:56:11.710] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:56:11.711] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 26315 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:11.716] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T18:56:11.721] [DEBUG] game-server - utils/network.js 26315 客户端连接建立成功ip-port:  192.168.10.34 59784 9100
+[2019-04-20T18:56:11.722] [DEBUG] game-server - utils/network.js 26315 客户端连接建立成功ip-port:  192.168.10.34 48364 9120
+[2019-04-20T18:56:11.707] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T18:56:11.726] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.726] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.708] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 26316 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:11.717] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T18:56:11.721] [DEBUG] game-server - utils/network.js 26316 客户端连接建立成功ip-port:  192.168.10.34 59780 9100
+[2019-04-20T18:56:11.722] [DEBUG] game-server - utils/network.js 26316 客户端连接建立成功ip-port:  192.168.10.34 48360 9120
+[2019-04-20T18:56:11.727] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T18:56:11.727] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.182] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:22:55.183] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:22:55.188] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:22:55.226] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:22:55.228] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 29518 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:55.240] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T19:22:55.245] [DEBUG] game-server - utils/network.js 29518 客户端连接建立成功ip-port:  192.168.10.34 60054 9100
+[2019-04-20T19:22:55.247] [DEBUG] game-server - utils/network.js 29518 客户端连接建立成功ip-port:  192.168.10.34 48634 9120
+[2019-04-20T19:22:55.260] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.188] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:22:55.262] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.238] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:22:55.242] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 29510 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:55.249] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T19:22:55.253] [DEBUG] game-server - utils/network.js 29510 客户端连接建立成功ip-port:  192.168.10.34 60060 9100
+[2019-04-20T19:22:55.254] [DEBUG] game-server - utils/network.js 29510 客户端连接建立成功ip-port:  192.168.10.34 48640 9120
+[2019-04-20T19:22:55.265] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.265] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.304] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:22:55.309] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:22:55.349] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:22:55.350] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 29517 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:55.356] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T19:22:55.360] [DEBUG] game-server - utils/network.js 29517 客户端连接建立成功ip-port:  192.168.10.34 60066 9100
+[2019-04-20T19:22:55.362] [DEBUG] game-server - utils/network.js 29517 客户端连接建立成功ip-port:  192.168.10.34 48646 9120
+[2019-04-20T19:22:55.366] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.367] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.320] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:22:55.326] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:22:55.367] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:22:55.369] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 29511 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:55.375] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T19:22:55.380] [DEBUG] game-server - utils/network.js 29511 客户端连接建立成功ip-port:  192.168.10.34 60072 9100
+[2019-04-20T19:22:55.381] [DEBUG] game-server - utils/network.js 29511 客户端连接建立成功ip-port:  192.168.10.34 48652 9120
+[2019-04-20T19:22:55.385] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:22:55.385] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.352] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:39:04.357] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:39:04.396] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:39:04.397] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 31414 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:04.404] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T19:39:04.410] [DEBUG] game-server - utils/network.js 31414 客户端连接建立成功ip-port:  192.168.10.34 60234 9100
+[2019-04-20T19:39:04.412] [DEBUG] game-server - utils/network.js 31414 客户端连接建立成功ip-port:  192.168.10.34 48814 9120
+[2019-04-20T19:39:04.416] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.417] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.468] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:39:04.473] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:39:04.526] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:39:04.528] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 31420 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:04.551] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T19:39:04.555] [DEBUG] game-server - utils/network.js 31420 客户端连接建立成功ip-port:  192.168.10.34 60240 9100
+[2019-04-20T19:39:04.556] [DEBUG] game-server - utils/network.js 31420 客户端连接建立成功ip-port:  192.168.10.34 48820 9120
+[2019-04-20T19:39:04.561] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.562] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.492] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:39:04.499] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:39:04.559] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:39:04.561] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 31408 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:04.576] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T19:39:04.581] [DEBUG] game-server - utils/network.js 31408 客户端连接建立成功ip-port:  192.168.10.34 60246 9100
+[2019-04-20T19:39:04.584] [DEBUG] game-server - utils/network.js 31408 客户端连接建立成功ip-port:  192.168.10.34 48826 9120
+[2019-04-20T19:39:04.589] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.589] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.513] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:39:04.530] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:39:04.603] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:39:04.604] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 31407 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:04.611] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T19:39:04.617] [DEBUG] game-server - utils/network.js 31407 客户端连接建立成功ip-port:  192.168.10.34 60252 9100
+[2019-04-20T19:39:04.618] [DEBUG] game-server - utils/network.js 31407 客户端连接建立成功ip-port:  192.168.10.34 48832 9120
+[2019-04-20T19:39:04.623] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:39:04.624] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.011] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:49:01.020] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:49:01.011] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:49:01.044] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:49:01.107] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:49:01.128] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 32621 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:49:01.142] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T19:49:01.155] [DEBUG] game-server - utils/network.js 32621 客户端连接建立成功ip-port:  192.168.10.34 60370 9100
+[2019-04-20T19:49:01.156] [DEBUG] game-server - utils/network.js 32621 客户端连接建立成功ip-port:  192.168.10.34 48950 9120
+[2019-04-20T19:49:01.173] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.174] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.132] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:49:01.146] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 32622 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:49:01.159] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T19:49:01.166] [DEBUG] game-server - utils/network.js 32622 客户端连接建立成功ip-port:  192.168.10.34 60376 9100
+[2019-04-20T19:49:01.170] [DEBUG] game-server - utils/network.js 32622 客户端连接建立成功ip-port:  192.168.10.34 48956 9120
+[2019-04-20T19:49:01.176] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.177] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.198] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:49:01.204] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:49:01.243] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:49:01.245] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 32628 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:49:01.250] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T19:49:01.255] [DEBUG] game-server - utils/network.js 32628 客户端连接建立成功ip-port:  192.168.10.34 60382 9100
+[2019-04-20T19:49:01.257] [DEBUG] game-server - utils/network.js 32628 客户端连接建立成功ip-port:  192.168.10.34 48962 9120
+[2019-04-20T19:49:01.262] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.262] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.264] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:49:01.270] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:49:01.307] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:49:01.309] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 32635 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:49:01.316] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T19:49:01.321] [DEBUG] game-server - utils/network.js 32635 客户端连接建立成功ip-port:  192.168.10.34 60388 9100
+[2019-04-20T19:49:01.323] [DEBUG] game-server - utils/network.js 32635 客户端连接建立成功ip-port:  192.168.10.34 48968 9120
+[2019-04-20T19:49:01.327] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:49:01.328] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.066] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:54:16.071] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:54:16.122] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:54:16.124] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 947 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:16.131] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T19:54:16.135] [DEBUG] game-server - utils/network.js 947 客户端连接建立成功ip-port:  192.168.10.34 60458 9100
+[2019-04-20T19:54:16.138] [ERROR] game-server - utils/network.js client client socket error : { Error: connect ECONNREFUSED 192.168.10.34:9120
+    at Object.exports._errnoException (util.js:1020:11)
+    at exports._exceptionWithHostPort (util.js:1043:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1099:14)
+  code: 'ECONNREFUSED',
+  errno: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '192.168.10.34',
+  port: 9120 }
+[2019-04-20T19:54:16.139] [WARN] game-server - utils/network.js socket client close close 尝试重新连接!!!
+[2019-04-20T19:54:16.143] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.184] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:54:16.189] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:54:16.239] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:54:16.240] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 960 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:16.254] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T19:54:16.258] [DEBUG] game-server - utils/network.js 960 客户端连接建立成功ip-port:  192.168.10.34 60470 9100
+[2019-04-20T19:54:16.261] [DEBUG] game-server - utils/network.js 960 客户端连接建立成功ip-port:  192.168.10.34 49050 9120
+[2019-04-20T19:54:16.266] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.267] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.225] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:54:16.232] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:54:16.271] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:54:16.273] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 954 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:16.282] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T19:54:16.288] [DEBUG] game-server - utils/network.js 954 客户端连接建立成功ip-port:  192.168.10.34 60476 9100
+[2019-04-20T19:54:16.289] [DEBUG] game-server - utils/network.js 954 客户端连接建立成功ip-port:  192.168.10.34 49056 9120
+[2019-04-20T19:54:16.295] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.296] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.244] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:54:16.249] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:54:16.342] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:54:16.343] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 948 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:16.350] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T19:54:16.354] [DEBUG] game-server - utils/network.js 948 客户端连接建立成功ip-port:  192.168.10.34 60482 9100
+[2019-04-20T19:54:16.355] [DEBUG] game-server - utils/network.js 948 客户端连接建立成功ip-port:  192.168.10.34 49062 9120
+[2019-04-20T19:54:16.360] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:54:16.360] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:25.987] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:57:25.992] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:57:26.040] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:57:26.042] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-3 1467 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:26.048] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8320 }
+[2019-04-20T19:57:26.053] [DEBUG] game-server - utils/network.js 1467 客户端连接建立成功ip-port:  192.168.10.34 60538 9100
+[2019-04-20T19:57:26.056] [DEBUG] game-server - utils/network.js 1467 客户端连接建立成功ip-port:  192.168.10.34 49118 9120
+[2019-04-20T19:57:26.061] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.061] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:25.957] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:57:26.059] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:57:25.962] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:57:26.064] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:57:26.100] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:57:26.102] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-1 1460 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:26.128] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8310 }
+[2019-04-20T19:57:26.137] [DEBUG] game-server - utils/network.js 1460 客户端连接建立成功ip-port:  192.168.10.34 60544 9100
+[2019-04-20T19:57:26.137] [DEBUG] game-server - utils/network.js 1460 客户端连接建立成功ip-port:  192.168.10.34 49124 9120
+[2019-04-20T19:57:26.143] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.143] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.116] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:57:26.118] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-4 1473 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:26.133] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8321 }
+[2019-04-20T19:57:26.137] [DEBUG] game-server - utils/network.js 1473 客户端连接建立成功ip-port:  192.168.10.34 60550 9100
+[2019-04-20T19:57:26.139] [DEBUG] game-server - utils/network.js 1473 客户端连接建立成功ip-port:  192.168.10.34 49130 9120
+[2019-04-20T19:57:26.146] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.146] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.089] [INFO] game-server - 连接 redis server， mysql server
+[2019-04-20T19:57:26.104] [INFO] game-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-20T19:57:26.169] [INFO] game-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-20T19:57:26.170] [INFO] game-server - gameserver-start.js game server start ~~!!!! game-server-2 1461 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:26.176] [DEBUG] game-server - ws server listening { host: '192.168.10.34', port: 8311 }
+[2019-04-20T19:57:26.183] [DEBUG] game-server - utils/network.js 1461 客户端连接建立成功ip-port:  192.168.10.34 60556 9100
+[2019-04-20T19:57:26.183] [DEBUG] game-server - utils/network.js 1461 客户端连接建立成功ip-port:  192.168.10.34 49136 9120
+[2019-04-20T19:57:26.187] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0
+[2019-04-20T19:57:26.188] [INFO] game-server - gameserver-start.js 向home server 注册 success code:  0

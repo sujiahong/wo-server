@@ -12,7 +12,7 @@ class HomeUser {
         this.accountType = opts.account_type;
         this.loginIp = opts.login_ip || "";
         this.coins = opts.coins;
-        this.miniId = opts.mini_id;
+        this.clientId = opts.client_id;
         this.userAction = 1;
         this.loginStat = 0;
         this.timeId = null;

@@ -221,3 +221,91 @@
 [2019-04-19T16:54:05.522] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
 [2019-04-19T16:54:05.661] [DEBUG] center-server - utils/network.js 14220 服务端连接建立成功ip-port:  192.168.10.34 54482
 [2019-04-19T16:54:05.680] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T18:41:42.562] [INFO] center-server - center-start.js center server start ~~!!!! 24408 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:41:42.589] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T18:41:42.590] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T18:41:43.093] [DEBUG] center-server - utils/network.js 24408 服务端连接建立成功ip-port:  192.168.10.34 38128
+[2019-04-20T18:41:43.099] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T18:41:44.229] [DEBUG] center-server - utils/network.js 24408 服务端连接建立成功ip-port:  192.168.10.34 38132
+[2019-04-20T18:41:44.236] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T18:41:44.871] [DEBUG] center-server - utils/network.js 24408 服务端连接建立成功ip-port:  192.168.10.34 38160
+[2019-04-20T18:41:44.877] [DEBUG] center-server - utils/network.js 24408 服务端连接建立成功ip-port:  192.168.10.34 38164
+[2019-04-20T18:41:44.885] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T18:41:44.902] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T18:42:33.676] [INFO] center-server - center-start.js center server start ~~!!!! 24642 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:42:33.686] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T18:42:33.687] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T18:42:34.167] [DEBUG] center-server - utils/network.js 24642 服务端连接建立成功ip-port:  192.168.10.34 38182
+[2019-04-20T18:42:34.179] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T18:42:34.300] [DEBUG] center-server - utils/network.js 24642 服务端连接建立成功ip-port:  192.168.10.34 38184
+[2019-04-20T18:42:34.312] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T18:42:34.830] [DEBUG] center-server - utils/network.js 24642 服务端连接建立成功ip-port:  192.168.10.34 38188
+[2019-04-20T18:42:34.850] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T18:42:34.961] [DEBUG] center-server - utils/network.js 24642 服务端连接建立成功ip-port:  192.168.10.34 38200
+[2019-04-20T18:42:34.980] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T18:56:10.198] [INFO] center-server - center-start.js center server start ~~!!!! 26245 /home/sujiahong/workspace/aa-server
+[2019-04-20T18:56:10.209] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T18:56:10.210] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T18:56:10.706] [DEBUG] center-server - utils/network.js 26245 服务端连接建立成功ip-port:  192.168.10.34 38338
+[2019-04-20T18:56:10.714] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T18:56:10.721] [DEBUG] center-server - utils/network.js 26245 服务端连接建立成功ip-port:  192.168.10.34 38342
+[2019-04-20T18:56:10.728] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T18:56:11.225] [DEBUG] center-server - utils/network.js 26245 服务端连接建立成功ip-port:  192.168.10.34 38346
+[2019-04-20T18:56:11.237] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T18:56:11.462] [DEBUG] center-server - utils/network.js 26245 服务端连接建立成功ip-port:  192.168.10.34 38352
+[2019-04-20T18:56:11.475] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T19:22:53.904] [INFO] center-server - center-start.js center server start ~~!!!! 29452 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:22:53.914] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T19:22:53.916] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T19:22:54.411] [DEBUG] center-server - utils/network.js 29452 服务端连接建立成功ip-port:  192.168.10.34 38626
+[2019-04-20T19:22:54.422] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T19:22:54.439] [DEBUG] center-server - utils/network.js 29452 服务端连接建立成功ip-port:  192.168.10.34 38630
+[2019-04-20T19:22:54.447] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T19:22:54.963] [DEBUG] center-server - utils/network.js 29452 服务端连接建立成功ip-port:  192.168.10.34 38634
+[2019-04-20T19:22:54.984] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T19:22:55.027] [DEBUG] center-server - utils/network.js 29452 服务端连接建立成功ip-port:  192.168.10.34 38640
+[2019-04-20T19:22:55.053] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T19:39:03.068] [INFO] center-server - center-start.js center server start ~~!!!! 31350 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:39:03.079] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T19:39:03.081] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T19:39:03.567] [DEBUG] center-server - utils/network.js 31350 服务端连接建立成功ip-port:  192.168.10.34 38808
+[2019-04-20T19:39:03.587] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T19:39:03.618] [DEBUG] center-server - utils/network.js 31350 服务端连接建立成功ip-port:  192.168.10.34 38810
+[2019-04-20T19:39:03.625] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T19:39:04.098] [DEBUG] center-server - utils/network.js 31350 服务端连接建立成功ip-port:  192.168.10.34 38815
+[2019-04-20T19:39:04.113] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T19:39:04.293] [DEBUG] center-server - utils/network.js 31350 服务端连接建立成功ip-port:  192.168.10.34 38820
+[2019-04-20T19:39:04.311] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T19:48:59.757] [INFO] center-server - center-start.js center server start ~~!!!! 32565 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:48:59.767] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T19:48:59.770] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T19:49:00.231] [DEBUG] center-server - utils/network.js 32565 服务端连接建立成功ip-port:  192.168.10.34 38942
+[2019-04-20T19:49:00.241] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T19:49:00.317] [DEBUG] center-server - utils/network.js 32565 服务端连接建立成功ip-port:  192.168.10.34 38944
+[2019-04-20T19:49:00.325] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T19:49:00.814] [DEBUG] center-server - utils/network.js 32565 服务端连接建立成功ip-port:  192.168.10.34 38948
+[2019-04-20T19:49:00.836] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T19:49:00.975] [DEBUG] center-server - utils/network.js 32565 服务端连接建立成功ip-port:  192.168.10.34 38956
+[2019-04-20T19:49:00.987] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T19:54:14.822] [INFO] center-server - center-start.js center server start ~~!!!! 889 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:54:14.832] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T19:54:14.833] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T19:54:15.318] [DEBUG] center-server - utils/network.js 889 服务端连接建立成功ip-port:  192.168.10.34 39034
+[2019-04-20T19:54:15.328] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T19:54:15.376] [DEBUG] center-server - utils/network.js 889 服务端连接建立成功ip-port:  192.168.10.34 39038
+[2019-04-20T19:54:15.397] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T19:54:15.828] [DEBUG] center-server - utils/network.js 889 服务端连接建立成功ip-port:  192.168.10.34 39042
+[2019-04-20T19:54:15.841] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T19:54:16.148] [DEBUG] center-server - utils/network.js 889 服务端连接建立成功ip-port:  192.168.10.34 39056
+[2019-04-20T19:54:16.180] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-20T19:57:24.669] [INFO] center-server - center-start.js center server start ~~!!!! 1372 /home/sujiahong/workspace/aa-server
+[2019-04-20T19:57:24.679] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-20T19:57:24.680] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-20T19:57:25.135] [DEBUG] center-server - utils/network.js 1372 服务端连接建立成功ip-port:  192.168.10.34 39112
+[2019-04-20T19:57:25.143] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-20T19:57:25.165] [DEBUG] center-server - utils/network.js 1372 服务端连接建立成功ip-port:  192.168.10.34 39114
+[2019-04-20T19:57:25.171] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-20T19:57:25.766] [DEBUG] center-server - utils/network.js 1372 服务端连接建立成功ip-port:  192.168.10.34 39118
+[2019-04-20T19:57:25.787] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-20T19:57:25.849] [DEBUG] center-server - utils/network.js 1372 服务端连接建立成功ip-port:  192.168.10.34 39124
+[2019-04-20T19:57:25.859] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
