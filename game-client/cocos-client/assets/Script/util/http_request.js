@@ -9,8 +9,6 @@ request.get = function(opt, next){
     url += "?";
     for (var key in opt){
         var val = opt[key];
-        if (typeof val == "object")
-            val = JSON.stringify(val);
         url += key + "=" + val + "&";
     }    
     console.log(TAG, "http get 请求： ", url);

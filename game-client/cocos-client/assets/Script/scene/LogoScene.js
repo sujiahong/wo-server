@@ -1,4 +1,8 @@
 const TAG = "LogoScene.js";
+/////创建一个全局数据
+var g_ada = {};
+cc.g_ada = g_ada;
+
 var cls = {};
 cls.extends = cc.Component;
 
@@ -15,8 +19,6 @@ cls.onLoad = function () {
 }
 
 cls.init = function () {
-    var g_ada = {};
-    cc.g_ada = g_ada;
     //var Client = require("../util/network");
     //var cli = new Client({ip: "192.168.10.34", port: 8311});
     //cli.connect();
