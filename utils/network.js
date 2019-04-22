@@ -6,6 +6,8 @@ const event = require("events");
 const util = require("util");
 const logger = g_serverData.logger;
 
+const packageAnalysis = packet.packageAnalysis;
+
 var nw = module.exports;
 
 var Client = function(options){
@@ -63,7 +65,7 @@ var doConnect = function(self, next){
         logger.error(TAG, "socket client drain事件 触发 触发 触发！！！");
     });
     socket.on("data", (buffer)=>{
-        bufferAnalysis(self, socket, buffer);
+        packageAnalysis(self, socket, buffer);
     });
 }
 
@@ -88,7 +90,7 @@ Client.prototype.ping = function(){
 
 Client.prototype.request = function(data, next){
     this.send(data);
-    this.on(data.route, (ret)=>{
+    this.once(data.route, (ret)=>{
         next(ret);
     });
 }
@@ -108,37 +110,6 @@ Client.prototype.close = function(){
 }
 nw.Client = Client;
 
-///////////////////////////////////////////////////////////////////////
-///////////----------------------------------------------//////////////
-///////////////////////////////////////////////////////////////////////
-
-var bufferAnalysis = function(self, socket, buffer){
-    self.remainderData = Buffer.concat([self.remainderData, buffer]);
-    var len = self.remainderData.length;
-    console.log(TAG, "data data: bufflen:", buffer.length, "remainderLen :", len);
-    var bodylen = 0;
-    var packlen = 0;
-    var idx = 0;
-    while (true){
-        if (len - idx < 4){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        bodylen = self.remainderData.readUInt32BE(idx);
-        packlen = bodylen + 4;
-        if (idx + packlen > len){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        idx += packlen;
-        var jsonData = packet.unpack(self.remainderData, idx - bodylen, idx);
-        self.emit("socketData", socket, jsonData);
-        if (idx == len){
-            self.remainderData = Buffer.alloc(0);
-            break;
-        }
-    }
-}
 
 ///////////////////////////////////////////////////////////////////////
 ///////////----------------------------------------------//////////////
@@ -178,7 +149,7 @@ Server.prototype.createServer = function(next){
             logger.error(TAG, "server server socket err err", socket.id, err);
         });
         socket.on("data", function(buffer){
-            bufferAnalysis(self, socket, buffer);
+            packageAnalysis(self, socket, buffer);
         });
         socket.on("drain", function(){
             logger.error(TAG, "socket server drain事件 触发 触发 触发！！！");

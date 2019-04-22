@@ -309,3 +309,340 @@
 [2019-04-20T19:57:25.787] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
 [2019-04-20T19:57:25.849] [DEBUG] center-server - utils/network.js 1372 服务端连接建立成功ip-port:  192.168.10.34 39124
 [2019-04-20T19:57:25.859] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T10:47:38.224] [INFO] center-server - center-start.js center server start ~~!!!! 14931 /home/sujiahong/workspace/aa-server
+[2019-04-22T10:47:38.256] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T10:47:38.257] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T10:47:38.791] [DEBUG] center-server - utils/network.js 14931 服务端连接建立成功ip-port:  192.168.10.34 57624
+[2019-04-22T10:47:38.794] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T10:47:40.055] [DEBUG] center-server - utils/network.js 14931 服务端连接建立成功ip-port:  192.168.10.34 57628
+[2019-04-22T10:47:40.080] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T10:47:40.660] [DEBUG] center-server - utils/network.js 14931 服务端连接建立成功ip-port:  192.168.10.34 57656
+[2019-04-22T10:47:40.664] [DEBUG] center-server - utils/network.js 14931 服务端连接建立成功ip-port:  192.168.10.34 57660
+[2019-04-22T10:47:40.672] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T10:47:40.675] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T12:51:56.196] [INFO] center-server - center-start.js center server start ~~!!!! 29218 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:51:56.206] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T12:51:56.207] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T12:51:56.696] [DEBUG] center-server - utils/network.js 29218 服务端连接建立成功ip-port:  192.168.10.34 58660
+[2019-04-22T12:51:56.706] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T12:51:56.707] [DEBUG] center-server - utils/network.js 29218 服务端连接建立成功ip-port:  192.168.10.34 58664
+[2019-04-22T12:51:56.715] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T12:51:57.258] [DEBUG] center-server - utils/network.js 29218 服务端连接建立成功ip-port:  192.168.10.34 58668
+[2019-04-22T12:51:57.281] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T12:51:57.315] [DEBUG] center-server - utils/network.js 29218 服务端连接建立成功ip-port:  192.168.10.34 58674
+[2019-04-22T12:51:57.329] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T12:55:13.371] [INFO] center-server - center-start.js center server start ~~!!!! 29714 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:55:13.381] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T12:55:13.382] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T12:55:13.887] [DEBUG] center-server - utils/network.js 29714 服务端连接建立成功ip-port:  192.168.10.34 58732
+[2019-04-22T12:55:13.899] [DEBUG] center-server - utils/network.js 29714 服务端连接建立成功ip-port:  192.168.10.34 58734
+[2019-04-22T12:55:13.904] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T12:55:13.908] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T12:55:14.471] [DEBUG] center-server - utils/network.js 29714 服务端连接建立成功ip-port:  192.168.10.34 58738
+[2019-04-22T12:55:14.494] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T12:55:14.521] [DEBUG] center-server - utils/network.js 29714 服务端连接建立成功ip-port:  192.168.10.34 58744
+[2019-04-22T12:55:14.527] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:24:19.505] [INFO] center-server - center-start.js center server start ~~!!!! 8207 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:24:19.515] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:24:19.516] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:24:20.001] [DEBUG] center-server - utils/network.js 8207 服务端连接建立成功ip-port:  192.168.10.34 59518
+[2019-04-22T14:24:20.010] [DEBUG] center-server - utils/network.js 8207 服务端连接建立成功ip-port:  192.168.10.34 59520
+[2019-04-22T14:24:20.020] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:24:20.024] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:24:20.470] [DEBUG] center-server - utils/network.js 8207 服务端连接建立成功ip-port:  192.168.10.34 59524
+[2019-04-22T14:24:20.486] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:24:20.578] [DEBUG] center-server - utils/network.js 8207 服务端连接建立成功ip-port:  192.168.10.34 59530
+[2019-04-22T14:24:20.585] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:25:54.778] [INFO] center-server - center-start.js center server start ~~!!!! 8478 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:25:54.788] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:25:54.789] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:25:55.263] [DEBUG] center-server - utils/network.js 8478 服务端连接建立成功ip-port:  192.168.10.34 59572
+[2019-04-22T14:25:55.296] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:25:55.303] [DEBUG] center-server - utils/network.js 8478 服务端连接建立成功ip-port:  192.168.10.34 59574
+[2019-04-22T14:25:55.312] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:25:55.697] [DEBUG] center-server - utils/network.js 8478 服务端连接建立成功ip-port:  192.168.10.34 59578
+[2019-04-22T14:25:55.721] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:25:55.906] [DEBUG] center-server - utils/network.js 8478 服务端连接建立成功ip-port:  192.168.10.34 59584
+[2019-04-22T14:25:55.919] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:31:13.710] [INFO] center-server - center-start.js center server start ~~!!!! 9236 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:31:13.720] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:31:13.721] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:31:14.191] [DEBUG] center-server - utils/network.js 9236 服务端连接建立成功ip-port:  192.168.10.34 59670
+[2019-04-22T14:31:14.199] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:31:14.213] [DEBUG] center-server - utils/network.js 9236 服务端连接建立成功ip-port:  192.168.10.34 59672
+[2019-04-22T14:31:14.220] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:31:14.610] [DEBUG] center-server - utils/network.js 9236 服务端连接建立成功ip-port:  192.168.10.34 59676
+[2019-04-22T14:31:14.617] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:31:14.836] [DEBUG] center-server - utils/network.js 9236 服务端连接建立成功ip-port:  192.168.10.34 59682
+[2019-04-22T14:31:14.851] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:40:31.731] [INFO] center-server - center-start.js center server start ~~!!!! 10408 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:40:31.742] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:40:31.743] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:40:32.219] [DEBUG] center-server - utils/network.js 10408 服务端连接建立成功ip-port:  192.168.10.34 59802
+[2019-04-22T14:40:32.228] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:40:32.236] [DEBUG] center-server - utils/network.js 10408 服务端连接建立成功ip-port:  192.168.10.34 59804
+[2019-04-22T14:40:32.243] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:40:32.841] [DEBUG] center-server - utils/network.js 10408 服务端连接建立成功ip-port:  192.168.10.34 59808
+[2019-04-22T14:40:32.864] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:40:32.879] [DEBUG] center-server - utils/network.js 10408 服务端连接建立成功ip-port:  192.168.10.34 59814
+[2019-04-22T14:40:32.918] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:47:52.771] [INFO] center-server - center-start.js center server start ~~!!!! 11369 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:47:52.781] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:47:52.782] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:47:53.274] [DEBUG] center-server - utils/network.js 11369 服务端连接建立成功ip-port:  192.168.10.34 59926
+[2019-04-22T14:47:53.277] [DEBUG] center-server - utils/network.js 11369 服务端连接建立成功ip-port:  192.168.10.34 59928
+[2019-04-22T14:47:53.284] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:47:53.290] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:47:53.759] [DEBUG] center-server - utils/network.js 11369 服务端连接建立成功ip-port:  192.168.10.34 59932
+[2019-04-22T14:47:53.767] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:47:53.933] [DEBUG] center-server - utils/network.js 11369 服务端连接建立成功ip-port:  192.168.10.34 59938
+[2019-04-22T14:47:53.960] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:49:59.830] [INFO] center-server - center-start.js center server start ~~!!!! 11682 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:49:59.844] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:49:59.845] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:50:00.322] [DEBUG] center-server - utils/network.js 11682 服务端连接建立成功ip-port:  192.168.10.34 59986
+[2019-04-22T14:50:00.331] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:50:00.369] [DEBUG] center-server - utils/network.js 11682 服务端连接建立成功ip-port:  192.168.10.34 59988
+[2019-04-22T14:50:00.378] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:50:00.781] [DEBUG] center-server - utils/network.js 11682 服务端连接建立成功ip-port:  192.168.10.34 59992
+[2019-04-22T14:50:00.798] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T14:50:00.973] [DEBUG] center-server - utils/network.js 11682 服务端连接建立成功ip-port:  192.168.10.34 59998
+[2019-04-22T14:50:00.981] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:53:42.645] [INFO] center-server - center-start.js center server start ~~!!!! 12225 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:53:42.655] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T14:53:42.656] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T14:53:43.149] [DEBUG] center-server - utils/network.js 12225 服务端连接建立成功ip-port:  192.168.10.34 60062
+[2019-04-22T14:53:43.156] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T14:53:43.238] [DEBUG] center-server - utils/network.js 12225 服务端连接建立成功ip-port:  192.168.10.34 60066
+[2019-04-22T14:53:43.256] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T14:53:43.731] [DEBUG] center-server - utils/network.js 12225 服务端连接建立成功ip-port:  192.168.10.34 60070
+[2019-04-22T14:53:43.774] [DEBUG] center-server - utils/network.js 12225 服务端连接建立成功ip-port:  192.168.10.34 60074
+[2019-04-22T14:53:43.777] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T14:53:43.791] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T15:38:27.919] [INFO] center-server - center-start.js center server start ~~!!!! 17583 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:38:27.929] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T15:38:27.930] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T15:38:28.420] [DEBUG] center-server - utils/network.js 17583 服务端连接建立成功ip-port:  192.168.10.34 60500
+[2019-04-22T15:38:28.435] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T15:38:28.465] [DEBUG] center-server - utils/network.js 17583 服务端连接建立成功ip-port:  192.168.10.34 60502
+[2019-04-22T15:38:28.472] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T15:38:29.080] [DEBUG] center-server - utils/network.js 17583 服务端连接建立成功ip-port:  192.168.10.34 60506
+[2019-04-22T15:38:29.105] [DEBUG] center-server - utils/network.js 17583 服务端连接建立成功ip-port:  192.168.10.34 60510
+[2019-04-22T15:38:29.117] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T15:38:29.132] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T15:41:41.533] [INFO] center-server - center-start.js center server start ~~!!!! 18076 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:41:41.543] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T15:41:41.544] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T15:41:42.013] [DEBUG] center-server - utils/network.js 18076 服务端连接建立成功ip-port:  192.168.10.34 60574
+[2019-04-22T15:41:42.020] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T15:41:42.046] [DEBUG] center-server - utils/network.js 18076 服务端连接建立成功ip-port:  192.168.10.34 60576
+[2019-04-22T15:41:42.053] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T15:41:42.598] [DEBUG] center-server - utils/network.js 18076 服务端连接建立成功ip-port:  192.168.10.34 60580
+[2019-04-22T15:41:42.616] [DEBUG] center-server - utils/network.js 18076 服务端连接建立成功ip-port:  192.168.10.34 60584
+[2019-04-22T15:41:42.629] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T15:41:42.640] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T16:08:04.858] [INFO] center-server - center-start.js center server start ~~!!!! 21189 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:08:04.869] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T16:08:04.870] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T16:08:05.359] [DEBUG] center-server - utils/network.js 21189 服务端连接建立成功ip-port:  192.168.10.34 60894
+[2019-04-22T16:08:05.365] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T16:08:05.386] [DEBUG] center-server - utils/network.js 21189 服务端连接建立成功ip-port:  192.168.10.34 60898
+[2019-04-22T16:08:05.395] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T16:08:05.905] [DEBUG] center-server - utils/network.js 21189 服务端连接建立成功ip-port:  192.168.10.34 60902
+[2019-04-22T16:08:05.914] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T16:08:05.947] [DEBUG] center-server - utils/network.js 21189 服务端连接建立成功ip-port:  192.168.10.34 60908
+[2019-04-22T16:08:05.962] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T16:22:58.364] [INFO] center-server - center-start.js center server start ~~!!!! 22997 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:22:58.374] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T16:22:58.375] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T16:22:58.863] [DEBUG] center-server - utils/network.js 22997 服务端连接建立成功ip-port:  192.168.10.34 32828
+[2019-04-22T16:22:58.872] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T16:22:58.884] [DEBUG] center-server - utils/network.js 22997 服务端连接建立成功ip-port:  192.168.10.34 32830
+[2019-04-22T16:22:58.903] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T16:22:59.460] [DEBUG] center-server - utils/network.js 22997 服务端连接建立成功ip-port:  192.168.10.34 32834
+[2019-04-22T16:22:59.476] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T16:22:59.505] [DEBUG] center-server - utils/network.js 22997 服务端连接建立成功ip-port:  192.168.10.34 32840
+[2019-04-22T16:22:59.521] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T17:37:16.117] [INFO] center-server - center-start.js center server start ~~!!!! 31693 /home/sujiahong/workspace/aa-server
+[2019-04-22T17:37:16.127] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T17:37:16.129] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T17:37:16.598] [DEBUG] center-server - utils/network.js 31693 服务端连接建立成功ip-port:  192.168.10.34 33602
+[2019-04-22T17:37:16.604] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T17:37:16.722] [DEBUG] center-server - utils/network.js 31693 服务端连接建立成功ip-port:  192.168.10.34 33604
+[2019-04-22T17:37:16.745] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T17:37:17.087] [DEBUG] center-server - utils/network.js 31693 服务端连接建立成功ip-port:  192.168.10.34 33608
+[2019-04-22T17:37:17.096] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T17:37:17.366] [DEBUG] center-server - utils/network.js 31693 服务端连接建立成功ip-port:  192.168.10.34 33614
+[2019-04-22T17:37:17.391] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:26:22.453] [INFO] center-server - center-start.js center server start ~~!!!! 5729 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:26:22.468] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T18:26:22.470] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T18:26:22.990] [DEBUG] center-server - utils/network.js 5729 服务端连接建立成功ip-port:  192.168.10.34 34192
+[2019-04-22T18:26:22.996] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T18:26:23.042] [DEBUG] center-server - utils/network.js 5729 服务端连接建立成功ip-port:  192.168.10.34 34196
+[2019-04-22T18:26:23.050] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T18:26:23.637] [DEBUG] center-server - utils/network.js 5729 服务端连接建立成功ip-port:  192.168.10.34 34200
+[2019-04-22T18:26:23.656] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:26:23.737] [DEBUG] center-server - utils/network.js 5729 服务端连接建立成功ip-port:  192.168.10.34 34206
+[2019-04-22T18:26:23.743] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T18:35:36.080] [INFO] center-server - center-start.js center server start ~~!!!! 6964 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:35:36.089] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T18:35:36.090] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T18:35:36.623] [DEBUG] center-server - utils/network.js 6964 服务端连接建立成功ip-port:  192.168.10.34 34392
+[2019-04-22T18:35:36.630] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T18:35:36.645] [DEBUG] center-server - utils/network.js 6964 服务端连接建立成功ip-port:  192.168.10.34 34396
+[2019-04-22T18:35:36.662] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T18:35:37.076] [DEBUG] center-server - utils/network.js 6964 服务端连接建立成功ip-port:  192.168.10.34 34400
+[2019-04-22T18:35:37.095] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T18:35:37.222] [DEBUG] center-server - utils/network.js 6964 服务端连接建立成功ip-port:  192.168.10.34 34406
+[2019-04-22T18:35:37.232] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:44:50.883] [INFO] center-server - center-start.js center server start ~~!!!! 8144 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:44:50.892] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T18:44:50.893] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T18:44:51.368] [DEBUG] center-server - utils/network.js 8144 服务端连接建立成功ip-port:  192.168.10.34 34724
+[2019-04-22T18:44:51.377] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T18:44:51.444] [DEBUG] center-server - utils/network.js 8144 服务端连接建立成功ip-port:  192.168.10.34 34726
+[2019-04-22T18:44:51.453] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T18:44:51.896] [DEBUG] center-server - utils/network.js 8144 服务端连接建立成功ip-port:  192.168.10.34 34730
+[2019-04-22T18:44:51.922] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T18:44:52.008] [DEBUG] center-server - utils/network.js 8144 服务端连接建立成功ip-port:  192.168.10.34 34736
+[2019-04-22T18:44:52.028] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:46:22.609] [INFO] center-server - center-start.js center server start ~~!!!! 8416 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:46:22.621] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T18:46:22.622] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T18:46:23.121] [DEBUG] center-server - utils/network.js 8416 服务端连接建立成功ip-port:  192.168.10.34 34778
+[2019-04-22T18:46:23.124] [DEBUG] center-server - utils/network.js 8416 服务端连接建立成功ip-port:  192.168.10.34 34782
+[2019-04-22T18:46:23.129] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T18:46:23.136] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T18:46:23.525] [DEBUG] center-server - utils/network.js 8416 服务端连接建立成功ip-port:  192.168.10.34 34786
+[2019-04-22T18:46:23.535] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:46:23.687] [DEBUG] center-server - utils/network.js 8416 服务端连接建立成功ip-port:  192.168.10.34 34792
+[2019-04-22T18:46:23.706] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T18:59:24.366] [INFO] center-server - center-start.js center server start ~~!!!! 10026 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:59:24.376] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T18:59:24.378] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T18:59:24.842] [DEBUG] center-server - utils/network.js 10026 服务端连接建立成功ip-port:  192.168.10.34 34950
+[2019-04-22T18:59:24.852] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T18:59:24.905] [DEBUG] center-server - utils/network.js 10026 服务端连接建立成功ip-port:  192.168.10.34 34952
+[2019-04-22T18:59:24.923] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T18:59:25.469] [DEBUG] center-server - utils/network.js 10026 服务端连接建立成功ip-port:  192.168.10.34 34956
+[2019-04-22T18:59:25.489] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T18:59:25.584] [DEBUG] center-server - utils/network.js 10026 服务端连接建立成功ip-port:  192.168.10.34 34962
+[2019-04-22T18:59:25.602] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T19:38:35.225] [INFO] center-server - center-start.js center server start ~~!!!! 14774 /home/sujiahong/workspace/aa-server
+[2019-04-22T19:38:35.235] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T19:38:35.236] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T19:38:35.711] [DEBUG] center-server - utils/network.js 14774 服务端连接建立成功ip-port:  192.168.10.34 35378
+[2019-04-22T19:38:35.723] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T19:38:35.732] [DEBUG] center-server - utils/network.js 14774 服务端连接建立成功ip-port:  192.168.10.34 35380
+[2019-04-22T19:38:35.737] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T19:38:36.345] [DEBUG] center-server - utils/network.js 14774 服务端连接建立成功ip-port:  192.168.10.34 35384
+[2019-04-22T19:38:36.361] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T19:38:36.433] [DEBUG] center-server - utils/network.js 14774 服务端连接建立成功ip-port:  192.168.10.34 35390
+[2019-04-22T19:38:36.462] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T20:37:42.879] [INFO] center-server - center-start.js center server start ~~!!!! 21783 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:37:42.889] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T20:37:42.890] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T20:37:43.375] [DEBUG] center-server - utils/network.js 21783 服务端连接建立成功ip-port:  192.168.10.34 35930
+[2019-04-22T20:37:43.377] [DEBUG] center-server - utils/network.js 21783 服务端连接建立成功ip-port:  192.168.10.34 35932
+[2019-04-22T20:37:43.797] [DEBUG] center-server - utils/network.js 21783 服务端连接建立成功ip-port:  192.168.10.34 35936
+[2019-04-22T20:37:44.057] [DEBUG] center-server - utils/network.js 21783 服务端连接建立成功ip-port:  192.168.10.34 35940
+[2019-04-22T20:40:21.095] [INFO] center-server - center-start.js center server start ~~!!!! 22190 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:40:21.105] [DEBUG] center-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9001 }
+[2019-04-22T20:40:21.107] [INFO] center-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8001 }
+[2019-04-22T20:40:21.590] [DEBUG] center-server - utils/network.js 22190 服务端连接建立成功ip-port:  192.168.10.34 35992
+[2019-04-22T20:40:21.591] [DEBUG] center-server - utils/network.js 22190 服务端连接建立成功ip-port:  192.168.10.34 35996
+[2019-04-22T20:40:21.596] [DEBUG] center-server - utils/packet.js data data: bufflen: 189 remainderLen : 189
+[2019-04-22T20:40:21.598] [DEBUG] center-server - center-start.js gate-server-1 注册成功在center server!!!
+[2019-04-22T20:40:21.600] [DEBUG] center-server - utils/packet.js data data: bufflen: 182 remainderLen : 182
+[2019-04-22T20:40:21.601] [DEBUG] center-server - center-start.js download-server-1 注册成功在center server!!!
+[2019-04-22T20:40:22.138] [DEBUG] center-server - utils/network.js 22190 服务端连接建立成功ip-port:  192.168.10.34 36000
+[2019-04-22T20:40:22.151] [DEBUG] center-server - utils/packet.js data data: bufflen: 192 remainderLen : 192
+[2019-04-22T20:40:22.152] [DEBUG] center-server - center-start.js home-server-1 注册成功在center server!!!
+[2019-04-22T20:40:22.179] [DEBUG] center-server - utils/network.js 22190 服务端连接建立成功ip-port:  192.168.10.34 36006
+[2019-04-22T20:40:22.202] [DEBUG] center-server - utils/packet.js data data: bufflen: 192 remainderLen : 192
+[2019-04-22T20:40:22.203] [DEBUG] center-server - center-start.js home-server-2 注册成功在center server!!!
+[2019-04-22T20:40:22.597] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:22.601] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.154] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.204] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:47.607] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:47.616] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.157] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.214] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:12.618] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:12.627] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.162] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.225] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:37.643] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:37.655] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.164] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.242] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:02.662] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:02.674] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.177] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.245] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:27.662] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:27.693] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.180] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.263] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:52.667] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:52.714] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.190] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.281] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:17.675] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:17.734] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.205] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.286] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:42.695] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:42.758] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.222] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.296] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:07.707] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:07.766] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.239] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.302] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:32.711] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:32.768] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.246] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.321] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:57.719] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:57.789] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.263] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.326] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:22.735] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:22.814] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.285] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.338] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:47.751] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:47.823] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.298] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.343] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:12.766] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:12.848] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.301] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.360] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:37.780] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:37.871] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.312] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.377] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:02.795] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:02.881] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.319] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.386] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:27.809] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:27.904] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.332] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.405] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:52.826] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:52.925] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.352] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.424] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:17.842] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:17.946] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.361] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.439] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:42.859] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:42.969] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.381] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.456] [DEBUG] center-server - utils/packet.js data data: bufflen: 53 remainderLen : 53

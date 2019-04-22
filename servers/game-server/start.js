@@ -24,8 +24,8 @@ logger.info(TAG, "game server start ~~!!!!", serverInfo.ID, process.pid, process
 
 var connectHome = function(){
     var homeList = require("../../config/cluster_info.json").HOME_SERVER_LIST;
-    for (var i = 0; i < homeList.length; ++i){
-        var cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
+    for (let i = 0; i < homeList.length; ++i){
+        let cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
         cli.connect();
         cli.request({route: "register", serverData: serverInfo}, function(data){
             logger.info(TAG, "向home server 注册 success code: ", data.code);
@@ -44,7 +44,7 @@ var listenConnection = function(){
     }
     var wsvr = new WSServer(options);
     wsvr.createServer();
-    mainRouter.listen(wsvr);
+    mainRouter.addMonitor(wsvr);
     g_serverData.manager.forClientServer = wsvr;
 }
 

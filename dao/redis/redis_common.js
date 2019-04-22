@@ -64,7 +64,7 @@ exp.isHaveRegisted = function(wxId, next){
 /////////////////////////房间id玩法/////////////////////////
 exp.setRoomIdToPlay = function(roomId, play){
     var _set = function(){
-        redis.hset("ROOMID_ROOMPLAY", roomId, play, (err, reply)=>{
+        client.hset("ROOMID_ROOMPLAY", roomId, play, (err, reply)=>{
             if (err || reply < 0){
                 return _set();
             }
@@ -74,13 +74,13 @@ exp.setRoomIdToPlay = function(roomId, play){
 }
 
 exp.getRoomIdToPlay = function(roomId, next){
-	redis.hget("ROOMID_ROOMPLAY", roomId, next);
+	client.hget("ROOMID_ROOMPLAY", roomId, next);
 }
 
 exp.delRoomIdToPlay = function(roomId, next){
     var count = 0 ;
     var _del = function(){
-        redis.hdel("ROOMID_ROOMPLAY", roomId, (err, reply)=>{
+        client.hdel("ROOMID_ROOMPLAY", roomId, (err, reply)=>{
             console.log(TAG, "delRoomIdToPlay ", err, reply);
             if (err || reply != 1){
                 count ++;
@@ -94,7 +94,7 @@ exp.delRoomIdToPlay = function(roomId, next){
 }
 
 exp.existRoomId = function(roomId, next){
-	redis.hexists("ROOMID_ROOMPLAY", roomId, function(err, ret){
+	client.hexists("ROOMID_ROOMPLAY", roomId, function(err, ret){
         if (err){
             logger.error(TAG, "exp.existRoomId error: ", err);
             return next({code: 20});
@@ -104,5 +104,5 @@ exp.existRoomId = function(roomId, next){
 }
 
 exp.clearRoomIdToPlay = function(){
-	redis.del("ROOMID_ROOMPLAY");
+	client.del("ROOMID_ROOMPLAY");
 }

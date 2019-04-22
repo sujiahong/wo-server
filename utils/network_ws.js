@@ -3,36 +3,9 @@ const TAG = "utils/network_ws.js";
 const ws = require("ws");
 const packet = require("./packet");
 const event = require("events");
+const packageAnalysis = packet.packageAnalysis;
 
 const logger = g_serverData.logger;
-
-var bufferAnalysis = function(self, socket, buffer){
-    self.remainderData = Buffer.concat([self.remainderData, buffer]);
-    var len = self.remainderData.length;
-    logger.debug(TAG, "data data: bufflen:", buffer.length, "remainderLen :", len);
-    var bodylen = 0;
-    var packlen = 0;
-    var idx = 0;
-    while (true){
-        if (len - idx < 4){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        bodylen = self.remainderData.readUInt32BE(idx);
-        packlen = bodylen + 4;
-        if (idx + packlen > len){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        idx += packlen;
-        var jsonData = packet.unpack(self.remainderData, idx - bodylen, idx);
-        self.emit("socketData", socket, jsonData);
-        if (idx == len){
-            self.remainderData = Buffer.alloc(0);
-            break;
-        }
-    }
-}
 
 class WSServer extends event.EventEmitter{
     constructor(options){
@@ -53,7 +26,7 @@ class WSServer extends event.EventEmitter{
             self.socketMap[socket.id] = socket;
             socket.on("message", function(buffer){
                 logger.info("socket message", socket.id);
-                bufferAnalysis(self, socket, buffer);
+                packageAnalysis(self, socket, buffer);
             });
             socket.on("close", function(code, reason){
                 logger.info("socket close", code, reason);
@@ -81,7 +54,6 @@ class WSServer extends event.EventEmitter{
                 self.pong(socket, data.time);
             }else{
                 self.emit(data.route, socket.id, data);
-                next(socket.id, data);
             }
         });
     }

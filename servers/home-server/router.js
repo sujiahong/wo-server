@@ -106,7 +106,7 @@ router.get("/createRoom", function(req, res){
     if (!user){
         return res.send({code: errcode.LOGIN_INVALID});
     }
-    roomService.createRoom(user, req.query.roomInfo, function(ret){
+    roomService.createRoom(user, JSON.parse(req.query.roomInfo), function(ret){
         res.send(ret);
     });
 });

@@ -36808,3 +36808,1980 @@
   recommendation: 'b95588d6d6230e82a4b20624722f8850',
   accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
   ip: '192.168.10.128' }
+[2019-04-20T20:33:41.892] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '19b566cd3a58a6e36318c07282e5da30',
+  account: '45623876436' }
+[2019-04-20T20:33:41.905] [INFO] home-server - router.js 用户登录！！！ { account: '45623876436',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '19b566cd3a58a6e36318c07282e5da30',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-20T20:33:41.905] [INFO] home-server - home-server/main_service.js go 注册！！！ { account: '45623876436',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '19b566cd3a58a6e36318c07282e5da30',
+  accountData: { nickName: '', gender: 0, avatarUrl: '' },
+  ip: '192.168.10.128' }
+[2019-04-20T20:33:41.938] [INFO] home-server - home-server/main_service.js to client data:  { code: 0, userId: '64415088', coins: 20 }
+[2019-04-22T10:47:39.927] [INFO] home-server - 连接 redis server， mysql server pid:  14976
+[2019-04-22T10:47:39.934] [INFO] home-server - 连接 redis server， mysql server pid:  14970
+[2019-04-22T10:47:39.939] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T10:47:39.932] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T10:47:40.526] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T10:47:40.526] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T10:47:40.646] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 14970 /home/sujiahong/workspace/aa-server
+[2019-04-22T10:47:40.642] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 14976 /home/sujiahong/workspace/aa-server
+[2019-04-22T10:47:40.662] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T10:47:40.662] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T10:47:40.665] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T10:47:40.665] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T10:47:40.673] [DEBUG] home-server - utils/network.js 14970 客户端连接建立成功ip-port:  192.168.10.34 57656 9001
+[2019-04-22T10:47:40.670] [DEBUG] home-server - utils/network.js 14976 客户端连接建立成功ip-port:  192.168.10.34 57660 9001
+[2019-04-22T10:47:40.680] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T10:47:40.678] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T10:47:40.681] [DEBUG] home-server - utils/network.js 14970 客户端连接建立成功ip-port:  192.168.10.34 43394 9090
+[2019-04-22T10:47:40.682] [DEBUG] home-server - utils/network.js 14976 客户端连接建立成功ip-port:  192.168.10.34 43392 9090
+[2019-04-22T10:47:40.685] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T10:47:40.685] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T11:18:24.023] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: 'c14139fc5089fcc67b92108c7a220495',
+  account: '12345678' }
+[2019-04-22T11:40:39.612] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  account: '12345678' }
+[2019-04-22T11:40:39.663] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T11:44:31.042] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T11:48:32.582] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T11:52:11.440] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T11:53:52.647] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:22:07.701] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:22:24.106] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:48:01.513] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '7b5d0c6dd6864972cada7deb1752b70f',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:48:01.535] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  account: '12345678' }
+[2019-04-22T12:48:01.555] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:49:34.576] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:50:17.588] [INFO] home-server - router.js 用户登录！！！ { account: '123456',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:50:17.590] [INFO] home-server - home-server/main_service.js go 注册！！！ { account: '123456',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: { nickName: '', gender: 0, avatarUrl: '' },
+  ip: '192.168.10.128' }
+[2019-04-22T12:50:17.642] [INFO] home-server - home-server/main_service.js to client data:  { code: 0, userId: '92057203', coins: 20 }
+[2019-04-22T12:51:57.111] [INFO] home-server - 连接 redis server， mysql server pid:  29254
+[2019-04-22T12:51:57.137] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:51:57.224] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T12:51:57.246] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 29254 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:51:57.269] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T12:51:57.270] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T12:51:57.273] [DEBUG] home-server - utils/network.js 29254 客户端连接建立成功ip-port:  192.168.10.34 58668 9001
+[2019-04-22T12:51:57.284] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:51:57.286] [DEBUG] home-server - utils/network.js 29254 客户端连接建立成功ip-port:  192.168.10.34 44400 9090
+[2019-04-22T12:51:57.295] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T12:51:57.194] [INFO] home-server - 连接 redis server， mysql server pid:  29260
+[2019-04-22T12:51:57.212] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:51:57.284] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T12:51:57.308] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 29260 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:51:57.316] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T12:51:57.322] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T12:51:57.328] [DEBUG] home-server - utils/network.js 29260 客户端连接建立成功ip-port:  192.168.10.34 58674 9001
+[2019-04-22T12:51:57.340] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:51:57.341] [DEBUG] home-server - utils/network.js 29260 客户端连接建立成功ip-port:  192.168.10.34 44406 9090
+[2019-04-22T12:51:57.342] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T12:51:57.540] [DEBUG] home-server - utils/network.js 29254 服务端连接建立成功ip-port:  192.168.10.34 51856
+[2019-04-22T12:51:57.540] [DEBUG] home-server - utils/network.js 29260 服务端连接建立成功ip-port:  192.168.10.34 40436
+[2019-04-22T12:51:57.553] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T12:51:57.554] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T12:51:57.601] [DEBUG] home-server - utils/network.js 29254 服务端连接建立成功ip-port:  192.168.10.34 51862
+[2019-04-22T12:51:57.608] [DEBUG] home-server - utils/network.js 29260 服务端连接建立成功ip-port:  192.168.10.34 40442
+[2019-04-22T12:51:57.618] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T12:51:57.631] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T12:51:57.645] [DEBUG] home-server - utils/network.js 29254 服务端连接建立成功ip-port:  192.168.10.34 51868
+[2019-04-22T12:51:57.645] [DEBUG] home-server - utils/network.js 29260 服务端连接建立成功ip-port:  192.168.10.34 40448
+[2019-04-22T12:51:57.651] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T12:51:57.654] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T12:51:57.667] [DEBUG] home-server - utils/network.js 29254 服务端连接建立成功ip-port:  192.168.10.34 51874
+[2019-04-22T12:51:57.668] [DEBUG] home-server - utils/network.js 29260 服务端连接建立成功ip-port:  192.168.10.34 40454
+[2019-04-22T12:51:57.674] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T12:51:57.675] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T12:53:04.648] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T12:55:14.352] [INFO] home-server - 连接 redis server， mysql server pid:  29753
+[2019-04-22T12:55:14.368] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:55:14.443] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T12:55:14.460] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 29753 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:55:14.473] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T12:55:14.479] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T12:55:14.483] [DEBUG] home-server - utils/network.js 29753 客户端连接建立成功ip-port:  192.168.10.34 58738 9001
+[2019-04-22T12:55:14.498] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:55:14.499] [DEBUG] home-server - utils/network.js 29753 客户端连接建立成功ip-port:  192.168.10.34 44470 9090
+[2019-04-22T12:55:14.502] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T12:55:14.390] [INFO] home-server - 连接 redis server， mysql server pid:  29747
+[2019-04-22T12:55:14.401] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:55:14.486] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T12:55:14.503] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 29747 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:55:14.522] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T12:55:14.523] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T12:55:14.526] [DEBUG] home-server - utils/network.js 29747 客户端连接建立成功ip-port:  192.168.10.34 58744 9001
+[2019-04-22T12:55:14.540] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:55:14.543] [DEBUG] home-server - utils/network.js 29747 客户端连接建立成功ip-port:  192.168.10.34 44476 9090
+[2019-04-22T12:55:14.545] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T12:55:14.712] [DEBUG] home-server - utils/network.js 29753 服务端连接建立成功ip-port:  192.168.10.34 40506
+[2019-04-22T12:55:14.712] [DEBUG] home-server - utils/network.js 29747 服务端连接建立成功ip-port:  192.168.10.34 51926
+[2019-04-22T12:55:14.719] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T12:55:14.719] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T12:55:14.755] [DEBUG] home-server - utils/network.js 29747 服务端连接建立成功ip-port:  192.168.10.34 51932
+[2019-04-22T12:55:14.756] [DEBUG] home-server - utils/network.js 29753 服务端连接建立成功ip-port:  192.168.10.34 40512
+[2019-04-22T12:55:14.773] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T12:55:14.777] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T12:55:14.817] [DEBUG] home-server - utils/network.js 29747 服务端连接建立成功ip-port:  192.168.10.34 51938
+[2019-04-22T12:55:14.817] [DEBUG] home-server - utils/network.js 29753 服务端连接建立成功ip-port:  192.168.10.34 40518
+[2019-04-22T12:55:14.827] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T12:55:14.828] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T12:55:14.883] [DEBUG] home-server - utils/network.js 29747 服务端连接建立成功ip-port:  192.168.10.34 51944
+[2019-04-22T12:55:14.883] [DEBUG] home-server - utils/network.js 29753 服务端连接建立成功ip-port:  192.168.10.34 40524
+[2019-04-22T12:55:14.891] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T12:55:14.893] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T12:55:44.561] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:14:45.579] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'abce51336f56e34e81e6c728a970efc6',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:14:45.622] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  account: '12345678' }
+[2019-04-22T14:14:45.646] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:20:10.575] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:23:02.173] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:24:20.391] [INFO] home-server - 连接 redis server， mysql server pid:  8239
+[2019-04-22T14:24:20.396] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:24:20.441] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:24:20.463] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 8239 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:24:20.473] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:24:20.474] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:24:20.478] [DEBUG] home-server - utils/network.js 8239 客户端连接建立成功ip-port:  192.168.10.34 59524 9001
+[2019-04-22T14:24:20.504] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:24:20.507] [DEBUG] home-server - utils/network.js 8239 客户端连接建立成功ip-port:  192.168.10.34 45256 9090
+[2019-04-22T14:24:20.510] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:24:20.475] [INFO] home-server - 连接 redis server， mysql server pid:  8245
+[2019-04-22T14:24:20.484] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:24:20.564] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:24:20.571] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 8245 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:24:20.579] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:24:20.580] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:24:20.583] [DEBUG] home-server - utils/network.js 8245 客户端连接建立成功ip-port:  192.168.10.34 59530 9001
+[2019-04-22T14:24:20.588] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:24:20.590] [DEBUG] home-server - utils/network.js 8245 客户端连接建立成功ip-port:  192.168.10.34 45262 9090
+[2019-04-22T14:24:20.591] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:24:20.937] [DEBUG] home-server - utils/network.js 8239 服务端连接建立成功ip-port:  192.168.10.34 52712
+[2019-04-22T14:24:20.937] [DEBUG] home-server - utils/network.js 8245 服务端连接建立成功ip-port:  192.168.10.34 41292
+[2019-04-22T14:24:20.945] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:24:20.944] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:24:20.958] [DEBUG] home-server - utils/network.js 8239 服务端连接建立成功ip-port:  192.168.10.34 52718
+[2019-04-22T14:24:20.958] [DEBUG] home-server - utils/network.js 8245 服务端连接建立成功ip-port:  192.168.10.34 41298
+[2019-04-22T14:24:20.975] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:24:20.976] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:24:20.989] [DEBUG] home-server - utils/network.js 8239 服务端连接建立成功ip-port:  192.168.10.34 52724
+[2019-04-22T14:24:20.990] [DEBUG] home-server - utils/network.js 8245 服务端连接建立成功ip-port:  192.168.10.34 41304
+[2019-04-22T14:24:20.997] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:24:20.998] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:24:21.032] [DEBUG] home-server - utils/network.js 8239 服务端连接建立成功ip-port:  192.168.10.34 52730
+[2019-04-22T14:24:21.032] [DEBUG] home-server - utils/network.js 8245 服务端连接建立成功ip-port:  192.168.10.34 41310
+[2019-04-22T14:24:21.039] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:24:21.040] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:25:03.969] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:25:55.642] [INFO] home-server - 连接 redis server， mysql server pid:  8511
+[2019-04-22T14:25:55.647] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:25:55.685] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:25:55.691] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 8511 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:25:55.699] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:25:55.700] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:25:55.719] [DEBUG] home-server - utils/network.js 8511 客户端连接建立成功ip-port:  192.168.10.34 59578 9001
+[2019-04-22T14:25:55.728] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:25:55.729] [DEBUG] home-server - utils/network.js 8511 客户端连接建立成功ip-port:  192.168.10.34 45310 9090
+[2019-04-22T14:25:55.735] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:25:55.792] [INFO] home-server - 连接 redis server， mysql server pid:  8517
+[2019-04-22T14:25:55.797] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:25:55.875] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:25:55.892] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 8517 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:25:55.907] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:25:55.912] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:25:55.914] [DEBUG] home-server - utils/network.js 8517 客户端连接建立成功ip-port:  192.168.10.34 59584 9001
+[2019-04-22T14:25:55.927] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:25:55.928] [DEBUG] home-server - utils/network.js 8517 客户端连接建立成功ip-port:  192.168.10.34 45316 9090
+[2019-04-22T14:25:55.940] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:25:56.146] [DEBUG] home-server - utils/network.js 8511 服务端连接建立成功ip-port:  192.168.10.34 52766
+[2019-04-22T14:25:56.146] [DEBUG] home-server - utils/network.js 8517 服务端连接建立成功ip-port:  192.168.10.34 41346
+[2019-04-22T14:25:56.155] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:25:56.157] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:25:56.191] [DEBUG] home-server - utils/network.js 8511 服务端连接建立成功ip-port:  192.168.10.34 52772
+[2019-04-22T14:25:56.193] [DEBUG] home-server - utils/network.js 8517 服务端连接建立成功ip-port:  192.168.10.34 41352
+[2019-04-22T14:25:56.206] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:25:56.210] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:25:56.219] [DEBUG] home-server - utils/network.js 8517 服务端连接建立成功ip-port:  192.168.10.34 41358
+[2019-04-22T14:25:56.219] [DEBUG] home-server - utils/network.js 8511 服务端连接建立成功ip-port:  192.168.10.34 52778
+[2019-04-22T14:25:56.226] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:25:56.227] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:25:56.321] [DEBUG] home-server - utils/network.js 8511 服务端连接建立成功ip-port:  192.168.10.34 52784
+[2019-04-22T14:25:56.321] [DEBUG] home-server - utils/network.js 8517 服务端连接建立成功ip-port:  192.168.10.34 41364
+[2019-04-22T14:25:56.327] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:25:56.327] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:26:29.013] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:31:14.552] [INFO] home-server - 连接 redis server， mysql server pid:  9269
+[2019-04-22T14:31:14.557] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:31:14.595] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:31:14.603] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 9269 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:31:14.612] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:31:14.613] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:31:14.616] [DEBUG] home-server - utils/network.js 9269 客户端连接建立成功ip-port:  192.168.10.34 59676 9001
+[2019-04-22T14:31:14.620] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:31:14.624] [DEBUG] home-server - utils/network.js 9269 客户端连接建立成功ip-port:  192.168.10.34 45408 9090
+[2019-04-22T14:31:14.630] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:31:14.701] [INFO] home-server - 连接 redis server， mysql server pid:  9275
+[2019-04-22T14:31:14.715] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:31:14.793] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:31:14.821] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 9275 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:31:14.837] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:31:14.846] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:31:14.849] [DEBUG] home-server - utils/network.js 9275 客户端连接建立成功ip-port:  192.168.10.34 59682 9001
+[2019-04-22T14:31:14.855] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:31:14.866] [DEBUG] home-server - utils/network.js 9275 客户端连接建立成功ip-port:  192.168.10.34 45414 9090
+[2019-04-22T14:31:14.867] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:31:15.085] [DEBUG] home-server - utils/network.js 9269 服务端连接建立成功ip-port:  192.168.10.34 52864
+[2019-04-22T14:31:15.085] [DEBUG] home-server - utils/network.js 9275 服务端连接建立成功ip-port:  192.168.10.34 41444
+[2019-04-22T14:31:15.094] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:31:15.095] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:31:15.166] [DEBUG] home-server - utils/network.js 9275 服务端连接建立成功ip-port:  192.168.10.34 41450
+[2019-04-22T14:31:15.166] [DEBUG] home-server - utils/network.js 9269 服务端连接建立成功ip-port:  192.168.10.34 52870
+[2019-04-22T14:31:15.177] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:31:15.177] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:31:15.223] [DEBUG] home-server - utils/network.js 9269 服务端连接建立成功ip-port:  192.168.10.34 52876
+[2019-04-22T14:31:15.223] [DEBUG] home-server - utils/network.js 9275 服务端连接建立成功ip-port:  192.168.10.34 41456
+[2019-04-22T14:31:15.230] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:31:15.231] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:31:15.275] [DEBUG] home-server - utils/network.js 9269 服务端连接建立成功ip-port:  192.168.10.34 52882
+[2019-04-22T14:31:15.276] [DEBUG] home-server - utils/network.js 9275 服务端连接建立成功ip-port:  192.168.10.34 41462
+[2019-04-22T14:31:15.281] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:31:15.282] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:32:20.302] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:40:32.717] [INFO] home-server - 连接 redis server， mysql server pid:  10459
+[2019-04-22T14:40:32.726] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:40:32.815] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:40:32.825] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 10459 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:40:32.843] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:40:32.849] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:40:32.852] [DEBUG] home-server - utils/network.js 10459 客户端连接建立成功ip-port:  192.168.10.34 59808 9001
+[2019-04-22T14:40:32.867] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:40:32.868] [DEBUG] home-server - utils/network.js 10459 客户端连接建立成功ip-port:  192.168.10.34 45540 9090
+[2019-04-22T14:40:32.877] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:40:32.674] [INFO] home-server - 连接 redis server， mysql server pid:  10453
+[2019-04-22T14:40:32.679] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:40:32.806] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:40:32.835] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 10453 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:40:32.880] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:40:32.895] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:40:32.916] [DEBUG] home-server - utils/network.js 10453 客户端连接建立成功ip-port:  192.168.10.34 59814 9001
+[2019-04-22T14:40:32.922] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:40:32.923] [DEBUG] home-server - utils/network.js 10453 客户端连接建立成功ip-port:  192.168.10.34 45546 9090
+[2019-04-22T14:40:32.932] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:40:33.012] [DEBUG] home-server - utils/network.js 10453 服务端连接建立成功ip-port:  192.168.10.34 52996
+[2019-04-22T14:40:33.014] [DEBUG] home-server - utils/network.js 10459 服务端连接建立成功ip-port:  192.168.10.34 41576
+[2019-04-22T14:40:33.021] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:40:33.024] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:40:33.174] [DEBUG] home-server - utils/network.js 10453 服务端连接建立成功ip-port:  192.168.10.34 53002
+[2019-04-22T14:40:33.175] [DEBUG] home-server - utils/network.js 10459 服务端连接建立成功ip-port:  192.168.10.34 41582
+[2019-04-22T14:40:33.203] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:40:33.206] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:40:33.242] [DEBUG] home-server - utils/network.js 10453 服务端连接建立成功ip-port:  192.168.10.34 53008
+[2019-04-22T14:40:33.243] [DEBUG] home-server - utils/network.js 10459 服务端连接建立成功ip-port:  192.168.10.34 41588
+[2019-04-22T14:40:33.250] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:40:33.252] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:40:33.271] [DEBUG] home-server - utils/network.js 10453 服务端连接建立成功ip-port:  192.168.10.34 53014
+[2019-04-22T14:40:33.271] [DEBUG] home-server - utils/network.js 10459 服务端连接建立成功ip-port:  192.168.10.34 41594
+[2019-04-22T14:40:33.277] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:40:33.280] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:40:51.929] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:47:53.693] [INFO] home-server - 连接 redis server， mysql server pid:  11401
+[2019-04-22T14:47:53.698] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:47:53.744] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:47:53.750] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 11401 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:47:53.761] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:47:53.762] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:47:53.765] [DEBUG] home-server - utils/network.js 11401 客户端连接建立成功ip-port:  192.168.10.34 59932 9001
+[2019-04-22T14:47:53.770] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:47:53.773] [DEBUG] home-server - utils/network.js 11401 客户端连接建立成功ip-port:  192.168.10.34 45664 9090
+[2019-04-22T14:47:53.775] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:47:53.801] [INFO] home-server - 连接 redis server， mysql server pid:  11402
+[2019-04-22T14:47:53.809] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:47:53.921] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:47:53.926] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 11402 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:47:53.934] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:47:53.935] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:47:53.959] [DEBUG] home-server - utils/network.js 11402 客户端连接建立成功ip-port:  192.168.10.34 59938 9001
+[2019-04-22T14:47:53.970] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:47:53.982] [DEBUG] home-server - utils/network.js 11402 客户端连接建立成功ip-port:  192.168.10.34 45670 9090
+[2019-04-22T14:47:53.987] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:47:54.153] [DEBUG] home-server - utils/network.js 11401 服务端连接建立成功ip-port:  192.168.10.34 53120
+[2019-04-22T14:47:54.155] [DEBUG] home-server - utils/network.js 11402 服务端连接建立成功ip-port:  192.168.10.34 41700
+[2019-04-22T14:47:54.162] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:47:54.164] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:47:54.208] [DEBUG] home-server - utils/network.js 11401 服务端连接建立成功ip-port:  192.168.10.34 53126
+[2019-04-22T14:47:54.214] [DEBUG] home-server - utils/network.js 11402 服务端连接建立成功ip-port:  192.168.10.34 41706
+[2019-04-22T14:47:54.220] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:47:54.223] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:47:54.241] [DEBUG] home-server - utils/network.js 11401 服务端连接建立成功ip-port:  192.168.10.34 53132
+[2019-04-22T14:47:54.241] [DEBUG] home-server - utils/network.js 11402 服务端连接建立成功ip-port:  192.168.10.34 41712
+[2019-04-22T14:47:54.247] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:47:54.250] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:47:54.354] [DEBUG] home-server - utils/network.js 11401 服务端连接建立成功ip-port:  192.168.10.34 53138
+[2019-04-22T14:47:54.354] [DEBUG] home-server - utils/network.js 11402 服务端连接建立成功ip-port:  192.168.10.34 41718
+[2019-04-22T14:47:54.360] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:47:54.364] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:48:09.142] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:50:00.698] [INFO] home-server - 连接 redis server， mysql server pid:  11717
+[2019-04-22T14:50:00.704] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:50:00.754] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:50:00.767] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 11717 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:50:00.786] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:50:00.790] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:50:00.797] [DEBUG] home-server - utils/network.js 11717 客户端连接建立成功ip-port:  192.168.10.34 59992 9001
+[2019-04-22T14:50:00.812] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:50:00.815] [DEBUG] home-server - utils/network.js 11717 客户端连接建立成功ip-port:  192.168.10.34 45724 9090
+[2019-04-22T14:50:00.817] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:50:00.854] [INFO] home-server - 连接 redis server， mysql server pid:  11716
+[2019-04-22T14:50:00.876] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:50:00.930] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:50:00.948] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 11716 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:50:00.975] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:50:00.976] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:50:00.979] [DEBUG] home-server - utils/network.js 11716 客户端连接建立成功ip-port:  192.168.10.34 59998 9001
+[2019-04-22T14:50:00.999] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:50:01.000] [DEBUG] home-server - utils/network.js 11716 客户端连接建立成功ip-port:  192.168.10.34 45730 9090
+[2019-04-22T14:50:01.010] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:50:01.225] [DEBUG] home-server - utils/network.js 11716 服务端连接建立成功ip-port:  192.168.10.34 53180
+[2019-04-22T14:50:01.228] [DEBUG] home-server - utils/network.js 11717 服务端连接建立成功ip-port:  192.168.10.34 41760
+[2019-04-22T14:50:01.237] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:50:01.240] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:50:01.400] [DEBUG] home-server - utils/network.js 11717 服务端连接建立成功ip-port:  192.168.10.34 41766
+[2019-04-22T14:50:01.400] [DEBUG] home-server - utils/network.js 11716 服务端连接建立成功ip-port:  192.168.10.34 53186
+[2019-04-22T14:50:01.409] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:50:01.413] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:50:01.483] [DEBUG] home-server - utils/network.js 11716 服务端连接建立成功ip-port:  192.168.10.34 53192
+[2019-04-22T14:50:01.483] [DEBUG] home-server - utils/network.js 11717 服务端连接建立成功ip-port:  192.168.10.34 41772
+[2019-04-22T14:50:01.488] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:50:01.489] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:50:01.513] [DEBUG] home-server - utils/network.js 11716 服务端连接建立成功ip-port:  192.168.10.34 53198
+[2019-04-22T14:50:01.513] [DEBUG] home-server - utils/network.js 11717 服务端连接建立成功ip-port:  192.168.10.34 41778
+[2019-04-22T14:50:01.520] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:50:01.520] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:50:17.444] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:53:43.565] [INFO] home-server - 连接 redis server， mysql server pid:  12257
+[2019-04-22T14:53:43.570] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:53:43.707] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:53:43.650] [INFO] home-server - 连接 redis server， mysql server pid:  12258
+[2019-04-22T14:53:43.667] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:53:43.725] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 12257 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:53:43.742] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T14:53:43.743] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T14:53:43.773] [DEBUG] home-server - utils/network.js 12257 客户端连接建立成功ip-port:  192.168.10.34 60070 9001
+[2019-04-22T14:53:43.791] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:53:43.792] [DEBUG] home-server - utils/network.js 12257 客户端连接建立成功ip-port:  192.168.10.34 45806 9090
+[2019-04-22T14:53:43.749] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T14:53:43.762] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 12258 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:53:43.803] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:53:43.775] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T14:53:43.785] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T14:53:43.788] [DEBUG] home-server - utils/network.js 12258 客户端连接建立成功ip-port:  192.168.10.34 60074 9001
+[2019-04-22T14:53:43.802] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:53:43.803] [DEBUG] home-server - utils/network.js 12258 客户端连接建立成功ip-port:  192.168.10.34 45808 9090
+[2019-04-22T14:53:43.804] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T14:53:44.027] [DEBUG] home-server - utils/network.js 12257 服务端连接建立成功ip-port:  192.168.10.34 53258
+[2019-04-22T14:53:44.029] [DEBUG] home-server - utils/network.js 12258 服务端连接建立成功ip-port:  192.168.10.34 41838
+[2019-04-22T14:53:44.036] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:53:44.038] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T14:53:44.051] [DEBUG] home-server - utils/network.js 12257 服务端连接建立成功ip-port:  192.168.10.34 53264
+[2019-04-22T14:53:44.051] [DEBUG] home-server - utils/network.js 12258 服务端连接建立成功ip-port:  192.168.10.34 41844
+[2019-04-22T14:53:44.067] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:53:44.068] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T14:53:44.098] [DEBUG] home-server - utils/network.js 12257 服务端连接建立成功ip-port:  192.168.10.34 53270
+[2019-04-22T14:53:44.098] [DEBUG] home-server - utils/network.js 12258 服务端连接建立成功ip-port:  192.168.10.34 41850
+[2019-04-22T14:53:44.105] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:53:44.107] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T14:53:44.128] [DEBUG] home-server - utils/network.js 12258 服务端连接建立成功ip-port:  192.168.10.34 41856
+[2019-04-22T14:53:44.128] [DEBUG] home-server - utils/network.js 12257 服务端连接建立成功ip-port:  192.168.10.34 53276
+[2019-04-22T14:53:44.135] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:53:44.135] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T14:54:17.073] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T14:54:18.861] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53270:1555916024098' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:38:28.904] [INFO] home-server - 连接 redis server， mysql server pid:  17615
+[2019-04-22T15:38:28.984] [INFO] home-server - 连接 redis server， mysql server pid:  17621
+[2019-04-22T15:38:28.909] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:38:29.026] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T15:38:28.996] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:38:29.059] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 17615 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:38:29.077] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T15:38:29.084] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T15:38:29.095] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 17621 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:38:29.089] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T15:38:29.114] [DEBUG] home-server - utils/network.js 17615 客户端连接建立成功ip-port:  192.168.10.34 60506 9001
+[2019-04-22T15:38:29.129] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:38:29.109] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T15:38:29.112] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T15:38:29.123] [DEBUG] home-server - utils/network.js 17621 客户端连接建立成功ip-port:  192.168.10.34 60510 9001
+[2019-04-22T15:38:29.134] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:38:29.135] [DEBUG] home-server - utils/network.js 17621 客户端连接建立成功ip-port:  192.168.10.34 46244 9090
+[2019-04-22T15:38:29.131] [DEBUG] home-server - utils/network.js 17615 客户端连接建立成功ip-port:  192.168.10.34 46242 9090
+[2019-04-22T15:38:29.135] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T15:38:29.144] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T15:38:29.271] [DEBUG] home-server - utils/network.js 17615 服务端连接建立成功ip-port:  192.168.10.34 53694
+[2019-04-22T15:38:29.273] [DEBUG] home-server - utils/network.js 17621 服务端连接建立成功ip-port:  192.168.10.34 42274
+[2019-04-22T15:38:29.280] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T15:38:29.283] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T15:38:29.375] [DEBUG] home-server - utils/network.js 17615 服务端连接建立成功ip-port:  192.168.10.34 53700
+[2019-04-22T15:38:29.381] [DEBUG] home-server - utils/network.js 17621 服务端连接建立成功ip-port:  192.168.10.34 42280
+[2019-04-22T15:38:29.395] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T15:38:29.398] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T15:38:29.479] [DEBUG] home-server - utils/network.js 17615 服务端连接建立成功ip-port:  192.168.10.34 53706
+[2019-04-22T15:38:29.480] [DEBUG] home-server - utils/network.js 17621 服务端连接建立成功ip-port:  192.168.10.34 42286
+[2019-04-22T15:38:29.486] [DEBUG] home-server - utils/network.js 17615 服务端连接建立成功ip-port:  192.168.10.34 53712
+[2019-04-22T15:38:29.486] [DEBUG] home-server - utils/network.js 17621 服务端连接建立成功ip-port:  192.168.10.34 42292
+[2019-04-22T15:38:29.489] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T15:38:29.491] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T15:38:29.493] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T15:38:29.494] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T15:39:09.159] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '6440cf3b57c5ed317d5f90f4bcd77158',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T15:39:09.207] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  account: '12345678' }
+[2019-04-22T15:39:09.222] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T15:39:12.322] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53712:1555918709485' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:41:42.409] [INFO] home-server - 连接 redis server， mysql server pid:  18109
+[2019-04-22T15:41:42.414] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:41:42.498] [INFO] home-server - 连接 redis server， mysql server pid:  18108
+[2019-04-22T15:41:42.543] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T15:41:42.567] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 18109 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:41:42.514] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:41:42.601] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T15:41:42.617] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T15:41:42.620] [DEBUG] home-server - utils/network.js 18109 客户端连接建立成功ip-port:  192.168.10.34 60580 9001
+[2019-04-22T15:41:42.636] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:41:42.639] [DEBUG] home-server - utils/network.js 18109 客户端连接建立成功ip-port:  192.168.10.34 46316 9090
+[2019-04-22T15:41:42.653] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T15:41:42.596] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T15:41:42.610] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 18108 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:41:42.627] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T15:41:42.632] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T15:41:42.638] [DEBUG] home-server - utils/network.js 18108 客户端连接建立成功ip-port:  192.168.10.34 60584 9001
+[2019-04-22T15:41:42.654] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:41:42.657] [DEBUG] home-server - utils/network.js 18108 客户端连接建立成功ip-port:  192.168.10.34 46318 9090
+[2019-04-22T15:41:42.659] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T15:41:42.913] [DEBUG] home-server - utils/network.js 18108 服务端连接建立成功ip-port:  192.168.10.34 53768
+[2019-04-22T15:41:42.915] [DEBUG] home-server - utils/network.js 18109 服务端连接建立成功ip-port:  192.168.10.34 42348
+[2019-04-22T15:41:42.928] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T15:41:42.933] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T15:41:42.944] [DEBUG] home-server - utils/network.js 18109 服务端连接建立成功ip-port:  192.168.10.34 42354
+[2019-04-22T15:41:42.944] [DEBUG] home-server - utils/network.js 18108 服务端连接建立成功ip-port:  192.168.10.34 53774
+[2019-04-22T15:41:42.953] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T15:41:42.954] [DEBUG] home-server - utils/network.js 18109 服务端连接建立成功ip-port:  192.168.10.34 42360
+[2019-04-22T15:41:42.955] [DEBUG] home-server - utils/network.js 18108 服务端连接建立成功ip-port:  192.168.10.34 53780
+[2019-04-22T15:41:42.955] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T15:41:42.962] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T15:41:42.962] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T15:41:43.041] [DEBUG] home-server - utils/network.js 18108 服务端连接建立成功ip-port:  192.168.10.34 53786
+[2019-04-22T15:41:43.042] [DEBUG] home-server - utils/network.js 18109 服务端连接建立成功ip-port:  192.168.10.34 42366
+[2019-04-22T15:41:43.047] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T15:41:43.048] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T15:44:57.123] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T15:45:07.498] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:00.292] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T15:55:02.911] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:04.429] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:04.493] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:04.530] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:04.639] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:53774:1555918902944' } { route: 'createRoom', code: 0 }
+[2019-04-22T15:55:09.418] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:53774:1555918902944
+[2019-04-22T15:55:09.482] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:53768:1555918902913
+[2019-04-22T15:55:09.517] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:53780:1555918902955
+[2019-04-22T15:55:09.639] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:53786:1555918903041
+[2019-04-22T16:08:05.788] [INFO] home-server - 连接 redis server， mysql server pid:  21229
+[2019-04-22T16:08:05.799] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:08:05.876] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T16:08:05.893] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 21229 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:08:05.907] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T16:08:05.908] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T16:08:05.913] [DEBUG] home-server - utils/network.js 21229 客户端连接建立成功ip-port:  192.168.10.34 60902 9001
+[2019-04-22T16:08:05.923] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:08:05.938] [DEBUG] home-server - utils/network.js 21229 客户端连接建立成功ip-port:  192.168.10.34 46634 9090
+[2019-04-22T16:08:05.940] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T16:08:05.824] [INFO] home-server - 连接 redis server， mysql server pid:  21223
+[2019-04-22T16:08:05.833] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:08:05.912] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T16:08:05.930] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 21223 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:08:05.955] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T16:08:05.956] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T16:08:05.960] [DEBUG] home-server - utils/network.js 21223 客户端连接建立成功ip-port:  192.168.10.34 60908 9001
+[2019-04-22T16:08:05.975] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:08:05.978] [DEBUG] home-server - utils/network.js 21223 客户端连接建立成功ip-port:  192.168.10.34 46640 9090
+[2019-04-22T16:08:05.980] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T16:08:06.261] [DEBUG] home-server - utils/network.js 21223 服务端连接建立成功ip-port:  192.168.10.34 54092
+[2019-04-22T16:08:06.262] [DEBUG] home-server - utils/network.js 21229 服务端连接建立成功ip-port:  192.168.10.34 42672
+[2019-04-22T16:08:06.264] [DEBUG] home-server - utils/network.js 21223 服务端连接建立成功ip-port:  192.168.10.34 54096
+[2019-04-22T16:08:06.264] [DEBUG] home-server - utils/network.js 21229 服务端连接建立成功ip-port:  192.168.10.34 42676
+[2019-04-22T16:08:06.276] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T16:08:06.277] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T16:08:06.285] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T16:08:06.288] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T16:08:06.328] [DEBUG] home-server - utils/network.js 21229 服务端连接建立成功ip-port:  192.168.10.34 42682
+[2019-04-22T16:08:06.327] [DEBUG] home-server - utils/network.js 21223 服务端连接建立成功ip-port:  192.168.10.34 54102
+[2019-04-22T16:08:06.334] [DEBUG] home-server - utils/network.js 21223 服务端连接建立成功ip-port:  192.168.10.34 54108
+[2019-04-22T16:08:06.334] [DEBUG] home-server - utils/network.js 21229 服务端连接建立成功ip-port:  192.168.10.34 42688
+[2019-04-22T16:08:06.336] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T16:08:06.338] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T16:08:06.343] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T16:08:06.345] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T16:08:25.660] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T16:08:28.282] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54096:1555920486264' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:22:59.336] [INFO] home-server - 连接 redis server， mysql server pid:  23030
+[2019-04-22T16:22:59.357] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:22:59.430] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T16:22:59.449] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 23030 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:22:59.462] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T16:22:59.471] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T16:22:59.474] [DEBUG] home-server - utils/network.js 23030 客户端连接建立成功ip-port:  192.168.10.34 32834 9001
+[2019-04-22T16:22:59.490] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:22:59.491] [DEBUG] home-server - utils/network.js 23030 客户端连接建立成功ip-port:  192.168.10.34 46798 9090
+[2019-04-22T16:22:59.494] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T16:22:59.376] [INFO] home-server - 连接 redis server， mysql server pid:  23036
+[2019-04-22T16:22:59.388] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:22:59.469] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T16:22:59.492] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 23036 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:22:59.507] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T16:22:59.508] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T16:22:59.519] [DEBUG] home-server - utils/network.js 23036 客户端连接建立成功ip-port:  192.168.10.34 32840 9001
+[2019-04-22T16:22:59.528] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:22:59.530] [DEBUG] home-server - utils/network.js 23036 客户端连接建立成功ip-port:  192.168.10.34 46804 9090
+[2019-04-22T16:22:59.537] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T16:22:59.705] [DEBUG] home-server - utils/network.js 23036 服务端连接建立成功ip-port:  192.168.10.34 42834
+[2019-04-22T16:22:59.705] [DEBUG] home-server - utils/network.js 23030 服务端连接建立成功ip-port:  192.168.10.34 54254
+[2019-04-22T16:22:59.719] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T16:22:59.721] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T16:22:59.793] [DEBUG] home-server - utils/network.js 23030 服务端连接建立成功ip-port:  192.168.10.34 54260
+[2019-04-22T16:22:59.795] [DEBUG] home-server - utils/network.js 23036 服务端连接建立成功ip-port:  192.168.10.34 42840
+[2019-04-22T16:22:59.805] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T16:22:59.808] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T16:22:59.835] [DEBUG] home-server - utils/network.js 23030 服务端连接建立成功ip-port:  192.168.10.34 54266
+[2019-04-22T16:22:59.836] [DEBUG] home-server - utils/network.js 23036 服务端连接建立成功ip-port:  192.168.10.34 42846
+[2019-04-22T16:22:59.843] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T16:22:59.846] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T16:22:59.850] [DEBUG] home-server - utils/network.js 23030 服务端连接建立成功ip-port:  192.168.10.34 54272
+[2019-04-22T16:22:59.851] [DEBUG] home-server - utils/network.js 23036 服务端连接建立成功ip-port:  192.168.10.34 42852
+[2019-04-22T16:22:59.856] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T16:22:59.857] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T16:23:20.593] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T16:23:22.113] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:30:42.770] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T16:30:46.729] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:30:56.027] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:30:56.083] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:30:56.160] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:30:56.171] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:54272:1555921379850' } { route: 'createRoom', code: 0 }
+[2019-04-22T16:31:01.013] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:54272:1555921379850
+[2019-04-22T16:31:01.064] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:54254:1555921379704
+[2019-04-22T16:31:01.153] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:54266:1555921379835
+[2019-04-22T16:31:01.168] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:54260:1555921379793
+[2019-04-22T17:37:17.031] [INFO] home-server - 连接 redis server， mysql server pid:  31727
+[2019-04-22T17:37:17.036] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T17:37:17.074] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T17:37:17.081] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 31727 /home/sujiahong/workspace/aa-server
+[2019-04-22T17:37:17.090] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T17:37:17.091] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T17:37:17.094] [DEBUG] home-server - utils/network.js 31727 客户端连接建立成功ip-port:  192.168.10.34 33608 9001
+[2019-04-22T17:37:17.099] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T17:37:17.102] [DEBUG] home-server - utils/network.js 31727 客户端连接建立成功ip-port:  192.168.10.34 47572 9090
+[2019-04-22T17:37:17.104] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T17:37:17.245] [INFO] home-server - 连接 redis server， mysql server pid:  31726
+[2019-04-22T17:37:17.261] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T17:37:17.329] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T17:37:17.346] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 31726 /home/sujiahong/workspace/aa-server
+[2019-04-22T17:37:17.368] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T17:37:17.370] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T17:37:17.388] [DEBUG] home-server - utils/network.js 31726 客户端连接建立成功ip-port:  192.168.10.34 33614 9001
+[2019-04-22T17:37:17.394] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T17:37:17.398] [DEBUG] home-server - utils/network.js 31726 客户端连接建立成功ip-port:  192.168.10.34 47578 9090
+[2019-04-22T17:37:17.402] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T17:37:17.498] [DEBUG] home-server - utils/network.js 31727 服务端连接建立成功ip-port:  192.168.10.34 43608
+[2019-04-22T17:37:17.498] [DEBUG] home-server - utils/network.js 31726 服务端连接建立成功ip-port:  192.168.10.34 55028
+[2019-04-22T17:37:17.515] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T17:37:17.516] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T17:37:17.643] [DEBUG] home-server - utils/network.js 31726 服务端连接建立成功ip-port:  192.168.10.34 55034
+[2019-04-22T17:37:17.647] [DEBUG] home-server - utils/network.js 31727 服务端连接建立成功ip-port:  192.168.10.34 43614
+[2019-04-22T17:37:17.654] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T17:37:17.656] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T17:37:17.661] [DEBUG] home-server - utils/network.js 31726 服务端连接建立成功ip-port:  192.168.10.34 55040
+[2019-04-22T17:37:17.661] [DEBUG] home-server - utils/network.js 31727 服务端连接建立成功ip-port:  192.168.10.34 43620
+[2019-04-22T17:37:17.670] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T17:37:17.671] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T17:37:17.683] [DEBUG] home-server - utils/network.js 31726 服务端连接建立成功ip-port:  192.168.10.34 55046
+[2019-04-22T17:37:17.683] [DEBUG] home-server - utils/network.js 31727 服务端连接建立成功ip-port:  192.168.10.34 43626
+[2019-04-22T17:37:17.690] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T17:37:17.691] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T17:38:33.609] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: 'e9a648b2b5fd54f4d0306200942767b9',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T17:38:33.647] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  account: '12345678' }
+[2019-04-22T17:38:33.664] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T17:38:35.739] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T17:38:35.743] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:40:18.714] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T17:40:55.671] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T17:40:55.675] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:41:03.689] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:41:03.791] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:41:03.832] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:41:03.881] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55040:1555925837661' } { route: 'createRoom', code: 0 }
+[2019-04-22T17:41:08.670] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55028:1555925837497
+[2019-04-22T17:41:08.764] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55040:1555925837661
+[2019-04-22T17:41:08.807] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55034:1555925837643
+[2019-04-22T17:41:08.876] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55046:1555925837683
+[2019-04-22T18:26:23.491] [INFO] home-server - 连接 redis server， mysql server pid:  5802
+[2019-04-22T18:26:23.503] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:26:23.581] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:26:23.610] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 5802 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:26:23.641] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T18:26:23.642] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T18:26:23.654] [DEBUG] home-server - utils/network.js 5802 客户端连接建立成功ip-port:  192.168.10.34 34200 9001
+[2019-04-22T18:26:23.669] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:26:23.673] [DEBUG] home-server - utils/network.js 5802 客户端连接建立成功ip-port:  192.168.10.34 48164 9090
+[2019-04-22T18:26:23.681] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:26:23.630] [INFO] home-server - 连接 redis server， mysql server pid:  5808
+[2019-04-22T18:26:23.639] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:26:23.724] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:26:23.731] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 5808 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:26:23.738] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T18:26:23.739] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T18:26:23.742] [DEBUG] home-server - utils/network.js 5808 客户端连接建立成功ip-port:  192.168.10.34 34206 9001
+[2019-04-22T18:26:23.746] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:26:23.747] [DEBUG] home-server - utils/network.js 5808 客户端连接建立成功ip-port:  192.168.10.34 48170 9090
+[2019-04-22T18:26:23.748] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:26:23.867] [DEBUG] home-server - utils/network.js 5802 服务端连接建立成功ip-port:  192.168.10.34 55620
+[2019-04-22T18:26:23.870] [DEBUG] home-server - utils/network.js 5808 服务端连接建立成功ip-port:  192.168.10.34 44200
+[2019-04-22T18:26:23.877] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:26:23.880] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:26:23.996] [DEBUG] home-server - utils/network.js 5802 服务端连接建立成功ip-port:  192.168.10.34 55626
+[2019-04-22T18:26:23.998] [DEBUG] home-server - utils/network.js 5808 服务端连接建立成功ip-port:  192.168.10.34 44210
+[2019-04-22T18:26:24.001] [DEBUG] home-server - utils/network.js 5802 服务端连接建立成功ip-port:  192.168.10.34 55630
+[2019-04-22T18:26:24.003] [DEBUG] home-server - utils/network.js 5808 服务端连接建立成功ip-port:  192.168.10.34 44212
+[2019-04-22T18:26:24.010] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:26:24.012] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:26:24.014] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:26:24.015] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:26:24.070] [DEBUG] home-server - utils/network.js 5802 服务端连接建立成功ip-port:  192.168.10.34 55638
+[2019-04-22T18:26:24.071] [DEBUG] home-server - utils/network.js 5808 服务端连接建立成功ip-port:  192.168.10.34 44218
+[2019-04-22T18:26:24.080] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:26:24.081] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:26:36.050] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:26:38.383] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:26:38.385] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55630:1555928784001' } object
+[2019-04-22T18:30:23.785] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:31:45.170] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:31:45.173] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55630:1555928784001' } object
+[2019-04-22T18:31:45.176] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55630:1555928784001' } object
+[2019-04-22T18:32:13.682] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:32:15.081] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:32:15.086] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55630:1555928784001' } object
+[2019-04-22T18:32:15.087] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55630:1555928784001' } object
+[2019-04-22T18:32:15.088] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55638:1555928784070' } object
+[2019-04-22T18:35:36.970] [INFO] home-server - 连接 redis server， mysql server pid:  7002
+[2019-04-22T18:35:36.975] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:35:37.046] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:35:37.071] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 7002 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:35:37.078] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T18:35:37.085] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T18:35:37.092] [DEBUG] home-server - utils/network.js 7002 客户端连接建立成功ip-port:  192.168.10.34 34400 9001
+[2019-04-22T18:35:37.102] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:35:37.103] [DEBUG] home-server - utils/network.js 7002 客户端连接建立成功ip-port:  192.168.10.34 48364 9090
+[2019-04-22T18:35:37.106] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:35:37.107] [INFO] home-server - 连接 redis server， mysql server pid:  6996
+[2019-04-22T18:35:37.119] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:35:37.193] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:35:37.208] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 6996 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:35:37.224] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T18:35:37.225] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T18:35:37.231] [DEBUG] home-server - utils/network.js 6996 客户端连接建立成功ip-port:  192.168.10.34 34406 9001
+[2019-04-22T18:35:37.241] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:35:37.244] [DEBUG] home-server - utils/network.js 6996 客户端连接建立成功ip-port:  192.168.10.34 48370 9090
+[2019-04-22T18:35:37.246] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:35:37.334] [DEBUG] home-server - utils/network.js 7002 服务端连接建立成功ip-port:  192.168.10.34 44400
+[2019-04-22T18:35:37.334] [DEBUG] home-server - utils/network.js 6996 服务端连接建立成功ip-port:  192.168.10.34 55820
+[2019-04-22T18:35:37.339] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:35:37.339] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:35:37.369] [DEBUG] home-server - utils/network.js 6996 服务端连接建立成功ip-port:  192.168.10.34 55826
+[2019-04-22T18:35:37.369] [DEBUG] home-server - utils/network.js 7002 服务端连接建立成功ip-port:  192.168.10.34 44406
+[2019-04-22T18:35:37.375] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:35:37.376] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:35:37.474] [DEBUG] home-server - utils/network.js 6996 服务端连接建立成功ip-port:  192.168.10.34 55832
+[2019-04-22T18:35:37.474] [DEBUG] home-server - utils/network.js 7002 服务端连接建立成功ip-port:  192.168.10.34 44412
+[2019-04-22T18:35:37.480] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:35:37.480] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:35:37.599] [DEBUG] home-server - utils/network.js 7002 服务端连接建立成功ip-port:  192.168.10.34 44418
+[2019-04-22T18:35:37.599] [DEBUG] home-server - utils/network.js 6996 服务端连接建立成功ip-port:  192.168.10.34 55838
+[2019-04-22T18:35:37.604] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:35:37.605] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:36:01.808] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:36:03.678] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:36:03.682] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:24.643] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:36:27.397] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:36:27.401] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:28.368] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:28.389] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:28.503] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:28.646] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:55820:1555929337333' } object
+[2019-04-22T18:36:33.400] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55826:1555929337369
+[2019-04-22T18:36:33.437] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55820:1555929337333
+[2019-04-22T18:36:33.500] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55832:1555929337474
+[2019-04-22T18:36:33.628] [WARN] home-server - utils/network.js server close close socketId:  192.168.10.34:55838:1555929337599
+[2019-04-22T18:44:51.794] [INFO] home-server - 连接 redis server， mysql server pid:  8182
+[2019-04-22T18:44:51.813] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:44:51.864] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:44:51.889] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 8182 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:44:51.910] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T18:44:51.912] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T18:44:51.916] [DEBUG] home-server - utils/network.js 8182 客户端连接建立成功ip-port:  192.168.10.34 34730 9001
+[2019-04-22T18:44:51.941] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:44:51.949] [DEBUG] home-server - utils/network.js 8182 客户端连接建立成功ip-port:  192.168.10.34 48694 9090
+[2019-04-22T18:44:51.952] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:44:51.883] [INFO] home-server - 连接 redis server， mysql server pid:  8176
+[2019-04-22T18:44:51.901] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:44:51.979] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:44:51.994] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 8176 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:44:52.009] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T18:44:52.015] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T18:44:52.026] [DEBUG] home-server - utils/network.js 8176 客户端连接建立成功ip-port:  192.168.10.34 34736 9001
+[2019-04-22T18:44:52.042] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:44:52.043] [DEBUG] home-server - utils/network.js 8176 客户端连接建立成功ip-port:  192.168.10.34 48700 9090
+[2019-04-22T18:44:52.045] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:44:52.285] [DEBUG] home-server - utils/network.js 8176 服务端连接建立成功ip-port:  192.168.10.34 56150
+[2019-04-22T18:44:52.287] [DEBUG] home-server - utils/network.js 8182 服务端连接建立成功ip-port:  192.168.10.34 44730
+[2019-04-22T18:44:52.294] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:44:52.296] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:44:52.302] [DEBUG] home-server - utils/network.js 8176 服务端连接建立成功ip-port:  192.168.10.34 56156
+[2019-04-22T18:44:52.303] [DEBUG] home-server - utils/network.js 8182 服务端连接建立成功ip-port:  192.168.10.34 44736
+[2019-04-22T18:44:52.315] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:44:52.318] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:44:52.321] [DEBUG] home-server - utils/network.js 8176 服务端连接建立成功ip-port:  192.168.10.34 56162
+[2019-04-22T18:44:52.321] [DEBUG] home-server - utils/network.js 8182 服务端连接建立成功ip-port:  192.168.10.34 44742
+[2019-04-22T18:44:52.327] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:44:52.330] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:44:52.488] [DEBUG] home-server - utils/network.js 8176 服务端连接建立成功ip-port:  192.168.10.34 56168
+[2019-04-22T18:44:52.488] [DEBUG] home-server - utils/network.js 8182 服务端连接建立成功ip-port:  192.168.10.34 44748
+[2019-04-22T18:44:52.494] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:44:52.494] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:45:04.262] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '9aa0b958e662df1d42ca7a6d0fecc4f5',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:45:04.311] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  account: '12345678' }
+[2019-04-22T18:45:04.335] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:45:10.551] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:45:10.610] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56150:1555929892284' } object
+[2019-04-22T18:46:04.146] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:46:09.766] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:46:09.767] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56150:1555929892284' } object
+[2019-04-22T18:46:23.467] [INFO] home-server - 连接 redis server， mysql server pid:  8449
+[2019-04-22T18:46:23.472] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:46:23.511] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:46:23.518] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 8449 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:46:23.527] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T18:46:23.529] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T18:46:23.533] [DEBUG] home-server - utils/network.js 8449 客户端连接建立成功ip-port:  192.168.10.34 34786 9001
+[2019-04-22T18:46:23.557] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:46:23.558] [DEBUG] home-server - utils/network.js 8449 客户端连接建立成功ip-port:  192.168.10.34 48750 9090
+[2019-04-22T18:46:23.563] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:46:23.554] [INFO] home-server - 连接 redis server， mysql server pid:  8450
+[2019-04-22T18:46:23.560] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:46:23.631] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:46:23.658] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 8450 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:46:23.701] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T18:46:23.702] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T18:46:23.705] [DEBUG] home-server - utils/network.js 8450 客户端连接建立成功ip-port:  192.168.10.34 34792 9001
+[2019-04-22T18:46:23.717] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:46:23.726] [DEBUG] home-server - utils/network.js 8450 客户端连接建立成功ip-port:  192.168.10.34 48756 9090
+[2019-04-22T18:46:23.728] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:46:23.984] [DEBUG] home-server - utils/network.js 8449 服务端连接建立成功ip-port:  192.168.10.34 56206
+[2019-04-22T18:46:23.986] [DEBUG] home-server - utils/network.js 8450 服务端连接建立成功ip-port:  192.168.10.34 44786
+[2019-04-22T18:46:23.992] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:46:23.993] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:46:24.099] [DEBUG] home-server - utils/network.js 8449 服务端连接建立成功ip-port:  192.168.10.34 56212
+[2019-04-22T18:46:24.102] [DEBUG] home-server - utils/network.js 8449 服务端连接建立成功ip-port:  192.168.10.34 56218
+[2019-04-22T18:46:24.099] [DEBUG] home-server - utils/network.js 8450 服务端连接建立成功ip-port:  192.168.10.34 44794
+[2019-04-22T18:46:24.104] [DEBUG] home-server - utils/network.js 8450 服务端连接建立成功ip-port:  192.168.10.34 44798
+[2019-04-22T18:46:24.110] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:46:24.111] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:46:24.117] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:46:24.130] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:46:24.169] [DEBUG] home-server - utils/network.js 8449 服务端连接建立成功ip-port:  192.168.10.34 56224
+[2019-04-22T18:46:24.170] [DEBUG] home-server - utils/network.js 8450 服务端连接建立成功ip-port:  192.168.10.34 44804
+[2019-04-22T18:46:24.175] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:46:24.176] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:46:53.422] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:46:54.718] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:46:54.764] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56212:1555929984099' } object
+[2019-04-22T18:46:56.534] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:46:56.540] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56212:1555929984099' } object
+[2019-04-22T18:46:56.541] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56206:1555929983983' } object
+[2019-04-22T18:48:38.495] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:48:41.439] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:48:41.443] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56212:1555929984099' } object
+[2019-04-22T18:48:41.444] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56206:1555929983983' } object
+[2019-04-22T18:48:41.445] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56218:1555929984102' } object
+[2019-04-22T18:59:25.352] [INFO] home-server - 连接 redis server， mysql server pid:  10059
+[2019-04-22T18:59:25.362] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:59:25.437] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:59:25.457] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 10059 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:59:25.474] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T18:59:25.484] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T18:59:25.487] [DEBUG] home-server - utils/network.js 10059 客户端连接建立成功ip-port:  192.168.10.34 34956 9001
+[2019-04-22T18:59:25.493] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:59:25.497] [DEBUG] home-server - utils/network.js 10059 客户端连接建立成功ip-port:  192.168.10.34 48920 9090
+[2019-04-22T18:59:25.502] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:59:25.454] [INFO] home-server - 连接 redis server， mysql server pid:  10065
+[2019-04-22T18:59:25.472] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:59:25.557] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T18:59:25.567] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 10065 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:59:25.586] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T18:59:25.591] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T18:59:25.596] [DEBUG] home-server - utils/network.js 10065 客户端连接建立成功ip-port:  192.168.10.34 34962 9001
+[2019-04-22T18:59:25.614] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:59:25.617] [DEBUG] home-server - utils/network.js 10065 客户端连接建立成功ip-port:  192.168.10.34 48926 9090
+[2019-04-22T18:59:25.620] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T18:59:25.624] [DEBUG] home-server - utils/network.js 10059 服务端连接建立成功ip-port:  192.168.10.34 56376
+[2019-04-22T18:59:25.625] [DEBUG] home-server - utils/network.js 10065 服务端连接建立成功ip-port:  192.168.10.34 44956
+[2019-04-22T18:59:25.643] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:59:25.657] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T18:59:25.797] [DEBUG] home-server - utils/network.js 10065 服务端连接建立成功ip-port:  192.168.10.34 44962
+[2019-04-22T18:59:25.797] [DEBUG] home-server - utils/network.js 10059 服务端连接建立成功ip-port:  192.168.10.34 56382
+[2019-04-22T18:59:25.819] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:59:25.821] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T18:59:25.851] [DEBUG] home-server - utils/network.js 10059 服务端连接建立成功ip-port:  192.168.10.34 56390
+[2019-04-22T18:59:25.851] [DEBUG] home-server - utils/network.js 10065 服务端连接建立成功ip-port:  192.168.10.34 44970
+[2019-04-22T18:59:25.853] [DEBUG] home-server - utils/network.js 10059 服务端连接建立成功ip-port:  192.168.10.34 56394
+[2019-04-22T18:59:25.854] [DEBUG] home-server - utils/network.js 10065 服务端连接建立成功ip-port:  192.168.10.34 44974
+[2019-04-22T18:59:25.860] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:59:25.860] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:59:25.861] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T18:59:25.861] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T18:59:41.809] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T18:59:44.721] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T18:59:44.727] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:09.445] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:00:10.898] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:10.902] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:14.485] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:14.489] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56376:1555930765623' } object
+[2019-04-22T19:00:32.623] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:32.626] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56376:1555930765623' } object
+[2019-04-22T19:00:33.398] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:33.402] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:33.973] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:33.975] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:34.341] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:34.343] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:34.508] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:34.509] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56376:1555930765623' } object
+[2019-04-22T19:00:34.695] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:34.699] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:34.846] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:34.847] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:35.030] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.036] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:35.183] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.187] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:35.371] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.372] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56376:1555930765623' } object
+[2019-04-22T19:00:35.556] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.557] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:35.707] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.709] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:35.876] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:35.878] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:36.044] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.046] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:36.215] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.220] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:36.403] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.406] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:36.554] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.557] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:36.725] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.728] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56376:1555930765623' } object
+[2019-04-22T19:00:36.910] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:36.917] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:37.061] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:37.064] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:37.247] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:37.250] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:37.418] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:37.419] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56382:1555930765797' } object
+[2019-04-22T19:00:37.603] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:37.613] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-2',
+  NAME: 'game-server-2',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8311,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56390:1555930765851' } object
+[2019-04-22T19:00:37.805] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:37.808] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:00:38.140] [DEBUG] home-server - home-server/main_service.js create room create room !!!! 
+[2019-04-22T19:00:38.142] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56394:1555930765853' } object
+[2019-04-22T19:38:36.224] [INFO] home-server - 连接 redis server， mysql server pid:  14806
+[2019-04-22T19:38:36.229] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T19:38:36.315] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T19:38:36.332] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 14806 /home/sujiahong/workspace/aa-server
+[2019-04-22T19:38:36.349] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T19:38:36.353] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T19:38:36.360] [DEBUG] home-server - utils/network.js 14806 客户端连接建立成功ip-port:  192.168.10.34 35384 9001
+[2019-04-22T19:38:36.381] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T19:38:36.382] [DEBUG] home-server - utils/network.js 14806 客户端连接建立成功ip-port:  192.168.10.34 49348 9090
+[2019-04-22T19:38:36.385] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T19:38:36.248] [INFO] home-server - 连接 redis server， mysql server pid:  14812
+[2019-04-22T19:38:36.263] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T19:38:36.386] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T19:38:36.406] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 14812 /home/sujiahong/workspace/aa-server
+[2019-04-22T19:38:36.434] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T19:38:36.446] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T19:38:36.457] [DEBUG] home-server - utils/network.js 14812 客户端连接建立成功ip-port:  192.168.10.34 35390 9001
+[2019-04-22T19:38:36.474] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T19:38:36.483] [DEBUG] home-server - utils/network.js 14812 客户端连接建立成功ip-port:  192.168.10.34 49354 9090
+[2019-04-22T19:38:36.493] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T19:38:36.676] [DEBUG] home-server - utils/network.js 14806 服务端连接建立成功ip-port:  192.168.10.34 56804
+[2019-04-22T19:38:36.679] [DEBUG] home-server - utils/network.js 14812 服务端连接建立成功ip-port:  192.168.10.34 45384
+[2019-04-22T19:38:36.684] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T19:38:36.686] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T19:38:36.706] [DEBUG] home-server - utils/network.js 14806 服务端连接建立成功ip-port:  192.168.10.34 56810
+[2019-04-22T19:38:36.715] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T19:38:36.708] [DEBUG] home-server - utils/network.js 14812 服务端连接建立成功ip-port:  192.168.10.34 45390
+[2019-04-22T19:38:36.727] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T19:38:36.804] [DEBUG] home-server - utils/network.js 14806 服务端连接建立成功ip-port:  192.168.10.34 56816
+[2019-04-22T19:38:36.804] [DEBUG] home-server - utils/network.js 14812 服务端连接建立成功ip-port:  192.168.10.34 45396
+[2019-04-22T19:38:36.811] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T19:38:36.813] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T19:38:36.817] [DEBUG] home-server - utils/network.js 14806 服务端连接建立成功ip-port:  192.168.10.34 56822
+[2019-04-22T19:38:36.817] [DEBUG] home-server - utils/network.js 14812 服务端连接建立成功ip-port:  192.168.10.34 45402
+[2019-04-22T19:38:36.822] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T19:38:36.823] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T19:39:05.528] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:39:13.564] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56804:1555933116676' } object
+[2019-04-22T19:46:58.663] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '18059062e4f43628ace22f42af5c61fa',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:46:58.703] [INFO] home-server - homeserver-start.js recommend:  { route: 'recommend',
+  recommendation: '203ebd1fd5cad2d200068f9c4d01b872',
+  account: '12345678' }
+[2019-04-22T19:46:58.725] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '203ebd1fd5cad2d200068f9c4d01b872',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:47:07.677] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56804:1555933116676' } object
+[2019-04-22T19:49:24.718] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '203ebd1fd5cad2d200068f9c4d01b872',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:49:29.716] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-3',
+  NAME: 'game-server-3',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8320,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56816:1555933116803' } object
+[2019-04-22T19:51:30.416] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '203ebd1fd5cad2d200068f9c4d01b872',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T19:51:31.661] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-4',
+  NAME: 'game-server-4',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8321,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:56822:1555933116817' } object
+[2019-04-22T20:37:43.736] [INFO] home-server - 连接 redis server， mysql server pid:  21821
+[2019-04-22T20:37:43.742] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:37:43.784] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T20:37:43.791] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 21821 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:37:43.799] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T20:37:43.801] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T20:37:43.803] [DEBUG] home-server - utils/network.js 21821 客户端连接建立成功ip-port:  192.168.10.34 35936 9001
+[2019-04-22T20:37:43.888] [INFO] home-server - 连接 redis server， mysql server pid:  21815
+[2019-04-22T20:37:43.915] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:37:43.994] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T20:37:44.032] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 21815 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:37:44.057] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T20:37:44.060] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T20:37:44.064] [DEBUG] home-server - utils/network.js 21815 客户端连接建立成功ip-port:  192.168.10.34 35940 9001
+[2019-04-22T20:37:44.187] [DEBUG] home-server - utils/network.js 21815 服务端连接建立成功ip-port:  192.168.10.34 57352
+[2019-04-22T20:37:44.189] [DEBUG] home-server - utils/network.js 21821 服务端连接建立成功ip-port:  192.168.10.34 45932
+[2019-04-22T20:37:44.309] [DEBUG] home-server - utils/network.js 21815 服务端连接建立成功ip-port:  192.168.10.34 57358
+[2019-04-22T20:37:44.311] [DEBUG] home-server - utils/network.js 21821 服务端连接建立成功ip-port:  192.168.10.34 45938
+[2019-04-22T20:37:44.359] [DEBUG] home-server - utils/network.js 21815 服务端连接建立成功ip-port:  192.168.10.34 57364
+[2019-04-22T20:37:44.359] [DEBUG] home-server - utils/network.js 21821 服务端连接建立成功ip-port:  192.168.10.34 45944
+[2019-04-22T20:37:44.471] [DEBUG] home-server - utils/network.js 21815 服务端连接建立成功ip-port:  192.168.10.34 57370
+[2019-04-22T20:37:44.471] [DEBUG] home-server - utils/network.js 21821 服务端连接建立成功ip-port:  192.168.10.34 45950
+[2019-04-22T20:40:22.014] [INFO] home-server - 连接 redis server， mysql server pid:  22223
+[2019-04-22T20:40:22.029] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:40:22.105] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T20:40:22.118] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-1 22223 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:40:22.139] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9100 }
+[2019-04-22T20:40:22.145] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8110 }
+[2019-04-22T20:40:22.148] [DEBUG] home-server - utils/network.js 22223 客户端连接建立成功ip-port:  192.168.10.34 36000 9001
+[2019-04-22T20:40:22.164] [DEBUG] home-server - utils/packet.js data data: bufflen: 33 remainderLen : 33
+[2019-04-22T20:40:22.170] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T20:40:22.170] [DEBUG] home-server - utils/network.js 22223 客户端连接建立成功ip-port:  192.168.10.34 49964 9090
+[2019-04-22T20:40:22.172] [DEBUG] home-server - utils/packet.js data data: bufflen: 33 remainderLen : 33
+[2019-04-22T20:40:22.173] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T20:40:22.050] [INFO] home-server - 连接 redis server， mysql server pid:  22229
+[2019-04-22T20:40:22.065] [INFO] home-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:40:22.133] [INFO] home-server - utils/db_connection.js mysql数据库连接成功, 使用连接池！！！！！
+[2019-04-22T20:40:22.157] [INFO] home-server - homeserver-start.js home server start ~~!!!! home-server-2 22229 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:40:22.190] [DEBUG] home-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9120 }
+[2019-04-22T20:40:22.191] [INFO] home-server - network_http.js express server listen:  { host: '192.168.10.34', port: 8120 }
+[2019-04-22T20:40:22.201] [DEBUG] home-server - utils/network.js 22229 客户端连接建立成功ip-port:  192.168.10.34 36006 9001
+[2019-04-22T20:40:22.209] [DEBUG] home-server - utils/packet.js data data: bufflen: 33 remainderLen : 33
+[2019-04-22T20:40:22.210] [INFO] home-server - homeserver-start.js 向center server 注册 success code:  0
+[2019-04-22T20:40:22.219] [DEBUG] home-server - utils/network.js 22229 客户端连接建立成功ip-port:  192.168.10.34 49970 9090
+[2019-04-22T20:40:22.227] [DEBUG] home-server - utils/packet.js data data: bufflen: 33 remainderLen : 33
+[2019-04-22T20:40:22.227] [INFO] home-server - homeserver-start.js 向gate server 注册 success code:  0
+[2019-04-22T20:40:22.432] [DEBUG] home-server - utils/network.js 22223 服务端连接建立成功ip-port:  192.168.10.34 57420
+[2019-04-22T20:40:22.434] [DEBUG] home-server - utils/network.js 22229 服务端连接建立成功ip-port:  192.168.10.34 46000
+[2019-04-22T20:40:22.452] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.459] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.457] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T20:40:22.464] [DEBUG] home-server - homeserver-start.js game-server-2 注册成功在home server!!!
+[2019-04-22T20:40:22.508] [DEBUG] home-server - utils/network.js 22223 服务端连接建立成功ip-port:  192.168.10.34 57426
+[2019-04-22T20:40:22.509] [DEBUG] home-server - utils/network.js 22229 服务端连接建立成功ip-port:  192.168.10.34 46006
+[2019-04-22T20:40:22.514] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.514] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T20:40:22.515] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.516] [DEBUG] home-server - homeserver-start.js game-server-1 注册成功在home server!!!
+[2019-04-22T20:40:22.563] [DEBUG] home-server - utils/network.js 22223 服务端连接建立成功ip-port:  192.168.10.34 57432
+[2019-04-22T20:40:22.563] [DEBUG] home-server - utils/network.js 22229 服务端连接建立成功ip-port:  192.168.10.34 46012
+[2019-04-22T20:40:22.570] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.571] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T20:40:22.572] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.573] [DEBUG] home-server - homeserver-start.js game-server-4 注册成功在home server!!!
+[2019-04-22T20:40:22.617] [DEBUG] home-server - utils/network.js 22223 服务端连接建立成功ip-port:  192.168.10.34 57438
+[2019-04-22T20:40:22.617] [DEBUG] home-server - utils/network.js 22229 服务端连接建立成功ip-port:  192.168.10.34 46018
+[2019-04-22T20:40:22.623] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.623] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T20:40:22.624] [DEBUG] home-server - utils/packet.js data data: bufflen: 170 remainderLen : 170
+[2019-04-22T20:40:22.624] [DEBUG] home-server - homeserver-start.js game-server-3 注册成功在home server!!!
+[2019-04-22T20:40:23.156] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:23.175] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:23.205] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:23.222] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:23.455] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.462] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.516] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.515] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.571] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.572] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.623] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.625] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.158] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:48.173] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:48.220] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:48.223] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:48.479] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.479] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.540] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.541] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.598] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.597] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.646] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.645] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.169] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:13.172] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:13.229] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:13.230] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:13.499] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.499] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.564] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.564] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.615] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.615] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.665] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.665] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:26.005] [INFO] home-server - router.js 用户登录！！！ { account: '12345678',
+  cliType: 'app',
+  accountType: 'telnumber',
+  clientId: '101',
+  recommendation: '203ebd1fd5cad2d200068f9c4d01b872',
+  accountData: '{"nickName":"","gender":0,"avatarUrl":""}',
+  ip: '192.168.10.128' }
+[2019-04-22T20:41:32.164] [DEBUG] home-server - utils/packet.js data data: bufflen: 35 remainderLen : 35
+[2019-04-22T20:41:32.166] [INFO] home-server - home-server/main_service.js create room  { ID: 'game-server-1',
+  NAME: 'game-server-1',
+  IP: '192.168.10.34',
+  FOR_CLIENT_PORT: 8310,
+  START_PATH: './servers/game-server/start',
+  socketId: '192.168.10.34:57426:1555936822507' } object
+[2019-04-22T20:41:38.171] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:38.172] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:38.255] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:38.255] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:38.524] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.524] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.565] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.565] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.615] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.615] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.690] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.690] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.180] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:03.182] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:03.245] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:03.246] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:03.526] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.526] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.568] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.568] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.639] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.639] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.691] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.691] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.180] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:28.184] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:28.263] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:28.264] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:28.541] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.541] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.579] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.580] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.639] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.640] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.705] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.706] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.191] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:53.192] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:53.282] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:53.283] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:53.544] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.545] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.581] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.583] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.651] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.651] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.716] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.717] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.206] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:18.208] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:18.287] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:18.287] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:18.555] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.556] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.587] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.588] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.671] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.671] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.737] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.737] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.225] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:43.226] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:43.297] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:43.297] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:43.578] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.578] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.588] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.588] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.687] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.687] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.762] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.762] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.240] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:08.240] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:08.303] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:08.303] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:08.599] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.600] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.604] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.604] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.712] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.712] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.773] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.772] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.247] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:33.248] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:33.322] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:33.322] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:33.605] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.605] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.609] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.609] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.718] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.718] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.790] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.790] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.265] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:58.266] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:58.327] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:58.329] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:58.606] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.606] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.611] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.611] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.726] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.726] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.816] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.817] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.289] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:23.289] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:23.340] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:23.341] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:23.617] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.617] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.628] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.628] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.751] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.751] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.842] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.842] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.299] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:48.300] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:48.344] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:48.345] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:48.631] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.631] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.649] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.649] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.777] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.778] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.867] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.867] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.302] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:13.303] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:13.361] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:13.361] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:13.632] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.632] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.674] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.674] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.802] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.803] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.873] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.873] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.314] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:38.317] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:38.378] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:38.381] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:38.633] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.633] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.698] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.698] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.818] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.818] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.899] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.900] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.320] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:03.321] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:03.388] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:03.389] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:03.640] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.640] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.710] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.710] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.841] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.841] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.923] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.923] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.333] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:28.336] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:28.407] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:28.408] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:28.643] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.657] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.713] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.713] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.864] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.865] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.938] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.952] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.353] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:53.354] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:53.425] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:53.425] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:53.644] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.643] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.715] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.716] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.870] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.870] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.947] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.947] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.362] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:18.364] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:18.440] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:18.441] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:18.645] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.645] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.726] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.727] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.884] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.885] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.973] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.974] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.383] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:43.383] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:43.456] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:43.457] [DEBUG] home-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:43.649] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.649] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.745] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.745] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.908] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.908] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.998] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.998] [DEBUG] home-server - utils/packet.js data data: bufflen: 53 remainderLen : 53

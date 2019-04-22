@@ -11604,3 +11604,344 @@
 [2019-04-20T20:12:27.172] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
 [2019-04-20T20:12:27.174] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
   accountData: '{"account":"12345678"}' }
+[2019-04-20T20:33:41.887] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2245623876436%22%7D&
+[2019-04-20T20:33:41.889] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"45623876436"}' }
+[2019-04-22T10:47:39.927] [INFO] gate-server - 连接数据库
+[2019-04-22T10:47:39.932] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T10:47:40.041] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 14950 /home/sujiahong/workspace/aa-server
+[2019-04-22T10:47:40.059] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T10:47:40.061] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T10:47:40.076] [DEBUG] gate-server - utils/network.js 14950 客户端连接建立成功ip-port:  192.168.10.34 57628 9001
+[2019-04-22T10:47:40.092] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T10:47:40.680] [DEBUG] gate-server - utils/network.js 14950 服务端连接建立成功ip-port:  192.168.10.34 43392
+[2019-04-22T10:47:40.681] [DEBUG] gate-server - utils/network.js 14950 服务端连接建立成功ip-port:  192.168.10.34 43394
+[2019-04-22T10:47:40.684] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T10:47:40.684] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T11:18:23.969] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T11:18:23.974] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T11:40:39.606] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T11:40:39.607] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T12:48:01.533] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T12:48:01.534] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T12:51:56.688] [INFO] gate-server - 连接数据库
+[2019-04-22T12:51:56.693] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:51:56.696] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 29238 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:51:56.711] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T12:51:56.711] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T12:51:56.714] [DEBUG] gate-server - utils/network.js 29238 客户端连接建立成功ip-port:  192.168.10.34 58664 9001
+[2019-04-22T12:51:56.718] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:51:57.286] [DEBUG] gate-server - utils/network.js 29238 服务端连接建立成功ip-port:  192.168.10.34 44400
+[2019-04-22T12:51:57.294] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T12:51:57.341] [DEBUG] gate-server - utils/network.js 29238 服务端连接建立成功ip-port:  192.168.10.34 44406
+[2019-04-22T12:51:57.342] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T12:55:13.853] [INFO] gate-server - 连接数据库
+[2019-04-22T12:55:13.867] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T12:55:13.870] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 29730 /home/sujiahong/workspace/aa-server
+[2019-04-22T12:55:13.889] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T12:55:13.890] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T12:55:13.902] [DEBUG] gate-server - utils/network.js 29730 客户端连接建立成功ip-port:  192.168.10.34 58732 9001
+[2019-04-22T12:55:13.906] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T12:55:14.500] [DEBUG] gate-server - utils/network.js 29730 服务端连接建立成功ip-port:  192.168.10.34 44470
+[2019-04-22T12:55:14.501] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T12:55:14.541] [DEBUG] gate-server - utils/network.js 29730 服务端连接建立成功ip-port:  192.168.10.34 44476
+[2019-04-22T12:55:14.544] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:14:45.617] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T14:14:45.618] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T14:24:19.978] [INFO] gate-server - 连接数据库
+[2019-04-22T14:24:19.991] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:24:19.995] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 8223 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:24:20.003] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:24:20.004] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:24:20.008] [DEBUG] gate-server - utils/network.js 8223 客户端连接建立成功ip-port:  192.168.10.34 59518 9001
+[2019-04-22T14:24:20.028] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:24:20.506] [DEBUG] gate-server - utils/network.js 8223 服务端连接建立成功ip-port:  192.168.10.34 45256
+[2019-04-22T14:24:20.509] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:24:20.589] [DEBUG] gate-server - utils/network.js 8223 服务端连接建立成功ip-port:  192.168.10.34 45262
+[2019-04-22T14:24:20.591] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:25:55.248] [INFO] gate-server - 连接数据库
+[2019-04-22T14:25:55.253] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:25:55.256] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 8494 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:25:55.281] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:25:55.289] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:25:55.293] [DEBUG] gate-server - utils/network.js 8494 客户端连接建立成功ip-port:  192.168.10.34 59572 9001
+[2019-04-22T14:25:55.302] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:25:55.729] [DEBUG] gate-server - utils/network.js 8494 服务端连接建立成功ip-port:  192.168.10.34 45310
+[2019-04-22T14:25:55.734] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:25:55.928] [DEBUG] gate-server - utils/network.js 8494 服务端连接建立成功ip-port:  192.168.10.34 45316
+[2019-04-22T14:25:55.930] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:31:14.178] [INFO] gate-server - 连接数据库
+[2019-04-22T14:31:14.183] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:31:14.186] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 9253 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:31:14.191] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:31:14.192] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:31:14.195] [DEBUG] gate-server - utils/network.js 9253 客户端连接建立成功ip-port:  192.168.10.34 59670 9001
+[2019-04-22T14:31:14.201] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:31:14.622] [DEBUG] gate-server - utils/network.js 9253 服务端连接建立成功ip-port:  192.168.10.34 45408
+[2019-04-22T14:31:14.625] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:31:14.856] [DEBUG] gate-server - utils/network.js 9253 服务端连接建立成功ip-port:  192.168.10.34 45414
+[2019-04-22T14:31:14.867] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:40:32.206] [INFO] gate-server - 连接数据库
+[2019-04-22T14:40:32.210] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:40:32.213] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 10436 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:40:32.222] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:40:32.223] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:40:32.226] [DEBUG] gate-server - utils/network.js 10436 客户端连接建立成功ip-port:  192.168.10.34 59802 9001
+[2019-04-22T14:40:32.232] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:40:32.869] [DEBUG] gate-server - utils/network.js 10436 服务端连接建立成功ip-port:  192.168.10.34 45540
+[2019-04-22T14:40:32.870] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:40:32.924] [DEBUG] gate-server - utils/network.js 10436 服务端连接建立成功ip-port:  192.168.10.34 45546
+[2019-04-22T14:40:32.931] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:47:53.244] [INFO] gate-server - 连接数据库
+[2019-04-22T14:47:53.251] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:47:53.254] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 11385 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:47:53.279] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:47:53.280] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:47:53.289] [DEBUG] gate-server - utils/network.js 11385 客户端连接建立成功ip-port:  192.168.10.34 59926 9001
+[2019-04-22T14:47:53.295] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:47:53.772] [DEBUG] gate-server - utils/network.js 11385 服务端连接建立成功ip-port:  192.168.10.34 45664
+[2019-04-22T14:47:53.774] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:47:53.972] [DEBUG] gate-server - utils/network.js 11385 服务端连接建立成功ip-port:  192.168.10.34 45670
+[2019-04-22T14:47:53.986] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:50:00.309] [INFO] gate-server - 连接数据库
+[2019-04-22T14:50:00.314] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:50:00.317] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 11700 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:50:00.325] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:50:00.326] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:50:00.329] [DEBUG] gate-server - utils/network.js 11700 客户端连接建立成功ip-port:  192.168.10.34 59986 9001
+[2019-04-22T14:50:00.335] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:50:00.814] [DEBUG] gate-server - utils/network.js 11700 服务端连接建立成功ip-port:  192.168.10.34 45724
+[2019-04-22T14:50:00.817] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T14:50:01.001] [DEBUG] gate-server - utils/network.js 11700 服务端连接建立成功ip-port:  192.168.10.34 45730
+[2019-04-22T14:50:01.005] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:53:43.192] [INFO] gate-server - 连接数据库
+[2019-04-22T14:53:43.197] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T14:53:43.222] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 12241 /home/sujiahong/workspace/aa-server
+[2019-04-22T14:53:43.244] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T14:53:43.251] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T14:53:43.254] [DEBUG] gate-server - utils/network.js 12241 客户端连接建立成功ip-port:  192.168.10.34 60066 9001
+[2019-04-22T14:53:43.270] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T14:53:43.792] [DEBUG] gate-server - utils/network.js 12241 服务端连接建立成功ip-port:  192.168.10.34 45806
+[2019-04-22T14:53:43.794] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T14:53:43.803] [DEBUG] gate-server - utils/network.js 12241 服务端连接建立成功ip-port:  192.168.10.34 45808
+[2019-04-22T14:53:43.804] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T15:38:28.386] [INFO] gate-server - 连接数据库
+[2019-04-22T15:38:28.396] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:38:28.404] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 17599 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:38:28.423] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T15:38:28.428] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T15:38:28.431] [DEBUG] gate-server - utils/network.js 17599 客户端连接建立成功ip-port:  192.168.10.34 60500 9001
+[2019-04-22T15:38:28.455] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:38:29.130] [DEBUG] gate-server - utils/network.js 17599 服务端连接建立成功ip-port:  192.168.10.34 46242
+[2019-04-22T15:38:29.133] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T15:38:29.135] [DEBUG] gate-server - utils/network.js 17599 服务端连接建立成功ip-port:  192.168.10.34 46244
+[2019-04-22T15:38:29.136] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T15:39:09.202] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T15:39:09.204] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T15:41:41.997] [INFO] gate-server - 连接数据库
+[2019-04-22T15:41:42.002] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T15:41:42.006] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 18092 /home/sujiahong/workspace/aa-server
+[2019-04-22T15:41:42.013] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T15:41:42.014] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T15:41:42.017] [DEBUG] gate-server - utils/network.js 18092 客户端连接建立成功ip-port:  192.168.10.34 60574 9001
+[2019-04-22T15:41:42.021] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T15:41:42.637] [DEBUG] gate-server - utils/network.js 18092 服务端连接建立成功ip-port:  192.168.10.34 46316
+[2019-04-22T15:41:42.644] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T15:41:42.656] [DEBUG] gate-server - utils/network.js 18092 服务端连接建立成功ip-port:  192.168.10.34 46318
+[2019-04-22T15:41:42.659] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T16:08:05.356] [INFO] gate-server - 连接数据库
+[2019-04-22T16:08:05.366] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:08:05.369] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 21206 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:08:05.388] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T16:08:05.389] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T16:08:05.393] [DEBUG] gate-server - utils/network.js 21206 客户端连接建立成功ip-port:  192.168.10.34 60898 9001
+[2019-04-22T16:08:05.399] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:08:05.926] [DEBUG] gate-server - utils/network.js 21206 服务端连接建立成功ip-port:  192.168.10.34 46634
+[2019-04-22T16:08:05.939] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T16:08:05.976] [DEBUG] gate-server - utils/network.js 21206 服务端连接建立成功ip-port:  192.168.10.34 46640
+[2019-04-22T16:08:05.979] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T16:22:58.827] [INFO] gate-server - 连接数据库
+[2019-04-22T16:22:58.840] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T16:22:58.844] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 23013 /home/sujiahong/workspace/aa-server
+[2019-04-22T16:22:58.866] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T16:22:58.866] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T16:22:58.869] [DEBUG] gate-server - utils/network.js 23013 客户端连接建立成功ip-port:  192.168.10.34 32828 9001
+[2019-04-22T16:22:58.879] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T16:22:59.492] [DEBUG] gate-server - utils/network.js 23013 服务端连接建立成功ip-port:  192.168.10.34 46798
+[2019-04-22T16:22:59.493] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T16:22:59.530] [DEBUG] gate-server - utils/network.js 23013 服务端连接建立成功ip-port:  192.168.10.34 46804
+[2019-04-22T16:22:59.536] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T17:37:16.582] [INFO] gate-server - 连接数据库
+[2019-04-22T17:37:16.588] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T17:37:16.591] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 31709 /home/sujiahong/workspace/aa-server
+[2019-04-22T17:37:16.598] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T17:37:16.598] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T17:37:16.602] [DEBUG] gate-server - utils/network.js 31709 客户端连接建立成功ip-port:  192.168.10.34 33602 9001
+[2019-04-22T17:37:16.606] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T17:37:17.101] [DEBUG] gate-server - utils/network.js 31709 服务端连接建立成功ip-port:  192.168.10.34 47572
+[2019-04-22T17:37:17.103] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T17:37:17.395] [DEBUG] gate-server - utils/network.js 31709 服务端连接建立成功ip-port:  192.168.10.34 47578
+[2019-04-22T17:37:17.400] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T17:38:33.643] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T17:38:33.644] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T18:26:23.026] [INFO] gate-server - 连接数据库
+[2019-04-22T18:26:23.031] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:26:23.035] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 5786 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:26:23.045] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T18:26:23.046] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T18:26:23.049] [DEBUG] gate-server - utils/network.js 5786 客户端连接建立成功ip-port:  192.168.10.34 34196 9001
+[2019-04-22T18:26:23.053] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:26:23.674] [DEBUG] gate-server - utils/network.js 5786 服务端连接建立成功ip-port:  192.168.10.34 48164
+[2019-04-22T18:26:23.675] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T18:26:23.747] [DEBUG] gate-server - utils/network.js 5786 服务端连接建立成功ip-port:  192.168.10.34 48170
+[2019-04-22T18:26:23.748] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T18:35:36.588] [INFO] gate-server - 连接数据库
+[2019-04-22T18:35:36.627] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:35:36.630] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 6980 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:35:36.644] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T18:35:36.645] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T18:35:36.661] [DEBUG] gate-server - utils/network.js 6980 客户端连接建立成功ip-port:  192.168.10.34 34396 9001
+[2019-04-22T18:35:36.665] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:35:37.104] [DEBUG] gate-server - utils/network.js 6980 服务端连接建立成功ip-port:  192.168.10.34 48364
+[2019-04-22T18:35:37.105] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T18:35:37.242] [DEBUG] gate-server - utils/network.js 6980 服务端连接建立成功ip-port:  192.168.10.34 48370
+[2019-04-22T18:35:37.245] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T18:44:51.354] [INFO] gate-server - 连接数据库
+[2019-04-22T18:44:51.360] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:44:51.363] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 8160 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:44:51.371] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T18:44:51.372] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T18:44:51.375] [DEBUG] gate-server - utils/network.js 8160 客户端连接建立成功ip-port:  192.168.10.34 34724 9001
+[2019-04-22T18:44:51.381] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:44:51.947] [DEBUG] gate-server - utils/network.js 8160 服务端连接建立成功ip-port:  192.168.10.34 48694
+[2019-04-22T18:44:51.951] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T18:44:52.043] [DEBUG] gate-server - utils/network.js 8160 服务端连接建立成功ip-port:  192.168.10.34 48700
+[2019-04-22T18:44:52.044] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T18:45:04.304] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T18:45:04.306] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T18:46:23.111] [INFO] gate-server - 连接数据库
+[2019-04-22T18:46:23.116] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:46:23.119] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 8432 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:46:23.125] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T18:46:23.129] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T18:46:23.134] [DEBUG] gate-server - utils/network.js 8432 客户端连接建立成功ip-port:  192.168.10.34 34782 9001
+[2019-04-22T18:46:23.139] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:46:23.558] [DEBUG] gate-server - utils/network.js 8432 服务端连接建立成功ip-port:  192.168.10.34 48750
+[2019-04-22T18:46:23.561] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T18:46:23.726] [DEBUG] gate-server - utils/network.js 8432 服务端连接建立成功ip-port:  192.168.10.34 48756
+[2019-04-22T18:46:23.727] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T18:59:24.826] [INFO] gate-server - 连接数据库
+[2019-04-22T18:59:24.831] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T18:59:24.834] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 10042 /home/sujiahong/workspace/aa-server
+[2019-04-22T18:59:24.845] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T18:59:24.845] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T18:59:24.849] [DEBUG] gate-server - utils/network.js 10042 客户端连接建立成功ip-port:  192.168.10.34 34950 9001
+[2019-04-22T18:59:24.856] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T18:59:25.495] [DEBUG] gate-server - utils/network.js 10042 服务端连接建立成功ip-port:  192.168.10.34 48920
+[2019-04-22T18:59:25.499] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T18:59:25.615] [DEBUG] gate-server - utils/network.js 10042 服务端连接建立成功ip-port:  192.168.10.34 48926
+[2019-04-22T18:59:25.618] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T19:38:35.697] [INFO] gate-server - 连接数据库
+[2019-04-22T19:38:35.702] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T19:38:35.705] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 14790 /home/sujiahong/workspace/aa-server
+[2019-04-22T19:38:35.714] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T19:38:35.715] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T19:38:35.721] [DEBUG] gate-server - utils/network.js 14790 客户端连接建立成功ip-port:  192.168.10.34 35378 9001
+[2019-04-22T19:38:35.728] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T19:38:36.383] [DEBUG] gate-server - utils/network.js 14790 服务端连接建立成功ip-port:  192.168.10.34 49348
+[2019-04-22T19:38:36.384] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T19:38:36.483] [DEBUG] gate-server - utils/network.js 14790 服务端连接建立成功ip-port:  192.168.10.34 49354
+[2019-04-22T19:38:36.491] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T19:46:58.700] [INFO] gate-server - gateserver-start.js 验证用户身份，获取推荐码 accountType=telnumber&accountData=%7B%22account%22%3A%2212345678%22%7D&
+[2019-04-22T19:46:58.701] [INFO] gate-server - gate-server/main_ervice.js { accountType: 'telnumber',
+  accountData: '{"account":"12345678"}' }
+[2019-04-22T20:37:43.362] [INFO] gate-server - 连接数据库
+[2019-04-22T20:37:43.367] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:37:43.370] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 21799 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:37:43.379] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T20:37:43.379] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T20:37:43.387] [DEBUG] gate-server - utils/network.js 21799 客户端连接建立成功ip-port:  192.168.10.34 35930 9001
+[2019-04-22T20:40:21.577] [INFO] gate-server - 连接数据库
+[2019-04-22T20:40:21.582] [INFO] gate-server - utils/db_connection.js redis数据库连接成功！！！！！
+[2019-04-22T20:40:21.585] [INFO] gate-server - gateserver-start.js gate server start ~~!!!! gate-server-1 22207 /home/sujiahong/workspace/aa-server
+[2019-04-22T20:40:21.591] [DEBUG] gate-server - utils/network.js socket server listen start!! { host: '192.168.10.34', port: 9090 }
+[2019-04-22T20:40:21.592] [INFO] gate-server - network_http.js http server listen:  { host: '192.168.10.34', port: 8090 }
+[2019-04-22T20:40:21.595] [DEBUG] gate-server - utils/network.js 22207 客户端连接建立成功ip-port:  192.168.10.34 35996 9001
+[2019-04-22T20:40:21.599] [DEBUG] gate-server - utils/packet.js data data: bufflen: 33 remainderLen : 33
+[2019-04-22T20:40:21.601] [INFO] gate-server - gateserver-start.js 向center server 注册 success code:  0
+[2019-04-22T20:40:22.171] [DEBUG] gate-server - utils/network.js 22207 服务端连接建立成功ip-port:  192.168.10.34 49964
+[2019-04-22T20:40:22.172] [DEBUG] gate-server - utils/packet.js data data: bufflen: 192 remainderLen : 192
+[2019-04-22T20:40:22.172] [DEBUG] gate-server - gateserver-start.js home-server-1 注册成功在gate server!!!
+[2019-04-22T20:40:22.219] [DEBUG] gate-server - utils/network.js 22207 服务端连接建立成功ip-port:  192.168.10.34 49970
+[2019-04-22T20:40:22.221] [DEBUG] gate-server - utils/packet.js data data: bufflen: 192 remainderLen : 192
+[2019-04-22T20:40:22.222] [DEBUG] gate-server - gateserver-start.js home-server-2 注册成功在gate server!!!
+[2019-04-22T20:40:22.598] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:23.172] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:23.222] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:47.609] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:40:48.172] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:40:48.223] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:12.633] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:13.172] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:13.225] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:37.658] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:41:38.172] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:41:38.242] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:02.665] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:03.178] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:03.245] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:27.663] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:28.177] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:28.263] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:52.668] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:42:53.190] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:42:53.281] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:17.677] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:18.205] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:18.286] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:42.696] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:43:43.223] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:43:43.297] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:07.707] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:08.239] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:08.302] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:32.714] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:33.246] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:33.321] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:57.720] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:44:58.263] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:44:58.325] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:22.737] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:23.284] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:23.339] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:47.752] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:45:48.298] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:45:48.343] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:12.767] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:13.301] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:13.360] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:37.782] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:46:38.314] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:46:38.377] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:02.798] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:03.319] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:03.386] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:27.810] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:28.332] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:28.406] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:52.828] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:47:53.352] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:47:53.424] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:17.846] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:18.362] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:18.440] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:42.860] [DEBUG] gate-server - utils/packet.js data data: bufflen: 41 remainderLen : 41
+[2019-04-22T20:48:43.382] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
+[2019-04-22T20:48:43.456] [DEBUG] gate-server - utils/packet.js data data: bufflen: 53 remainderLen : 53
