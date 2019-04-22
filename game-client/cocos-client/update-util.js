@@ -105,6 +105,7 @@ var destVersion = path.join(dest, 'version.manifest');
 mkdirSync(dest);
 
 fs.writeFileSync(destManifest, JSON.stringify(manifest));
+fs.writeFileSync(path.join("./assets", "project.manifest"), JSON.stringify(manifest));
 console.log('Manifest successfully generated');
 
 delete manifest.assets;
