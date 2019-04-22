@@ -11,8 +11,14 @@ class LoginLauncher{
         this.account = "";
         this.cliType = constant.CLI_TYPE.app;
         this.accountType = constant.ACCOUNT_TYPE.tel;
-        this.loginAddress = "";
+        this.address = "";
         this.recommendation = "";
+        var addressData = cc.sys.localStorage.getItem(constant.LOCAL_ITEM.address_data);
+        if (addressData){
+            addressData = JSON.parse(addressData);
+            this.address = addressData.address;
+            this.recommendation = addressData.recommendation;
+        }
     }
 
     setAccount(account){
@@ -45,13 +51,16 @@ class LoginLauncher{
             url: constant.GATE_URL,
             accountType: this.accountType,
             accountData: encodeURIComponent(accountData)
-        }, function(ret){
-            console.log(TAG, "requestGate: ", JSON.stringify(ret));
-            if (ret.code != errcode.OK){
+        }, function(code, ret){
+            console.log(TAG, "requestGate: ", code, JSON.stringify(ret));
+            if (code != errcode.OK)
+                return next(code);
+            if (ret.code != errcode.OK)
                 return next(ret.code);
-            }
             self.recommendation = ret.recommendation;
-            self.loginAddress = "http://"+ret.ip + ":"+ret.port+"/login";
+            self.address = "http://"+ret.ip + ":"+ret.port;
+            cc.sys.localStorage.setItem(constant.LOCAL_ITEM.address_data, 
+                JSON.stringify({recommendation: self.recommendation, address: self.address}));
             self.account = ret.account;
             self.requestLogin(next);
         });
@@ -62,26 +71,28 @@ class LoginLauncher{
         var accountData = {nickName: "", gender: 0, avatarUrl: ""};
         accountData = JSON.stringify(accountData);
         request.get({
-            url: this.loginAddress,
+            url: this.address+"/login",
             account: this.account,
             cliType: this.cliType,
             accountType: this.accountType,
             clientId: constant.CLIENT_ID,
             recommendation: this.recommendation,
             accountData: encodeURIComponent(accountData)
-        }, function(ret){
-            console.log(TAG, "requestLogin: ", JSON.stringify(ret));
+        }, function(code, ret){
+            console.log(TAG, "requestLogin: ", code, JSON.stringify(ret));
+            if (code != errcode.OK)
+                return next(code);
             if (ret.code != errcode.OK){
                 if (ret.code == errcode.RECOMMENDATION_NOT_EXIST){
                     self.recommendation = "";
-                    self.loginAddress = "";
-                    self.requestGate(next);
+                    self.address = "";
+                    return self.requestGate(next);
                 }else{
-                    cc.g_ada.gameUser = new GameUser(ret.userId, ret.coins);
                     return next(ret.code);
                 }
             }
-            next(ret.code);
+            cc.g_ada.gameUser = new GameUser(ret.userId, ret.coins);
+            next(0);
         });
     }
 
@@ -89,7 +100,7 @@ class LoginLauncher{
         if (this.account == ""){
             return next(errcode.LOGIN_ACCOUNT_NULL);
         }
-        if (this.recommendation && this.loginAddress){
+        if (this.recommendation && this.address){
             this.requestLogin(next);
         }else{
             this.requestGate(next);

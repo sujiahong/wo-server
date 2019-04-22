@@ -1,6 +1,6 @@
 "use strict";
 const TAG = "http_request.js";
-
+const errcode = require("../share/errcode");
 var request = {};
 
 request.get = function(opt, next){
@@ -14,19 +14,21 @@ request.get = function(opt, next){
     console.log(TAG, "http get 请求： ", url);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
-        console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
+        //console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
         if (xhr.readyState == 4 && (xhr.status >=200 && xhr.status < 400)){
-            next ? next(JSON.parse(xhr.responseText)) : null;
+            next ? next(0, JSON.parse(xhr.responseText)) : null;
         } 
     }
     xhr.open("GET", url, true);
-    xhr.timeout = 3000;
+    //xhr.timeout = 3000;
     xhr.send();
     xhr.ontimeout = function(){
         console.log(TAG, "@@@@@@ ontimeout");
+        next ? next(errcode.HTTP_REQUEST_TIMEOUT) : null;
     }
     xhr.onerror = function(){
         console.log(TAG, "###### xhr error");
+        next ? next(errcode.HTTP_REQUEST_ERROR) : null;
     }
 }
 
@@ -40,20 +42,22 @@ request.post = function(opt, next){
     console.log(TAG, "http post 请求： ", url);
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
-        console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
+        //console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
         if (xhr.readyState == 4 && (xhr.status >=200 && xhr.status < 400)){
-            next ? next(JSON.parse(xhr.responseText)) : null;
+            next ? next(0, JSON.parse(xhr.responseText)) : null;
         } 
     }
     xhr.open("POST", url, true);
-    xhr.timeout = 3000;
+    //xhr.timeout = 3000;
     xhr.setRequestHeader("Content-Type" , "application/x-www-form-urlencoded");  
     xhr.send(param);
     xhr.ontimeout = function(){
         console.log(TAG, "@@@@@@ ontimeout");
+        next ? next(errcode.HTTP_REQUEST_TIMEOUT) : null;
     }
     xhr.onerror = function(){
         console.log(TAG, "###### xhr error");
+        next ? next(errcode.HTTP_REQUEST_ERROR) : null;
     }}
 
 module.exports = request;

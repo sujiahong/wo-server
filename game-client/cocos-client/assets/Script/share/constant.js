@@ -13,4 +13,8 @@ module.exports = {
         wb: "weibo",
         mail: "mail",
     },
+    LOCAL_ITEM: {
+        address_data: "AddressData",
+        connect_data: "ConnectData",
+    },
 };

@@ -6,7 +6,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        local_manifest: cc.Asset,
+        local_manifest: {
+            type: cc.Asset,
+            default: null
+        },
         st_label: cc.Label,
         ver_label: cc.Label,
         pct_label: cc.Label,
@@ -39,8 +42,4 @@ cc.Class({
             }
         });
     },
-
-    // called every frame, uncomment this function to activate update callback
-    update: function (dt) {
-    }
 });

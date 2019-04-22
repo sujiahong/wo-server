@@ -18,10 +18,11 @@ var compareFunc = function(v1, v2){
     }
 }
 
-hot.ctor = function(localManifest){
+hot.ctor = function(){
+    var localManifest = arguments[0].nativeUrl;
     this.localManifest = localManifest;
     var localPath = ((jsb.fileUtils) ? (jsb.fileUtils.getWritablePath()) : "/") + "new-assets";
-    console.log(TAG, localPath, cc.sys.isNative);
+    console.log(TAG, (localManifest), localPath, cc.sys.isNative);
     this.am = new jsb.AssetsManager(localManifest, localPath, compareFunc);
     this.am.setVerifyCallback(function(filepath, asset){
         console.log(TAG, "setVerifyCallback  ", filepath);

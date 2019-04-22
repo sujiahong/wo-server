@@ -19,9 +19,9 @@ cls.onLoad = function () {
 }
 
 cls.init = function () {
-    //var Client = require("../util/network");
-    //var cli = new Client({ip: "192.168.10.34", port: 8311});
-    //cli.connect();
+    // var Client = require("../util/net_client");
+    // var cli = new Client({ip: "192.168.10.34", port: 8311});
+    // cli.connect();
     // var req = require("../util/http_request");
     // req.get({
     //     url: "http://192.168.10.34:8090/validateUser",

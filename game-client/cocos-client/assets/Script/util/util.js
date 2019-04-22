@@ -13,6 +13,10 @@ exp.clone = function(pbj){
 
 }
 
-exp.setLocalStore = function(){
+exp.setLocalStore = function(name, str){
+    
+}
+
+exp.getLocalStore = function(name){
     
 }

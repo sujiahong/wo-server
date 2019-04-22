@@ -27,13 +27,12 @@ cc.Class({
     },
 
     onLogin: function(){
-        console.log(TAG, "on login login!!!");
+        console.log(TAG, "onLogin onLogin!!!");
         this.loginLauncher.login(function(code){
-            console.log(TAG, "login code : ", code);
             if (code == 0){
                 cc.director.loadScene("HomeScene");
             }
-        })
+        });
     },
 
     onEditDidBegan: function(){

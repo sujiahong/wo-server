@@ -2,6 +2,7 @@
 const TAG = "net_client.js";
 const packet = require("./packet");
 const Buffer = require("buffer").Buffer;
+const errcode = require("../share/errcode");
 
 var cls = {};
 
@@ -37,8 +38,7 @@ var doConnect = function(self, url, next){
     var socket = new WebSocket(url);
     socket.onopen = function(){
         self.socket = socket;
-        console.log("1111111111  onopen ");
-        next ? next() : null;
+        next ? next(0) : null;
         setTimeout(()=>{
             self.ping();
             self.freqTimeId = setInterval(()=>{
@@ -47,13 +47,13 @@ var doConnect = function(self, url, next){
         }, 1000);
     }
     socket.onmessage = function(event){
-        console.log("2222222222 onmessage", event.data);
+        //console.log("2222222222 onmessage", event.data);
         bufferAnalysis(self, new Buffer(event.data));
     }
     socket.onclose = function(){
         console.log("3333333333  onclose 准备重新连接！！！ ");
         self.close();
-
+        next ? next(errcode.SOCKET_CLOSE) : null;
     }
     socket.onerror = function(event){
         console.log("4444444444  onerror ", event);
@@ -61,6 +61,7 @@ var doConnect = function(self, url, next){
             console.log(k, event[k]);
         }
         throw event;
+        next ? next() : null;
     }
 }
 
@@ -82,8 +83,9 @@ cls.connect = function(next){
     var url = "ws://" + this.addr.ip + ":" + this.addr.port;
     console.log(TAG, "准备连接服务器：", url, this.node);
     doConnect(self, url, next);
+    //////监听socket数据
     self.node.on("socketData", (data)=>{
-        console.log(TAG, "Client socketData", data, self.HBTime);
+        console.log(TAG, "Client socketData", JSON.stringify(data), self.HBTime);
         if (data.route == "pong"){
             if (data.time == self.HBTime){
                  if (self.closeTimeId){
@@ -114,9 +116,13 @@ cls.ping = function(){
 
 cls.request = function(data, next){
     this.send(data);
-    this.event.on(data.route, (ret)=>{
+    this.node.once(data.route, (ret)=>{
         next(ret);
     });
+}
+
+cls.on = function(event, next){
+    this.node.on(event, next);
 }
 
 cls.close = function(){
@@ -132,5 +138,4 @@ cls.close = function(){
     this.remainderData = Buffer.alloc(0);
 }
 
-var WSClient = cc.Class(cls);
-module.exports = WSClient;
+module.exports = cc.Class(cls);
