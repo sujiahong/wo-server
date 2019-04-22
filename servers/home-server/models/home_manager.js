@@ -26,7 +26,7 @@ class HomeManager {
         return this.serverName;
     }
     getSocketIdByServerId(serverId){
-        return this.idGameInfoMap[serverId];
+        return this.idGameInfoMap[serverId].socketId;
     }
 };
 

@@ -1,5 +1,6 @@
 "use strict"
 const TAG = "utils/packet.js";
+const logger = g_serverData.logger;
 
 var p = module.exports;
 //////包头长度是4
@@ -14,4 +15,32 @@ p.pack = function(jsonData){
 p.unpack = function(buf, start, end){
     var str = buf.toString('utf8', start, end);
     return JSON.parse(str);
+}
+
+p.packageAnalysis = function(self, socket, buffer){
+    self.remainderData = Buffer.concat([self.remainderData, buffer]);
+    var len = self.remainderData.length;
+    logger.debug(TAG, "data data: bufflen:", buffer.length, "remainderLen :", len);
+    var bodylen = 0;
+    var packlen = 0;
+    var idx = 0;
+    while (true){
+        if (len - idx < 4){
+            self.remainderData = self.remainderData.slice(idx, len);
+            break;
+        }
+        bodylen = self.remainderData.readUInt32BE(idx);
+        packlen = bodylen + 4;
+        if (idx + packlen > len){
+            self.remainderData = self.remainderData.slice(idx, len);
+            break;
+        }
+        idx += packlen;
+        var jsonData = p.unpack(self.remainderData, idx - bodylen, idx);
+        self.emit("socketData", socket, jsonData);
+        if (idx == len){
+            self.remainderData = Buffer.alloc(0);
+            break;
+        }
+    }
 }

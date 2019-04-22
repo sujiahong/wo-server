@@ -9,23 +9,22 @@ const logger = g_serverData.logger;
 var service = module.exports;
 
 service.createRoom = function(user, roomInfo, next){
-    util.generateUniqueId(6, redis.existRoomId, function(ret){
-        if (ret.code != errcode.OK){
-            return next(ret);
+    util.generateUniqueId(6, redis.existRoomId, function(genData){
+        if (genData.code != errcode.OK){
+            return next(genData);
         }
-        var roomId = ret.roomId;
+        var roomId = genData.roomId;
         var info = getGameServerInfoByRoomId(roomId);
         var homeManager = g_serverData.homeManager;
-        var connectionCode = homeManager.serverName + "|" + info.NAME + "|" +
-        roomId + "|" + Math.floor(Date.now() * Math.random());
+        var connectionCode = homeManager.serverName+"|"+info.NAME+"|"+roomId+"|"+Math.floor(Date.now()*Math.random());
         var socketId = homeManager.getSocketIdByServerId(info.ID);
         roomInfo.connectionCode = connectionCode;
         homeManager.forGameServer.send(socketId, {route: "createRoom", roomInfo: roomInfo});
-        homeManager.forGameServer.on("createRoom", function(socketId, data){
+        homeManager.forGameServer.once("createRoom", function(socketId, data){
+            logger.info(TAG, "create room ", info, typeof data);
             if (data.code != errcode.OK){
                 return next({code: data.code});
             }
-            logger.info(TAG, "create room ", info);
             var ret = {code: 0, roomId: roomId, connectionCode: connectionCode};
             ret.ip = info.IP;
             ret.port = info.FOR_CLIENT_PORT;
@@ -47,8 +46,11 @@ var getGameServerInfoByRoomId = function(id){
 }
 
 service.joinRoom = function(user, roomId, next){
+    var homeManager = g_serverData.homeManager;
     var info = getGameServerInfoByRoomId(roomId);
-    var ret = {code: 0};
+    var connectionCode = homeManager.serverName + "|" + info.NAME + "|" +
+    roomId + "|" + Math.floor(Date.now() * Math.random());
+    var ret = {code: 0, connectionCode: connectionCode};
     ret.ip = info.IP;
     ret.port = info.FOR_CLIENT_PORT;
     next(ret);
