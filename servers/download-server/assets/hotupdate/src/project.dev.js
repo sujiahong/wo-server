@@ -1288,14 +1288,223 @@ window.__require = function e(t, n, r) {
       buffer[offset + i - d] |= 128 * s;
     };
   }, {} ],
+  GameUser: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "3eba7BXVMNC4ov6MxWpUdcQ", "GameUser");
+    "use strict";
+    var _createClass = function() {
+      function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+          var descriptor = props[i];
+          descriptor.enumerable = descriptor.enumerable || false;
+          descriptor.configurable = true;
+          "value" in descriptor && (descriptor.writable = true);
+          Object.defineProperty(target, descriptor.key, descriptor);
+        }
+      }
+      return function(Constructor, protoProps, staticProps) {
+        protoProps && defineProperties(Constructor.prototype, protoProps);
+        staticProps && defineProperties(Constructor, staticProps);
+        return Constructor;
+      };
+    }();
+    function _classCallCheck(instance, Constructor) {
+      if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+    }
+    var TAG = "GameUser.js";
+    var Client = require("../util/net_client");
+    var request = require("../util/http_request");
+    var constant = require("../share/constant");
+    var errcode = require("../share/errcode");
+    var GameUser = function() {
+      function GameUser(id, coins) {
+        _classCallCheck(this, GameUser);
+        this.userId = id;
+        this.coins = coins;
+        this.account = "";
+        this.nickname = "";
+        this.sex = 0;
+        this.iconUrl = "";
+        this.connectData = null;
+        this.address = "";
+        var addressData = cc.sys.localStorage.getItem(constant.LOCAL_ITEM.address_data);
+        if (addressData) {
+          addressData = JSON.parse(addressData);
+          this.address = addressData.address;
+        }
+        var connectData = cc.sys.localStorage.getItem(constant.LOCAL_ITEM.connect_data);
+        if (connectData) {
+          connectData = JSON.parse(connectData);
+          this.connectData = connectData;
+        }
+      }
+      _createClass(GameUser, [ {
+        key: "buyCoins",
+        value: function buyCoins(num) {
+          if ("" == this.address) return next(errcode.REQUEST_URL_NULL);
+          request.get({
+            url: "",
+            userId: this.userId
+          }, function(code, ret) {
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) return next(ret.code);
+          });
+        }
+      }, {
+        key: "logout",
+        value: function logout(next) {
+          if ("" == this.address) return next(errcode.REQUEST_URL_NULL);
+          request.get({
+            url: this.address + "/logout",
+            userId: this.userId
+          }, function(code, ret) {
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) return next(ret.code);
+            delete cc.g_ada.gameUser;
+            next(0);
+          });
+        }
+      }, {
+        key: "createRoom",
+        value: function createRoom(next) {
+          var self = this;
+          if ("" == this.address) return next(errcode.REQUEST_URL_NULL);
+          var roomInfo = {
+            userId: this.userId
+          };
+          roomInfo = JSON.stringify(roomInfo);
+          request.get({
+            url: this.address + "/createRoom",
+            userId: this.userId,
+            roomInfo: encodeURIComponent(roomInfo)
+          }, function(code, ret) {
+            console.log(TAG, "createRoom: ", code, JSON.stringify(ret));
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) return next(ret.code);
+            cc.sys.localStorage.setItem(constant.LOCAL_ITEM.connect_data, JSON.stringify(ret));
+            doJoinRoom(ret, next);
+          });
+        }
+      }, {
+        key: "joinRoom",
+        value: function joinRoom(roomId, next) {
+          if ("" == this.address) return next(errcode.REQUEST_URL_NULL);
+          request.get({
+            url: this.address + "/joinRoom",
+            userId: this.userId,
+            roomId: roomId
+          }, function(code, ret) {
+            console.log(TAG, "joinRoom: ", code, JSON.stringify(ret));
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) return next(ret.code);
+            ret.roomId = roomId;
+            cc.sys.localStorage.setItem(constant.LOCAL_ITEM.connect_data, JSON.stringify(ret));
+            doJoinRoom(ret, next);
+          });
+        }
+      }, {
+        key: "reconnect",
+        value: function reconnect(next) {
+          if (!this.connectData) return next(errcode.CONNECTION_DATA_NULL);
+          doJoinRoom(this.connectData, next);
+        }
+      } ]);
+      return GameUser;
+    }();
+    var doJoinRoom = function doJoinRoom(ret, next) {
+      var cli = new Client({
+        ip: ret.ip,
+        port: ret.port
+      });
+      cc.g_ada.cliSocket = cli;
+      cli.connect(function(code) {
+        if (code != errcode.OK) return console.log(TAG, "doJoinRoom: ", code);
+        cli.request({
+          route: "joinRoom",
+          joinData: {
+            roomId: ret.roomId,
+            connectionCode: ret.connectionCode
+          }
+        }, function(result) {
+          if (result.code != errcode.OK) return next(result.code);
+          next(0);
+        });
+      });
+    };
+    module.exports = GameUser;
+    cc._RF.pop();
+  }, {
+    "../share/constant": "constant",
+    "../share/errcode": "errcode",
+    "../util/http_request": "http_request",
+    "../util/net_client": "net_client"
+  } ],
   HomeScene: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "94fa7AOfX5N5ZJNJy74SRww", "HomeScene");
     "use strict";
+    var TAG = "HomeScene.js";
     cc.Class({
       extends: cc.Component,
-      properties: {},
-      onLoad: function onLoad() {}
+      properties: {
+        idLabel: cc.Label,
+        coinLabel: cc.Label,
+        logoutButton: cc.Button,
+        creatRoomButton: cc.Button,
+        joinRoomButton: cc.Button,
+        setupButton: cc.Button,
+        msgButton: cc.Button,
+        serviceButton: cc.Button,
+        shopButton: cc.Button,
+        noticeButton: cc.Button
+      },
+      onLoad: function onLoad() {
+        console.log(TAG, "onLoad onLoad!!!!", JSON.stringify(cc.g_ada));
+        this.logoutButton.node.on("click", this.onLogout, this);
+        this.creatRoomButton.node.on("click", this.onCreateRoom, this);
+        this.joinRoomButton.node.on("click", this.onJoinRoom, this);
+        this.setupButton.node.on("click", this.onSetup, this);
+        this.msgButton.node.on("click", this.onMsg, this);
+        this.serviceButton.node.on("click", this.onService, this);
+        this.shopButton.node.on("click", this.onShop, this);
+        this.noticeButton.node.on("click", this.onNotice, this);
+        this.idLabel.string = cc.g_ada.gameUser.userId;
+        this.coinLabel.string = cc.g_ada.gameUser.coins;
+      },
+      onLogout: function onLogout() {
+        console.log(TAG, "onLogout onLogout!!!");
+        cc.g_ada.gameUser.logout(function(code) {
+          if (0 != code) return console.log(TAG, code);
+          cc.director.loadScene("LoginScene");
+        });
+      },
+      onCreateRoom: function onCreateRoom() {
+        console.log(TAG, "onCreateRoom onCreateRoom!!!");
+        cc.g_ada.gameUser.createRoom(function(code) {
+          if (0 != code) return console.log(TAG, code);
+        });
+      },
+      onJoinRoom: function onJoinRoom() {
+        console.log(TAG, "onJoinRoom onJoinRoom!!!");
+        cc.g_ada.gameUser.joinRoom(roomId, function(code) {
+          if (0 != code) return console.log(TAG, code);
+        });
+      },
+      onSetup: function onSetup() {
+        console.log(TAG, "onSetup onSetup!!!");
+      },
+      onMsg: function onMsg() {
+        console.log(TAG, "onMsg onMsg!!!");
+      },
+      onService: function onService() {
+        console.log(TAG, "onService onService!!!");
+      },
+      onShop: function onShop() {
+        console.log(TAG, "onShop onShop!!!");
+      },
+      onNotice: function onNotice() {
+        console.log(TAG, "onNotice onNotice!!!");
+      }
     });
     cc._RF.pop();
   }, {} ],
@@ -1309,7 +1518,10 @@ window.__require = function e(t, n, r) {
     cc.Class({
       extends: cc.Component,
       properties: {
-        local_manifest: cc.Asset,
+        local_manifest: {
+          type: cc.Asset,
+          default: null
+        },
         st_label: cc.Label,
         ver_label: cc.Label,
         pct_label: cc.Label,
@@ -1334,13 +1546,154 @@ window.__require = function e(t, n, r) {
             self.file_lable.string = data.fileTotal;
           } else cc.director.loadScene("LoginScene");
         });
-      },
-      update: function update(dt) {}
+      }
     });
     cc._RF.pop();
   }, {
     "../share/errcode": "errcode",
     "../util/hot_update": "hot_update"
+  } ],
+  LoginLauncher: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "551e2uBKMpPj6jDsnh+j+UC", "LoginLauncher");
+    "use strict";
+    var _createClass = function() {
+      function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+          var descriptor = props[i];
+          descriptor.enumerable = descriptor.enumerable || false;
+          descriptor.configurable = true;
+          "value" in descriptor && (descriptor.writable = true);
+          Object.defineProperty(target, descriptor.key, descriptor);
+        }
+      }
+      return function(Constructor, protoProps, staticProps) {
+        protoProps && defineProperties(Constructor.prototype, protoProps);
+        staticProps && defineProperties(Constructor, staticProps);
+        return Constructor;
+      };
+    }();
+    function _classCallCheck(instance, Constructor) {
+      if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+    }
+    var TAG = "LoginLauncher.js";
+    var request = require("../util/http_request");
+    var constant = require("../share/constant");
+    var errcode = require("../share/errcode");
+    var GameUser = require("./GameUser");
+    var LoginLauncher = function() {
+      function LoginLauncher() {
+        _classCallCheck(this, LoginLauncher);
+        this.account = "";
+        this.cliType = constant.CLI_TYPE.app;
+        this.accountType = constant.ACCOUNT_TYPE.tel;
+        this.address = "";
+        this.recommendation = "";
+        var addressData = cc.sys.localStorage.getItem(constant.LOCAL_ITEM.address_data);
+        if (addressData) {
+          addressData = JSON.parse(addressData);
+          this.address = addressData.address;
+          this.recommendation = addressData.recommendation;
+        }
+      }
+      _createClass(LoginLauncher, [ {
+        key: "setAccount",
+        value: function setAccount(account) {
+          this.account = account;
+        }
+      }, {
+        key: "getAccount",
+        value: function getAccount() {
+          return this.account;
+        }
+      }, {
+        key: "setAccountType",
+        value: function setAccountType(accountType) {
+          this.accountType = accountType;
+        }
+      }, {
+        key: "requestGate",
+        value: function requestGate(next) {
+          var self = this;
+          var accountData = {};
+          if (this.accountType == constant.ACCOUNT_TYPE.wx) {
+            accountData.code = "";
+            accountData.clientId = constant.CLIENT_ID;
+          } else if (this.accountType == constant.ACCOUNT_TYPE.tel) accountData.account = this.account; else if (this.accountType == constant.ACCOUNT_TYPE.wb) ; else {
+            if (this.accountType != constant.ACCOUNT_TYPE.mail) return next(errcode.UNKNOW_ACCOUNT_TYPE);
+            accountData.account = this.account;
+          }
+          accountData = JSON.stringify(accountData);
+          request.get({
+            url: constant.GATE_URL,
+            accountType: this.accountType,
+            accountData: encodeURIComponent(accountData)
+          }, function(code, ret) {
+            console.log(TAG, "requestGate: ", code, JSON.stringify(ret));
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) return next(ret.code);
+            self.recommendation = ret.recommendation;
+            self.address = "http://" + ret.ip + ":" + ret.port;
+            cc.sys.localStorage.setItem(constant.LOCAL_ITEM.address_data, JSON.stringify({
+              recommendation: self.recommendation,
+              address: self.address
+            }));
+            self.account = ret.account;
+            self.requestLogin(next);
+          });
+        }
+      }, {
+        key: "requestLogin",
+        value: function requestLogin(next) {
+          var self = this;
+          var accountData = {
+            nickName: "",
+            gender: 0,
+            avatarUrl: ""
+          };
+          accountData = JSON.stringify(accountData);
+          request.get({
+            url: this.address + "/login",
+            account: this.account,
+            cliType: this.cliType,
+            accountType: this.accountType,
+            clientId: constant.CLIENT_ID,
+            recommendation: this.recommendation,
+            accountData: encodeURIComponent(accountData)
+          }, function(code, ret) {
+            console.log(TAG, "requestLogin: ", code, JSON.stringify(ret));
+            if (code != errcode.OK) return next(code);
+            if (ret.code != errcode.OK) {
+              if (ret.code == errcode.RECOMMENDATION_NOT_EXIST) {
+                self.recommendation = "";
+                self.address = "";
+                return self.requestGate(next);
+              }
+              return next(ret.code);
+            }
+            cc.g_ada.gameUser = new GameUser(ret.userId, ret.coins);
+            next(0);
+          });
+        }
+      }, {
+        key: "login",
+        value: function login(next) {
+          if ("" == this.account) return next(errcode.LOGIN_ACCOUNT_NULL);
+          this.recommendation && this.address ? this.requestLogin(next) : this.requestGate(next);
+        }
+      }, {
+        key: "requestRegister",
+        value: function requestRegister(next) {}
+      } ]);
+      return LoginLauncher;
+    }();
+    module.exports = LoginLauncher;
+    cc._RF.pop();
+  }, {
+    "../share/constant": "constant",
+    "../share/errcode": "errcode",
+    "../util/http_request": "http_request",
+    "./GameUser": "GameUser"
   } ],
   LoginScene: [ function(require, module, exports) {
     "use strict";
@@ -1348,24 +1701,58 @@ window.__require = function e(t, n, r) {
     "use strict";
     var TAG = "LoginScene.js";
     var g_ada = cc.g_ada;
+    var Login = require("../model/LoginLauncher");
     cc.Class({
       extends: cc.Component,
       properties: {
-        nameLablel: cc.Label
+        verLablel: cc.Label,
+        loginButton: cc.Button,
+        accountEdBox: cc.EditBox
       },
       onLoad: function onLoad() {
-        console.log(TAG, "onlogin1111", cc.g_ada, g_ada);
-        cc.g_ada && (this.nameLablel.string = cc.g_ada.localVersion || 0);
+        console.log(TAG, "onLoad onLoad ", cc.g_ada, g_ada);
+        this.loginButton.node.on("click", this.onLogin, this);
+        this.accountEdBox.node.on("editing-did-began", this.onEditDidBegan, this);
+        this.accountEdBox.node.on("editing-did-ended", this.onEditDidEnd, this);
+        this.accountEdBox.node.on("text-changed", this.onTextChange, this);
+        this.accountEdBox.node.on("editing-return", this.onEditReturn, this);
+        this.loginLauncher = new Login();
+        if (cc.g_ada) {
+          this.verLablel.string = "V" + cc.g_ada.localVersion || 0;
+          cc.g_ada.loginLauncher = this.loginLauncher;
+        }
       },
-      start: function start() {}
+      onLogin: function onLogin() {
+        console.log(TAG, "onLogin onLogin!!!");
+        this.loginLauncher.login(function(code) {
+          0 == code && cc.director.loadScene("HomeScene");
+        });
+      },
+      onEditDidBegan: function onEditDidBegan() {
+        console.log(TAG, "onEditDidBegan");
+      },
+      onEditDidEnd: function onEditDidEnd() {
+        console.log(TAG, "onEditDidEnd", this.accountEdBox.string);
+        this.loginLauncher.setAccount(this.accountEdBox.string);
+      },
+      onTextChange: function onTextChange() {
+        console.log(TAG, "onTextChange");
+      },
+      onEditReturn: function onEditReturn() {
+        console.log(TAG, "onEditReturn");
+      }
     });
     cc._RF.pop();
-  }, {} ],
+  }, {
+    "../model/LoginLauncher": "LoginLauncher"
+  } ],
   LogoScene: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "38ccb4SfMJBXoq4SkxgoXn+", "LogoScene");
     "use strict";
     var TAG = "LogoScene.js";
+    var g_ada = {};
+    cc.g_ada = g_ada;
     var cls = {};
     cls.extends = cc.Component;
     cls.properties = {};
@@ -1376,10 +1763,7 @@ window.__require = function e(t, n, r) {
         console.debug(TAG, "111111   ", cc.director.loadScene("HotUpdateScene"), cc.director.getScene());
       }, 2e3);
     };
-    cls.init = function() {
-      var g_ada = {};
-      cc.g_ada = g_ada;
-    };
+    cls.init = function() {};
     var urlParse = function urlParse() {
       console.log(TAG, window.io);
       var params = {};
@@ -1431,11 +1815,44 @@ window.__require = function e(t, n, r) {
     });
     cc._RF.pop();
   }, {} ],
+  Player: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "8da86ndPZlO5ahB1y1xNsN1", "Player");
+    "use strict";
+    var TAG = "Player.js";
+    cc._RF.pop();
+  }, {} ],
+  Room: [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "53e46+9M89ITLSSlwlmVxYl", "Room");
+    "use strict";
+    var TAG = "Room.js";
+    cc._RF.pop();
+  }, {} ],
   constant: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "06b5fV5AdNBcrWBI7oMdOwX", "constant");
     "use strict";
-    module.exports = {};
+    module.exports = {
+      CLIENT_ID: 101,
+      GATE_URL: "http://192.168.10.34:8090/validateUser",
+      CLI_TYPE: {
+        app: "app",
+        mini: "mini_program",
+        pc: "pc",
+        web: "web"
+      },
+      ACCOUNT_TYPE: {
+        wx: "wechat",
+        tel: "telnumber",
+        wb: "weibo",
+        mail: "mail"
+      },
+      LOCAL_ITEM: {
+        address_data: "AddressData",
+        connect_data: "ConnectData"
+      }
+    };
     cc._RF.pop();
   }, {} ],
   errcode: [ function(require, module, exports) {
@@ -1444,6 +1861,20 @@ window.__require = function e(t, n, r) {
     "use strict";
     module.exports = {
       OK: 0,
+      FAIL: 1,
+      TIMEOUT: 2,
+      HAVE_FROZEN: 3,
+      ACCOUNT_TYPE_ERR: 4,
+      RECOMMENDATION_NOT_EXIST: 5,
+      ROUTE_ERR: 6,
+      REGISTER_FAIL: 9,
+      UP_GEN_USREID_LIMIT: 10,
+      LOGIN_ERR: 11,
+      LOGINED: 12,
+      LOGIN_INVALID: 13,
+      LOGIN_USERID_NULL: 14,
+      REDIS_DATABASE_ERR: 20,
+      MYSQL_DATABASE_ERR: 21,
       CHECK_UPDATE_ERR: 1e4,
       HOT_UPDATE_ERR: 10001,
       DECOMPRESS_ERR: 10002,
@@ -1452,6 +1883,13 @@ window.__require = function e(t, n, r) {
       ASSET_MANAGER_UNINITED: 10005,
       UPDATEING_ASSETS: 10006,
       UPDATE_FINISHED: 10007,
+      UNKNOW_ACCOUNT_TYPE: 10010,
+      LOGIN_ACCOUNT_NULL: 10011,
+      REQUEST_URL_NULL: 10012,
+      HTTP_REQUEST_TIMEOUT: 10050,
+      HTTP_REQUEST_ERROR: 10051,
+      SOCKET_CLOSE: 10055,
+      CONNECTION_DATA_NULL: 10100,
       CODE_MSG: {
         10000: "\u68c0\u67e5\u66f4\u65b0\u9519\u8bef\uff01"
       }
@@ -1475,10 +1913,11 @@ window.__require = function e(t, n, r) {
         return a - b;
       }
     };
-    hot.ctor = function(localManifest) {
+    hot.ctor = function() {
+      var localManifest = arguments[0].nativeUrl;
       this.localManifest = localManifest;
       var localPath = (jsb.fileUtils ? jsb.fileUtils.getWritablePath() : "/") + "new-assets";
-      console.log(TAG, localPath, cc.sys.isNative);
+      console.log(TAG, localManifest, localPath, cc.sys.isNative);
       this.am = new jsb.AssetsManager(localManifest, localPath, compareFunc);
       this.am.setVerifyCallback(function(filepath, asset) {
         console.log(TAG, "setVerifyCallback  ", filepath);
@@ -1595,6 +2034,7 @@ window.__require = function e(t, n, r) {
     hot.gameRestart = function() {
       var searchPathArr = jsb.fileUtils.getSearchPaths();
       var newPathArr = this.am.getLocalManifest().getSearchPaths();
+      console.log(TAG, "@@@@@  ", JSON.stringify(searchPathArr), JSON.stringify(newPathArr));
       Array.prototype.unshift.apply(searchPathArr, newPathArr);
       cc.sys.localStorage.setItem("HotUpdateSearchPaths", JSON.stringify(searchPathArr));
       jsb.fileUtils.setSearchPaths(searchPathArr);
@@ -1614,12 +2054,8 @@ window.__require = function e(t, n, r) {
     "use strict";
     cc._RF.push(module, "c6a79XCenlAGbtMjDjrqazC", "http_request");
     "use strict";
-    var _typeof = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function(obj) {
-      return typeof obj;
-    } : function(obj) {
-      return obj && "function" === typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
     var TAG = "http_request.js";
+    var errcode = require("../share/errcode");
     var request = {};
     request.get = function(opt, next) {
       var url = opt.url;
@@ -1627,23 +2063,22 @@ window.__require = function e(t, n, r) {
       url += "?";
       for (var key in opt) {
         var val = opt[key];
-        "object" == ("undefined" === typeof val ? "undefined" : _typeof(val)) && (val = JSON.stringify(val));
         url += key + "=" + val + "&";
       }
       console.log(TAG, "http get \u8bf7\u6c42\uff1a ", url);
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
-        console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
-        4 == xhr.readyState && xhr.status >= 200 && xhr.status < 400 && (next ? next(JSON.parse(xhr.responseText)) : null);
+        4 == xhr.readyState && xhr.status >= 200 && xhr.status < 400 && (next ? next(0, JSON.parse(xhr.responseText)) : null);
       };
       xhr.open("GET", url, true);
-      xhr.timeout = 3e3;
       xhr.send();
       xhr.ontimeout = function() {
         console.log(TAG, "@@@@@@ ontimeout");
+        next ? next(errcode.HTTP_REQUEST_TIMEOUT) : null;
       };
       xhr.onerror = function() {
         console.log(TAG, "###### xhr error");
+        next ? next(errcode.HTTP_REQUEST_ERROR) : null;
       };
     };
     request.post = function(opt, next) {
@@ -1654,23 +2089,25 @@ window.__require = function e(t, n, r) {
       console.log(TAG, "http post \u8bf7\u6c42\uff1a ", url);
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
-        console.log(TAG, "!!!!!  onreadystatechange", xhr.responseText, xhr.timeout);
-        4 == xhr.readyState && xhr.status >= 200 && xhr.status < 400 && (next ? next(JSON.parse(xhr.responseText)) : null);
+        4 == xhr.readyState && xhr.status >= 200 && xhr.status < 400 && (next ? next(0, JSON.parse(xhr.responseText)) : null);
       };
       xhr.open("POST", url, true);
-      xhr.timeout = 3e3;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.send(param);
       xhr.ontimeout = function() {
         console.log(TAG, "@@@@@@ ontimeout");
+        next ? next(errcode.HTTP_REQUEST_TIMEOUT) : null;
       };
       xhr.onerror = function() {
         console.log(TAG, "###### xhr error");
+        next ? next(errcode.HTTP_REQUEST_ERROR) : null;
       };
     };
     module.exports = request;
     cc._RF.pop();
-  }, {} ],
+  }, {
+    "../share/errcode": "errcode"
+  } ],
   net_client: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "72d2dm2wMhLjavwIpHwY+Kw", "net_client");
@@ -1678,6 +2115,7 @@ window.__require = function e(t, n, r) {
     var TAG = "net_client.js";
     var packet = require("./packet");
     var Buffer = require("buffer").Buffer;
+    var errcode = require("../share/errcode");
     var cls = {};
     var bufferAnalysis = function bufferAnalysis(self, buffer) {
       self.remainderData = Buffer.concat([ self.remainderData, buffer ]);
@@ -1710,8 +2148,7 @@ window.__require = function e(t, n, r) {
       var socket = new WebSocket(url);
       socket.onopen = function() {
         self.socket = socket;
-        console.log("1111111111  onopen ");
-        next ? next() : null;
+        next ? next(0) : null;
         setTimeout(function() {
           self.ping();
           self.freqTimeId = setInterval(function() {
@@ -1720,12 +2157,12 @@ window.__require = function e(t, n, r) {
         }, 1e3);
       };
       socket.onmessage = function(event) {
-        console.log("2222222222 onmessage", event.data);
         bufferAnalysis(self, new Buffer(event.data));
       };
       socket.onclose = function() {
         console.log("3333333333  onclose \u51c6\u5907\u91cd\u65b0\u8fde\u63a5\uff01\uff01\uff01 ");
         self.close();
+        next ? next(errcode.SOCKET_CLOSE) : null;
       };
       socket.onerror = function(event) {
         console.log("4444444444  onerror ", event);
@@ -1750,7 +2187,7 @@ window.__require = function e(t, n, r) {
       console.log(TAG, "\u51c6\u5907\u8fde\u63a5\u670d\u52a1\u5668\uff1a", url, this.node);
       doConnect(self, url, next);
       self.node.on("socketData", function(data) {
-        console.log(TAG, "Client socketData", data, self.HBTime);
+        console.log(TAG, "Client socketData", JSON.stringify(data), self.HBTime);
         if ("pong" == data.route) {
           if (data.time == self.HBTime && self.closeTimeId) {
             clearTimeout(self.closeTimeId);
@@ -1777,9 +2214,12 @@ window.__require = function e(t, n, r) {
     };
     cls.request = function(data, next) {
       this.send(data);
-      this.event.on(data.route, function(ret) {
+      this.node.once(data.route, function(ret) {
         next(ret);
       });
+    };
+    cls.on = function(event, next) {
+      this.node.on(event, next);
     };
     cls.close = function() {
       this.socket.close();
@@ -1793,10 +2233,10 @@ window.__require = function e(t, n, r) {
       }
       this.remainderData = Buffer.alloc(0);
     };
-    var WSClient = cc.Class(cls);
-    module.exports = WSClient;
+    module.exports = cc.Class(cls);
     cc._RF.pop();
   }, {
+    "../share/errcode": "errcode",
     "./packet": "packet",
     buffer: 2
   } ],
@@ -1830,7 +2270,8 @@ window.__require = function e(t, n, r) {
     var exp = module.exports;
     exp.md5 = function(str) {};
     exp.clone = function(pbj) {};
-    exp.setLocalStore = function() {};
+    exp.setLocalStore = function(name, str) {};
+    exp.getLocalStore = function(name) {};
     cc._RF.pop();
   }, {} ]
-}, {}, [ "HomeScene", "HotUpdateScene", "LoginScene", "LogoScene", "NiuScene", "constant", "errcode", "hot_update", "http_request", "net_client", "packet", "util" ]);
+}, {}, [ "GameUser", "LoginLauncher", "Player", "Room", "HomeScene", "HotUpdateScene", "LoginScene", "LogoScene", "NiuScene", "constant", "errcode", "hot_update", "http_request", "net_client", "packet", "util" ]);

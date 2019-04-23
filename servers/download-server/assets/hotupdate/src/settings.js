@@ -30,34 +30,7 @@ window._CCSettings = {
             uuid: "f6WMewfU1KS6QRJfxDO6QJ"
         }
     ],
-    packedAssets: {
-        "03b15c223": [
-            "a2MjXRFdtLlYQ5ouAFv/+R",
-            "f6WMewfU1KS6QRJfxDO6QJ"
-        ],
-        "059217707": [
-            "a2MjXRFdtLlYQ5ouAFv/+R",
-            "f9K0EFFPlHgrb/62iqKCUg"
-        ],
-        "0b38bb553": [
-            "02delMVqdBD70a/HSD99FK",
-            "71VhFCTINJM6/Ky3oX9nBT",
-            "b4P/PCArtIdIH38t6mlw8Y",
-            "d8HsitJHxOYqo801xBk8ev",
-            "e8Ueib+qJEhL6mXAHdnwbi"
-        ],
-        "0bc07086d": [
-            "29FYIk+N1GYaeWH/q1NxQO",
-            "a2MjXRFdtLlYQ5ouAFv/+R",
-            "e97GVMl6JHh5Ml5qEDdSGa",
-            "eb24tg7z5Oi6Qq+AuL7CuG",
-            "f0BIwQ8D5Ml7nTNQbh1YlS"
-        ],
-        "0bea27fc8": [
-            "1b6iG9dNNHmZdIYCnF34lR",
-            "9bvaMerUlDyary99mJa6xp"
-        ]
-    },
+    packedAssets: {},
     md5AssetsMap: {},
     orientation: "",
     debug: true,
