@@ -105,7 +105,7 @@ var destVersion = path.join(dest, 'version.manifest');
 mkdirSync(dest);
 
 fs.writeFileSync(destManifest, JSON.stringify(manifest));
-fs.writeFileSync(path.join("./assets", "project.manifest"), JSON.stringify(manifest));
+//fs.writeFileSync(path.join("./assets", "project.manifest"), JSON.stringify(manifest));
 console.log('Manifest successfully generated');
 
 delete manifest.assets;
@@ -117,5 +117,6 @@ cp.execSync("cp -R ./build/jsb-default/res/ ./remote-assets/res/");
 cp.execSync("cp -R ./build/jsb-default/src/ ./remote-assets/src/");
 cp.execSync("cd ./remote-assets; tar -cvzf update.tar project.manifest version.manifest res src");
 console.log("打包完成！！   准备上传更新包！！！");
-
-//cp.execSync("rm -rf update.tar");
+cp.execSync("./upload.sh");
+console.log("上传更新结束！！！");
+cp.execSync("rm -rf ./remote-assets/update.tar");

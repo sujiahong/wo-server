@@ -17,4 +17,7 @@ module.exports = {
         address_data: "AddressData",
         connect_data: "ConnectData",
     },
+    EVENT_NAME: {
+
+    },
 };

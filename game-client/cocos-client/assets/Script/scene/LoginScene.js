@@ -1,6 +1,9 @@
 const TAG = "LoginScene.js";
 const g_ada = cc.g_ada;
 const Login = require("../model/LoginLauncher");
+const util = require("../util/util");
+const event = require("../util/event_emit");
+
  
 cc.Class({
     extends: cc.Component,
@@ -24,6 +27,11 @@ cc.Class({
             this.verLablel.string = "V" + cc.g_ada.localVersion || 0;
             cc.g_ada.loginLauncher = this.loginLauncher;
         }
+        var node = new cc.Node();
+        util.delayRun(node, 5, function(dt){
+            console.log(TAG, " 1 later exe", dt, util.encrypt("aaaa"))
+        })
+        event.emit("gogo", {aa: "you are limit"})
     },
 
     onLogin: function(){
