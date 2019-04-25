@@ -191,7 +191,6 @@ Server.prototype.recv = function(next){
     });
 }
 
-
 Server.prototype.getSocketById = function(id){
     if (id){
         return this.socketMap[id];

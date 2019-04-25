@@ -41,7 +41,7 @@ var doLogin = function(userId, loginData, next){
             if (loginData.ip == userData.login_ip){
                 userTable.modifyUserLoginTime(userId, function(){});
             }else{
-                userTable.modifyUserLogin(userId, loginData.ip, function(){});
+                userTable.modifyUserLoginIP(userId, loginData.ip, function(){});
             }
         }else{
             loginData.accountData.ip = loginData.ip;
