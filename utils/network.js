@@ -27,7 +27,7 @@ Client.prototype.connect = function(next){
     var self = this;
     doConnect(self, next);
     self.on("socketData", (socket, data)=>{
-        console.log(TAG, "Client socketData", data, self.HBTime);
+        logger.info(TAG, "Client socketData", data, self.HBTime);
         if (data.route == "pong"){
             if (data.time == self.HBTime){
                  if (self.closeTimeId){
@@ -177,7 +177,7 @@ Server.prototype.send = function(socketId, data){
 Server.prototype.recv = function(next){
     var self = this;
     this.on("socketData", function(socket, data){
-        console.log(TAG, "Server socketData: ", socket.id, data);
+        logger.info(TAG, "Server socketData: ", socket.id, data);
         if (data.route == "ping"){
             if (socket.closeTimeId){
                 clearTimeout(socket.closeTimeId);

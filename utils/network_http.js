@@ -8,11 +8,13 @@ var nwh = module.exports;
 
 nwh.createHttp = function(options, next){
     const httpSvr = http.createServer(next);
-    
     httpSvr.listen(options, ()=>{
         logger.info(TAG, "http server listen: ", options);
 	});
-	httpSvr.on("error", onError);
+	httpSvr.on("clientError", function(err, socket){
+		logger.error(TAG, "http client error: ", err);
+		socket.end(JSON.stringify({code: 0}));
+	});
 }
 
 nwh.createExpress = function(options){
@@ -26,6 +28,7 @@ nwh.createExpress = function(options){
 }
 
 function onError(error) {
+	logger.error(TAG, "http error: ", error);
 	if (error.syscall !== 'listen') {
 		throw error;
 	}

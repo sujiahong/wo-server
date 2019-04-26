@@ -1,12 +1,12 @@
 服务器类型介绍：
 
-center-server 主要有两个功能，管理所有服务器，管理员后台服务
+center-server 主要有三个功能，管理所有服务器，管理员后台服务, 数据中心
 
 gate-server 网关
 
-home-server 大厅
+home-server 大厅, 主界面
  
-game-server 游戏逻辑
+game-server 游戏逻辑或者业务逻辑
 
 download-server 下载
 

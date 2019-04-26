@@ -35,10 +35,10 @@ exp.getRecommendationTTL = function(recommondation, next){
     _get();
 }
 
-/////////////////////////注册用户表/////////////////////////
-exp.addToRegisterTable = function(wxId, userId){
+/////////////////////////USERID使用表/////////////////////////
+exp.addToUserIdTable = function(userId){
     var _set = function(){
-        client.hset("REGISTER_USER", wxId, userId, function(err, reply){
+        client.hset("USERID_TABLE", userId, '1', function(err, reply){
             if (err || reply < 0){
                 return _set();
             }
@@ -47,18 +47,28 @@ exp.addToRegisterTable = function(wxId, userId){
     _set();
 }
 
-exp.getRegisterUserId = function(wxId, next){
-    client.hget("REGISTER_USER", wxId, function(err, id){
+exp.addToMUserIdTable = function(userIdMap){
+    client.hmset("USERID_TABLE", userIdMap);
+}
+
+exp.userIdTableLen = function(next){
+    client.hlen("USERID_TABLE", function(err, len){
         if (err){
-            logger.error(TAG, "exp.getRegisterUserId error: ", err);
+            logger.error(TAG, "exp.isHaveUsed error: ", err);
             return next({code: 20});
         }
-        next({code: 0, userId: id});
+        next({code: 0, len: len});
     });
 }
 
-exp.isHaveRegisted = function(wxId, next){
-    client.hexists("REGISTER_USER", wxId, next);
+exp.isHaveUsed = function(userId, next){
+    client.hexists("USERID_TABLE", userId, function(err, ret){
+        if (err){
+            logger.error(TAG, "exp.isHaveUsed error: ", err);
+            return next({code: 20});
+        }
+        next({code: 0, is: (ret == 1)})
+    });
 }
 
 /////////////////////////房间id玩法/////////////////////////

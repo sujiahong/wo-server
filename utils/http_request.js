@@ -23,7 +23,7 @@ var request = function(url, next){
         });
     });
     rt.on("error", function(e){
-        console.log("loginWX error", e);
+        console.log("request error", e);
         next({code: errcode.FAIL});
     });
     rt.end();

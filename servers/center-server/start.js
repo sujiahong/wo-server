@@ -8,16 +8,21 @@ const network = require("../../utils/network");
 const networkHttp = require("../../utils/network_http");
 const URL = require("url");
 const queryString = require("querystring");
-
+const dbConn = require("../../utils/db_connection");
+//连接redis
+dbConn.redisConnect();
+//连接mysql
+dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
 logger.info(TAG, "center server start ~~!!!!", process.pid, process.cwd());
+const mainService = require("./main_service");
 
 g_serverData.idServerInfoMap = {};
 var svr = new network.Server({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
 svr.createServer(function(socketId){});
 svr.recv(function(socketId, data){
     if (data.route == "register"){
-        g_serverData.idServerInfoMap[data.serverData.ID] = data;
         data.serverData.socketId = socketId;
+        g_serverData.idServerInfoMap[data.serverData.ID] = data.serverData;
         svr.send(socketId, {route: "register", code: 0});
         logger.debug(TAG, data.serverData.NAME, "注册成功在center server!!!");
     }
@@ -48,6 +53,10 @@ var requestRouteHandler = function(req, next){
         next({code: errcode.ROUTE_ERR});
     }
 }
+
+//////初始化用户数据
+g_serverData.idUserDataMap = {};
+mainService.initUserData();
 
 process.on("exit", function(){
     logger.warn(TAG, "exit 事件", process.pid);

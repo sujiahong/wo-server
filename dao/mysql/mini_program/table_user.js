@@ -46,6 +46,16 @@ exports.queryUser = function(userId, next){
     dbConn.mysqlPoolQuery(sql, next);
 }
 
+exports.queryAccount = function(account, next){
+    var sql = "SELECT * FROM mp_user WHERE account = " + account;
+    dbConn.mysqlPoolQuery(sql, next);
+}
+
+exports.queryAllUserId = function(next){
+    var sql = "SELECT userid FROM mp_user";
+    dbConn.mysqlPoolQuery(sql, next);
+}
+
 exports.isHaveUserId = function(userId, next){
     var sql = "SELECT account FROM mp_user WHERE userid = " + userId;
     dbConn.mysqlPoolQuery(sql, next);

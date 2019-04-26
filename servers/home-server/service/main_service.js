@@ -13,13 +13,12 @@ var service = module.exports;
 
 service.login = function(loginData, next){
     loginData.accountData = JSON.parse(decodeURIComponent(loginData.accountData));
-    redis.getRegisterUserId(loginData.account, (ret)=>{
+    userTable.queryAccount(loginData.account, (ret)=>{
         if (ret.code != errcode.OK){
             return next(ret);
         }
-        var userId = ret.userId;
-        if (userId){
-            doLogin(userId, loginData, next);
+        if (ret.results.length > 0){
+            doLogin(ret.results[0], loginData, next);
         }else{
             logger.info(TAG, "go 注册！！！", loginData);
             service.register(loginData, next);
@@ -27,51 +26,47 @@ service.login = function(loginData, next){
     });
 }
 
-var doLogin = function(userId, loginData, next){
-    userTable.queryUser(userId, (ret)=>{
-        if (ret.code != errcode.OK){
-            return next(ret);
-        }
-        var userData = ret.results[0];
-        var accountData = loginData.accountData;
-        accountData.avatarUrl = decodeURIComponent(accountData.avatarUrl);
-        accountData.nickName = decodeURIComponent(accountData.nickName);
-        if(accountData.avatarUrl == userData.icon && accountData.gender == userData.sex &&
-        accountData.nickName == userData.nickname){
-            if (loginData.ip == userData.login_ip){
-                userTable.modifyUserLoginTime(userId, function(){});
-            }else{
-                userTable.modifyUserLoginIP(userId, loginData.ip, function(){});
-            }
+var doLogin = function(userData, loginData, next){
+    var userId = userData.userid;
+    var accountData = loginData.accountData;
+    accountData.avatarUrl = decodeURIComponent(accountData.avatarUrl);
+    accountData.nickName = decodeURIComponent(accountData.nickName);
+    if(accountData.avatarUrl == userData.icon && accountData.gender == userData.sex &&
+    accountData.nickName == userData.nickname){
+        if (loginData.ip == userData.login_ip){
+            userTable.modifyUserLoginTime(userId, function(){});
         }else{
-            loginData.accountData.ip = loginData.ip;
-            userTable.modifyUserInfo(userId, loginData.accountData, function(){});
+            userTable.modifyUserLoginIP(userId, loginData.ip, function(){});
         }
-        var user = new HomeUser(userId, userData);
-        g_serverData.homeManager.userAdd(userId, user);
-        redis.getRecommendationTTL(loginData.recommendation, function(num){
-            if (num > 0){
-                user.timeId = setTimeout(function(){
-                    g_serverData.homeManager.userExit(userId);
-                    delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-                }, num);
-            }else{
+    }else{
+        loginData.accountData.ip = loginData.ip;
+        userTable.modifyUserInfo(userId, loginData.accountData, function(){});
+    }
+    var user = new HomeUser(userId, userData);
+    g_serverData.homeManager.userAdd(userId, user);
+    redis.getRecommendationTTL(loginData.recommendation, function(num){
+        if (num > 0){
+            user.timeId = setTimeout(function(){
                 g_serverData.homeManager.userExit(userId);
                 delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-            }
-        });
-        var res = {
-            code: 0,
-            userId: userId,
-            coins: userData.coins,
-        };
-        next(res);
+            }, num);
+        }else{
+            g_serverData.homeManager.userExit(userId);
+            delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
+        }
     });
+    var res = {
+        code: 0,
+        userId: userId,
+        coins: userData.coins,
+    };
+    next(res);
 }
 
 service.register = function(registerData, next){
     genUserUniqueId((code, userId)=>{
         if (code != errcode.OK){
+            logger.error(TAG, "生成userid errcode: ", code);
             return next({code: code});
         }
         var userData = {};
@@ -102,7 +97,7 @@ service.register = function(registerData, next){
                     delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
                 }
             });
-            redis.addToRegisterTable(registerData.account, userId);
+            redis.addToUserIdTable(userId);
             var res = {
                 code: 0,
                 userId: userId,
@@ -118,11 +113,11 @@ var genUserUniqueId = function(next){
     var cur = 0;
     var _genUniqueId = function(){
         var id = util.randFirstNotZero(8);
-        userTable.isHaveUserId(id, function(ret){
+        redis.isHaveUsed(id, function(ret){
             if (ret.code != errcode.OK){
                 return next(ret.code);
             }
-            if (ret.results.length > 0){
+            if (ret.is){
                 cur++;
                 if (cur < 10){
                     _genUniqueId();

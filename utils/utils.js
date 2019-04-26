@@ -97,20 +97,6 @@ utils.decodeBase64 = function(content){
 	return new Buffer(content, 'base64').toString();
 }
 
-utils.base64Decode = function(nickname){
-	var base = BASE64.decoder(nickname);
-	var str = '';
-	for(var i = 0 , len =  base.length ; i < len ;++i){
-		str += String.fromCharCode(base[i]);
-	}
-	return str;
-}
-
-utils.base64Encode = function(str){
-	var baseCode = BASE64.encoder(str);
-	return baseCode;
-}
-
 utils.AddTingType = function( tingtypeArr, cards, tingType ){
 	if( !cards || !tingtypeArr ){
 		return
@@ -208,4 +194,8 @@ utils.generateUniqueId = function(idLen, isExist, next){
         });
     }
     _genUniqueId();
+}
+
+utils.generateConnectionCode = function(userId, from, to, roomId){
+	return userId+"|"+from+"|"+to +"|"+roomId+"|"+Math.floor(Date.now()*Math.random());
 }

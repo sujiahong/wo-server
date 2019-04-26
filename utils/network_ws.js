@@ -85,7 +85,3 @@ class WSServer extends event.EventEmitter{
     }
 };
 module.exports = WSServer;
-
-class WSClient extends event.EventEmitter{
-
-}

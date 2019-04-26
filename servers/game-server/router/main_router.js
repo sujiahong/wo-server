@@ -15,5 +15,5 @@ exports.addMonitor = function(svr){
     });
     svr.on("go", function(socketId, data){
         svr.push(socketId, data);
-    })
+    });
 }

@@ -17,20 +17,24 @@ var request = function(url, next){
         });
     });
     rt.on("error", function(e){
-        console.log("loginWX error", e);
+        console.log("request error", e);
         next({code: 1});
     });
     rt.end();
 }
 
 var gate = function(i, next){
+    let account = 10000000+i;
     var url = "http://192.168.10.34:8090/validateUser?";
     var queryData = {
         accountType: "telnumber",
-        accountData: JSON.stringify({account: 10000000+i})
+        accountData: JSON.stringify({account: account})
     };
     url = url + queryString.stringify(queryData);
-    request(url, next)
+    request(url, function(ret){
+        ret.account = account;
+        next(ret);
+    });
 }
 
 var login = function(data, next){

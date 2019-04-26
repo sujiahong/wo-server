@@ -9,6 +9,7 @@ class HomeManager {
         this.recommendationAccountMap = {};
         this.idGameInfoMap = {};
         this.forGameServer = null;
+        this.allUserIdMap = null;
     }
     userAdd(id, user){
         this.userIdObjectMap[id] = user;
@@ -27,6 +28,10 @@ class HomeManager {
     }
     getSocketIdByServerId(serverId){
         return this.idGameInfoMap[serverId].socketId;
+    }
+
+    isHaveUserId(userId){
+        return this.allUserIdMap[userId] != null;
     }
 };
 

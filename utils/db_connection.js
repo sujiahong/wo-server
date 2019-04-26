@@ -67,7 +67,7 @@ dbc.mysqlPoolConnect = function(dbName){
 dbc.mysqlPoolQuery = function(sql, next){
     g_mysqlPool.getConnection((err, conn)=>{
         if (err){
-            logger.error(TAG, "mysql 获取连接出错：", err);
+            logger.error(TAG, sql, " 获取连接出错：", err);
             return next({code: 21});
         }
         conn.query(sql, (err, results, fields)=>{
