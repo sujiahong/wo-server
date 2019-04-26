@@ -28,3 +28,7 @@ exp.createFlutterWord = function(str, parentNode){
     node.parent = cc.g_ada.persistNode;
     return node;
 }
+///提示框
+exp.createTipsPanel = function(){
+
+}

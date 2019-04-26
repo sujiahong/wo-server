@@ -10,7 +10,6 @@ var request = function(url, next){
         res.on("data", function(chunk){
             str += chunk;
         }).on("end", function(){
-            console.log(TAG, "end end", str);
             var data = JSON.parse(str);
             if (!data.errcode)
                 data.errcode = 0;
@@ -19,7 +18,7 @@ var request = function(url, next){
     });
     rt.on("error", function(e){
         console.log("loginWX error", e);
-        next({code: errcode.FAIL});
+        next({code: 1});
     });
     rt.end();
 }
@@ -101,4 +100,4 @@ var bench = function(num){
     }
 }
 
-bench(1);
+bench(5000);

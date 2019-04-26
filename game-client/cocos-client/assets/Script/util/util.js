@@ -1,17 +1,33 @@
 "use strict";
 const TAG = "util.js";
-const encrypt = require("../extern/encryptjs");
+const crypto = require("../extern/cryptoJS");
 const Timer = require("timer");
 //////////小工具///////////
 
 var exp = module.exports;
 
-exp.encrypt = function(str){
-    return encrypt.encrypt(str, "111", 256);
+exp.md5 = function(str){
+    return crypto.MD5(str).toString(crypto.enc.Hex);
 }
 
-exp.decrypt = function(secret){
-    return encrypt.decrypt(secret, "111", 256);
+exp.sha256 = function(str){
+    return crypto.SHA256(str).toString(crypto.enc.Hex);
+}
+
+exp.AESEncrypt = function(str){
+    return crypto.AES.encrypt(str, "sec88887");
+}
+exp.AESDecrypt = function(str){
+    return crypto.AES.decrypt(str, "sec88887");
+}
+
+exp.base64Encrypt = function(str){
+    var arr = crypto.enc.Utf8.parse(str);
+    return crypto.enc.Base64.stringify(arr);
+}
+exp.base64Decrypt = function(str){
+    var arr = crypto.enc.Base64.parse(str);
+    return arr.toString(crypto.enc.Utf8);
 }
 
 exp.clone = function(obj){

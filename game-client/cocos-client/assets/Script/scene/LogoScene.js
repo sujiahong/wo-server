@@ -23,30 +23,34 @@ cls.onLoad = function () {
     this.name = "!!!!!!!";
     this.init();
     setTimeout(function() {
-        //cc.director.loadScene("HotUpdateScene");
+        cc.director.loadScene("HotUpdateScene");
     }, 2000);
 }
 
 cls.init = function () {
-    event.on("gogo", function(){
-        console.log(TAG, "i can gogogog!");
-    });
-    cc.director.getScheduler().schedule(function(){
-        console.log(TAG, "this.name")
-    }, this, 3);
-    var timer = util.createTimer(2, function(){
-        console.log(TAG, "ggggggggggge")
-        timer.pause();
-    });
-    this.schedule(function(){
-        console.log(TAG, "IIIIIIIIII")
-    }, 1);
-    this.schedule(function(){
-        console.log(TAG, "ooooooooooo")
-    }, 2);
-    util.frameUpdater(500, function(c){
-        console.log(TAG, "count: ", c)
-    });
+    var str = util.md5("38338");
+    var str1 = util.base64Encrypt("83739");
+    console.log(TAG, "加密 ", str, str1)
+
+    // event.on("gogo", function(){
+    //     console.log(TAG, "i can gogogog!");
+    // });
+    // cc.director.getScheduler().schedule(function(){
+    //     console.log(TAG, "this.name")
+    // }, this, 3);
+    // var timer = util.createTimer(2, function(){
+    //     console.log(TAG, "ggggggggggge")
+    //     timer.pause();
+    // });
+    // this.schedule(function(){
+    //     console.log(TAG, "IIIIIIIIII")
+    // }, 1);
+    // this.schedule(function(){
+    //     console.log(TAG, "ooooooooooo")
+    // }, 2);
+    // util.frameUpdater(500, function(c){
+    //     console.log(TAG, "count: ", c)
+    // });
     // var Client = require("../util/net_client");
     // var cli = new Client({ip: "192.168.10.34", port: 8311});
     // cli.connect();

@@ -29,7 +29,7 @@ cc.Class({
         }
         var node = new cc.Node();
         util.delayRun(node, 5, function(dt){
-            console.log(TAG, " 1 later exe", dt, util.encrypt("aaaa"))
+            console.log(TAG, " 1 later exe", dt)
         })
         event.emit("gogo", {aa: "you are limit"})
     },
