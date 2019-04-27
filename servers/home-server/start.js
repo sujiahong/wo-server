@@ -8,6 +8,7 @@ const cps = require("child_process");
 const homeManager = require("./models/home_manager");
 const network = require("../../utils/network");
 const config = require("../../share/config");
+const errcode = require("../../share/errcode");
 const networkHttp = require("../../utils/network_http");
 const dbConn = require("../../utils/db_connection");
 logger.info("连接 redis server， mysql server pid: ", process.pid);
@@ -51,7 +52,17 @@ var connectGate = function(){
 var listenGameClient = function(){
     var homeManager = g_serverData.homeManager;
     var svr = new network.Server({host: serverInfo.IP, port: serverInfo.FOR_LOGIC_PORT});
-    svr.createServer(function(socketId){});
+    svr.createServer(function(ret){
+        if (ret.code == errcode.SERVER_SOCKET_CLOSE){
+            for (var k in homeManager.idGameInfoMap){
+                if (ret.socketId == homeManager.idGameInfoMap[k].socketId){
+                    logger.warn(TAG, homeManager.idGameInfoMap[k].NAME, "socket close");
+                    delete homeManager.idGameInfoMap[k];
+                    return;
+                }
+            }
+        }
+    });
     svr.recv(function(socketId, data){
         if (data.route == "register"){
             data.serverData.socketId = socketId;

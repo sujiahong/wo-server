@@ -3,6 +3,7 @@ const TAG = "utils/network_ws.js";
 const ws = require("ws");
 const packet = require("./packet");
 const event = require("events");
+const errcode = require("../share/errcode");
 const packageAnalysis = packet.packageAnalysis;
 
 const logger = g_serverData.logger;
@@ -29,10 +30,11 @@ class WSServer extends event.EventEmitter{
                 packageAnalysis(self, socket, buffer);
             });
             socket.on("close", function(code, reason){
-                logger.info("socket close", code, reason);
+                logger.warn("socket close", code, reason);
                 self.closeClientConn(socket.id);
             });
             socket.on("error", function(err){
+                self.closeClientConn(socket.id);
                 throw err;
             });
         });
@@ -58,8 +60,13 @@ class WSServer extends event.EventEmitter{
         });
     }
     push(socketId, data){
-        var pack = packet.pack(data);
-        this.socketMap[socketId].send(pack);
+        var socket = this.socketMap[socketId];
+        if (socket){
+            var pack = packet.pack(data);
+            socket.send(pack);
+        }else{
+            logger.fatal(TAG, "WSServer socket is null, 不能发送数据！！！");
+        }
     }
     pong(socket, time){
         var self = this;
@@ -76,12 +83,14 @@ class WSServer extends event.EventEmitter{
     }
     closeClientConn(socketId){
         var socket = this.socketMap[socketId];
-        if (socket.closeTimeId){
-            clearTimeout(socket.closeTimeId);
-            socket.closeTimeId = null;
+        if (socket){
+            if (socket.closeTimeId){
+                clearTimeout(socket.closeTimeId);
+                socket.closeTimeId = null;
+            }
+            socket.close();
+            delete this.socketMap[socketId];
         }
-        socket.close();
-        delete this.socketMap[socketId];
     }
 };
 module.exports = WSServer;

@@ -34,19 +34,19 @@
             "level": "all"
         },
         "gate-server": {
-            "appenders": ["gate-server", "out"],
+            "appenders": ["gate-server"],
             "level": "all"
         },
         "home-server": {
-            "appenders": ["home-server", "out"],
+            "appenders": ["home-server"],
             "level": "all"
         },
         "game-server": {
-            "appenders": ["game-server", "out"],
+            "appenders": ["game-server"],
             "level": "all"
         },
         "download-server": {
-            "appenders": ["download-server", "out"],
+            "appenders": ["download-server"],
             "level": "all"
         }
     },

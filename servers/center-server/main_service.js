@@ -4,6 +4,7 @@ const userTable = require("../../dao/mysql/mini_program/table_user");
 const redis = require("../../dao/redis/redis_common");
 
 exports.initUserData = function(){
+    /////初始化userid使用表
     redis.userIdTableLen(function(data){
         if (data.code != 0){
             return;
@@ -24,4 +25,7 @@ exports.initUserData = function(){
         }
         console.log(TAG, "user table len: ", data.len);
     });
+
+    /////加载用户数据
+    //userTable.queryUserLastLogin();
 }

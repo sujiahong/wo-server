@@ -46,6 +46,11 @@ exports.queryUser = function(userId, next){
     dbConn.mysqlPoolQuery(sql, next);
 }
 
+exports.queryUserLastLogin = function(next){
+    var sql = "SELECT * FROM mp_user WHERE";
+    dbConn.mysqlPoolQuery(sql, next);
+}
+
 exports.queryAccount = function(account, next){
     var sql = "SELECT * FROM mp_user WHERE account = " + account;
     dbConn.mysqlPoolQuery(sql, next);

@@ -4,6 +4,7 @@ global.g_serverData = {};
 g_serverData.logger = require("../../utils/log_launch")("center-server");
 const logger = g_serverData.logger;
 const config = require("../../share/config");
+const errcode = require("../../share/errcode");
 const network = require("../../utils/network");
 const networkHttp = require("../../utils/network_http");
 const URL = require("url");
@@ -18,7 +19,17 @@ const mainService = require("./main_service");
 
 g_serverData.idServerInfoMap = {};
 var svr = new network.Server({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
-svr.createServer(function(socketId){});
+svr.createServer(function(ret){
+    if (ret.code == errcode.SERVER_SOCKET_CLOSE){
+        for (var k in g_serverData.idServerInfoMap){
+            if (ret.socketId == g_serverData.idServerInfoMap[k].socketId){
+                logger.warn(TAG, g_serverData.idServerInfoMap[k].NAME, "socket close");
+                delete g_serverData.idServerInfoMap[k];
+                return;
+            }
+        }
+    }
+});
 svr.recv(function(socketId, data){
     if (data.route == "register"){
         data.serverData.socketId = socketId;

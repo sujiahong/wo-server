@@ -30,7 +30,17 @@ cli.request({route: "register", serverData: serverInfo}, function(data){
 var listenHomeClient = function(){
     g_serverData.idHomeInfoMap = {};
     var svr = new network.Server({host: serverInfo.IP, port: serverInfo.FOR_HOME_PORT});
-    svr.createServer(function(socketId){});
+    svr.createServer(function(ret){
+        if (ret.code == errcode.SERVER_SOCKET_CLOSE){
+            for (var k in g_serverData.idHomeInfoMap){
+                if (ret.socketId == g_serverData.idHomeInfoMap[k].socketId){
+                    logger.warn(TAG, g_serverData.idHomeInfoMap[k].NAME, "socket close");
+                    delete g_serverData.idHomeInfoMap[k];
+                    return;
+                }
+            }
+        }
+    });
     svr.recv(function(socketId, data){
         if (data.route == "register"){
             data.serverData.socketId = socketId;

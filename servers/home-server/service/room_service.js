@@ -16,7 +16,7 @@ service.createRoom = function(user, roomInfo, next){
         var roomId = genData.roomId;
         var info = getGameServerInfoByRoomId(roomId);
         var homeManager = g_serverData.homeManager;
-        var connectionCode = util.generateConnectionCode(user.userId, homeManager.serverName, info.NAME, roomId);
+        var connectionCode = util.generateConnectionCode(user.id, homeManager.serverName, info.NAME, roomId);
         var socketId = homeManager.getSocketIdByServerId(info.ID);
         roomInfo.connectionCode = connectionCode;
         homeManager.forGameServer.send(socketId, {route: "createRoom", roomInfo: roomInfo});
@@ -48,7 +48,7 @@ var getGameServerInfoByRoomId = function(id){
 service.joinRoom = function(user, roomId, next){
     var homeManager = g_serverData.homeManager;
     var info = getGameServerInfoByRoomId(roomId);
-    var connectionCode = util.generateConnectionCode(user.userId, homeManager.serverName, info.NAME, roomId);
+    var connectionCode = util.generateConnectionCode(user.id, homeManager.serverName, info.NAME, roomId);
     var ret = {code: 0, connectionCode: connectionCode};
     ret.ip = info.IP;
     ret.port = info.FOR_CLIENT_PORT;

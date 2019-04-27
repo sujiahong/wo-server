@@ -4,6 +4,7 @@ const net = require("net");
 const packet = require("./packet");
 const event = require("events");
 const util = require("util");
+const errcode = require("../share/errcode");
 const logger = g_serverData.logger;
 
 const packageAnalysis = packet.packageAnalysis;
@@ -45,15 +46,21 @@ var doConnect = function(self, next){
     var socket = net.createConnection(self.options);
     self.socket = socket;
     socket.on("close", ()=>{
+        self.close();
         logger.warn(TAG, "socket client close close 尝试重新连接!!!");
+        next ? next({code: errcode.CLIENT_SOCKET_CLOSE}) : null;
+        setTimeout(function(){
+            doConnect(self, next);
+        }, 1000);
     });
     socket.on("error", (err)=>{
         logger.error(TAG, "client client socket error :", err);
+        next ? next({code: errcode.CLIENT_SOCKET_ERR}) : null;
         throw err;
     });
     socket.on("connect", ()=>{
         logger.debug(TAG, process.pid, "客户端连接建立成功ip-port: ", socket.localAddress, socket.localPort, socket.remotePort);
-        next ? next(socket): null;
+        next ? next({code: 0, socket: socket}): null;
         setTimeout(()=>{
             self.ping();
             self.freqTimeId = setInterval(()=>{
@@ -70,11 +77,15 @@ var doConnect = function(self, next){
 }
 
 Client.prototype.send = function(data){
-    var pack = packet.pack(data);
-    var rt = this.socket.write(pack);
-    if (rt == false){
-        logger.error(TAG, "socket client send函数失败！！！");
-        Buffer.concat([this.sendFailData, pack]);
+    if (this.socket){
+        var pack = packet.pack(data);
+        var rt = this.socket.write(pack);
+        if (rt == false){
+            logger.fatal(TAG, "client socket send函数失败！！！");
+            Buffer.concat([this.sendFailData, pack]);
+        }
+    }else{
+        logger.fatal(TAG, "client socket is null, 不能发送数据！！！");
     }
 }
 
@@ -96,7 +107,10 @@ Client.prototype.request = function(data, next){
 }
 
 Client.prototype.close = function(){
-    this.socket.destroy();
+    if (this.socket){
+        this.socket.destroy();
+        this.socket = null;
+    }
     if (this.freqTimeId){
         clearInterval(this.freqTimeId);
         this.freqTimeId = null;
@@ -133,9 +147,6 @@ Server.prototype.createServer = function(next){
     server.on("error", (err)=>{
         throw err;
     });
-    server.on("close", function(){
-        logger.warn(TAG, "server close, close close!!!");
-    });
     server.on("connection", function(socket){
         socket.id = socket.remoteAddress + ":" + socket.remotePort + ":" + Date.now();
         self.socketMap[socket.id] = socket;
@@ -143,22 +154,24 @@ Server.prototype.createServer = function(next){
         socket.on("close", function(){
             logger.warn(TAG, "server close close socketId: ", socket.id);
             self.closeClientConn(socket.id);
+            next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id}) : null;
         });
         socket.on("error", function(err){
             self.closeClientConn(socket.id);
             logger.error(TAG, "server server socket err err", socket.id, err);
+            next ? next({code: errcode.SERVER_SOCKET_ERR}) : null;
         });
         socket.on("data", function(buffer){
             packageAnalysis(self, socket, buffer);
         });
         socket.on("drain", function(){
-            logger.error(TAG, "socket server drain事件 触发 触发 触发！！！");
+            logger.fatal(TAG, "socket server drain事件 触发 触发 触发！！！");
         });
         socket.on("timeout", function(){
             logger.warn(TAG, "socket server timeout事件 触发 触发 触发！！！");
             self.closeClientConn(socket.id);
         });
-        next ? next(socket.id) : null;
+        next ? next({code: 0, socketId: socket.id}) : null;
     });
     server.listen(this.options, ()=>{
         logger.debug(TAG, "socket server listen start!!", this.options);
@@ -166,11 +179,16 @@ Server.prototype.createServer = function(next){
 }
 
 Server.prototype.send = function(socketId, data){
-    var pack = packet.pack(data);
-    var rt = this.socketMap[socketId].write(pack);
-    if (rt == false){
-        logger.error(TAG, "socket server send函数失败！！！");
-        Buffer.concat([this.sendFailData, pack]);
+    var socket = this.socketMap[socketId];
+    if (socket){
+        var pack = packet.pack(data);
+        var rt = socket.write(pack);
+        if (rt == false){
+            logger.fatal(TAG, "server socket send函数失败！！！");
+            Buffer.concat([this.sendFailData, pack]);
+        }
+    }else{
+        logger.fatal(TAG, "server socket closed or null, 不能发送数据!!!");
     }
 }
 
@@ -208,12 +226,14 @@ Server.prototype.pong = function(socket, time){
 
 Server.prototype.closeClientConn = function(socketId){
     var socket = this.socketMap[socketId];
-    if (socket.closeTimeId){
-        clearTimeout(socket.closeTimeId);
-        socket.closeTimeId = null;
+    if (socket){
+        if (socket.closeTimeId){
+            clearTimeout(socket.closeTimeId);
+            socket.closeTimeId = null;
+        }
+        socket.destroy();
+        delete this.socketMap[socketId];
     }
-    socket.destroy();
-    delete this.socketMap[socketId];
 }
 
 Server.prototype.close = function(){
