@@ -107,13 +107,10 @@ cls.request = function(route, msg, next){
         ++self.reqId;
     }
     let reqId = self.reqId;
-
     self.reqIdHandlerMap[reqId] = function(data){
         next(data);
         delete self.reqIdHandlerMap[reqId];
-        console.log(TAG, JSON.stringify(self.reqIdHandlerMap));
     };
-    console.log(TAG, JSON.stringify(self.reqIdHandlerMap));
     this.send({route: route, data: msg});
     if (self.reqId > 100000000000)
         self.reqId = 1;

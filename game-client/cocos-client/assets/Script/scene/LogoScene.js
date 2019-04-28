@@ -30,7 +30,7 @@ cls.onLoad = function () {
 cls.init = function () {
     var str = util.md5("38338");
     var str1 = util.base64Encrypt("83739");
-    console.log(TAG, "加密 ", str, str1)
+    console.error(TAG, "加密 ", str, str1)
 
     // event.on("gogo", function(){
     //     console.log(TAG, "i can gogogog!");

@@ -81,6 +81,7 @@ class GameUser {
                 return next(ret.code);
             }
             cc.sys.localStorage.setItem(constant.LOCAL_ITEM.connect_data, JSON.stringify(ret));
+            ret.userId = self.userId;
             doJoinRoom(ret, next);
         });
     }
@@ -88,6 +89,7 @@ class GameUser {
         if (this.address == ""){
             return next(errcode.REQUEST_URL_NULL);
         }
+        var self = this;
         request.get({
             url: this.address+"/joinRoom",
             userId: this.userId,
@@ -101,6 +103,7 @@ class GameUser {
             }
             ret.roomId = roomId;
             cc.sys.localStorage.setItem(constant.LOCAL_ITEM.connect_data, JSON.stringify(ret));
+            ret.userId = self.userId
             doJoinRoom(ret, next);
         });
     }
@@ -120,7 +123,7 @@ var doJoinRoom = function(ret, next){
         if (code != errcode.OK){
             return console.log(TAG, "doJoinRoom: ", code);
         }
-        cli.request("joinRoom", {roomId: ret.roomId, connectionCode: ret.connectionCode}, function(result){
+        cli.request("joinRoom", {userId: ret.userId, roomId: ret.roomId, connectionCode: ret.connectionCode}, function(result){
             if (result.code != errcode.OK){
                 return next(result.code);
             }
