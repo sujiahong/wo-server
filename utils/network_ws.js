@@ -17,7 +17,7 @@ class WSServer extends event.EventEmitter{
         this.HBInterval = 30;
         this.remainderData = Buffer.alloc(0);
     }
-    createServer(){
+    createServer(next){
         var self = this;
         var server = new ws.Server(self.options);
         server.on("connection", function(socket, req){
@@ -32,11 +32,14 @@ class WSServer extends event.EventEmitter{
             socket.on("close", function(code, reason){
                 logger.warn("socket close", code, reason);
                 self.closeClientConn(socket.id);
+                next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id}) : null;
             });
             socket.on("error", function(err){
                 self.closeClientConn(socket.id);
+                next ? next({code: errcode.SERVER_SOCKET_ERR}) : null;
                 throw err;
             });
+            next ? next({code: 0, socket: socket}) : null;
         });
         server.on("error", function(error){
             throw error;
@@ -46,20 +49,23 @@ class WSServer extends event.EventEmitter{
         });
         self.server = server;
         ///////
-        self.on("socketData", function(socket, data){
-            logger.debug(TAG, "Server socketData", socket.id, data);
-            if (data.route == "ping"){
+        self.on("socketData", function(socket, msg){
+            logger.debug(TAG, "Server socketData", socket.id, msg);
+            if (msg.route == "ping"){
                 if (socket.closeTimeId){
                     clearTimeout(socket.closeTimeId);
                     socket.closeTimeId = null;
                 }
-                self.pong(socket, data.time);
+                self.pong(socket, msg);
             }else{
-                self.emit(data.route, socket.id, data);
+                self.emit(msg.route, msg.data, function(ret){
+                    msg.data = ret;
+                    socket.send(packet.pack(msg));
+                });
             }
         });
     }
-    push(socketId, data){
+    send(socketId, data){
         var socket = this.socketMap[socketId];
         if (socket){
             var pack = packet.pack(data);
@@ -68,9 +74,13 @@ class WSServer extends event.EventEmitter{
             logger.fatal(TAG, "WSServer socket is null, 不能发送数据！！！");
         }
     }
-    pong(socket, time){
+    push(socketId, route, msg){
+        this.send(socketId, {route: route, data: msg});
+    }
+    pong(socket, data){
         var self = this;
-        this.push(socket.id, {route: "pong", time: time});
+        data.route = "pong";
+        this.send(socket.id, data);
         socket.closeTimeId = setTimeout(() => {
             self.closeClientConn(socket.id);
         }, this.HBInterval*1000);

@@ -3,17 +3,18 @@ const TAG = "main_router.js";
 const mainService = require("../service/main_service");
 
 
-exports.createRoom = function(cli, data){
-    var ret = mainService.createRoom(data.roomInfo);
-    cli.send({route: data.route, code: 0});
+exports.notifyFromHome = function(cli){
+    cli.on("createRoom", function(data){
+        mainService.createRoom(data.roomInfo);
+    });
 }
 
 exports.addMonitor = function(svr){
-    svr.on("joinRoom", function(socketId, data){
+    svr.on("joinRoom", function(data, next){
         var ret = mainService.joinRoom(data.joinData);
-        svr.push(socketId, {route: data.route, code: 0});
+        next({code: 0});
     });
-    svr.on("go", function(socketId, data){
-        svr.push(socketId, data);
+    svr.on("go", function(data, next){
+        next({code: 0});
     });
 }

@@ -20,6 +20,8 @@ var Client = function(options){
     this.closeTimeId = null;
     this.remainderData = Buffer.alloc(0);
     this.sendFailData = Buffer.alloc(0);
+    this.reqId = 0;
+    this.reqIdHandlerMap = {};
 };
 
 util.inherits(Client, event.EventEmitter);
@@ -27,17 +29,24 @@ util.inherits(Client, event.EventEmitter);
 Client.prototype.connect = function(next){
     var self = this;
     doConnect(self, next);
-    self.on("socketData", (socket, data)=>{
-        logger.info(TAG, "Client socketData", data, self.HBTime);
-        if (data.route == "pong"){
-            if (data.time == self.HBTime){
+    self.on("socketData", (socket, msg)=>{
+        logger.info(TAG, "Client socketData", msg, self.HBTime);
+        if (msg.route == "pong"){
+            if (msg.time == self.HBTime){
                  if (self.closeTimeId){
                      clearTimeout(self.closeTimeId);
                      self.closeTimeId = null;
                  }
             }
         }else{
-             self.emit(data.route, data);
+            if (msg.reqId){
+                var handlerFunc = self.reqIdHandlerMap[msg.reqId];
+                if (handlerFunc){
+                    handlerFunc(msg.data);
+                }
+            }else{
+                self.emit(msg.route, msg.data);
+            }
         }
     });
 }
@@ -78,32 +87,45 @@ var doConnect = function(self, next){
 
 Client.prototype.send = function(data){
     if (this.socket){
+        data.reqId = this.reqId;
         var pack = packet.pack(data);
         var rt = this.socket.write(pack);
         if (rt == false){
             logger.fatal(TAG, "client socket send函数失败！！！");
             Buffer.concat([this.sendFailData, pack]);
         }
+        return rt;
     }else{
         logger.fatal(TAG, "client socket is null, 不能发送数据！！！");
+        return false;
     }
 }
 
 Client.prototype.ping = function(){
     var self = this;
     this.HBTime = Date.now();
-    this.send({route: "ping", time: this.HBTime, pid: process.pid});
+    this.send({route: "ping", time: this.HBTime});
     this.closeTimeId = setTimeout(()=>{
         self.closeTimeId = null;
         self.close();
     }, this.HBInterval*1000/2);
 }
 
-Client.prototype.request = function(data, next){
-    this.send(data);
-    this.once(data.route, (ret)=>{
-        next(ret);
-    });
+Client.prototype.request = function(route, msg, next){
+    var self = this;
+    ++self.reqId;
+    if (self.reqIdHandlerMap[self.reqId]){
+        ++self.reqId;
+    }
+    let reqId = self.reqId;
+    self.reqIdHandlerMap[reqId] = function(data){
+        next(data);
+        delete self.reqIdHandlerMap[reqId];
+    };
+    self.send({route: route, data: msg});
+    if (self.reqId > 100000000000){
+        self.reqId = 1;
+    }
 }
 
 Client.prototype.close = function(){
@@ -148,7 +170,7 @@ Server.prototype.createServer = function(next){
         throw err;
     });
     server.on("connection", function(socket){
-        socket.id = socket.remoteAddress + ":" + socket.remotePort + ":" + Date.now();
+        socket.id = socket.remoteAddress + ":" + socket.remotePort + ":" + Math.floor(Math.random()*Date.now());
         self.socketMap[socket.id] = socket;
         logger.debug(TAG, process.pid, "服务端连接建立成功ip-port: ", socket.remoteAddress, socket.remotePort);
         socket.on("close", function(){
@@ -167,14 +189,26 @@ Server.prototype.createServer = function(next){
         socket.on("drain", function(){
             logger.fatal(TAG, "socket server drain事件 触发 触发 触发！！！");
         });
-        socket.on("timeout", function(){
-            logger.warn(TAG, "socket server timeout事件 触发 触发 触发！！！");
-            self.closeClientConn(socket.id);
-        });
-        next ? next({code: 0, socketId: socket.id}) : null;
+        next ? next({code: 0, socket: socket}) : null;
     });
     server.listen(this.options, ()=>{
         logger.debug(TAG, "socket server listen start!!", this.options);
+    });
+    this.on("socketData", function(socket, msg){
+        logger.info(TAG, "Server socketData: ", socket.id, msg);
+        if (msg.route == "ping"){
+            if (socket.closeTimeId){
+                clearTimeout(socket.closeTimeId);
+                socket.closeTimeId = null;
+            }
+            self.pong(socket, msg);
+        }else{
+            msg.data.socketId = socket.id;
+            self.emit(msg.route, msg.data, function(res){
+                msg.data = res;
+                self.send(socket.id, msg);
+            });
+        }
     });
 }
 
@@ -192,21 +226,8 @@ Server.prototype.send = function(socketId, data){
     }
 }
 
-Server.prototype.recv = function(next){
-    var self = this;
-    this.on("socketData", function(socket, data){
-        logger.info(TAG, "Server socketData: ", socket.id, data);
-        if (data.route == "ping"){
-            if (socket.closeTimeId){
-                clearTimeout(socket.closeTimeId);
-                socket.closeTimeId = null;
-            }
-            self.pong(socket, data.time);
-        }else{
-            self.emit(data.route, socket.id, data);
-            next(socket.id, data);
-        }
-    });
+Server.prototype.push = function(socketId, route, msg){
+    this.send(socketId, {route: route, data: msg});
 }
 
 Server.prototype.getSocketById = function(id){
@@ -216,9 +237,10 @@ Server.prototype.getSocketById = function(id){
     return null;
 }
 
-Server.prototype.pong = function(socket, time){
+Server.prototype.pong = function(socket, data){
     var self = this;
-    this.send(socket.id, {route: "pong", time: time});
+    data.route = "pong";
+    this.send(socket.id, data);
     socket.closeTimeId = setTimeout(() => {
         self.closeClientConn(socket.id);
     }, this.HBInterval*1000);

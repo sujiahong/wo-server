@@ -23,7 +23,7 @@ logger.info(TAG, "gate server start ~~!!!!", serverInfo.ID, process.pid, process
 
 var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
 cli.connect();
-cli.request({route: "register", serverData: serverInfo}, function(data){
+cli.request("register", serverInfo, function(data){
     logger.info(TAG, "向center server 注册 success code: ", data.code);
 });
 
@@ -41,13 +41,10 @@ var listenHomeClient = function(){
             }
         }
     });
-    svr.recv(function(socketId, data){
-        if (data.route == "register"){
-            data.serverData.socketId = socketId;
-            g_serverData.idHomeInfoMap[data.serverData.ID] = data.serverData;
-            svr.send(socketId, {route: "register", code: 0});
-            logger.debug(TAG, data.serverData.NAME, "注册成功在gate server!!!");
-        }
+    svr.on("register", function(serverData, next){
+        g_serverData.idHomeInfoMap[serverData.ID] = serverData;
+        next({code: 0});
+        logger.debug(TAG, serverData.NAME, "注册成功在gate server!!!");
     });
     g_serverData.forHomeServer = svr;
 }

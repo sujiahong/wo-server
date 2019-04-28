@@ -18,7 +18,7 @@ logger.info(TAG, "download start ~~!!!!", serverInfo.ID, process.pid, process.cw
 
 var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
 cli.connect();
-cli.request({route: "register", serverData: serverInfo}, function(data){
+cli.request("register", serverInfo, function(data){
     logger.info(TAG, "向center server 注册 success code: ", data.code);
 });
 

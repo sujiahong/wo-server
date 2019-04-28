@@ -30,13 +30,10 @@ svr.createServer(function(ret){
         }
     }
 });
-svr.recv(function(socketId, data){
-    if (data.route == "register"){
-        data.serverData.socketId = socketId;
-        g_serverData.idServerInfoMap[data.serverData.ID] = data.serverData;
-        svr.send(socketId, {route: "register", code: 0});
-        logger.debug(TAG, data.serverData.NAME, "注册成功在center server!!!");
-    }
+svr.on("register", function(serverData, next){
+    g_serverData.idServerInfoMap[serverData.ID] = serverData;
+    next({code: 0});
+    logger.debug(TAG, serverData.NAME, "注册成功在center server!!!");
 });
 g_serverData.centerServer = svr;
 

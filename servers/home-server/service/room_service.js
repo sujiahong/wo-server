@@ -19,17 +19,11 @@ service.createRoom = function(user, roomInfo, next){
         var connectionCode = util.generateConnectionCode(user.id, homeManager.serverName, info.NAME, roomId);
         var socketId = homeManager.getSocketIdByServerId(info.ID);
         roomInfo.connectionCode = connectionCode;
-        homeManager.forGameServer.send(socketId, {route: "createRoom", roomInfo: roomInfo});
-        homeManager.forGameServer.once("createRoom", function(socketId, data){
-            logger.info(TAG, "create room ", info, typeof data);
-            if (data.code != errcode.OK){
-                return next({code: data.code});
-            }
-            var ret = {code: 0, roomId: roomId, connectionCode: connectionCode};
-            ret.ip = info.IP;
-            ret.port = info.FOR_CLIENT_PORT;
-            next(ret);
-        });
+        homeManager.forGameServer.send(socketId, {route: "createRoom", data: roomInfo});
+        var ret = {code: 0, roomId: roomId, connectionCode: connectionCode};
+        ret.ip = info.IP;
+        ret.port = info.FOR_CLIENT_PORT;
+        next(ret);
     });
 }
 

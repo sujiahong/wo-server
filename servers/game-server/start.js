@@ -27,12 +27,10 @@ var connectHome = function(){
     for (let i = 0; i < homeList.length; ++i){
         let cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
         cli.connect();
-        cli.request({route: "register", serverData: serverInfo}, function(data){
+        cli.request("register", serverInfo, function(data){
             logger.info(TAG, "向home server 注册 success code: ", data.code);
         });
-        cli.on("createRoom", function(data){
-            mainRouter.createRoom(cli, data);
-        });
+        mainRouter.notifyFromHome(cli);
         g_serverData.manager.homeIdClientMap[homeList[i].ID] = cli; 
     }
 }

@@ -27,7 +27,7 @@ logger.info(TAG, "home server start ~~!!!!", serverInfo.ID, process.pid, process
 
 var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
 cli.connect();
-cli.request({route: "register", serverData: serverInfo}, function(data){
+cli.request("register", serverInfo, function(data){
     logger.info(TAG, "向center server 注册 success code: ", data.code);
     //连接gate
     connectGate();
@@ -39,7 +39,7 @@ var connectGate = function(){
     for (var i = 0; i < gateList.length; ++i){
         var gateClient = new network.Client({host: gateList[i].IP, port: gateList[i].FOR_HOME_PORT});
         gateClient.connect();
-        gateClient.request({route: "register", serverData: serverInfo}, function(data){
+        gateClient.request("register", serverInfo, function(data){
             logger.info(TAG, "向gate server 注册 success code: ", data.code);
         });
         gateClient.on("recommend", function(data){
@@ -63,13 +63,10 @@ var listenGameClient = function(){
             }
         }
     });
-    svr.recv(function(socketId, data){
-        if (data.route == "register"){
-            data.serverData.socketId = socketId;
-            homeManager.idGameInfoMap[data.serverData.ID] = data.serverData;
-            svr.send(socketId, {route: "register", code: 0});
-            logger.debug(TAG, data.serverData.NAME, "注册成功在home server!!!");
-        }
+    svr.on("register", function(serverData, next){
+        homeManager.idGameInfoMap[serverData.ID] = serverData;
+        next({code: 0});
+        logger.debug(TAG, serverData.NAME, "注册成功在home server!!!");
     });
     homeManager.forGameServer = svr;
 }

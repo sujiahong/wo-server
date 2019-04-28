@@ -38,7 +38,7 @@
             "level": "all"
         },
         "home-server": {
-            "appenders": ["home-server"],
+            "appenders": ["home-server", "out"],
             "level": "all"
         },
         "game-server": {

@@ -70,7 +70,7 @@ var recommondHomeServer = function(serverMap){
 
 var notifyHomeServerRecommendation = function(homeId, str, account){
     var socketId = g_serverData.idHomeInfoMap[homeId].socketId;
-    g_serverData.forHomeServer.send(socketId, {route: "recommend", recommendation: str, account: account});
+    g_serverData.forHomeServer.send(socketId, {route: "recommend", data: {recommendation: str, account: account}});
 }
 
 service.checkRecommendation = function(vData, next){

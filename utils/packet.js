@@ -3,6 +3,7 @@ const TAG = "utils/packet.js";
 const logger = g_serverData.logger;
 
 var p = module.exports;
+///{route: "", reqId: 33, data: {}}
 //////包头长度是4
 p.pack = function(jsonData){
     var str = JSON.stringify(jsonData);
