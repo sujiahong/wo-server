@@ -7,6 +7,7 @@ class GameManager{
         this.serverName = "";
         this.homeIdClientMap = {};
         this.forClientServer = null;
+        this.connCodeUserIdMap = {};
         this.userIdPlayerMap = {};
         this.roomIdRoomMap = {};
     }

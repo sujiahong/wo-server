@@ -13,11 +13,11 @@ p.pack = function(jsonData){
     return pack;
 }
 ///解包
-p.unpack = function(buf, start, end){
+var unpack = function(buf, start, end){
     var str = buf.toString('utf8', start, end);
     return JSON.parse(str);
 }
-
+/////包解析
 p.packageAnalysis = function(self, socket, buffer){
     self.remainderData = Buffer.concat([self.remainderData, buffer]);
     var len = self.remainderData.length;
@@ -37,7 +37,7 @@ p.packageAnalysis = function(self, socket, buffer){
             break;
         }
         idx += packlen;
-        var jsonData = p.unpack(self.remainderData, idx - bodylen, idx);
+        var jsonData = unpack(self.remainderData, idx - bodylen, idx);
         self.emit("socketData", socket, jsonData);
         if (idx == len){
             self.remainderData = Buffer.alloc(0);

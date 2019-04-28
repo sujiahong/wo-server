@@ -7,16 +7,18 @@ const GameManager = require("./models/game_manager");
 const network = require("../../utils/network");
 const WSServer = require("../../utils/network_ws");
 const config = require("../../share/config");
+const errcode = require("../../share/errcode");
 const dbConn = require("../../utils/db_connection");
 logger.info("连接 redis server， mysql server");
 //连接redis
 dbConn.redisConnect();
 //连接mysql
 dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
-const mainRouter = require("./router/main_router");
 
 const serverInfo = JSON.parse(process.argv[2]);
 g_serverData.manager = new GameManager();
+const mainRouter = require("./router/main_router");
+
 g_serverData.manager.serverName = serverInfo.NAME;
 g_serverData.manager.serverId = serverInfo.ID;
 
@@ -41,7 +43,11 @@ var listenConnection = function(){
         port: serverInfo.FOR_CLIENT_PORT
     }
     var wsvr = new WSServer(options);
-    wsvr.createServer();
+    wsvr.createServer(function(ret){
+        if (ret.code == errcode.WS_SOCKET_CLOSE){
+            return logger.warn(TAG, "socket id close: ",  ret.socketId, ret.uid);
+        }
+    });
     mainRouter.addMonitor(wsvr);
     g_serverData.manager.forClientServer = wsvr;
 }

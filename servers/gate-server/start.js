@@ -34,7 +34,7 @@ var listenHomeClient = function(){
         if (ret.code == errcode.SERVER_SOCKET_CLOSE){
             for (var k in g_serverData.idHomeInfoMap){
                 if (ret.socketId == g_serverData.idHomeInfoMap[k].socketId){
-                    logger.warn(TAG, g_serverData.idHomeInfoMap[k].NAME, "socket close");
+                    logger.warn(TAG, g_serverData.idHomeInfoMap[k].NAME, "socket close", ret.uid);
                     delete g_serverData.idHomeInfoMap[k];
                     return;
                 }

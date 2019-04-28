@@ -43,6 +43,8 @@ Client.prototype.connect = function(next){
                 var handlerFunc = self.reqIdHandlerMap[msg.reqId];
                 if (handlerFunc){
                     handlerFunc(msg.data);
+                }else{
+                    logger.fatal(TAG, "reqId 处理函数 null, reqId; ", msg.reqId);
                 }
             }else{
                 self.emit(msg.route, msg.data);
@@ -176,7 +178,7 @@ Server.prototype.createServer = function(next){
         socket.on("close", function(){
             logger.warn(TAG, "server close close socketId: ", socket.id);
             self.closeClientConn(socket.id);
-            next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id}) : null;
+            next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id, uid: socket._uid}) : null;
         });
         socket.on("error", function(err){
             self.closeClientConn(socket.id);
@@ -203,7 +205,10 @@ Server.prototype.createServer = function(next){
             }
             self.pong(socket, msg);
         }else{
-            msg.data.socketId = socket.id;
+            if (msg.route == "register"){
+                msg.data.socketId = socket.id;
+                socket._uid = msg.data.ID;
+            }
             self.emit(msg.route, msg.data, function(res){
                 msg.data = res;
                 self.send(socket.id, msg);

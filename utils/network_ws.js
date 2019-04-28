@@ -32,7 +32,7 @@ class WSServer extends event.EventEmitter{
             socket.on("close", function(code, reason){
                 logger.warn("socket close", code, reason);
                 self.closeClientConn(socket.id);
-                next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id}) : null;
+                next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id, uid: socket._uid}) : null;
             });
             socket.on("error", function(err){
                 self.closeClientConn(socket.id);
@@ -58,6 +58,10 @@ class WSServer extends event.EventEmitter{
                 }
                 self.pong(socket, msg);
             }else{
+                if (msg.route == "joinRoom"){
+                    msg.data.socketId = socket.id;
+                    socket._uid = msg.data.userId;
+                }
                 self.emit(msg.route, msg.data, function(ret){
                     msg.data = ret;
                     socket.send(packet.pack(msg));

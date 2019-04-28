@@ -23,7 +23,7 @@ svr.createServer(function(ret){
     if (ret.code == errcode.SERVER_SOCKET_CLOSE){
         for (var k in g_serverData.idServerInfoMap){
             if (ret.socketId == g_serverData.idServerInfoMap[k].socketId){
-                logger.warn(TAG, g_serverData.idServerInfoMap[k].NAME, "socket close");
+                logger.warn(TAG, g_serverData.idServerInfoMap[k].NAME, "socket close", ret.uid);
                 delete g_serverData.idServerInfoMap[k];
                 return;
             }

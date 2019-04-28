@@ -56,7 +56,7 @@ var listenGameClient = function(){
         if (ret.code == errcode.SERVER_SOCKET_CLOSE){
             for (var k in homeManager.idGameInfoMap){
                 if (ret.socketId == homeManager.idGameInfoMap[k].socketId){
-                    logger.warn(TAG, homeManager.idGameInfoMap[k].NAME, "socket close");
+                    logger.warn(TAG, homeManager.idGameInfoMap[k].NAME, "socket close", ret.uid);
                     delete homeManager.idGameInfoMap[k];
                     return;
                 }
