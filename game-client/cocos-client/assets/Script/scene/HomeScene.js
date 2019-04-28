@@ -19,7 +19,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        console.log(TAG, "onLoad onLoad!!!!", JSON.stringify(cc.g_ada));
+        console.log(TAG, "onLoad onLoad!!!!", cc.g_ada);
         this.logoutButton.node.on("click", this.onLogout, this);
         this.creatRoomButton.node.on("click", this.onCreateRoom, this);
         this.joinRoomButton.node.on("click", this.onJoinRoom, this);

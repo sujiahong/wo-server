@@ -3,36 +3,9 @@ const TAG = "net_client.js";
 const packet = require("./packet");
 const Buffer = require("buffer").Buffer;
 const errcode = require("../share/errcode");
+const bufferAnalysis = packet.bufferAnalysis;
 
 var cls = {};
-
-var bufferAnalysis = function(self, buffer){
-    self.remainderData = Buffer.concat([self.remainderData, buffer]);
-    var len = self.remainderData.length;
-    console.log(TAG, "data data: bufflen:", buffer.length, "remainderLen :", len);
-    var bodylen = 0;
-    var packlen = 0;
-    var idx = 0;
-    while (true){
-        if (len - idx < 4){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        bodylen = self.remainderData.readUInt32BE(idx);
-        packlen = bodylen + 4;
-        if (idx + packlen > len){
-            self.remainderData = self.remainderData.slice(idx, len);
-            break;
-        }
-        idx += packlen;
-        var jsonData = packet.unpack(self.remainderData, idx - bodylen, idx);
-        self.node.emit("socketData", jsonData);
-        if (idx == len){
-            self.remainderData = Buffer.alloc(0);
-            break;
-        }
-    }
-}
 
 var doConnect = function(self, url, next){
     var socket = new WebSocket(url);
@@ -47,7 +20,6 @@ var doConnect = function(self, url, next){
         }, 1000);
     }
     socket.onmessage = function(event){
-        //console.log("2222222222 onmessage", event.data);
         bufferAnalysis(self, new Buffer(event.data));
     }
     socket.onclose = function(){
@@ -56,10 +28,7 @@ var doConnect = function(self, url, next){
         next ? next(errcode.SOCKET_CLOSE) : null;
     }
     socket.onerror = function(event){
-        console.log("4444444444  onerror ", event);
-        for (var k in event){
-            console.log(k, event[k]);
-        }
+        console.log("4444444444  onerror ", JSON.stringify(event));
         throw event;
         next ? next() : null;
     }
@@ -74,6 +43,8 @@ cls.ctor = function(){
     this.closeTimeId = null;
     this.remainderData = Buffer.alloc(0);
     this.reconnectTimes = 3;
+    this.reqId = 0;
+    this.reqIdHandlerMap = {};
     this.node = new cc.Node();
 }
 
@@ -84,24 +55,39 @@ cls.connect = function(next){
     console.log(TAG, "准备连接服务器：", url, this.node);
     doConnect(self, url, next);
     //////监听socket数据
-    self.node.on("socketData", (data)=>{
-        console.log(TAG, "Client socketData", JSON.stringify(data), self.HBTime);
-        if (data.route == "pong"){
-            if (data.time == self.HBTime){
+    self.node.on("socketData", (msg)=>{
+        console.log(TAG, "Client socketData", JSON.stringify(msg), self.HBTime);
+        if (msg.route == "pong"){
+            if (msg.time == self.HBTime){
                  if (self.closeTimeId){
                      clearTimeout(self.closeTimeId);
                      self.closeTimeId = null;
                  }
             }
         }else{
-             self.node.emit(data.route, data);
+            var reqId = msg.reqId;
+             if (reqId){
+                 var handlerFunc = self.reqIdHandlerMap[reqId];
+                 if (handlerFunc){
+                     handlerFunc(msg.data);
+                 }else{
+                     console.log(TAG, "没有此reqId的处理函数 ", reqId);
+                 }
+             }else{
+                 self.node.emit(msg.route, msg.data);
+             }
         }
     });
 }
 
 cls.send = function(data){
-    var pack = packet.pack(data);
-    this.socket.send(pack);
+    if (this.socket){
+        data.reqId = this.reqId;
+        var pack = packet.pack(data);
+        this.socket.send(pack);
+    }else{
+        console.error(TAG, "client socket is null, 不能发送数据");
+    }
 }
 
 cls.ping = function(){
@@ -114,11 +100,23 @@ cls.ping = function(){
     }, this.HBInterval*1000/2);
 }
 
-cls.request = function(data, next){
-    this.send(data);
-    this.node.once(data.route, (ret)=>{
-        next(ret);
-    });
+cls.request = function(route, msg, next){
+    var self = this;
+    ++self.reqId;
+    if (self.reqIdHandlerMap[self.reqId]){
+        ++self.reqId;
+    }
+    let reqId = self.reqId;
+
+    self.reqIdHandlerMap[reqId] = function(data){
+        next(data);
+        delete self.reqIdHandlerMap[reqId];
+        console.log(TAG, JSON.stringify(self.reqIdHandlerMap));
+    };
+    console.log(TAG, JSON.stringify(self.reqIdHandlerMap));
+    this.send({route: route, data: msg});
+    if (self.reqId > 100000000000)
+        self.reqId = 1;
 }
 
 cls.on = function(event, next){
@@ -126,7 +124,10 @@ cls.on = function(event, next){
 }
 
 cls.close = function(){
-    this.socket.close();
+    if (this.socket){
+        this.socket.close();
+        this.socket = null;
+    }
     if (this.freqTimeId){
         clearInterval(this.freqTimeId);
         this.freqTimeId = null;

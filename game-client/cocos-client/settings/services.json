@@ -142,5 +142,21 @@
         "ios"
       ]
     }
+  ],
+  "game": {
+    "name": "艾达游戏",
+    "appid": "663389459",
+    "cid": "0"
+  },
+  "configs": [
+    {
+      "appid": "663389459",
+      "services": [
+        {
+          "service_id": "242",
+          "enable": false
+        }
+      ]
+    }
   ]
 }

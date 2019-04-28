@@ -120,7 +120,7 @@ var doJoinRoom = function(ret, next){
         if (code != errcode.OK){
             return console.log(TAG, "doJoinRoom: ", code);
         }
-        cli.request({route: "joinRoom", joinData: {roomId: ret.roomId, connectionCode: ret.connectionCode}}, function(result){
+        cli.request("joinRoom", {roomId: ret.roomId, connectionCode: ret.connectionCode}, function(result){
             if (result.code != errcode.OK){
                 return next(result.code);
             }
