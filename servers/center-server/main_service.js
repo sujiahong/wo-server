@@ -16,11 +16,13 @@ exports.initUserData = function(){
                 }
                 var rets = ret.results;
                 var len = rets.length;
-                var userIdMap = {};
-                for(var i = 0; i < len; ++i){
-                    userIdMap[ret.results[i].userid] = '1';
+                if (len > 0){
+                    var userIdMap = {};
+                    for(var i = 0; i < len; ++i){
+                        userIdMap[rets[i].userid] = '1';
+                    }
+                    redis.addToMUserIdTable(userIdMap);
                 }
-                redis.addToMUserIdTable(userIdMap);
             });
         }
         console.log(TAG, "user table len: ", data.len);

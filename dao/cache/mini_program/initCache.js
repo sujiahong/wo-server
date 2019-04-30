@@ -1,6 +1,6 @@
 "use strict";
 const TAG = "initCache.js";
-g_serverData.table = {};
+g_serverData.cache = {};
 const mysqlUser = require("../../mysql/mini_program/table_user");
 const User = require("./table/user");
 const errcode = require("../../../share/errcode");
@@ -31,6 +31,8 @@ class UserTableCache {
                 user = new User(ret.results[0]);
                 user.setOperation("update");
                 self.idUserCacheMap[userId] = user;
+                self.idUserCacheMap[user.account] = user;
+                Object.defineProperty(self.idUserCacheMap, user.account, {enumerable: false});
                 next({code: 0, data: user});
             });
         }else{
@@ -107,7 +109,7 @@ var refreshData = function(self){
                 }
                 if (dirtyArr.length > 0){
                     str = str.substr(1);
-                    logger.debug(TAG, "有数据更新 ", str);
+                    logger.debug(TAG, "有数据更新 ", str, user.userid);
                     mysqlUser.modifyUser(head + str + tail + user.userid, function(ret){
                         if (ret.code == errcode.OK){
                             for (var i = 0; i < dirtyArr.length; ++i){
@@ -130,7 +132,7 @@ var refreshData = function(self){
             refreshData(self);
         }
     }
-    console.log(TAG, "玩家数据变动的数量：   ", userDirtyArr.length)
+    logger.info(TAG, "玩家数据变动的数量：   ", userDirtyArr.length)
     if (userDirtyArr.length > 0){
         _refresh(0);
     }else{
@@ -140,4 +142,4 @@ var refreshData = function(self){
     }
 }
 
-g_serverData.table.userTableCache = new UserTableCache();
+g_serverData.cache.userTableCache = new UserTableCache();

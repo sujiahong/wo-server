@@ -2,6 +2,9 @@ const TAG = "bench.js";
 const http = require("http");
 const queryString = require("querystring");
 const ws = require("ws");
+const cluster = require("cluster");
+
+var base = 10000000;
 
 var request = function(url, next){
     var rt = http.request(url, function(res){
@@ -23,8 +26,8 @@ var request = function(url, next){
     rt.end();
 }
 
-var gate = function(i, next){
-    let account = 10000000+i;
+var gate = function(b, i, next){
+    let account = b+i;
     var url = "http://192.168.10.34:8090/validateUser?";
     var queryData = {
         accountType: "telnumber",
@@ -75,7 +78,7 @@ var createRoom = function(data, next){
             next({code: 0});
             setTimeout(function(){
                 client.close();
-            }, 3000);
+            }, 10000);
         });
         client.on("error", function(err){
             console.log("socket error !!!", err);
@@ -86,22 +89,39 @@ var createRoom = function(data, next){
     });
 }
 
-var bench = function(num){
+var bench = function(b, num){
     for (let i = 0; i < num; ++i){
-        gate(i, function(data){
+        gate(b, i, function(data){
             if (data.code != 0){
                 return console.log("gate error: ", data);
             }
+            console.log("account= ", data.account, " login !!!");
             login(data, function(ret){
                 if (ret.code != 0){
                     return console.log("login error: ", ret);
                 }
-                createRoom(ret, function(){
-
+                console.log("account= ", data.account, " logined, userid= ", ret.userId, " 创建房间");
+                createRoom(ret, function(r){
+                    console.log(r)
                 });
             });
         });
     }
 }
 
-bench(5000);
+
+if (cluster.isMaster) {
+    console.log(`主进程 ${process.pid} 正在运行`);
+    bench(base, 1);
+    // 衍生工作进程。
+    for (let i = 0; i < 1; i++) {
+      cluster.fork();
+    }
+  
+    cluster.on('exit', (worker, code, signal) => {
+      console.log(`工作进程 ${worker.process.pid} 已退出`);
+    });
+  } else {
+    console.log(`工作进程 ${process.pid} 已启动`);
+    bench(base + base, 1);
+  }

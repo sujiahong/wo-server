@@ -24,4 +24,5 @@ module.exports = {
     },
     LOGIN_TIME: 3600000,
     REFRESH_MYSQL_TIME: 20000,
+    CACHE_STAY_TIME: 30000,
 };

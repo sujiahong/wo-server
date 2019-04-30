@@ -1,5 +1,6 @@
 "use strict";
 const TAG = "table_user.js";
+const constant = require("../../../../share/constant");
 
 class User{
     constructor(opt){
@@ -24,9 +25,10 @@ class User{
         this.operation = "";////////insert  /  update
         Object.defineProperty(this, "operation", {enumerable: false});
         setTimeout(() => {
-            delete g_serverData.table.userTableCache[opt.userid];
-            delete g_serverData.table.userTableCache[opt.account];
-        }, 3000);
+            console.log("11111111111111111111  ", opt.userid, opt.account)
+            delete g_serverData.cache.userTableCache.idUserCacheMap[opt.userid];
+            delete g_serverData.cache.userTableCache.idUserCacheMap[opt.account];
+        }, constant.CACHE_STAY_TIME);
     }
     setOperation(op){
         this.operation = op;
