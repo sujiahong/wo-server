@@ -53,6 +53,8 @@ dbc.mysqlPoolConnect = function(dbName){
         port: config.MYSQL_PORT,
         user: config.MYSQL_USER,
         password: config.MYSQL_PASSWD,
+        connectTimeout: 60000,
+        acquireTimeout: 60000,
         database: dbName,
         charset: "utf8mb4",
         debug: false

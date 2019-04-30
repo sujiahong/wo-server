@@ -23,4 +23,5 @@ module.exports = {
         mail: "mail",
     },
     LOGIN_TIME: 3600000,
+    REFRESH_MYSQL_TIME: 20000,
 };

@@ -2,7 +2,7 @@
 const TAG = "home-server/main_service.js";
 const redis = require("../../../dao/redis/redis_common");
 const luckRedis = require("../../../dao/redis/redis_lucktest");
-const userTable = require("../../../dao/mysql/mini_program/table_user");
+const userTable = g_serverData.table.userTableCache;
 const constant = require("../../../share/constant");
 const errcode = require("../../../share/errcode");
 const util = require("../../../utils/utils");
@@ -13,12 +13,12 @@ var service = module.exports;
 
 service.login = function(loginData, next){
     loginData.accountData = JSON.parse(decodeURIComponent(loginData.accountData));
-    userTable.queryAccount(loginData.account, (ret)=>{
+    userTable.selectAccount(loginData.account, (ret)=>{
         if (ret.code != errcode.OK){
             return next(ret);
         }
-        if (ret.results.length > 0){
-            doLogin(ret.results[0], loginData, next);
+        if (ret.data){
+            doLogin(ret.data, loginData, next);
         }else{
             logger.info(TAG, "go 注册！！！", loginData);
             service.register(loginData, next);
@@ -26,41 +26,37 @@ service.login = function(loginData, next){
     });
 }
 
-var doLogin = function(userData, loginData, next){
-    var userId = userData.userid;
+var doLogin = function(cacheUser, loginData, next){
+    var userId = cacheUser.userid;
     var accountData = loginData.accountData;
     accountData.avatarUrl = decodeURIComponent(accountData.avatarUrl);
     accountData.nickName = decodeURIComponent(accountData.nickName);
-    if(accountData.avatarUrl == userData.icon && accountData.gender == userData.sex &&
-    accountData.nickName == userData.nickname){
-        if (loginData.ip == userData.login_ip){
-            userTable.modifyUserLoginTime(userId, function(){});
-        }else{
-            userTable.modifyUserLoginIP(userId, loginData.ip, function(){});
+    userTable.updateUser(userId, {nickname: accountData.nickName, icon: accountData.avatarUrl,
+         sex: accountData.gender, login_ip: loginData.ip, login_time: Date.now()}, 
+    function(ret){
+        if (ret.code != errcode.OK){
+            return next(ret);
         }
-    }else{
-        loginData.accountData.ip = loginData.ip;
-        userTable.modifyUserInfo(userId, loginData.accountData, function(){});
-    }
-    var user = new HomeUser(userId, userData);
-    g_serverData.homeManager.userAdd(userId, user);
-    redis.getRecommendationTTL(loginData.recommendation, function(num){
-        if (num > 0){
-            user.timeId = setTimeout(function(){
+        var user = new HomeUser(userId, cacheUser);
+        g_serverData.homeManager.userAdd(userId, user);
+        redis.getRecommendationTTL(loginData.recommendation, function(num){
+            if (num > 0){
+                user.timeId = setTimeout(function(){
+                    g_serverData.homeManager.userExit(userId);
+                    delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
+                }, num);
+            }else{
                 g_serverData.homeManager.userExit(userId);
                 delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-            }, num);
-        }else{
-            g_serverData.homeManager.userExit(userId);
-            delete g_serverData.homeManager.recommendationAccountMap[loginData.recommendation];
-        }
+            }
+        });
+        var res = {
+            code: 0,
+            userId: userId,
+            coins: cacheUser.coins,
+        };
+        next(res);
     });
-    var res = {
-        code: 0,
-        userId: userId,
-        coins: userData.coins,
-    };
-    next(res);
 }
 
 service.register = function(registerData, next){
@@ -69,43 +65,46 @@ service.register = function(registerData, next){
             logger.error(TAG, "生成userid errcode: ", code);
             return next({code: code});
         }
-        var userData = {};
-        userData.userId = userId;
-        userData.cli_type = registerData.cliType;
-        userData.account_type = registerData.accountType;
-        userData.account = registerData.account;
-        userData.client_id = registerData.clientId;
-        userData.nickname = decodeURIComponent(registerData.accountData.nickName);
-        userData.sex = registerData.accountData.gender;
-        userData.icon = decodeURIComponent(registerData.accountData.avatarUrl) || "";
-        userData.coins = 20;
-        userData.login_ip = registerData.ip;
-        userTable.createUser(userData, function(ret){
-            if (ret.code != errcode.OK){
-                return next(ret);
-            }
-            var user = new HomeUser(userId, userData);
-            g_serverData.homeManager.userAdd(userId, user);
-            redis.getRecommendationTTL(registerData.recommendation, function(num){
-                if (num > 0){
-                    user.timeId = setTimeout(function(){
-                        g_serverData.homeManager.userExit(userId);
-                        delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
-                    }, num);
-                }else{
+        var time = Date.now();
+        var userData = {
+            userid : userId,
+            cli_type : registerData.cliType,
+            account_type : registerData.accountType,
+            account : registerData.account,
+            client_id : registerData.clientId,
+            nickname : decodeURIComponent(registerData.accountData.nickName),
+            sex : registerData.accountData.gender,
+            icon : decodeURIComponent(registerData.accountData.avatarUrl) || "",
+            coins : 20,
+            login_ip : registerData.ip,
+            create_time : time,
+            login_time : time,
+            lv: 0,
+            location: "",
+            successive_sign: 0,
+        };
+        var cacheUser = userTable.insertUser(userData);
+        var user = new HomeUser(userId, cacheUser);
+        g_serverData.homeManager.userAdd(userId, user);
+        redis.getRecommendationTTL(registerData.recommendation, function(num){
+            if (num > 0){
+                user.timeId = setTimeout(function(){
                     g_serverData.homeManager.userExit(userId);
                     delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
-                }
-            });
-            redis.addToUserIdTable(userId);
-            var res = {
-                code: 0,
-                userId: userId,
-                coins: 20
-            };
-            logger.info(TAG, "to client data: ", res);
-            next(res);
+                }, num);
+            }else{
+                g_serverData.homeManager.userExit(userId);
+                delete g_serverData.homeManager.recommendationAccountMap[registerData.recommendation];
+            }
         });
+        redis.addToUserIdTable(userId);
+        var res = {
+            code: 0,
+            userId: userId,
+            coins: 20
+        };
+        logger.info(TAG, "to client data: ", res);
+        next(res);
     });
 }
 
@@ -152,7 +151,7 @@ service.luckTest = function(user, next){
         var costArr = info.consumption;
         user.coins -= costArr[times];
         luckRedis.setUserIdTimes(user.id, times + 1, function(){
-            userTable.modifyUserCoins(user.id, user.coins, function(){});
+            userTable.updateUser(user.id, {coins: user.coins}, function(){});
             next({code: errcode.OK, coins: user.coins});
         });
     });
@@ -191,9 +190,10 @@ service.signIn = function(user, next){
             luckRedis.setUserIdSignTimeArr(user.id, ret.data);
             var coin = 60 + Math.floor(Math.random() * 1000000)%10 + Math.floor(Math.pow(user.coins, 1/3));
             user.coins += coin;
-            userTable.modifyUserCoins(user.id, user.coins, function(){});
-            ret.coin = coin;
-            next(ret);
+            userTable.updateUser(user.id, {coins: user.coins}, function(){
+                ret.coin = coin;
+                next(ret);
+            });
         });
     });
 }
@@ -204,7 +204,7 @@ service.shareSignInSuccess = function(user, coin, next){
             return next(ret);
         }
         user.coins += coin;
-        userTable.modifyUserCoins(user.id, user.coins, function(){
+        userTable.updateUser(user.id, {coins: user.coins}, function(){
             ret.coin = 2 * coin;
             next(ret);
         });

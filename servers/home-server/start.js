@@ -16,6 +16,7 @@ logger.info("连接 redis server， mysql server pid: ", process.pid);
 dbConn.redisConnect();
 //连接mysql
 dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
+require("../../dao/cache/mini_program/initCache");
 const router = require("./router");
 
 const serverInfo = JSON.parse(process.argv[2]);

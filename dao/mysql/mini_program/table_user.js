@@ -12,14 +12,12 @@ exports.createUser = function(userData, next){
     var time = Date.now();
     var sql = "INSERT INTO mp_user(userid,nickname,sex,icon,coins,create_time,login_time,client_id,cli_type,account_type,account,login_ip) \
     VALUES(%s,'%s',%d,'%s',%d,%d,%d,%d,'%s','%s','%s','%s')";
-    sql = util.format(sql, userData.userId, userData.nickname, userData.sex, userData.icon, userData.coins,
+    sql = util.format(sql, userData.userid, userData.nickname, userData.sex, userData.icon, userData.coins,
         time, time, userData.client_id, userData.cli_type, userData.account_type, userData.account, userData.login_ip);
     dbConn.mysqlPoolQuery(sql, next);
 }
 
-exports.modifyUserInfo = function(userId, userInfo, next){
-    var sql = "UPDATE mp_user SET nickname='%s', sex=%d, icon='%s', login_ip='%s', login_time=%d  WHERE userid = " + userId;
-    sql = util.format(sql, userInfo.nickName, userInfo.gender, userInfo.avatarUrl, userInfo.ip, Date.now());
+exports.modifyUser = function(sql, next){
     dbConn.mysqlPoolQuery(sql, next);
 }
 
