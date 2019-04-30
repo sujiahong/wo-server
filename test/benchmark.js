@@ -5,6 +5,7 @@ const ws = require("ws");
 const cluster = require("cluster");
 
 var base = 10000000;
+var num = 3000;
 
 var request = function(url, next){
     var rt = http.request(url, function(res){
@@ -112,9 +113,9 @@ var bench = function(b, num){
 
 if (cluster.isMaster) {
     console.log(`主进程 ${process.pid} 正在运行`);
-    bench(base, 1);
+    bench(base, num);
     // 衍生工作进程。
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 2; i++) {
       cluster.fork();
     }
   
@@ -122,6 +123,9 @@ if (cluster.isMaster) {
       console.log(`工作进程 ${worker.process.pid} 已退出`);
     });
   } else {
-    console.log(`工作进程 ${process.pid} 已启动`);
-    bench(base + base, 1);
+    console.log(`工作进程 ${process.pid} 已启动`, cluster.worker.id);
+    if (cluster.worker.id == 1)
+        bench(base + base, num);
+    else
+        bench(base*3, num);
   }
