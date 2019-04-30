@@ -24,11 +24,18 @@ class User{
         Object.defineProperty(this, "_dirtyStat", {enumerable: false});
         this.operation = "";////////insert  /  update
         Object.defineProperty(this, "operation", {enumerable: false});
-        setTimeout(() => {
-            console.log("11111111111111111111  ", opt.userid, opt.account)
-            delete g_serverData.cache.userTableCache.idUserCacheMap[opt.userid];
-            delete g_serverData.cache.userTableCache.idUserCacheMap[opt.account];
-        }, constant.CACHE_STAY_TIME);
+        var _timeoutDelete = function(){
+            setTimeout(() => {
+                var user = g_serverData.cache.userTableCache.idUserCacheMap[opt.userid];
+                if (user._dirtyStat == false){
+                    delete g_serverData.cache.userTableCache.idUserCacheMap[opt.userid];
+                    delete g_serverData.cache.userTableCache.idUserCacheMap[opt.account];
+                }else{
+                    _timeoutDelete();
+                }
+            }, constant.CACHE_STAY_TIME);
+        }
+        _timeoutDelete();
     }
     setOperation(op){
         this.operation = op;

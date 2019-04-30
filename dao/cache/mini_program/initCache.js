@@ -115,12 +115,13 @@ var refreshData = function(self){
                             for (var i = 0; i < dirtyArr.length; ++i){
                                 dirtyArr[i]._dirtyStat = false;
                             }
+                            user._dirtyStat = false;
                         }
                         _refresh(idx+1);
                     });
                 }
             }else{
-                logger.debug(TAG, "新玩家创建 ", user.account, user.userid);
+                //logger.debug(TAG, "新玩家创建 ", user.account, user.userid);
                 mysqlUser.createUser(user, function(ret){
                     if (ret.code == errcode.OK){
                         user._dirtyStat = false;
