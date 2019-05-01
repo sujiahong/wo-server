@@ -28,9 +28,18 @@ var connectHome = function(){
     var homeList = require("../../config/cluster_info.json").HOME_SERVER_LIST;
     for (let i = 0; i < homeList.length; ++i){
         let cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
-        cli.connect();
-        cli.request("register", serverInfo, function(data){
-            logger.info(TAG, "向home server 注册 success code: ", data.code);
+        cli.connect(function(ret){
+            if (ret.code != errcode.OK){
+                if (ret.code == errcode.CLIENT_SOCKET_CLOSE){
+                    logger.warn(TAG, g_serverData.manager.serverName, " socket close!!!");
+                }else if (ret.code == errcode.CLIENT_SOCKET_ERR){
+                    logger.error(TAG, g_serverData.manager.serverName, " socket error!!!");
+                }
+            }else{
+                cli.request("register", serverInfo, function(data){
+                    logger.info(TAG, "向home server 注册 success code: ", data.code);
+                });
+            }
         });
         mainRouter.notifyFromHome(cli);
         g_serverData.manager.homeIdClientMap[homeList[i].ID] = cli; 

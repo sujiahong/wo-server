@@ -42,7 +42,7 @@
             "level": "all"
         },
         "game-server": {
-            "appenders": ["game-server"],
+            "appenders": ["game-server", "out"],
             "level": "all"
         },
         "download-server": {

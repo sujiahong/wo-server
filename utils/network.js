@@ -77,7 +77,7 @@ var doConnect = function(self, next){
             self.freqTimeId = setInterval(()=>{
                 self.ping();
             }, self.HBInterval*1000);
-        }, 1000);
+        }, 3000+Math.floor(2000*Math.random()));
     });
     socket.on("drain", ()=>{
         logger.error(TAG, "socket client drain事件 触发 触发 触发！！！");
@@ -176,7 +176,7 @@ Server.prototype.createServer = function(next){
         self.socketMap[socket.id] = socket;
         logger.debug(TAG, process.pid, "服务端连接建立成功ip-port: ", socket.remoteAddress, socket.remotePort);
         socket.on("close", function(){
-            logger.warn(TAG, "server close close socketId: ", socket.id);
+            logger.warn(TAG, "server close close socketId: ", socket.id, socket._uid);
             self.closeClientConn(socket.id);
             next ? next({code: errcode.SERVER_SOCKET_CLOSE, socketId: socket.id, uid: socket._uid}) : null;
         });

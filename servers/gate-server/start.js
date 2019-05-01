@@ -18,14 +18,25 @@ const mainService = require("./service/main_service");
 const serverInfo = JSON.parse(process.argv[2]);
 g_serverData.serverName = serverInfo.NAME;
 g_serverData.serverId = serverInfo.ID;
+g_serverData.accessCount = 0;
 
 logger.info(TAG, "gate server start ~~!!!!", serverInfo.ID, process.pid, process.cwd());
 
 var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
-cli.connect();
-cli.request("register", serverInfo, function(data){
-    logger.info(TAG, "向center server 注册 success code: ", data.code);
+cli.connect(function(ret){
+    if (ret.code != errcode.OK){
+        if (ret.code == errcode.CLIENT_SOCKET_CLOSE){
+            logger.warn(TAG, g_serverData.serverName, " socket close!!! to center");
+        }else if (ret.code == errcode.CLIENT_SOCKET_ERR){
+            logger.error(TAG, g_serverData.serverName, " socket error!!! to center");
+        }
+    }else{
+        cli.request("register", serverInfo, function(data){
+            logger.info(TAG, "向center server 注册 success code: ", data.code);
+        });
+    }
 });
+
 
 var listenHomeClient = function(){
     g_serverData.idHomeInfoMap = {};
@@ -69,6 +80,7 @@ var listenHttpClient = function(){
 var requestRouteHandler = function(req, next){
     var urlData = URL.parse(req.url);
     if (urlData.pathname == "/validateUser"){
+        ++g_serverData.accessCount;
         logger.info(TAG, "验证用户身份，获取推荐码", urlData.query);
         mainService.validateUser(queryString.parse(urlData.query), next);
     }else if (urlData.pathname == "/checkRecommendation"){

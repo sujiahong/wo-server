@@ -109,7 +109,7 @@ var refreshData = function(self){
                 }
                 if (dirtyArr.length > 0){
                     str = str.substr(1);
-                    logger.debug(TAG, "有数据更新 ", str, user.userid);
+                    //logger.debug(TAG, "有数据更新 ", str, user.userid);
                     mysqlUser.modifyUser(head + str + tail + user.userid, function(ret){
                         if (ret.code == errcode.OK){
                             for (var i = 0; i < dirtyArr.length; ++i){

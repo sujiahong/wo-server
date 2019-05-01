@@ -64,7 +64,7 @@ var recommondHomeServer = function(serverMap){
     if(len == 1){
 		return serverMap[serverList[0]];
 	}
-    var idx = Math.floor(Math.random()* 100000) % len;
+    var idx = g_serverData.accessCount % len;
     return serverMap[serverList[idx]];
 }
 
