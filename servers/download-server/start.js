@@ -35,10 +35,10 @@ cli.connect(function(ret){
 ///////热更新下载
 var app = nhp.createExpress({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT});
 app.use(express.static(path.join(__dirname+"/assets", "hotupdate")));
-
 ///////游戏包下载
 var appc = nhp.createExpress({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1});
 appc.use(express.static(path.join(__dirname+"/assets", "game-package")));
+///////config
 // nhp.createHttp({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1}, function(msg, res){
 //     var pathname = URL.parse(msg.url).pathname;
 //     pathname = __dirname + "/assets" + pathname;
