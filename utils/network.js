@@ -14,7 +14,7 @@ var nw = module.exports;
 var Client = function(options){
     this.options = options
     this.socket = null;
-    this.HBInterval = 25;
+    this.HBInterval = 30;
     this.HBTime = 0;
     this.freqTimeId = null;
     this.closeTimeId = null;
@@ -157,7 +157,7 @@ var Server = function(options){
     this.options = options;
     this.server = null;
     this.socketMap = {};
-    this.HBInterval = 30;
+    this.HBInterval = 40;
     this.remainderData = Buffer.alloc(0);
     this.sendFailData = Buffer.alloc(0);
 }
