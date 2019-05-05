@@ -19,6 +19,11 @@ class LoginLauncher{
             this.address = addressData.address;
             this.recommendation = addressData.recommendation;
         }
+        this.gateInfoArr = [];
+        var gateInfoArr = cc.sys.localStorage.getItem(constant.LOCAL_ITEM.gate_info);
+        if (gateInfoArr){
+            this.gateInfoArr = JSON.parse(gateInfoArr);
+        }
     }
 
     setAccount(account){
@@ -29,6 +34,33 @@ class LoginLauncher{
     }
     setAccountType(accountType){
         this.accountType = accountType;
+    }
+
+    getGateUrl(next){
+        var self = this;
+        var len = self.gateInfoArr.length;
+        if (len > 0){
+            next(0, self.randGateUrl(len));
+        }else{
+            request.get({
+                url: constant.DOWNLOAD_URL
+            }, function(code, ret){
+                console.log(TAG, "gainGateInfo: ", code, JSON.stringify(ret));
+                if (code != errcode.OK)
+                    return next(code);
+                cc.sys.localStorage.setItem(constant.LOCAL_ITEM.gate_info, JSON.stringify(ret));
+                self.gateInfoArr = ret;
+                next(0, self.randGateUrl(len));
+            });
+        }
+    }
+
+    randGateUrl(len){
+        var ram = 0;
+        if (len > 1)
+            ram = Math.floor(Math.random()*10000)%len;
+        var gateInfo = this.gateInfoArr[ram];
+        return "http://" + gateInfo.ip+":"+gateInfo.port+"/validateUser";
     }
 
     requestGate(next){
@@ -47,22 +79,28 @@ class LoginLauncher{
             return next(errcode.UNKNOW_ACCOUNT_TYPE);
         }
         accountData = JSON.stringify(accountData);
-        request.get({
-            url: constant.GATE_URL,
-            accountType: this.accountType,
-            accountData: encodeURIComponent(accountData)
-        }, function(code, ret){
-            console.log(TAG, "requestGate: ", code, JSON.stringify(ret));
-            if (code != errcode.OK)
-                return next(code);
-            if (ret.code != errcode.OK)
-                return next(ret.code);
-            self.recommendation = ret.recommendation;
-            self.address = "http://"+ret.ip + ":"+ret.port;
-            cc.sys.localStorage.setItem(constant.LOCAL_ITEM.address_data, 
-                JSON.stringify({recommendation: self.recommendation, address: self.address}));
-            self.account = ret.account;
-            self.requestLogin(next);
+        self.getGateUrl(function(ecode, url){
+            console.log(TAG, "request gate url: ", url);
+            if (ecode != 0){
+                return next(ecode);
+            }
+            request.get({
+                url: url,
+                accountType: self.accountType,
+                accountData: encodeURIComponent(accountData)
+            }, function(code, ret){
+                console.log(TAG, "requestGate: ", code, JSON.stringify(ret));
+                if (code != errcode.OK)
+                    return next(code);
+                if (ret.code != errcode.OK)
+                    return next(ret.code);
+                self.recommendation = ret.recommendation;
+                self.address = "http://"+ret.ip + ":"+ret.port;
+                cc.sys.localStorage.setItem(constant.LOCAL_ITEM.address_data, 
+                    JSON.stringify({recommendation: self.recommendation, address: self.address}));
+                self.account = ret.account;
+                self.requestLogin(next);
+            });
         });
     }
 
@@ -100,11 +138,11 @@ class LoginLauncher{
         if (this.account == ""){
             return next(errcode.LOGIN_ACCOUNT_NULL);
         }
-        if (this.recommendation && this.address){
-            this.requestLogin(next);
-        }else{
+        // if (this.recommendation && this.address){
+        //     this.requestLogin(next);
+        // }else{
             this.requestGate(next);
-        }
+        //}
     }
 
     requestRegister(next){

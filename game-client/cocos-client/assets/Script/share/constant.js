@@ -1,6 +1,6 @@
 module.exports = {
     CLIENT_ID: 101,
-    GATE_URL: "http://192.168.10.34:8090/validateUser",
+    DOWNLOAD_URL: "http://192.168.10.34:9992/gate_conf.json",
     CLI_TYPE: {
         app: "app",
         mini: "mini_program",
@@ -16,6 +16,7 @@ module.exports = {
     LOCAL_ITEM: {
         address_data: "AddressData",
         connect_data: "ConnectData",
+        gate_info: "GateInfo"
     },
     EVENT_NAME: {
 
