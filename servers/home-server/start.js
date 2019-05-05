@@ -26,24 +26,6 @@ g_serverData.homeManager.serverId = serverInfo.ID;
 
 logger.info(TAG, "home server start ~~!!!!", serverInfo.ID, process.pid, process.cwd());
 
-var cli = new network.Client({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
-cli.connect(function(ret){
-    if (ret.code != errcode.OK){
-        if (ret.code == errcode.CLIENT_SOCKET_CLOSE){
-            logger.warn(TAG, g_serverData.homeManager.serverName, " socket close!!! to center");
-        }else if (ret.code == errcode.CLIENT_SOCKET_ERR){
-            logger.error(TAG, g_serverData.homeManager.serverName, " socket error!!! to center");
-        }
-    }else{
-        cli.request("register", serverInfo, function(data){
-            logger.info(TAG, "向center server 注册 success code: ", data.code);
-            //连接gate
-            connectGate();
-        });
-    }
-});
-
-
 var connectGate = function(){
     var homeManager = g_serverData.homeManager;
     var gateList = require("../../config/cluster_info.json").GATE_SERVER_LIST;
@@ -62,12 +44,23 @@ var connectGate = function(){
                 });
             }
         });
+        homeManager.gateIdClientMap[gateList[i].ID] = gateClient;
         gateClient.on("recommend", function(data){
             logger.info(TAG, "recommend: ", data);
             homeManager.recommendationAccountMap[data.recommendation] = data.account;
         });
+        gateClient.on("home-info", function(data){
+            var forGameServer = g_serverData.homeManager.forGameServer;
+            var map = g_serverData.homeManager.idGameInfoMap;
+            data.homeId = g_serverData.homeManager.serverId;
+            for (var k in map){
+                forGameServer.send(map[k].socketId, {route: "game-info", data: data});
+            }
+        });
     }
 }
+
+connectGate();
 
 var listenGameClient = function(){
     var homeManager = g_serverData.homeManager;
@@ -87,6 +80,10 @@ var listenGameClient = function(){
         homeManager.idGameInfoMap[serverData.ID] = serverData;
         next({code: 0});
         logger.debug(TAG, serverData.NAME, "注册成功在home server!!!");
+    });
+    svr.on("game-info", function(info){
+        var gateClient = g_serverData.homeManager.gateIdClientMap[info.gateId];
+        gateClient.send({route: "home-info", data: info});
     });
     homeManager.forGameServer = svr;
 }

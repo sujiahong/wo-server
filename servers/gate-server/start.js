@@ -19,6 +19,7 @@ const serverInfo = JSON.parse(process.argv[2]);
 g_serverData.serverName = serverInfo.NAME;
 g_serverData.serverId = serverInfo.ID;
 g_serverData.accessCount = 0;
+g_serverData.gateServerNum = 0;
 
 logger.info(TAG, "gate server start ~~!!!!", serverInfo.ID, process.pid, process.cwd());
 
@@ -33,7 +34,20 @@ cli.connect(function(ret){
     }else{
         cli.request("register", serverInfo, function(data){
             logger.info(TAG, "向center server 注册 success code: ", data.code);
+            setTimeout(function(){
+                cli.request("gate-num", {}, function(data){
+                    g_serverData.gateServerNum = data.num;
+                });
+            }, 3000);
         });
+    }
+});
+
+cli.on("inner-servers-info", function(data){
+    var forHomeServer = g_serverData.forHomeServer;
+    var map = g_serverData.idHomeInfoMap;
+    for(var k in map){
+        forHomeServer.send(map[k].socketId, {route: "home-info", data: data});
     }
 });
 
@@ -56,6 +70,9 @@ var listenHomeClient = function(){
         g_serverData.idHomeInfoMap[serverData.ID] = serverData;
         next({code: 0});
         logger.debug(TAG, serverData.NAME, "注册成功在gate server!!!");
+    });
+    svr.on("home-info", function(info){
+        cli.send({route: "inner-servers-info", data: info});
     });
     g_serverData.forHomeServer = svr;
 }

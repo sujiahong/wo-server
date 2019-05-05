@@ -15,6 +15,9 @@ module.exports = {
     MYSQL_PASSWD: "root",
     MYSQL_CONNECTION_LIMIT: 1000,
 
+    WEB_IP: "192/168.10.34",
+    WEB_PORT: 10010,
+
     DB_NAME_LIST: ["test", "mini_program", ],
     WX_LOGIN_URL: "https://api.weixin.qq.com/sns/jscode2session?",
 };

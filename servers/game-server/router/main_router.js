@@ -6,6 +6,10 @@ const errcode = require("../../../share/errcode");
 var manager = g_serverData.manager;
 
 exports.notifyFromHome = function(cli){
+    cli.on("game-info", function(data){
+        data.gameInfo = {id: manager.serverId};
+        cli.send({route: "game-info", data: data});
+    });
     cli.on("createRoom", function(roomInfo){
         manager.connCodeUserIdMap[roomInfo.connectionCode] = roomInfo.userId;
         mainService.createRoom(roomInfo);

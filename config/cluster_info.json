@@ -74,15 +74,6 @@
             "FOR_LOGIC_PORT": 9150,
             "FOR_CLIENT_PORT": 8150,
             "START_PATH": "./servers/home-server/start"
-        },
-        {
-            "ID": "home-server-6",
-            "NAME": "home-server-6",
-            "type": "home-server",
-            "IP": "192.168.10.34",
-            "FOR_LOGIC_PORT": 9160,
-            "FOR_CLIENT_PORT": 8160,
-            "START_PATH": "./servers/home-server/start"
         }
     ],
     "GAME_SERVER_LIST": [

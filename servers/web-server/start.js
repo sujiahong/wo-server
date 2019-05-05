@@ -12,6 +12,7 @@ var http = require('http');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+const config = require("../../share/config");
 
 // error handler
 onerror(app);
@@ -55,7 +56,7 @@ var server = http.createServer(app.callback());
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(10010);
+server.listen(config.WEB_PORT);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -96,5 +97,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log(TAG, 'web server Listening on ' + bind);
 }

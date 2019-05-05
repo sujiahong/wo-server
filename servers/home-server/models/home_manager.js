@@ -5,6 +5,7 @@ class HomeManager {
     constructor(){
         this.serverId = 0;
         this.serverName = "";
+        this.gateIdClientMap = {};
         this.userIdObjectMap = {};
         this.recommendationAccountMap = {};
         this.idGameInfoMap = {};

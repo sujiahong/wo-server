@@ -17,6 +17,7 @@ dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
 logger.info(TAG, "center server start ~~!!!!", process.pid, process.cwd());
 const mainService = require("./main_service");
 
+g_serverData.innerServerInfo = {};
 g_serverData.idServerInfoMap = {};
 var svr = new network.Server({host: config.CENTER_IP, port: config.CENTER_SOCKET_PORT});
 svr.createServer(function(ret){
@@ -35,8 +36,34 @@ svr.on("register", function(serverData, next){
     next({code: 0});
     logger.debug(TAG, serverData.NAME, "注册成功在center server!!!");
 });
+svr.on("gate-num", function(data, next){
+    var count = 0;
+    for (var k in g_serverData.idServerInfoMap){
+        if (g_serverData.idServerInfoMap[k].type == "gate-server")
+            ++count;
+    }
+    next({code: 0, num: count});
+});
+
+svr.on("inner-servers-info", function(info){
+    var innerServerInfo = g_serverData.innerServerInfo;
+    if (!innerServerInfo[info.gateId]){
+        innerServerInfo[info.gateId] = {
+            [info.homeId]:{
+                [info.gameInfo.id]: info.gameInfo,
+            },
+        };
+    }else{
+        if (!innerServerInfo[info.gateId][info.homeId]){
+            innerServerInfo[info.gateId][info.homeId] = {[info.gameInfo.id]: info.gameInfo,};
+        }else{
+            innerServerInfo[info.gateId][info.homeId][info.gameInfo.id] = info.gameInfo;
+        }
+    }
+});
 g_serverData.centerServer = svr;
 
+////////////监听消息
 var options = {
     host: config.CENTER_IP,
     port: config.CENTER_HTTP_PORT,

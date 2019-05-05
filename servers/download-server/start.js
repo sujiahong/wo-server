@@ -39,20 +39,20 @@ app.use(express.static(path.join(__dirname+"/assets", "hotupdate")));
 var appc = nhp.createExpress({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1});
 appc.use(express.static(path.join(__dirname+"/assets", "game-package")));
 ///////config
-// nhp.createHttp({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+1}, function(msg, res){
-//     var pathname = URL.parse(msg.url).pathname;
-//     pathname = __dirname + "/assets" + pathname;
-//     logger.info(TAG, "请求pathname:", pathname, msg.headers, msg.httpVersion);
-//     fs.readFile(pathname, function(err, data){
-//         if (err){
-//             res.writeHead(404, {"Content-Type": "text/plain"});
-//             return res.end(err.code);
-//         }
-//         res.writeHead(200, {"Content-Type": "text/plain"});
-//         res.write(data, "binary");
-//         res.end();
-//     });
-// });
+nhp.createHttp({host: serverInfo.IP, port: serverInfo.FOR_CLIENT_PORT+2}, function(msg, res){
+    var pathname = URL.parse(msg.url).pathname;
+    pathname = __dirname + "/assets/config" + pathname;
+    logger.info(TAG, "请求pathname:", pathname, msg.headers);
+    fs.readFile(pathname, function(err, data){
+        if (err){
+            res.writeHead(404, {"Content-Type": "text/plain"});
+            return res.end(err.code);
+        }
+        res.writeHead(200, {"Content-Type": "text/plain"});
+        res.write(data, "binary");
+        res.end();
+    });
+});
 
 
 process.on("exit", function(){

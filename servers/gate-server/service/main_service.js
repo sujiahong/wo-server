@@ -13,7 +13,7 @@ service.validateUser = function(vData, next){
     switch(vData.accountType){
     case constant.ACCOUNT_TYPE.wx:
         httpReq.loginWX(vData, function(ret){
-            var toData = {};
+            var toData = {n: g_serverData.gateServerNum};;
             toData.code = ret.errcode;
             if (ret.errcode == errcode.OK){
                 var openid = ret.openid;
@@ -30,7 +30,7 @@ service.validateUser = function(vData, next){
         });
         break;
     case constant.ACCOUNT_TYPE.tel:
-        var toData = {};
+        var toData = {n: g_serverData.gateServerNum};
         toData.code = errcode.OK;
         var account = JSON.parse(decodeURIComponent(vData.accountData)).account;
         toData.account = account;

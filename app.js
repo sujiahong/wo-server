@@ -12,6 +12,7 @@ console.log(TAG, __dirname, process.execPath, process.execArgv, process.pid)
 /////启动集群
 srvCluster.createCluster(1, function(cluster){
     require("./servers/center-server/start");
+    cp.fork("./servers/web-server/start");
 }, function(cluster){
     //启动服务
     var startArr = [];

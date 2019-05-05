@@ -38,15 +38,15 @@
             "level": "all"
         },
         "home-server": {
-            "appenders": ["home-server", "out"],
+            "appenders": ["home-server"],
             "level": "all"
         },
         "game-server": {
-            "appenders": ["game-server", "out"],
+            "appenders": ["game-server"],
             "level": "all"
         },
         "download-server": {
-            "appenders": ["download-server"],
+            "appenders": ["download-server", "out"],
             "level": "all"
         }
     },

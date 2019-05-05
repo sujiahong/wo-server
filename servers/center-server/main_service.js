@@ -31,3 +31,13 @@ exports.initUserData = function(){
     /////加载用户数据
     //userTable.queryUserLastLogin();
 }
+
+exports.requestServerInfo = function(){
+    g_serverData.innerServerInfo = {};
+    var map = g_serverData.idServerInfoMap;
+    for (var k in map){
+        if (map[k].type == "gate-server"){
+            g_serverData.centerServer.send(map[k].socketId, {route: "inner-servers-info", data: {gateId: map[k].ID}});
+        }
+    }
+}
