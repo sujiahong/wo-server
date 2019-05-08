@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p(id="p", data-txt= serverInfo) #{serverInfo}
+  canvas(id="cvs")
+  script.
+    $(document).ready(function(){
+      var svrInfo = JSON.parse($("#p").attr("data-txt"));
+      var c = document.getElementById("cvs");
+      var ctx = c.getContext("2d");
+      var hi = 80, wi = 100, b = 20;
+      var arr = [];
+      var c1=0, c2=0, c3=0; 
+      for(var k in svrInfo){
+        c2=0;
+        ctx.rect(b, b+hi*c1, 80, 40);
+        for (var kk in svrInfo[k]){
+          c3=0;
+          ctx.rect(b+wi, b+hi*c2, 80, 40);
+          for(var kkk in svrInfo[kk]){
+            ctx.rect(b+wi*2, b+hi*c3, 80, 40);
+            c3++;
+          }
+          c2++;
+        }
+        c1++;
+      }
+      
+      ctx.stroke();
+    });
+

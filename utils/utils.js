@@ -199,3 +199,11 @@ utils.generateUniqueId = function(idLen, isExist, next){
 utils.generateConnectionCode = function(userId, from, to, roomId){
 	return userId+"|"+from+"|"+to +"|"+roomId+"|"+Math.floor(Date.now()*Math.random());
 }
+
+utils.delayPromise = function(time){
+	return new Promise(function(resolve, reject){
+		setTimeout(function(){
+			resolve();
+		}, time);
+	});
+}

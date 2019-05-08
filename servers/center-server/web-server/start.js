@@ -6,13 +6,13 @@ const views = require('koa-views');
 const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
-const logger = require('koa-logger');
-var debug = require('debug')('web-server');
+const klogger = require('koa-logger');
 var http = require('http');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
-const config = require("../../share/config");
+const config = require("../../../share/config");
+const logger = g_serverData.logger;
 
 // error handler
 onerror(app);
@@ -22,7 +22,7 @@ app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }));
 app.use(json());
-app.use(logger());
+app.use(klogger());
 app.use(require('koa-static')(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
@@ -56,7 +56,7 @@ var server = http.createServer(app.callback());
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(config.WEB_PORT);
+server.listen(config.CENTER_HTTP_PORT);
 server.on('error', onError);
 server.on('listening', onListening);
 
@@ -97,5 +97,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  console.log(TAG, 'web server Listening on ' + bind);
+  logger.debug(TAG, 'web server Listening on ' + bind);
 }

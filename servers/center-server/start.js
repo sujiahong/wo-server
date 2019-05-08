@@ -6,9 +6,6 @@ const logger = g_serverData.logger;
 const config = require("../../share/config");
 const errcode = require("../../share/errcode");
 const network = require("../../utils/network");
-const networkHttp = require("../../utils/network_http");
-const URL = require("url");
-const queryString = require("querystring");
 const dbConn = require("../../utils/db_connection");
 //连接redis
 dbConn.redisConnect();
@@ -63,34 +60,7 @@ svr.on("inner-servers-info", function(info){
 });
 g_serverData.centerServer = svr;
 
-////////////监听消息
-var options = {
-    host: config.CENTER_IP,
-    port: config.CENTER_HTTP_PORT,
-}
-networkHttp.createHttp(options, function(msg, res){
-    const statusCode = res.statusCode;
-    if (statusCode !== 200){
-        return res.end("fail");
-    }
-    requestRouteHandler(msg, (ret)=>{
-        res.end(JSON.stringify(ret));
-    });
-});
-
-var requestRouteHandler = function(req, next){
-    var urlData = URL.parse(req.url);
-    if (urlData.pathname == "/login"){
-        logger.info(TAG, "管理员用户登录, urlData.query");
-    }else if (urlData.pathname == "/lookServerInfo"){
-        
-    }else{
-        next({code: errcode.ROUTE_ERR});
-    }
-}
-
 //////初始化用户数据
-g_serverData.idUserDataMap = {};
 mainService.initUserData();
 
 process.on("exit", function(){

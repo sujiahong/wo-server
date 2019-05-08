@@ -32,7 +32,7 @@ exports.initUserData = function(){
     //userTable.queryUserLastLogin();
 }
 
-exports.requestServerInfo = function(){
+exports.refreshServerInfo = function(){
     g_serverData.innerServerInfo = {};
     var map = g_serverData.idServerInfoMap;
     for (var k in map){
