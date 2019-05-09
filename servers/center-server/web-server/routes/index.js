@@ -8,7 +8,7 @@ router.get('/', async (ctx, next) => {
   mainService.refreshServerInfo();
   await utils.delayPromise(2000);
   await ctx.render('index', {
-    title: '服务器状态',
+    title: '服务器状态Center-server',
     serverInfo: JSON.stringify(g_serverData.innerServerInfo)
   });
 })

@@ -2,31 +2,60 @@ extends layout
 
 block content
   h1= title
-  p(id="p", data-txt= serverInfo) #{serverInfo}
-  canvas(id="cvs")
+  p(id="p", data-txt= serverInfo)
+  canvas(id="cvs", style="border:1px solid #000000;", width="1500", height="1200")
   script.
     $(document).ready(function(){
       var svrInfo = JSON.parse($("#p").attr("data-txt"));
       var c = document.getElementById("cvs");
+      const width = $("#cvs").attr("width");
+      const height = $("#cvs").attr("height");
       var ctx = c.getContext("2d");
-      var hi = 80, wi = 100, b = 20;
-      var arr = [];
-      var c1=0, c2=0, c3=0; 
+      ctx.font = "30px Arial";
+      var arr = [{}, {}, {}];
       for(var k in svrInfo){
-        c2=0;
-        ctx.rect(b, b+hi*c1, 80, 40);
+        arr[0][k] = {name: k, lineData: svrInfo[k]};
         for (var kk in svrInfo[k]){
-          c3=0;
-          ctx.rect(b+wi, b+hi*c2, 80, 40);
-          for(var kkk in svrInfo[kk]){
-            ctx.rect(b+wi*2, b+hi*c3, 80, 40);
-            c3++;
+          arr[1][kk] = {name: kk, lineData: svrInfo[k][kk]};
+          for(var kkk in svrInfo[k][kk]){
+            arr[2][kkk] = {name: kkk};
           }
-          c2++;
         }
-        c1++;
       }
-      
+      const wi = 500, b = 80, rw = 220, rh = 40;
+      var setRectAndText = function(w, map){
+        var keys = Object.keys(map);
+        var len = keys.length;
+        var itv = height/(len+1);
+        for(var i = 0; i < len; ++i){
+          var o = map[keys[i]];
+          o.x = b + wi*w;
+          o.y = itv - rh/2 + itv*i;
+          o.mx = o.x + rw;
+          o.my = o.y + rh/2;
+          o.fx = o.x + 10;
+          o.fy = o.y + 30;
+          ctx.rect(o.x, o.y, rw, rh);
+          ctx.fillText(o.name, o.fx, o.fy);
+        }
+      }
+      for (var i = 0; i < 3; ++i){
+        setRectAndText(i, arr[i]);
+      }
+      var setLine = function(map1, map2){
+        for (var k in map1){
+          if (map1[k].lineData){
+            for(var kk in map1[k].lineData){
+              ctx.moveTo(map1[k].mx, map1[k].my);
+              var o = map2[kk];
+              ctx.lineTo(o.x, o.y+rh/2);
+            }
+          }
+        }
+      }
+      for (var i = 0; i < arr.length-1; ++i){
+        setLine(arr[i], arr[i+1]);
+      }
       ctx.stroke();
     });
 
