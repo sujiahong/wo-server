@@ -5,6 +5,7 @@ cc.g_ada = g_ada;
 const uiHelper = require("../util/ui_helper");
 const event = require("../util/event_emit");
 const util = require("../util/util");
+const agora = require("../util/agora");
 
 var cls = {};
 cls.extends = cc.Component;
@@ -16,14 +17,11 @@ cls.properties = {
 // use this for initialization
 cls.onLoad = function () {
     console.log(TAG, "onLoad onLoad!!!!");
-    /////添加常驻节点
-    cc.game.addPersistRootNode(this.persistNode);
-    cc.g_ada.persistNode = this.persistNode;
+
     //GLobleIAP.init();
-    this.name = "!!!!!!!";
     this.init();
     setTimeout(function() {
-        cc.director.loadScene("HotUpdateScene");
+        //cc.director.loadScene("HotUpdateScene");
     }, 2000);
 }
 
@@ -31,6 +29,11 @@ cls.init = function () {
     var str = util.md5("38338");
     var str1 = util.base64Encrypt("83739");
     console.error(TAG, "加密 ", str, str1)
+    /////添加常驻节点
+    cc.game.addPersistRootNode(this.persistNode);
+    cc.g_ada.persistNode = this.persistNode;
+    ///声网
+    agora.init();
 
     // event.on("gogo", function(){
     //     console.log(TAG, "i can gogogog!");
