@@ -21,4 +21,5 @@ module.exports = {
     EVENT_NAME: {
 
     },
+    AGORA_APP_ID: "f6fb5f3af6e4446a8114b0f76a0dddaf",
 };
