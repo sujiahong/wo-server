@@ -27,4 +27,6 @@ module.exports = {
 
 	UP_TIMES_LIMIT: 50,				//超过次数限制
 	HAVE_SIGNIN: 51,				//已经签过到
+
+	PLAYER_NOT_EXIST: 100,			//玩家不存在	
 };

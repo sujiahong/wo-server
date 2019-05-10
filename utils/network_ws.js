@@ -50,7 +50,7 @@ class WSServer extends event.EventEmitter{
         self.server = server;
         ///////
         self.on("socketData", function(socket, msg){
-            logger.debug(TAG, "Server socketData", socket.id, msg);
+            logger.debug(TAG, "Server socketData", socket.id, socket._uid, msg);
             if (msg.route == "ping"){
                 if (socket.closeTimeId){
                     clearTimeout(socket.closeTimeId);
@@ -61,6 +61,8 @@ class WSServer extends event.EventEmitter{
                 if (msg.route == "joinRoom"){
                     msg.data.socketId = socket.id;
                     socket._uid = msg.data.userId;
+                }else{
+                    msg.data.userId = socket._uid;
                 }
                 self.emit(msg.route, msg.data, function(ret){
                     msg.data = ret;

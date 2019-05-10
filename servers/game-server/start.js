@@ -17,7 +17,7 @@ dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
 
 const serverInfo = JSON.parse(process.argv[2]);
 g_serverData.manager = new GameManager();
-const mainRouter = require("./router/main_router");
+const router = require("./router");
 
 g_serverData.manager.serverName = serverInfo.NAME;
 g_serverData.manager.serverId = serverInfo.ID;
@@ -41,7 +41,7 @@ var connectHome = function(){
                 });
             }
         });
-        mainRouter.notifyFromHome(cli);
+        router.notifyFromHome(cli);
         g_serverData.manager.homeIdClientMap[homeList[i].ID] = cli; 
     }
 }
@@ -57,7 +57,7 @@ var listenConnection = function(){
             return logger.warn(TAG, "socket id close: ",  ret.socketId, ret.uid);
         }
     });
-    mainRouter.addMonitor(wsvr);
+    router.addMonitor(wsvr);
     g_serverData.manager.forClientServer = wsvr;
 }
 

@@ -1,5 +1,6 @@
 "use strict"
 const TAG = "game_manager.js";
+const RoomManager = require("./base/room_manager");
 
 class GameManager{
     constructor(){
@@ -9,13 +10,13 @@ class GameManager{
         this.forClientServer = null;
         this.connCodeUserIdMap = {};
         this.userIdPlayerMap = {};
-        this.roomIdRoomMap = {};
+        this.roomManager = new RoomManager();
     }
-    setHomeClient(){
-
+    getHomeClientById(id){
+        return this.homeIdClientMap[id];
     }
-    getHomeClientById(){
-        
+    getPlayerById(id){
+        return this.userIdPlayerMap[id];
     }
 };
 
