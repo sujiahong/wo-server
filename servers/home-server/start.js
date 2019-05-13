@@ -4,7 +4,6 @@ global.g_serverData = {};
 g_serverData.logger = require("../../utils/log_launch")("home-server");
 const logger = g_serverData.logger;
 const assert = require("assert");
-const cps = require("child_process");
 const homeManager = require("./models/home_manager");
 const network = require("../../utils/network");
 const config = require("../../share/config");
@@ -85,6 +84,7 @@ var listenGameClient = function(){
         var gateClient = g_serverData.homeManager.gateIdClientMap[info.gateId];
         gateClient.send({route: "home-info", data: info});
     });
+    router.onGameListener(svr);
     homeManager.forGameServer = svr;
 }
 

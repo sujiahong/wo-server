@@ -5,6 +5,7 @@ const router = express.Router();
 const errcode = require("../../share/errcode");
 const mainService = require("./service/main_service");
 const roomService = require("./service/room_service");
+const gameService = require("./service/game_service");
 const redis = require("../../dao/redis/redis_common");
 const logger = g_serverData.logger;
 
@@ -121,3 +122,10 @@ router.get("/joinRoom", function(req, res){
         res.send(ret);
     });
 });
+
+router.onGameListener = function(svr){
+    for (var key in gameService){
+        svr.on(key, gameService[key]);
+    }
+
+}

@@ -4,10 +4,12 @@ const Koa = require('koa');
 const app = new Koa();
 const views = require('koa-views');
 const json = require('koa-json');
+const koaStatic = require("koa-static");
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const klogger = require('koa-logger');
-var http = require('http');
+const session = require("koa-session-minimal");
+const http = require('http');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -17,13 +19,17 @@ const logger = g_serverData.logger;
 // error handler
 onerror(app);
 
+app.use(session({
+  key: "id",
+}))
+
 // middlewares
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }));
 app.use(json());
 app.use(klogger());
-app.use(require('koa-static')(__dirname + '/public'));
+app.use(koaStatic(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
@@ -43,7 +49,10 @@ app.use(users.routes(), users.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {
-  console.error('server error', err, ctx)
+  logger.error(TAG, 'server error', err, ctx);
+  ctx.status = 500;
+  ctx.statusText = "server Error";
+  ctx.body = {code: 1};
 });
 
 /**
@@ -97,5 +106,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  logger.debug(TAG, 'web server Listening on ' + bind);
+  logger.debug(TAG, __dirname, 'web server Listening on ' + bind);
 }

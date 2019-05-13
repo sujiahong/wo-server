@@ -31,7 +31,7 @@ class RoomManager{
         }
     }
     
-    getRoomById(roomId, next){
+    getRoomById(roomId){
         var roomType = this.roomIdTypeData[roomId];
         if (!roomType){
             return null;
@@ -47,6 +47,10 @@ class RoomManager{
             room = this.privateRooms[roomId];
         }
         return room;
+    }
+
+    existRoom(roomId){
+
     }
     
     rmvRoomById(roomId){
@@ -85,48 +89,28 @@ class RoomManager{
     
     ///////remote
     
-    createRoom(roomId, userId, serverId, rule, next){
+    createRoom(roomInfo){
+        return
         var self = this;
         var gamePlay = rule.gamePlay;
-        var player = self.gamePlayers[userId];
-        if (!player){
-            player = new playConfig.gamePlayToPlayer[gamePlay]();
-            self.gamePlayers[userId] = player;
+        if (rule.GPSActive == 1 && (player.location == "closed" || player.location == "")){
+            return next(null, {code: errcode.GPS_CLOSED});
         }
-        if (player.roomId  != ""){
-            player.matchStat = 0;
-            return next(null, {code: errcode.HAVE_IN_ROOM});
+        var playerCoin = player.coinNum;
+        var baseCoin = rule.baseCoin;
+        if (rule.roomType == constant.ROOM_TYPE.private_room && playerCoin <= constant.ROOM_LIMIT_RATE[gamePlay]*baseCoin){
+            return next(null, {code: errcode.COIN_NOT_ENOUGH});
         }
+        if (baseCoin < 10 && playerCoin > 500){
+            return next(null, {code: errcode.ROOM_COIN_UPLIMIT});
+        }
+        var room = new playConfig.gamePlayToRoom[gamePlay]();
+        room.init(roomId, rule);
+        room.creatorId = userId;
         player.roomId = roomId;
-        player.init(userId, serverId, function(ecode){
-            player.matchStat = 0;
-            player.roomId = "";
-            if (ecode == errcode.OK){
-                if (rule.GPSActive == 1 && (player.location == "closed" || player.location == "")){
-                    return next(null, {code: errcode.GPS_CLOSED});
-                }
-                var playerCoin = player.coinNum;
-                var baseCoin = rule.baseCoin;
-                if (rule.roomType == constant.ROOM_TYPE.private_room && playerCoin <= constant.ROOM_LIMIT_RATE[gamePlay]*baseCoin){
-                    return next(null, {code: errcode.COIN_NOT_ENOUGH});
-                }
-                if (baseCoin < 10 && playerCoin > 500){
-                    return next(null, {code: errcode.ROOM_COIN_UPLIMIT});
-                }
-                var room = new playConfig.gamePlayToRoom[gamePlay]();
-                room.init(roomId, rule);
-                userRecord.updateUserByUserId(userId, {roomId: roomId, gamePlay: gamePlay});
-                room.creatorId = userId;
-                player.roomId = roomId;
-                room.witnessPlayers[userId] = player;
-                self.addRoomTable(rule.roomType, room);
-                redis.setRoomIdToPlay(roomId, gamePlay);
-                gamePusher.pushRoomData(room, userId, serverId, next);
-            }else{
-                player.clearPlayer();
-                next(null, {code: ecode});
-            }
-        });
+        room.witnessPlayers[userId] = player;
+        self.addRoomTable(rule.roomType, room);
+        redis.setRoomIdToPlay(roomId, gamePlay);
     }
     
     joinRoom(roomId, gamePlay, userId, serverId, next){

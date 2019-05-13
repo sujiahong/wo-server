@@ -2,12 +2,15 @@
 const TAG = "game-server/main_service.js";
 const redis = require("../../../dao/redis/redis_common");
 const errcode = require("../../../share/errcode");
-
+const logger = g_serverData.logger;
 const manager = g_serverData.manager;
 var service = module.exports;
 
 service.createRoom = function(roomInfo){
-    manager.roomManager.createRoom(roomInfo);
+    if (roomInfo.roomId)
+        manager.roomManager.createRoom(roomInfo);
+    else
+        logger.error(TAG, "创建房间失败！ ", roomInfo);
 }
 
 service.joinRoom = function(joinData, next){
@@ -27,7 +30,7 @@ service.joinRoom = function(joinData, next){
 }
 
 service.matchRoom = function(){
-    
+
 }
 
 service.exitRoom = function(msg, next){
