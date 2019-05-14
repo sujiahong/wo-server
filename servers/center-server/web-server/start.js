@@ -12,7 +12,8 @@ const session = require("koa-session-minimal");
 const http = require('http');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+const admin = require("./routes/admin/index");
+const api = require('./routes/api');
 const config = require("../../../share/config");
 const logger = g_serverData.logger;
 
@@ -45,7 +46,8 @@ app.use(async (ctx, next) => {
 
 // routes
 app.use(index.routes(), index.allowedMethods());
-app.use(users.routes(), users.allowedMethods());
+app.use(admin.routes(), admin.allowedMethods());
+app.use(api.routes(), api.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {
