@@ -1,7 +1,7 @@
 "use strict";
 const TAG = "initCache.js";
 g_serverData.cache = {};
-const mysqlUser = require("../../mysql/mini_program/table_user");
+const mysqlUser = require("../../mysql/mini_program/table_action_user");
 const User = require("./table/user");
 const errcode = require("../../../share/errcode");
 const constant = require("../../../share/constant");

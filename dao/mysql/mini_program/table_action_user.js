@@ -1,5 +1,5 @@
 "use_strict"
-const TAG = "table_user.js";
+const TAG = "table_action_user.js";
 const util = require("util");
 const dbConn = require("../../../utils/db_connection");
 

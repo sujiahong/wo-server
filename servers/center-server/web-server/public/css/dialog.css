@@ -1,0 +1,88 @@
+.dialog-shadow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.dialog {
+    width: 26.5rem;
+    position: absolute;
+    top: 20%;
+    background: #FFF;
+    left: 50%;
+    margin-left: -13.25rem;
+    border-radius: .5rem;
+}
+
+.dialog-header {
+    height: 1.5rem;
+    background: -moz-linear-gradient(left, #885ef2 0%, #5e8ff2 100%);
+    background: -webkit-linear-gradient(left, #885ef2 0%, #5e8ff2 100%);
+    background: -o-linear-gradient(left, #885ef2 0%, #5e8ff2 100%);
+    background: -ms-linear-gradient(left, #885ef2 0%, #5e8ff2 100%);
+    background: linear-gradient(to left, #885ef2 0%, #5e8ff2 100%);
+}
+
+
+/*.dialog-header a.dialog-close{
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url(../img/close.png) no-repeat center center;
+	background-size: 0.5rem 0.5rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+}*/
+
+.dialog-body {
+    padding: 3rem 2.8rem 1.5rem;
+}
+
+.dialog-body p {
+    font-size: 1.6rem;
+    color: #1c1c1c;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.dialog-footer {
+    /*height: 3.6rem;*/
+    /*border-top: 1px solid #e1e1e1;*/
+    /*line-height: 3.6rem;*/
+    text-align: center;
+    padding: 1.8rem 0;
+}
+
+.dialog-footer:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.dialog-footer button {
+    width: 10.5rem;
+    height: 3rem;
+    color: #96d1ff;
+    font-size: 1.4rem;
+    background: #FFF;
+    line-height: 3rem;
+    text-align: center;
+    /* border-radius: 5px; */
+    border: 1px solid #96d1ff;
+}
+
+.dialog-footer button.dialog-confirm {
+    width: 10rem;
+    background: #209eff;
+    color: #fff;
+    border: 0px;
+}
+
+.dialog-footer button.dialog-cancel {
+    width: 10rem;
+    margin-left: 3rem;
+}

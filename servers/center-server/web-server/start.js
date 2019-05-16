@@ -5,24 +5,24 @@ const app = new Koa();
 const views = require('koa-views');
 const json = require('koa-json');
 const koaStatic = require("koa-static");
-const onerror = require('koa-onerror');
+const koaError = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const klogger = require('koa-logger');
 const session = require("koa-session-minimal");
 const http = require('http');
 
 const index = require('./routes/index');
-const admin = require("./routes/admin/index");
+const admin = require("./routes/admin");
 const api = require('./routes/api');
 const config = require("../../../share/config");
+const dbConn = require("../../../utils/db_connection");
+dbConn.mysqlConnect(config.DB_NAME_LIST[2]);
 const logger = g_serverData.logger;
 
 // error handler
-onerror(app);
+koaError(app);
 
-app.use(session({
-  key: "id",
-}))
+app.use(session(config.KOA_SESSION));
 
 // middlewares
 app.use(bodyparser({
@@ -44,6 +44,17 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 });
 
+////session验证拦截
+const allowRouterArr = ['/admin/login','/api/user/login'];
+app.use(async (ctx, next)=>{
+    var url = ctx.originalUrl;
+    console.log(url, ctx.origin, ctx.session, ctx.cookies.get("session-id"));
+    if (allowRouterArr.indexOf(url) < 0){////不允许访问
+        if (!ctx.session.userId)
+            return await ctx.render("admin/login", {title: "登录"});
+    }
+    await next();
+});
 // routes
 app.use(index.routes(), index.allowedMethods());
 app.use(admin.routes(), admin.allowedMethods());

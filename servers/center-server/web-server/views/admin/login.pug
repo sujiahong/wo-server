@@ -1,1 +1,30 @@
 extends ../layout
+
+block content
+    p(style="text-align: center;")
+        img(src= "/img/logo.png")
+    h1(align="center")= "欢迎登录" 
+    div(style="text-align: center")
+        input(id="account" type="text" placeholder="帐号" style="width:200px;height:22px;font-size:17px;")
+        br
+        br
+        input(id="passwd" type="password" placeholder="密码" style="width:200px;height:22px;font-size:17px;")
+        br
+        br
+        input(id="login" type="button" value="登录", style="width:180px;height:24px;font-size:15px;")
+    script.
+        console.log("开始执行脚本了 ", window.location);
+        $("#login").on("click", function(){
+            var account = $("#account").val();
+            var passwd = $("#passwd").val();
+            console.log("click click ", account, passwd, typeof account);
+            if (account == "" || passwd == ""){
+                return;
+            }
+            $.post(window.location.origin+"/api/user/login", {account, passwd}, function(data){
+                if(data.code != 0){
+                    return dialogbox({msg: data.code});;
+                }
+                window.location = "/admin";
+            });
+        });

@@ -42,8 +42,21 @@ dbc.mysqlConnect = function(dbName){
     conn.connect(function(err){
         if (err) throw err;
         logger.info(TAG, "mysql数据库连接成功！！！！！", conn.threadId);
-        global.g_mysqlConn = conn;
     });
+    global.g_mysqlConn = conn;
+}
+
+dbc.mysqlQuery = function(sql){
+    return new Promise((resolve, reject) => {
+        g_mysqlConn.query(sql, (err, results, fields) => {
+            if ( err ) {
+                logger.error(TAG, "mysql 查询出错：sql: ", sql, err);
+                reject({code: 21});
+            } else {
+                resolve({code: 0, results: results, fields: fields})
+            }
+        });
+    })
 }
 
 dbc.mysqlPoolConnect = function(dbName){

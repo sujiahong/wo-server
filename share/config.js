@@ -15,6 +15,14 @@ module.exports = {
     MYSQL_PASSWD: "root",
     MYSQL_CONNECTION_LIMIT: 1000,
 
-    DB_NAME_LIST: ["test", "mini_program", ],
+    DB_NAME_LIST: ["test", "mini_program", "admin"],
     WX_LOGIN_URL: "https://api.weixin.qq.com/sns/jscode2session?",
+
+    KOA_SESSION: {
+        key: "session-id",
+        cookie:{
+            maxAge:100000,
+            httpOnly: false
+        }
+    },
 };

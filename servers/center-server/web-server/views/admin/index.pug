@@ -1,0 +1,9 @@
+extends ../layout.pug
+
+block content
+    h1(align="center")= "主界面！"
+    input(id="login" type="button" value="服务器集群信息")
+    script.
+        $("#login").on("click", function(){
+            window.location = "/admin/cluster"
+        });

@@ -15,6 +15,8 @@ module.exports = {
 	LOGIN_INVALID: 13,				//登录信息失效
 	LOGIN_USERID_NULL: 14,			//登录用户Id为空
 	CONNECTION_CODE_INVALID: 15,	//连接码失效
+	LOGIN_USERID_NOT_EXIST: 16,		//登录用户Id不存在
+	LOGIN_PASSWD_ERR: 17,			//登录密码错误
 
 	REDIS_DATABASE_ERR: 20,
 	MYSQL_DATABASE_ERR: 21,

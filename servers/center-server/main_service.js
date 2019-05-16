@@ -1,6 +1,6 @@
 "use strict"
 const TAG = "center-server/main_service.js";
-const userTable = require("../../dao/mysql/mini_program/table_user");
+const userTable = require("../../dao/mysql/mini_program/table_action_user");
 const redis = require("../../dao/redis/redis_common");
 
 exports.initUserData = function(){
