@@ -4,9 +4,10 @@ const cp = require("child_process");
 const async = require("async");
 var clusterInfo = require("./config/cluster_info.json");
 console.log("!!!!!  ", process.argv)
-
-if (process.argv[2]){
-    var path = process.argv[2];
+////////////获取一个json文件
+var len = process.argv.length;
+if (len > 2 && process.argv[2] == "-f"){
+    var path = process.argv[3];
     clusterInfo = require(path);
 }
 
