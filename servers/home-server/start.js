@@ -90,7 +90,6 @@ var listenGameClient = function(){
 
 var listenHttpClient = function(){
     var options = {
-        host: serverInfo.IP,
         port: serverInfo.FOR_CLIENT_PORT,
     };
     var app = networkHttp.createExpress(options);

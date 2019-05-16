@@ -4,7 +4,7 @@
             "ID": "gate-server-1",
             "NAME": "gate-server-1",
             "type": "gate-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_HOME_PORT": 9090,
             "FOR_HTTP_PORT": 8090,
             "START_PATH": "./servers/gate-server/start"
@@ -13,20 +13,10 @@
             "ID": "gate-server-2",
             "NAME": "gate-server-2",
             "type": "gate-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_HOME_PORT": 9091,
             "FOR_HTTP_PORT": 8091,
             "START_PATH": "./servers/gate-server/start"
-        }
-    ],
-    "DOWNLOAD_SERVER_LIST": [
-        {
-            "ID": "download-server-1",
-            "NAME": "download-server-1",
-            "type": "download-server",
-            "IP": "192.168.10.34",
-            "FOR_CLIENT_PORT": 9990,
-            "START_PATH": "./servers/download-server/start"
         }
     ],
     "HOME_SERVER_LIST": [
@@ -34,7 +24,7 @@
             "ID": "home-server-1",
             "NAME": "home-server-1",
             "type": "home-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_LOGIC_PORT": 9100,
             "FOR_CLIENT_PORT": 8110,
             "START_PATH": "./servers/home-server/start"
@@ -43,7 +33,7 @@
             "ID": "home-server-2",
             "NAME": "home-server-2",
             "type": "home-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_LOGIC_PORT": 9120,
             "FOR_CLIENT_PORT": 8120,
             "START_PATH": "./servers/home-server/start"
@@ -52,7 +42,7 @@
             "ID": "home-server-3",
             "NAME": "home-server-3",
             "type": "home-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_LOGIC_PORT": 9130,
             "FOR_CLIENT_PORT": 8130,
             "START_PATH": "./servers/home-server/start"
@@ -61,7 +51,7 @@
             "ID": "home-server-4",
             "NAME": "home-server-4",
             "type": "home-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_LOGIC_PORT": 9140,
             "FOR_CLIENT_PORT": 8140,
             "START_PATH": "./servers/home-server/start"
@@ -70,7 +60,7 @@
             "ID": "home-server-5",
             "NAME": "home-server-5",
             "type": "home-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_LOGIC_PORT": 9150,
             "FOR_CLIENT_PORT": 8150,
             "START_PATH": "./servers/home-server/start"
@@ -81,7 +71,7 @@
             "ID": "game-server-1",
             "NAME": "game-server-1",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8810,
             "START_PATH": "./servers/game-server/start"
         },
@@ -89,7 +79,7 @@
             "ID": "game-server-2",
             "NAME": "game-server-2",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8811,
             "START_PATH": "./servers/game-server/start"
         },
@@ -97,7 +87,7 @@
             "ID": "game-server-3",
             "NAME": "game-server-3",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8812,
             "START_PATH": "./servers/game-server/start"
         },
@@ -105,7 +95,7 @@
             "ID": "game-server-4",
             "NAME": "game-server-4",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8813,
             "START_PATH": "./servers/game-server/start"
         },
@@ -113,7 +103,7 @@
             "ID": "game-server-5",
             "NAME": "game-server-5",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8814,
             "START_PATH": "./servers/game-server/start"
         },
@@ -121,7 +111,7 @@
             "ID": "game-server-6",
             "NAME": "game-server-6",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8815,
             "START_PATH": "./servers/game-server/start"
         },
@@ -129,7 +119,7 @@
             "ID": "game-server-7",
             "NAME": "game-server-7",
             "type": "game-server",
-            "IP": "192.168.10.34",
+            "IP": "127.0.0.1",
             "FOR_CLIENT_PORT": 8816,
             "START_PATH": "./servers/game-server/start"
         }

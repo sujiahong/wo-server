@@ -91,9 +91,7 @@ function onError(error) {
     throw error;
   }
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+  var bind = config.CENTER_HTTP_PORT;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {

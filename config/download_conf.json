@@ -1,0 +1,9 @@
+{
+    "download-server-1": {
+        "ID": "download-server-1",
+        "NAME": "download-server-1",
+        "type": "download-server",
+        "FOR_CLIENT_PORT": 9990,
+        "START_PATH": "./servers/download-server/start"
+    }
+}

@@ -48,7 +48,6 @@ var connectHome = function(){
 
 var listenConnection = function(){
     var options = {
-        host: serverInfo.IP,
         port: serverInfo.FOR_CLIENT_PORT
     }
     var wsvr = new WSServer(options);

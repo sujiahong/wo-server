@@ -79,7 +79,6 @@ var listenHomeClient = function(){
 
 var listenHttpClient = function(){
     var options = {
-        host: serverInfo.IP,
         port: serverInfo.FOR_HTTP_PORT,
     }
     networkHttp.createHttp(options, function(req, res){
