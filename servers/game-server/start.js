@@ -16,6 +16,7 @@ dbConn.redisConnect();
 dbConn.mysqlPoolConnect(config.DB_NAME_LIST[1]);
 
 const serverInfo = JSON.parse(process.argv[2]);
+const clusterInfo = JSON.parse(process.argv[3]);
 g_serverData.manager = new GameManager();
 const router = require("./router");
 
@@ -25,7 +26,7 @@ g_serverData.manager.serverId = serverInfo.ID;
 logger.info(TAG, "game server start ~~!!!!", serverInfo.ID, process.pid, process.cwd());
 
 var connectHome = function(){
-    var homeList = require("../../config/cluster_info.json").HOME_SERVER_LIST;
+    var homeList = clusterInfo.HOME_SERVER_LIST;
     for (let i = 0; i < homeList.length; ++i){
         let cli = new network.Client({host: homeList[i].IP, port: homeList[i].FOR_LOGIC_PORT});
         cli.connect(function(ret){

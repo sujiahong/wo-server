@@ -18,7 +18,7 @@ for (let key in clusterInfo){
         let len = list.length;
         for(var i = 0; i < len; ++i){
             console.log(TAG, "启动服务: ", list[i].ID);
-            cp.fork(list[i].START_PATH, [JSON.stringify(list[i])]);
+            cp.fork(list[i].START_PATH, [JSON.stringify(list[i]), JSON.stringify(clusterInfo)]);
         }
         setTimeout(cb, 200*len);
     }

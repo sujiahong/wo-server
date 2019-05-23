@@ -19,6 +19,7 @@ require("../../dao/cache/mini_program/initCache");
 const router = require("./router");
 
 const serverInfo = JSON.parse(process.argv[2]);
+const clusterInfo = JSON.parse(process.argv[3]);
 g_serverData.homeManager = new homeManager();
 g_serverData.homeManager.serverName = serverInfo.NAME;
 g_serverData.homeManager.serverId = serverInfo.ID;
@@ -27,7 +28,7 @@ logger.info(TAG, "home server start ~~!!!!", serverInfo.ID, process.pid, process
 
 var connectGate = function(){
     var homeManager = g_serverData.homeManager;
-    var gateList = require("../../config/cluster_info.json").GATE_SERVER_LIST;
+    var gateList = clusterInfo.GATE_SERVER_LIST;
     for (let i = 0; i < gateList.length; ++i){
         let gateClient = new network.Client({host: gateList[i].IP, port: gateList[i].FOR_HOME_PORT});
         gateClient.connect(function(ret){

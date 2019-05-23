@@ -16,6 +16,7 @@ dbConn.redisConnect();
 const mainService = require("./service/main_service");
 
 const serverInfo = JSON.parse(process.argv[2]);
+const clusterInfo = JSON.parse(process.argv[3]);
 g_serverData.serverName = serverInfo.NAME;
 g_serverData.serverId = serverInfo.ID;
 g_serverData.accessCount = 0;

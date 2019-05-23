@@ -1,0 +1,43 @@
+{
+    "GATE_SERVER_LIST": [
+        {
+            "ID": "gate-server-3",
+            "NAME": "gate-server-3",
+            "type": "gate-server",
+            "IP": "127.0.0.1",
+            "FOR_HOME_PORT": 9090,
+            "FOR_HTTP_PORT": 8090,
+            "START_PATH": "./servers/gate-server/start"
+        },
+        {
+            "ID": "gate-server-4",
+            "NAME": "gate-server-4",
+            "type": "gate-server",
+            "IP": "127.0.0.1",
+            "FOR_HOME_PORT": 9091,
+            "FOR_HTTP_PORT": 8091,
+            "START_PATH": "./servers/gate-server/start"
+        }
+    ],
+    "HOME_SERVER_LIST": [
+        {
+            "ID": "home-server-6",
+            "NAME": "home-server-6",
+            "type": "home-server",
+            "IP": "127.0.0.1",
+            "FOR_LOGIC_PORT": 9100,
+            "FOR_CLIENT_PORT": 8110,
+            "START_PATH": "./servers/home-server/start"
+        }
+    ],
+    "GAME_SERVER_LIST": [
+        {
+            "ID": "game-server-8",
+            "NAME": "game-server-8",
+            "type": "game-server",
+            "IP": "127.0.0.1",
+            "FOR_CLIENT_PORT": 8810,
+            "START_PATH": "./servers/game-server/start"
+        }
+    ]
+}
