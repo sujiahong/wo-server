@@ -9,7 +9,7 @@ module.exports = {
 
     MONGO_URL: "mongodb://127.0.0.1:7772",
 
-    MYSQL_IP: "127.0.0.1",
+    MYSQL_IP: "192.168.10.34",
     MYSQL_PORT: 7773,
     MYSQL_USER: "root",
     MYSQL_PASSWD: "root",
