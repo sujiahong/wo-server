@@ -51,6 +51,8 @@ dbc.mysqlQuery = function(sql){
         g_mysqlConn.query(sql, (err, results, fields) => {
             if ( err ) {
                 logger.error(TAG, "mysql 查询出错：sql: ", sql, err);
+                g_mysqlConn.destroy();
+                dbc.mysqlConnect(config.DB_NAME_LIST[2]);
                 reject({code: 21});
             } else {
                 resolve({code: 0, results: results, fields: fields})
