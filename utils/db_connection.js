@@ -31,7 +31,7 @@ dbc.mongoConnect = function(dbName, next){
 }
 
 dbc.mysqlConnect = function(dbName){
-    var conn = mysql.createConnection({
+    var conn = mysql.createPool({
         host: config.MYSQL_IP,
         port: config.MYSQL_PORT,
         user: config.MYSQL_USER,
@@ -39,10 +39,7 @@ dbc.mysqlConnect = function(dbName){
         database: dbName,
         charset: "utf8mb4"
     });
-    conn.connect(function(err){
-        if (err) throw err;
-        logger.info(TAG, "mysql数据库连接成功！！！！！", conn.threadId);
-    });
+    logger.info(TAG, "mysql数据库连接成功！！！！！", conn.threadId);
     global.g_mysqlConn = conn;
 }
 
