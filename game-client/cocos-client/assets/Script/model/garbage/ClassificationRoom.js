@@ -1,16 +1,18 @@
 "use strict";
 const TAG = "ClassificationRoom.js";
-const Room = require("./Room");
+const Room = require("../Room");
 
 class ClassificationRoom extends Room{
     constructor(id){
         super(id);
+        this.garbageArr = [];
         console.log("ClassificationRoom construct");
     }
 
     generateGarbage(){
         var type = Math.random()*100%3;
-        return type
+        
+        return type;
     }
 
 };

@@ -32,3 +32,13 @@ exp.createFlutterWord = function(str, parentNode){
 exp.createTipsPanel = function(){
 
 }
+
+exp.createSprite = function(){
+    let node = new cc.Node("Sprite");
+    let sp = node.addComponent(cc.Sprite);
+    sp.spriteFrame = this.garbage.spriteFrame;
+    node.setContentSize(cc.size(70, 70));
+    node.setPosition(0, 355);
+    node.color = cc.Color.GREEN;
+    node.parent = this.garbage.node.parent;
+}
