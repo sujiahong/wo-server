@@ -10,6 +10,7 @@ cc.Class({
         logoutButton: cc.Button,
         creatRoomButton: cc.Button,
         joinRoomButton: cc.Button,
+        stgmButton: cc.Button,
         setupButton: cc.Button,
         msgButton: cc.Button,
         serviceButton: cc.Button,
@@ -23,13 +24,14 @@ cc.Class({
         this.logoutButton.node.on("click", this.onLogout, this);
         this.creatRoomButton.node.on("click", this.onCreateRoom, this);
         this.joinRoomButton.node.on("click", this.onJoinRoom, this);
+        this.stgmButton.node.on("click", this.onStartGame, this);
         this.setupButton.node.on("click", this.onSetup, this);
         this.msgButton.node.on("click", this.onMsg, this);
         this.serviceButton.node.on("click", this.onService, this);
         this.shopButton.node.on("click", this.onShop, this);
         this.noticeButton.node.on("click", this.onNotice, this);
-        this.idLabel.string = cc.g_ada.gameUser.userId;
-        this.coinLabel.string = cc.g_ada.gameUser.coins;
+        // this.idLabel.string = cc.g_ada.gameUser.userId;
+        // this.coinLabel.string = cc.g_ada.gameUser.coins;
     },
 
     onLogout: function(){
@@ -60,6 +62,11 @@ cc.Class({
             }
             //cc.director.loadScene("LoginScene");
         });
+    },
+
+    onStartGame: function(){
+        console.log(TAG, "onStartGame onStartGame");
+        cc.director.loadScene("ClassificationScene");
     },
 
     onSetup: function(){

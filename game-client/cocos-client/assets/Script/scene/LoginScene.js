@@ -1,3 +1,4 @@
+"use strict";
 const TAG = "LoginScene.js";
 const g_ada = cc.g_ada;
 const Login = require("../model/LoginLauncher");

@@ -114,6 +114,17 @@ class GameUser {
         }
         doJoinRoom(this.connectData, next);
     }
+
+    getPlayerInitData(){
+        return {
+            userId: this.userId,
+            nickname: this.nickname,
+            sex: this.sex,
+            icon: this.iconUrl,
+            ip: this.ip,
+            coins: this.coins,
+        };
+    }
 };
 
 var doJoinRoom = function(ret, next){

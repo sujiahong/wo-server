@@ -7,6 +7,14 @@ class Room{
         this.playersInSeat = [];
         
     }
+
+    seatdown(){
+
+    }
+
+    leave(){
+        
+    }
 }
 
 module.exports = Room;

@@ -1,3 +1,4 @@
+"use strict";
 const TAG = "LogoScene.js";
 /////创建一个全局数据
 var g_ada = {};

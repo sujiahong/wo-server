@@ -2,8 +2,8 @@
 const TAG = "Player.js";
 
 class Player{
-    constructor(id){
-        this.userId = id;
+    constructor(data){
+        this.userId = data.id;
         this.nickname = "";
         this.sex = 0;
         this.icon = "";

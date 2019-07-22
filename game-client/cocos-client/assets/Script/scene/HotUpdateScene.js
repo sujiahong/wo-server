@@ -1,3 +1,4 @@
+"use strict";
 const TAG = "HotUpdateScene.js";
 const HotUpdate = require("../util/hot_update");
 const errcode = require("../share/errcode");
