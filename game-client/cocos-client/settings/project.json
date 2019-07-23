@@ -5,8 +5,8 @@
       true
     ]
   ],
-  "design-resolution-height": 640,
-  "design-resolution-width": 960,
+  "design-resolution-height": 960,
+  "design-resolution-width": 640,
   "excluded-modules": [
     "Geom Utils",
     "3D",
@@ -33,7 +33,7 @@
     "height": 640,
     "width": 960
   },
-  "start-scene": "current",
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false
+  "use-project-simulator-setting": false,
+  "start-scene": "current"
 }

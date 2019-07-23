@@ -2,10 +2,13 @@
 const TAG = "Room.js";
 
 class Room{
-    constructor(id){
-        this.roomId = id;
+    constructor(type){
+        this.type = type
+        this.roomId = 0;
         this.playersInSeat = [];
         
+        
+        this.scene = null;
     }
 
     seatdown(){

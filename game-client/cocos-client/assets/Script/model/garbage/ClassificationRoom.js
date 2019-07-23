@@ -1,18 +1,19 @@
 "use strict";
 const TAG = "ClassificationRoom.js";
 const Room = require("../Room");
+const config = require("./GarbageConfig");
 
 class ClassificationRoom extends Room{
-    constructor(id){
-        super(id);
-        this.garbageArr = [];
+    constructor(type){
+        super(type);
+        this.garbageClassificationArr = [];
         console.log("ClassificationRoom construct");
     }
 
-    generateGarbage(){
-        var type = Math.random()*100%3;
-        
-        return type;
+    spawnGarbage(){
+        var keyid = Math.floor(Math.random()*100000) % config.GARBAGE_KEYID_MAX+1;
+        var img = config.GARBAGE_KEYID_2_IMG[keyid];
+        this.scene.createGarbageSprite(keyid, img);
     }
 
 };

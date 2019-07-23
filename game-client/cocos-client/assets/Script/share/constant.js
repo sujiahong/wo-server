@@ -22,4 +22,9 @@ module.exports = {
 
     },
     AGORA_APP_ID: "f6fb5f3af6e4446a8114b0f76a0dddaf",
+
+    ROOM_TYPE:{
+        garbage: 1,
+        niu: 2,
+    }
 };
