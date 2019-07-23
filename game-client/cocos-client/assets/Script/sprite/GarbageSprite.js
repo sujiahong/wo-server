@@ -33,18 +33,18 @@ cls.onLoad = function(){
         var time = self.getAccrossTime();
         console.log("touch end  ", time);
         if (moveLocation.x - location.x > 10){
-            self.node.runAction(cc.moveTo(0.6, cc.v2(250, -250)));
+            self.node.runAction(cc.moveTo(time, cc.v2(250, -250)));
         }else if (moveLocation.x - location.x < -10){
-            self.node.runAction(cc.moveTo(0.6, cc.v2(-255, -250)));
+            self.node.runAction(cc.moveTo(time, cc.v2(-255, -250)));
         }
     });
     this.node.on(cc.Node.EventType.TOUCH_CANCEL, function(event){
         var time = self.getAccrossTime();
         console.log("touch cancel  ", time);
         if (moveLocation.x - location.x > 10){
-            self.node.runAction(cc.moveTo(0.6, cc.v2(250, -250)));
+            self.node.runAction(cc.moveTo(time, cc.v2(250, -250)));
         }else if (moveLocation.x - location.x < -10){
-            self.node.runAction(cc.moveTo(0.6, cc.v2(-255, -250)));
+            self.node.runAction(cc.moveTo(time, cc.v2(-255, -250)));
         }
     });
 }
@@ -62,8 +62,8 @@ cls.update = function(){
 }
 
 cls.getAccrossTime = function(){
-    console.log("getAccrosstime  ", this.downSpeed, this.node.y)
-    return (Math.sqrt(this.downSpeed*this.downSpeed+2*0.6*(this.node.y+250)) - this.downSpeed)/0.6;
+    console.log("getAccrosstime  :  ", this.downSpeed, this.node.y)
+    return (Math.sqrt(this.downSpeed*this.downSpeed*3600+1.2*(this.node.y+250)) - this.downSpeed*60)/0.6;
 }
 
 cc.Class(cls);
