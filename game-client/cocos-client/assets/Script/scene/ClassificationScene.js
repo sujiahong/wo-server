@@ -18,13 +18,11 @@ cls.properties = {
         default: null,
         type: cc.Prefab
     },
-    timeLimit: 1,
+    timeLimit: 0,
     timeCount: 0,
 };
 
 cls.onLoad = function(){
-    console.log(TAG, "onload", ClassificationRoom);
-    var self = this;
     this.closeButton.node.on("click", this.onClose, this); 
     cc.g_ada.room = new ClassificationRoom(constant.ROOM_TYPE.garbage);
     cc.g_ada.room.scene = this;
