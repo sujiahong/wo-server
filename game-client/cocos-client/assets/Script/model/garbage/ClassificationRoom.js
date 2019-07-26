@@ -1,7 +1,7 @@
 "use strict";
 const TAG = "ClassificationRoom.js";
 const Room = require("../Room");
-const config = require("./GarbageConfig");
+const config = require("GarbageConfig");
 
 class ClassificationRoom extends Room{
     constructor(type){

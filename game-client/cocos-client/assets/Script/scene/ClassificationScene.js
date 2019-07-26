@@ -7,7 +7,7 @@ if (!cc.g_ada){
 
 const ClassificationRoom = require("../model/garbage/ClassificationRoom");
 const constant = require("../share/constant");
-const config = require("./garbage/GarbageConfig");
+const config = require("../model/garbage/GarbageConfig");
 
 var cls = {};
 
@@ -35,7 +35,7 @@ cls.update = function(dt){
     if (this.timeCount >= this.timeLimit){
         cc.g_ada.room.spawnGarbage();
         this.timeCount = 0;
-        this.timeLimit = Math.random()*1000000%config.TIME_LIMIT_MAX+1;
+        this.timeLimit = Math.random()*1000000%config.GARBAGE_KEYID_MAX+1;
     }
 }
 
