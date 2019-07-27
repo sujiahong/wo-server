@@ -54,7 +54,7 @@
     "_is3DNode": true,
     "groupIndex": 0,
     "autoReleaseAssets": false,
-    "_id": "7e05aca2-a88d-4ddd-80bb-bf324a8a3f37"
+    "_id": "955a7333-fdea-415a-8cc0-e463404540be"
   },
   {
     "__type__": "cc.Node",
@@ -72,19 +72,16 @@
       },
       {
         "__id__": 7
-      },
-      {
-        "__id__": 14
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 15
+        "__id__": 14
       },
       {
-        "__id__": 16
+        "__id__": 15
       }
     ],
     "_prefab": null,
@@ -680,60 +677,6 @@
     "_id": "4c4UQltl1LKIbbnVCv4FWN"
   },
   {
-    "__type__": "cc.Node",
-    "_name": "New Node",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 2
-    },
-    "_children": [],
-    "_active": true,
-    "_level": 2,
-    "_components": [],
-    "_prefab": null,
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 0,
-      "height": 0
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 212.506,
-      "y": -260.082,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_eulerAngles": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": "25guQ5qnNKKY202WuE584X"
-  },
-  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -751,7 +694,7 @@
     "_id": "92CXmUMtJF2rGI+OgDrz1h"
   },
   {
-    "__type__": "63e28qvKS5CT6tTdSjWh+bK",
+    "__type__": "3ee429W1btLwI+ganiQlIsb",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -764,8 +707,8 @@
     "garbagePrefab": {
       "__uuid__": "1d0964c5-21cf-4ab9-9ebd-cb12073110bb"
     },
-    "timeLimit": 1,
+    "timeLimit": 0,
     "timeCount": 0,
-    "_id": "277jEhI0JMALL0TVs/q5+m"
+    "_id": "97AowjmupDpo6Z/3JuzIQK"
   }
 ]

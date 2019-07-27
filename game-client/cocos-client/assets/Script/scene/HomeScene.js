@@ -1,6 +1,8 @@
 "use strict";
 const TAG = "HomeScene.js";
-
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
 cc.Class({
     extends: cc.Component,
 

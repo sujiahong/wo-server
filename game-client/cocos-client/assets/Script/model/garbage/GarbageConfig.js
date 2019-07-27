@@ -8,4 +8,7 @@ module.exports = {
         5: "resources/image/011.png"
     },
     TIME_LIMIT_MAX: 3,
+    LEFT_X: -260,
+    RIGHT_X: 260,
+    DOWN_Y: -255
 };

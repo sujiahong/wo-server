@@ -1,5 +1,8 @@
 "use strict";
 const TAG = "HotUpdateScene.js";
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
 const HotUpdate = require("../util/hot_update");
 const errcode = require("../share/errcode");
 
