@@ -1,8 +1,10 @@
 "use strict";
 const TAG = "LogoScene.js";
 /////创建一个全局数据
-var g_ada = {};
-cc.g_ada = g_ada;
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
+const g_ada = cc.g_ada;
 const uiHelper = require("../util/ui_helper");
 const event = require("../util/event_emit");
 const util = require("../util/util");

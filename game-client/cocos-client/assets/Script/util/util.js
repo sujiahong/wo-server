@@ -1,6 +1,6 @@
 "use strict";
 const TAG = "util.js";
-//const crypto = require("../extern/cryptoJS");
+const crypto = require("../extern/cryptoJS");
 //const Timer = require("./node_modules/timer");
 //////////小工具///////////
 

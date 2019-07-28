@@ -1,10 +1,13 @@
 "use strict";
 const TAG = "Garbage.js";
-
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
+const g_ada = cc.g_ada;
 const config = require("../model/garbage/GarbageConfig");
 
 var cls = {};
-const g_ada = cc.g_ada;
+
 const acceleration = 0.01;
 
 cls.extends = cc.Component;
@@ -24,7 +27,7 @@ cls.update = function(){
     this.node.y = (this.node.y*100 - this.downSpeed*100)/100;
     if (this.node.y <= config.DOWN_Y){
         this.node.destroy();
-        cc.g_ada.room.garbageOpCount++;
+        g_ada.room.garbageOpCount++;
     }
 }
 

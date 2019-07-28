@@ -4,9 +4,9 @@ if (!cc.g_ada){
     cc.g_ada = {};
 }
 const g_ada = cc.g_ada;
-//const Login = require("../model/LoginLauncher");
-//const util = require("../util/util");
-//const event = require("../util/event_emit");
+const Login = require("../model/LoginLauncher");
+const util = require("../util/util");
+const event = require("../util/event_emit");
 
  
 cc.Class({
