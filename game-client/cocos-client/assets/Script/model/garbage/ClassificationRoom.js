@@ -14,7 +14,7 @@ class ClassificationRoom extends Room{
     }
 
     spawnGarbage(){
-        for (var i = 0; i < 10; ++i){
+        for (var i = 0; i < 100; ++i){
             var keyid = Math.floor(Math.random()*100000) % config.GARBAGE_KEYID_MAX+1;
             var img = config.GARBAGE_KEYID_2_IMG[keyid];
             this.garbageDataArr.push({keyid: keyid, img: img});

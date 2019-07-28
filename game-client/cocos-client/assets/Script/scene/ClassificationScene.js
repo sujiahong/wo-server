@@ -5,6 +5,10 @@ if (!cc.g_ada){
     cc.g_ada = {};
 }
 const g_ada = cc.g_ada;
+if (!cc.g_test){
+    cc.g_test = {};
+}
+const g_test = cc.g_test;
 const ClassificationRoom = require("../model/garbage/ClassificationRoom");
 const constant = require("../share/constant");
 const config = require("../model/garbage/GarbageConfig");
@@ -26,9 +30,13 @@ cls.properties = {
 
 cls.onLoad = function(){
     this.closeButton.node.on("click", this.onClose, this); 
-    g_ada.room = new ClassificationRoom(constant.ROOM_TYPE.garbage);
-    g_ada.room.scene = this;
-    g_ada.room.spawnGarbage();
+    cc.g_test.aa = new ClassificationRoom(constant.ROOM_TYPE.garbage);
+    cc.g_test.aa.bb = this;
+    cc.g_test.aa.spawnGarbage()
+    cc.g_ada.room = new ClassificationRoom(constant.ROOM_TYPE.garbage);
+    cc.g_ada.room.scene = this;
+    cc.g_ada.room.spawnGarbage();
+    console.log(g_test.aa, g_ada.room)
     // this.garbagePrefab.node.removeFromParent();
     //var player = new Player(cc.g_ada.gameUser.getPlayerInitData());
 
@@ -47,18 +55,16 @@ cls.onTouchMove = function(event){
 }
 
 cls.onTouchEnd = function(event){
-    var garbage = g_ada.room.garbageClassificationArr[g_ada.room.garbageOpCount];
-    console.log("touch--end ", garbage, g_ada.room.garbageOpCount, g_ada.room.garbageCount);
+    var garbage = cc.g_ada.room.garbageClassificationArr[cc.g_ada.room.garbageOpCount];
+    console.log("touch--end ", garbage, cc.g_ada.room.garbageOpCount, cc.g_ada.room.garbageCount);
     if (garbage){
         let gspt = garbage.getComponent("GarbageSprite");
         var time = gspt.getAccrossTime();
         console.log("touch end  ", gspt, garbage.x, garbage.y);
         if (this.moveLocation.x - this.startLocation.x > 10){
             garbage.runAction(cc.moveTo(time, cc.v2(config.RIGHT_X, config.DOWN_Y)));
-            g_ada.room.garbageOpCount++;
         }else if (this.moveLocation.x - this.startLocation.x < -10){
             garbage.runAction(cc.moveTo(time, cc.v2(config.LEFT_X, config.DOWN_Y)));
-            g_ada.room.garbageOpCount++;
         }
     }
 }
@@ -66,15 +72,15 @@ cls.onTouchEnd = function(event){
 cls.update = function(dt){
     this.timeCount += dt;
     if (this.timeCount >= this.timeLimit){
-        if (g_ada.room.isLastGarbage()){
+        if (cc.g_ada.room.isLastGarbage()){
             //console.log("all garbage create end end  end");
             this.timeLimit = -1;
         }else{
-            var data = g_ada.room.getBarbageDataByIndex(g_ada.room.garbageCount);
+            var data = cc.g_ada.room.getBarbageDataByIndex(cc.g_ada.room.garbageCount);
             this.createGarbageSprite(data.keyid, data.img);
             this.timeCount = 0;
             this.timeLimit = Math.random()*1000000%2+0.5;
-            g_ada.room.garbageCount++;
+            cc.g_ada.room.garbageCount++;
         }
     }
 }
@@ -83,7 +89,7 @@ cls.createGarbageSprite = function(keyid, img){
     console.log("11111111     ", keyid, img)
     var self = this;
     let garbage = cc.instantiate(this.garbagePrefab);
-    g_ada.room.garbageClassificationArr.push(garbage);
+    cc.g_ada.room.garbageClassificationArr.push(garbage);
     garbage.setPosition(0, 700);
     let gspt = garbage.getComponent("GarbageSprite");
     gspt.keyid = keyid;

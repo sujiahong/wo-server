@@ -709,6 +709,8 @@
     },
     "timeLimit": 0,
     "timeCount": 0,
+    "startLocation": null,
+    "moveLocation": null,
     "_id": "97AowjmupDpo6Z/3JuzIQK"
   }
 ]
