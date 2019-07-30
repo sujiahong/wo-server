@@ -98,6 +98,7 @@ cls.createGarbageSprite = function(keyid, img){
 
 cls.onClose = function(){
     console.log(TAG, "onClose");
+    cc.director.loadScene("HomeClassScene");
 }
 
 cc.Class(cls);
