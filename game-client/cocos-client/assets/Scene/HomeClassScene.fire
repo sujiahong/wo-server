@@ -96,10 +96,10 @@
     "_level": 0,
     "_components": [
       {
-        "__id__": 79
+        "__id__": 80
       },
       {
-        "__id__": 80
+        "__id__": 81
       }
     ],
     "_prefab": null,
@@ -2112,11 +2112,14 @@
         "__id__": 71
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 1,
     "_components": [
       {
         "__id__": 78
+      },
+      {
+        "__id__": 79
       }
     ],
     "_prefab": null,
@@ -3729,6 +3732,22 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "edt8M1aQREDp8FJ3W/ti6F"
+  },
+  {
+    "__type__": "141eckrd/xDX5K/k+R9fFfv",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 44
+    },
+    "_enabled": true,
+    "closeButton": {
+      "__id__": 53
+    },
+    "startButton": {
+      "__id__": 77
+    },
+    "_id": "ff//X9AIJG+LzkCtNLfX73"
   },
   {
     "__type__": "cc.Canvas",
