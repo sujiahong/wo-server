@@ -3761,6 +3761,30 @@
     "userAvatar": {
       "__id__": 18
     },
+    "nameLabel": {
+      "__id__": 17
+    },
+    "strengthAvatar": {
+      "__id__": 22
+    },
+    "strengthLabel": {
+      "__id__": 21
+    },
+    "redAvatar": {
+      "__id__": 26
+    },
+    "redLabel": {
+      "__id__": 25
+    },
+    "rankButton": {
+      "__id__": 34
+    },
+    "wasteButton": {
+      "__id__": 42
+    },
+    "startPanel": {
+      "__id__": 78
+    },
     "_id": "4c3MIpDzZOhbJcR1ezafyK"
   }
 ]

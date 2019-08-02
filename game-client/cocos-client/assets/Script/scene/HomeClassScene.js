@@ -25,7 +25,7 @@ cls.properties = {
 };
 
 cls.onLoad = function(){
-    console.log(TAG, "onLoad !", wx);
+    console.log(TAG, "onLoad !");
     if (typeof wx === undefined)
         return;
     this.startButton.node.on("click", this.onStart, this);
