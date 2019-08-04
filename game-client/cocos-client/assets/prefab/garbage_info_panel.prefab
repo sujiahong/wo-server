@@ -38,10 +38,13 @@
     "_components": [
       {
         "__id__": 25
+      },
+      {
+        "__id__": 26
       }
     ],
     "_prefab": {
-      "__id__": 26
+      "__id__": 27
     },
     "_opacity": 255,
     "_color": {
@@ -89,7 +92,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "garbage_spt",
+    "_name": "garbage_img",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -960,6 +963,31 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_atlas": null,
+    "_id": ""
+  },
+  {
+    "__type__": "40dbelP9eZNH5E4awpLyUYv",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "closeButton": {
+      "__id__": 16
+    },
+    "garbageImg": {
+      "__id__": 3
+    },
+    "nameLabel": {
+      "__id__": 6
+    },
+    "descLabel": {
+      "__id__": 20
+    },
+    "typeLabel": {
+      "__id__": 23
+    },
     "_id": ""
   },
   {

@@ -1,5 +1,5 @@
 "use strict";
-const TAG = "StartGamePanel.js";
+const TAG = "GarbageInfoPanel.js";
 
 var cls = {};
 
@@ -7,24 +7,19 @@ cls.extends = cc.Component;
 
 cls.properties = {
     closeButton: cc.Button,
-    startButton: cc.Button,
+    garbageImg: cc.Sprite,
     nameLabel: cc.Label,
+    descLabel: cc.Label,
+    typeLabel: cc.Label,
 };
 
 cls.onLoad = function(){
     console.log(TAG, "onLoad onLoad");
     this.closeButton.node.on("click", this.onClose, this);
-    this.startButton.node.on("click", this.onStart, this);
 }
 
 cls.onClose = function(){
-    this.node.active = false;
+    this.node.removeFromParent();
 }
-
-cls.onStart = function(){
-    console.log(TAG, "onStart");
-    cc.director.loadScene("ClassificationScene");
-}
-
 
 cc.Class(cls);
