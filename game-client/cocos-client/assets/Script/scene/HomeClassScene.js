@@ -36,6 +36,9 @@ cls.onLoad = function(){
 cls.onStart = function(){
     console.log(TAG, "onStart!!");
     this.startPanel.node.active = true;
+    var panel = this.startPanel.getComponent("StartGamePanel");
+    panel.nameLabel.string = "第十关";
+
 }
 
 cls.onRank = function(){
