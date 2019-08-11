@@ -28,7 +28,7 @@ cls.update = function(){
     if (this.node.y <= config.DOWN_Y){
         this.node.destroy();
         g_ada.room.garbageOpCount++;
-        if (g_ada.room.garbageOpCount == 5){
+        if (g_ada.room.garbageOpCount >= g_ada.room.maxGarbageCount){
             cc.director.emit("win");
         }
     }

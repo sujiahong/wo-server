@@ -33,7 +33,6 @@ cls.onLoad = function(){
     g_ada.room = new ClassificationRoom(constant.ROOM_TYPE.garbage);
     g_ada.room.scene = this;
     g_ada.room.spawnGarbage();
-    console.log(g_ada.room, self.winPanel)
     // this.garbagePrefab.node.removeFromParent();
     //var player = new Player(cc.g_ada.gameUser.getPlayerInitData());
 
@@ -85,9 +84,10 @@ cls.update = function(dt){
             this.timeLimit = -1;
         }else{
             var data = g_ada.room.getBarbageDataByIndex(g_ada.room.garbageCount);
+            console.log(JSON.stringify(data));
             this.createGarbageSprite(data.keyid, data.img);
             this.timeCount = 0;
-            this.timeLimit = Math.random()*1000000%2+0.5;
+            this.timeLimit = data.interval;
             g_ada.room.garbageCount++;
         }
     }
