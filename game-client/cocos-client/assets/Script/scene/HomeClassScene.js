@@ -21,7 +21,7 @@ cls.properties = {
     redLabel: cc.Label,
     rankButton: cc.Button,
     wasteButton: cc.Button,
-    startPanel: cc.Sprite,
+    startPanel: cc.Node,
 };
 
 cls.onLoad = function(){
@@ -35,7 +35,7 @@ cls.onLoad = function(){
 
 cls.onStart = function(){
     console.log(TAG, "onStart!!");
-    this.startPanel.node.active = true;
+    this.startPanel.active = true;
     var panel = this.startPanel.getComponent("StartGamePanel");
     panel.nameLabel.string = "第十关";
 
