@@ -16,6 +16,12 @@ cls.onLoad = function(){
     console.log(TAG, "onLoad onLoad");
     this.homeButton.node.on("click", this.onHome, this);
     this.retryButton.node.on("click", this.onRetry, this);
+    this.node.on(cc.Node.EventType.TOUCH_START, function(event){
+        event.stopPropagation();
+    }, this);
+    this.node.on(cc.Node.EventType.TOUCH_END, function(event){
+        event.stopPropagation();
+    }, this);
 }
 
 cls.onHome = function(){

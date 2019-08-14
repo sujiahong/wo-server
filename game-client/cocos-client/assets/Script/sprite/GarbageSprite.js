@@ -12,6 +12,7 @@ const acceleration = 0.01;
 
 cls.extends = cc.Component;
 cls.properties = {
+    idx: 0,
     keyid: 0,
     type: 0,
     downSpeed: 0,
