@@ -28,11 +28,14 @@ cls.onLoad = function(){
     }, this);
     this.garbageScroll.node.on("scroll-to-left", this.onScrollLeft, this);
     this.garbageScroll.node.on("scroll-began", this.onScrollBegan, this);
-    this.createGarbageSprite("resources/image/08.png")
+    let content = this.garbageScroll.content;
+    this.createGarbageSprite(content, 1, "resources/image/07.png");
+    this.createGarbageSprite(content, 2, "resources/image/08.png");
+    this.createGarbageSprite(content, 3, "resources/image/09.png");
+    this.createGarbageSprite(content, 4, "resources/image/010.png");
 }
 
-cls.createGarbageSprite = function(img){
-    let content = this.garbageScroll.content;
+cls.createGarbageSprite = function(content, keyId, img){
     cc.loader.load(cc.url.raw(img), function(err, texture){
         if (err){
             return console.log("createGarbageSprite load err: ", err);
@@ -40,13 +43,13 @@ cls.createGarbageSprite = function(img){
         var node = new cc.Node();
         var spt = node.addComponent(cc.Sprite);
         spt.spriteFrame = new cc.SpriteFrame(texture);
-        console.log(spt, spt.spriteFrame, node.width, node.height)
+        console.log(texture, spt, spt.spriteFrame, node.width, node.height)
         content.addChild(node);
         node.on(cc.Node.EventType.TOUCH_START, function(event){
-            console.log(TAG, "node touch start");
+            console.log(TAG, "node touch start ", keyId);
         }, node);
         node.on(cc.Node.EventType.TOUCH_END, function(event){
-            console.log(TAG, "node touch end");
+            console.log(TAG, "node touch end ", keyId);
         }, node);
     });
 }
