@@ -10,7 +10,7 @@ cls.properties = {
     startButton: cc.Button,
     nameLabel: cc.Label,
     garbageScroll: cc.ScrollView,
-    garbagePrefab: {
+    garbageDetailsPrefab: {
         default: null,
         type: cc.Prefab
     },
@@ -33,9 +33,11 @@ cls.onLoad = function(){
     this.createGarbageSprite(content, 2, "resources/image/08.png");
     this.createGarbageSprite(content, 3, "resources/image/09.png");
     this.createGarbageSprite(content, 4, "resources/image/010.png");
+    this.createGarbageSprite(content, 5, "resources/image/011.png");
 }
 
 cls.createGarbageSprite = function(content, keyId, img){
+    var self = this;
     cc.loader.load(cc.url.raw(img), function(err, texture){
         if (err){
             return console.log("createGarbageSprite load err: ", err);
@@ -50,6 +52,10 @@ cls.createGarbageSprite = function(content, keyId, img){
         }, node);
         node.on(cc.Node.EventType.TOUCH_END, function(event){
             console.log(TAG, "node touch end ", keyId);
+            var panel = cc.instantiate(self.garbageDetailsPrefab);
+            self.node.addChild(panel);
+            var obj = panel.getComponent("GarbageInfoPanel");
+            obj.nameLabel.string = "484895050";
         }, node);
     });
 }

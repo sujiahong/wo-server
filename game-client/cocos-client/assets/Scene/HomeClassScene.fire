@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_level": 0,
     "_components": [],
     "_prefab": null,
@@ -99,7 +99,7 @@
       }
     ],
     "_active": true,
-    "_level": 0,
+    "_level": 1,
     "_components": [
       {
         "__id__": 82
@@ -2844,7 +2844,7 @@
   {
     "__type__": "cc.Node",
     "_name": "garbage_scroll",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 46
     },
@@ -3058,7 +3058,7 @@
     "_N$paddingRight": 2,
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
-    "_N$spacingX": 5,
+    "_N$spacingX": 7,
     "_N$spacingY": 0,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
@@ -3268,7 +3268,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -10,
-      "y": -50,
+      "y": -63,
       "z": 0
     },
     "_scale": {
@@ -3793,8 +3793,8 @@
     "garbageScroll": {
       "__id__": 65
     },
-    "garbagePrefab": {
-      "__uuid__": "1d0964c5-21cf-4ab9-9ebd-cb12073110bb"
+    "garbageDetailsPrefab": {
+      "__uuid__": "51fad0d9-df70-4ed9-af30-4fd51d4aafa4"
     },
     "_id": "f09i9gDPRHRJPW9Uc989dH"
   },

@@ -106,7 +106,7 @@ cls.createGarbageSprite = function(keyid, img){
             return console.log("createGarbageSprite load err: ", err);
         }
         var spt = garbage.getComponent(cc.Sprite);
-        spt.spriteFrame.setTexture(texture);
+        spt.spriteFrame = new cc.SpriteFrame(texture);
         self.node.addChild(garbage);
     });
 }

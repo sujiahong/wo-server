@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "garbage_info_panel",
+    "_name": "garbage_detail_panel",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
