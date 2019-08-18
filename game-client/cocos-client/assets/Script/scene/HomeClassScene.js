@@ -7,6 +7,9 @@ if (!cc.g_ada){
 const g_ada = cc.g_ada;
 const constant = require("../share/constant");
 const config = require("../model/garbage/GarbageConfig");
+const util = require("../util/util");
+g_ada.curLevel = Number(util.getLocalStore("CUR_LEVEL") || 1);
+
 
 var cls = {};
 
@@ -37,7 +40,7 @@ cls.onStart = function(){
     console.log(TAG, "onStart!!");
     this.startPanel.active = true;
     var panel = this.startPanel.getComponent("StartGamePanel");
-    panel.nameLabel.string = "第十关";
+    panel.nameLabel.string = "第 " + g_ada.curLevel + " 关";
 
 }
 
