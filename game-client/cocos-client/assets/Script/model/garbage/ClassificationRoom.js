@@ -2,6 +2,10 @@
 const TAG = "ClassificationRoom.js";
 const Room = require("../Room");
 const config = require("GarbageConfig");
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
+const g_ada = cc.g_ada;
 
 class ClassificationRoom extends Room{
     constructor(type){
@@ -16,22 +20,16 @@ class ClassificationRoom extends Room{
     }
 
     spawnGarbage(){
-        var url = cc.url.raw("resources/json/level.json");
-        var self = this;
-        cc.loader.load(url, function(err, data){
-            if (err == null){
-                var levelData = data.json[self.curLevel];
-                var garbageKeyIdArr = levelData.garbage; 
-                self.maxGarbageCount = garbageKeyIdArr.length;
-                console.log("21111111   ", garbageKeyIdArr.length);
-                for (var i = 0; i < self.maxGarbageCount; ++i){
-                    var keyid = Number((garbageKeyIdArr[i]== "")?1:garbageKeyIdArr[i]);
-                    var img = config.GARBAGE_KEYID_2_IMG[keyid];
-                    var interval = Number((levelData.interval[i] == "") ? 0 : levelData.interval[i])/1000;
-                    self.garbageDataArr.push({keyid: keyid, img: img, interval: interval});
-                }
-            }
-        });
+        var curLevelData = g_ada.levelData[g_ada.curLevel];
+        var garbageKeyIdArr = curLevelData.garbage;
+        this.maxGarbageCount = garbageKeyIdArr.length;
+        for (var i = 0; i < this.maxGarbageCount; ++i){
+            var keyid = Number((garbageKeyIdArr[i]== "")?1:garbageKeyIdArr[i]);
+            var img = config.GARBAGE_KEYID_2_IMG[keyid];
+            var interval = Number((curLevelData.interval[i] == "") ? 0 : curLevelData.interval[i])/1000;
+            var type = g_ada.garbageData[keyid + 10000].type;
+            this.garbageDataArr.push({keyid: keyid, type: type, img: img, interval: interval});
+        }
     }
 
     getBarbageDataByIndex(idx){

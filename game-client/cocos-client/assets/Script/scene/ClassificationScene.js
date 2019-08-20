@@ -85,7 +85,7 @@ cls.update = function(dt){
         }else{
             var data = g_ada.room.getBarbageDataByIndex(g_ada.room.garbageCount);
             console.log(JSON.stringify(data));
-            this.createGarbageSprite(data.keyid, data.img);
+            this.createGarbageSprite(data.keyid, data.type, data.img);
             this.timeCount = 0;
             this.timeLimit = data.interval;
             g_ada.room.garbageCount++;
@@ -93,14 +93,15 @@ cls.update = function(dt){
     }
 }
 
-cls.createGarbageSprite = function(keyid, img){
-    console.log("11111111     ", keyid, img)
+cls.createGarbageSprite = function(keyid, type, img){
+    console.log("11111111     ", keyid, type, img)
     var self = this;
     let garbage = cc.instantiate(this.garbagePrefab);
     g_ada.room.garbageClassificationArr.push(garbage);
     garbage.setPosition(0, 700);
     let gspt = garbage.getComponent("GarbageSprite");
     gspt.keyid = keyid;
+    gspt.type = type;
     cc.loader.load(cc.url.raw(img), function(err, texture){
         if (err){
             return console.log("createGarbageSprite load err: ", err);

@@ -1,7 +1,10 @@
 "use strict";
 const TAG = "StartGamePanel.js";
 const config = require("GarbageConfig");
-
+if (!cc.g_ada){
+    cc.g_ada = {};
+}
+const g_ada = cc.g_ada;
 var cls = {};
 
 cls.extends = cc.Component;
@@ -30,23 +33,18 @@ cls.onLoad = function(){
     this.garbageScroll.node.on("scroll-to-left", this.onScrollLeft, this);
     this.garbageScroll.node.on("scroll-began", this.onScrollBegan, this);
     let content = this.garbageScroll.content;
-    let self = this;
-    var url = cc.url.raw("resources/json/level.json");
-    cc.loader.load(url, function(err, data){
-        if (err == null){
-            var levelData = data.json[cc.g_ada.curLevel];
-            var garbageKeyIdArr = levelData.garbage;
-            var garbageKeyIdMap = {};
-            for (var i = 0; i < garbageKeyIdArr.length; ++i){
-                var keyid = Number((garbageKeyIdArr[i]== "")?1:garbageKeyIdArr[i]);
-                garbageKeyIdMap[keyid] = 1;
-            }
-            for (var keyId in garbageKeyIdMap){
-                var img = config.GARBAGE_KEYID_2_IMG[keyId];
-                self.createGarbageSprite(content, Number(keyId), img);
-            }
-        }
-    });
+    var curLevelData = g_ada.levelData[g_ada.curLevel];
+    var garbageKeyIdArr = curLevelData.garbage;
+    var garbageKeyIdMap = {};
+    for (var i = 0; i < garbageKeyIdArr.length; ++i){
+        var keyid = Number((garbageKeyIdArr[i]== "")?1:garbageKeyIdArr[i]);
+        garbageKeyIdMap[keyid] = 1;
+    }
+    for (var keyId in garbageKeyIdMap){
+        var img = config.GARBAGE_KEYID_2_IMG[keyId];
+        this.createGarbageSprite(content, Number(keyId), img);
+    }
+
 }
 
 cls.createGarbageSprite = function(content, keyId, img){

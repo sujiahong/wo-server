@@ -34,6 +34,18 @@ cls.onLoad = function(){
     this.startButton.node.on("click", this.onStart, this);
     this.rankButton.node.on("click", this.onRank, this);
     this.wasteButton.node.on("click", this.onWaste, this);
+    var url = cc.url.raw("resources/json/level.json");
+    cc.loader.load(url, function(err, data){
+        if (err == null){
+            g_ada.levelData = data.json;
+        }
+    });
+    url = cc.url.raw("resources/json/garbage.json");
+    cc.loader.load(url, function(err, data){
+        if (err == null){
+            g_ada.garbageData = data.json;
+        }
+    });
 }
 
 cls.onStart = function(){

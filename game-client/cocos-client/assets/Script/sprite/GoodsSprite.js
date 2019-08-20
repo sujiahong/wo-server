@@ -9,6 +9,7 @@ var cls = {};
 cls.extends = cc.Component;
 cls.properties = {
     keyid: 0,
+    type: 0,
     nickname: "",
 };
 
